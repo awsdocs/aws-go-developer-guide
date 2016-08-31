@@ -20,7 +20,7 @@ This documentation is for the |sdk-go|.
    :titlesonly:
    :maxdepth: 1
 
-   Home
+   welcome
    setting-up
    configuring-sdk
    sessions
