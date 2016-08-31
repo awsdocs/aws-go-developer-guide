@@ -38,6 +38,7 @@ value of the ``Name`` tag in its list of instances.
 
 .. literalinclude:: example_code/ec2/create_instance.go
    :dedent: 4
+   :lines: 15-
 
 
 You can add up to 10 tags to an instance. You can add them all in a
@@ -56,6 +57,7 @@ will fail if other parameters are present.
 
 .. literalinclude:: example_code/ec2/create_image_no_block_device.go
    :dedent: 4
+   :lines: 15-
 
 .. _examples-s3:
 
@@ -70,6 +72,7 @@ list all buckets in your AWS account:
 
 .. literalinclude:: example_code/s3/list_all_buckets.go
    :dedent: 4
+   :lines: 15-
 
 
 Create a New Bucket and Object
@@ -83,6 +86,7 @@ text file with the string ``Hello World!``:
 
 .. literalinclude:: example_code/s3/create_new_bucket_and_object.go
    :dedent: 4
+   :lines: 15-
 
 Upload an Arbitrarily Sized Stream with |S3| Upload Manager
 ----------------------------------------------------------------
@@ -92,6 +96,9 @@ parts, in parallel. The following example gzips a large file and uploads
 it to Amazon as a stream:
 
 .. literalinclude:: example_code/s3/upload_arbitrary_sized_stream.go
+   :dedent: 4 
+   :lines: 15-
+
 
 Download a File with the |S3| Download Manager
 ---------------------------------------------------
@@ -101,6 +108,8 @@ smaller parts, in parallel. The following example uses the Download
 Manager to write a file from |S3| to disk:
 
 .. literalinclude:: example_code/s3/download_file.go
+   :dedent: 4 
+   :lines: 15-
 
 Generate a Pre-signed URL for a GetObject Operation
 ---------------------------------------------------
@@ -118,6 +127,8 @@ the URL can view the file.
 
 
 .. literalinclude:: example_code/s3/generate_presigned_url.go
+   :dedent: 4 
+   :lines: 15-
 
 If the SDK has not retrieved your credentials before calling
 ``Presign()``, it will get them to generate the pre-signed URL.
@@ -138,6 +149,9 @@ The following example adds a Body field to generate a pre-signed PUT
 operation that requires a specific payload to be uploaded by users:
 
 .. literalinclude:: example_code/s3/generate_presigned_url_specific_payload.go
+   :dedent: 4 
+   :lines: 15-
+
 
 If you omit the Body field, users can write any contents to the given
 object.
@@ -145,6 +159,9 @@ object.
 This example shows the enforcing of Content-Md5.
 
 .. literalinclude:: example_code/s3/enforce_content_md5.go
+   :dedent: 4 
+   :lines: 15-
+
 
 .. _examples-dynamodb:
 
@@ -159,6 +176,9 @@ to list all tables for the region you specified (us-west-2):
 
 
 .. literalinclude:: example_code/dynamodb/list_tables.go
+   :dedent: 4 
+   :lines: 15-
+
 
 
 .. _examples-glacier:
@@ -173,6 +193,9 @@ The following example uses the |GLlong| ``CreateVault`` operation
 to create a vault named ``YOUR_VAULT_NAME``:
 
 .. literalinclude:: example_code/glacier/create_vault.go
+   :dedent: 4 
+   :lines: 15-
+
 
 Upload an Archive
 -----------------
@@ -184,5 +207,8 @@ automatically computes the tree hash checksum for the data to be
 uploaded.
 
 .. literalinclude:: example_code/glacier/upload_archive.go
+   :dedent: 4 
+   :lines: 15-
+
 
 
