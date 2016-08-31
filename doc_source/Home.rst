@@ -10,9 +10,9 @@
 
 .. _welcome:
 
-###########################
+#####################
 What is the |sdk-go|?
-###########################
+#####################
 
 Use the |sdk-go| to build Go applications that use AWS services.
 
