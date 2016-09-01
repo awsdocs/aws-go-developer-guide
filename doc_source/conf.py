@@ -379,7 +379,16 @@ extlinks['sdk-examples-go'] = (
     '')
     
 # sample deep api url: http://docs.aws.amazon.com/sdk-for-go/api/aws/Config.html#HTTPClient-field
+# :sdk-go-api-deep:`aws/Config.html#HTTPClient-field`
 extlinks['sdk-go-api-deep']  = (
-    aws_docs_url + 'sdk-for-go/api/aws/%s', ''
+    aws_docs_url + 'sdk-for-go/api/%s', ''
     )
+    
+extlinks['cf-dg-deep'] = (
+    aws_docs_url + 'AmazonCloudFront/latest/DeveloperGuide/%s', ''
+)
+
+extlinks['ec2-ug-deep'] = (
+    aws_docs_url + 'AWSEC2/latest/UserGuide/%s', ''
+)
 

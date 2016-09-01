@@ -30,8 +30,9 @@ Create an Instance with Tags
 ----------------------------
 
 The |EC2| service has an operation for creating instances
-(``RunInstances``) and another for attaching tags to instances
-(``CreateTags``). To create an instance with tags, call both of these
+(:sdk-go-api-deep:``RunInstances <service/ec2/#EC2.RunInstances>``) and another for 
+attaching tags to instances (:sdk-go-api-deep:``CreateTags <service/ec2/#EC2.CreateTags>``). 
+To create an instance with tags, call both of these
 operations in series. The following example creates an instance and then
 adds a ``Name`` tag to the instance. The |EC2| console displays the
 value of the ``Name`` tag in its list of instances.
@@ -49,10 +50,10 @@ Create Image Without Block Device
 
 Sometimes when you create an |EC2| image you may want to explicitly not
 include certain block devices. To do this you can use the ``NoDevice``
-parameter in ``BlockDeviceMapping``. When this parameter is set to an
-empty string ``""`` the named device will not be mapped. It is important
-to note that ``NoDevice`` parameter is not compatible with any other
-field in BlockDeviceMapping other than ``DeviceName`` and the request
+parameter in :sdk-go-api-deep:``BlockDeviceMapping <service/ec2/#BlockDeviceMapping>``. 
+When this parameter is set to an empty string ``""`` the named device will not be mapped. 
+It is important to note that ``NoDevice`` parameter is not compatible with any other
+field in ``BlockDeviceMapping`` other than ``DeviceName`` and the request
 will fail if other parameters are present.
 
 .. literalinclude:: example_code/ec2/create_image_no_block_device.go
@@ -67,7 +68,8 @@ will fail if other parameters are present.
 List All Buckets
 ----------------
 
-The following example uses the |S3| ``ListBuckets`` operation to
+The following example uses the |S3| 
+:sdk-go-api-deep:``ListBuckets <services/s3/#S3.ListBuckets>`` operation to
 list all buckets in your AWS account:
 
 .. literalinclude:: example_code/s3/list_all_buckets.go
@@ -78,10 +80,10 @@ list all buckets in your AWS account:
 Create a New Bucket and Object
 ------------------------------
 
-The |S3| ``CreateBucket`` operation creates a bucket in your
-account. You must specify a globally unique name for the bucket. The
-``PutObject`` operation creates a file in a bucket. The following
-example uses these two operations to create a bucket and add to it a
+The |S3| :sdk-go-api-deep:``CreateBucket <services/s3/#S3.CreateBucket>`` operation 
+creates a bucket in your account. You must specify a globally unique name for the bucket. 
+The :sdk-go-api-deep:``PutObject <services/s3/#S3.PutObject>`` operation creates a file in 
+a bucket. The following example uses these two operations to create a bucket and add to it a
 text file with the string ``Hello World!``:
 
 .. literalinclude:: example_code/s3/create_new_bucket_and_object.go
@@ -91,9 +93,9 @@ text file with the string ``Hello World!``:
 Upload an Arbitrarily Sized Stream with |S3| Upload Manager
 ----------------------------------------------------------------
 
-The |S3| Upload Manager uploads large files to |S3| in smaller
-parts, in parallel. The following example gzips a large file and uploads
-it to Amazon as a stream:
+The |S3| :sdk-go-api-deep:``Upload Manager <service/s3/s3manager/#Uploader>`` uploads 
+large files to |S3| in smaller parts, in parallel. The following example gzips a large 
+file and uploads it to Amazon as a stream:
 
 .. literalinclude:: example_code/s3/upload_arbitrary_sized_stream.go
    :dedent: 4 
@@ -103,9 +105,9 @@ it to Amazon as a stream:
 Download a File with the |S3| Download Manager
 ---------------------------------------------------
 
-The |S3| Download Manager makes it easy to download large files in
-smaller parts, in parallel. The following example uses the Download
-Manager to write a file from |S3| to disk:
+The |S3|:sdk-go-api-deep:``Download Manager <service/s3/s3manager/#Downloader>`` 
+makes it easy to download large files in smaller parts, in parallel. The following example 
+uses the Download Manager to write a file from |S3| to disk:
 
 .. literalinclude:: example_code/s3/download_file.go
    :dedent: 4 
@@ -117,8 +119,9 @@ Generate a Pre-signed URL for a GetObject Operation
 A pre-signed URL allows you to grant temporary access to users who don't
 have permission to directly run AWS operations in your account. A
 pre-signed URL is signed with your credentials and can be used by any
-user. To generate a pre-signed URL, use the ``Presign()`` method on the
-request object. You must set an expiration value because the SDK does
+user. To generate a pre-signed URL, use the 
+:sdk-go-api-deep:``Presign() <aws/request/#Request.Presign>`` method on the
+``request`` object. You must set an expiration value because the SDK does
 not set one by default.
 
 The following example generates a pre-signed URL that enables you to
@@ -142,10 +145,10 @@ request, it computes the checksum of the request body and generates an
 MD5 checksum that is included in the pre-signed URL. Users must upload
 the same content that produces the same MD5 checksum generated by the
 SDK; otherwise, the operation fails. This is not the Content-MD5, but
-the signature. To enforce Content-Md5 simply add the header to the
+the signature. To enforce Content-MD5 simply add the header to the
 request.
 
-The following example adds a Body field to generate a pre-signed PUT
+The following example adds a ``Body`` field to generate a pre-signed PUT
 operation that requires a specific payload to be uploaded by users:
 
 .. literalinclude:: example_code/s3/generate_presigned_url_specific_payload.go
@@ -153,10 +156,10 @@ operation that requires a specific payload to be uploaded by users:
    :lines: 15-
 
 
-If you omit the Body field, users can write any contents to the given
+If you omit the ``Body`` field, users can write any contents to the given
 object.
 
-This example shows the enforcing of Content-Md5.
+This example shows the enforcing of Content-MD5.
 
 .. literalinclude:: example_code/s3/enforce_content_md5.go
    :dedent: 4 
@@ -171,8 +174,9 @@ This example shows the enforcing of Content-Md5.
 List Tables
 -----------
 
-The following example uses the |DDBlong| ``ListTables`` operation
-to list all tables for the region you specified (us-west-2):
+The following example uses the |DDBlong| 
+:sdk-go-api-deep:``ListTables <service/dynamodb/#DynamoDB.ListTables>`` operation
+to list all tables for the region you specified (``us-west-2``):
 
 
 .. literalinclude:: example_code/dynamodb/list_tables.go
@@ -189,7 +193,8 @@ to list all tables for the region you specified (us-west-2):
 Create a Vault
 --------------
 
-The following example uses the |GLlong| ``CreateVault`` operation
+The following example uses the |GLlong| 
+:sdk-go-api-deep:``CreateVault <service/glacier/#Glacier.CreateVault>`` operation
 to create a vault named ``YOUR_VAULT_NAME``:
 
 .. literalinclude:: example_code/glacier/create_vault.go
@@ -201,7 +206,8 @@ Upload an Archive
 -----------------
 
 The following example assumes you have a vault named
-``YOUR_VAULT_NAME``. It uses the |GLlong| ``UploadArchive``
+``YOUR_VAULT_NAME``. It uses the |GLlong| 
+:sdk-go-api-deep:``UploadArchive <service/glacier/#Glacier.UploadArchive>``
 operation to upload a single reader object as an entire archive. The SDK
 automatically computes the tree hash checksum for the data to be
 uploaded.

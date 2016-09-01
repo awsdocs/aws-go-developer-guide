@@ -24,7 +24,7 @@ https://golang.org/doc/install.
 
 To install the SDK and its dependencies, run the following Go command:
 
-.. code:: bsh
+.. code:: sh
 
     go get -u github.com/aws/aws-sdk-go/...
 
@@ -33,7 +33,7 @@ experiment <https://github.com/aws/aws-sdk-go#installing>`__ environment
 variable to ``1``, you can use the following command to get the SDK. The
 SDK's runtime dependancies are vendored in the ``vendor/`` folder.
 
-.. code:: bsh
+.. code:: sh
 
     go get -u github.com/aws/aws-sdk-go
 
@@ -47,12 +47,10 @@ consist of an access key ID and a secret access key.
 Depending on the scenario, you can create IAM users to generate
 long-term access keys or IAM roles to generate temporary access keys.
 For more information about how and when to generate access keys, and
-which type to use for your scenario, see `Best Practices for Managing
-AWS Access
-Keys <http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html>`__.
+which type to use for your scenario, see :aws-gr:`Best Practices for Managing 
+AWS Access Keys <aws-access-keys-best-practices>`.
 
-To set up your credentials for use with the AWS SDK for Go, see `SDK
-Configuration <configuring-sdk>`__.
+To set up your credentials for use with the AWS SDK for Go, see :ref:`configuring-sdk`.
 
 Packages
 ========
@@ -65,6 +63,5 @@ applications to use the SDK, as shown in the following example:
     import "github.com/aws/aws-sdk-go/service/s3"
 
 For more information about the packages provided by the AWS SDK for Go,
-see the list of
-`packages <http://docs.aws.amazon.com/sdk-for-go/api/service.html>`__ in
-the *AWS SDK for Go API Reference*.
+see the list of :sdk-go-api-deep:`packages <service.html>` in
+the |sdk-go-api|.

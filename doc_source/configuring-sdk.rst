@@ -30,8 +30,8 @@ Specifying the Region
 
 When you specify the region, you specify where to send requests, such as
 ``us-west-2`` or ``us-east-1.`` The SDK does not select a default
-region. For a list of regions for each service, see :rand:`Regions and
-Endpoints <>` in the |AWS-gr|.
+region. For a list of regions for each service, see |regions-and-endpoints|_ 
+in the |AWS-gr|.
 
 To specify the region, set the ``AWS_REGION`` environment variable or
 specify it in a session. If you do both, the SDK will always use the
@@ -42,19 +42,19 @@ variable.
 
 **Linux, OS X, or Unix**
 
-.. code:: bash
+.. code-block:: bash
 
     $ export AWS_REGION=us-west-2
 
 **Windows**
 
-.. code:: cmd
+.. code-block:: sh
 
     > set AWS_REGION=us-west-2
 
 The following snippet specifies the region in a session:
 
-.. code:: go
+.. code-block:: go
 
     sess := session.New(&aws.Config{Region: aws.String("us-west-2")})
 
@@ -67,10 +67,9 @@ several different locations, depending on your particular use case. For
 information about obtaining credentials, see :ref:`Setting Up <setting-up>`.
 
 When you initialize a new service client without providing any
-credential arguments, the SDK uses the `default credential provider
-chain <http://docs.aws.amazon.com/sdk-for-go/api/aws/defaults.html>`__
-to find AWS credentials. The SDK uses the first provider in the chain
-that returns credentials without an error. The default provider chain
+credential arguments, the SDK uses the :sdk-go-api-deep:`default credential provider
+chain <aws/defaults/#CredChain>` to find AWS credentials. The SDK uses the first provider 
+in the chain that returns credentials without an error. The default provider chain
 looks for credentials in the following order:
 
 1. Environment variables.
@@ -112,7 +111,7 @@ following order:
    credentials to source control.
 
 |IAM| Roles for |EC2| Instances
-----------------------------------
+-------------------------------
 
 If you are running your application on an |EC2| instance, you can
 use the instance's :ec2-ug:`IAM role <iam-roles-for-amazon-ec2>`
@@ -127,8 +126,8 @@ Shared Credentials File
 
 A credential file is a plaintext file that contains your access keys.
 The file must be on the same machine on which you're running your
-application. The file must be named ``credentials`` and located in the
-:file:`.aws//` folder in your home directory. The home directory can vary by
+application. The file must be named :file:`credentials` and located in the
+:file:`.aws/` folder in your home directory. The home directory can vary by
 operating system. In Windows, you can refer to your home directory by
 using the environment variable :code:`%UserProfile%`. In Unix-like systems, you
 can use the environment variable :code:`$HOME` or :code:`~` (tilde).
@@ -218,8 +217,8 @@ In addition, checking if your credentials have been found is fairly easy.
 
     _, err := sess.Config.Credentials.Get()
 
-If :code:`ChainProvider` is being used, set :code:`CredentialsChainVerboseErrors` to :code:`true` 
-in the session config.
+If :code:`ChainProvider` is being used, set :code:`CredentialsChainVerboseErrors` to 
+:code:`true` in the session config.
 
 .. note::
    If you specify credentials in environment variables, the SDK
@@ -250,7 +249,7 @@ The following examples show how you configure the environment variables.
 
 **Windows**
 
-.. code:: cmd
+.. code:: sh
 
     > set AWS_ACCESS_KEY_ID=YOUR_AKID
     > set AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
@@ -279,8 +278,8 @@ Other Credentials Providers
 The SDK provides other methods for retrieving credentials in the
 :code:`aws/credentials` package. For example, you can retrieve temporary
 security credentials from AWS Security Token Service or credentials from
-encrypted storage. For more information, see
-http://docs.aws.amazon.com/sdk-for-go/api/aws/credentials.html.
+encrypted storage. For more information, see :sdk-go-api-deep:`Credentials 
+<aws/credentials/>`.
 
 Configuring a Proxy
 ===================
@@ -288,8 +287,8 @@ Configuring a Proxy
 If you cannot directly connect to the Internet, you can use Go-supported
 environment variables (``HTTP_PROXY``) or create a custom HTTP client to
 configure your proxy. Use the
-:go-api-deep:`Config.HTTPClient <Config.html#HTTPClient-field>` 
+:sdk-go-api-deep:`Config.HTTPClient <aws/#Config.WithHTTPClient>` 
 struct to specify a custom HTTP client. For more information about how
 to create an HTTP client to use a proxy, see the
-```Transport`` <http://golang.org/pkg/net/http/#Transport>`__ struct in
+`Transport <http://golang.org/pkg/net/http/#Transport>`_ struct in
 the Go ``http`` package.

@@ -20,22 +20,21 @@ AWS services.
 To make calls to an AWS service, you must first construct a service
 client instance with a session. A service client provides low-level
 access to every API action for that service. For example, you create an
-S3 service client to make calls to Amazon S3.
+|S3| service client to make calls to |S3|.
 
 When you call service operations, you pass in input parameters as a
 struct. A successful call usually results in an output struct that you
-can use. For example, after you successfully call an S3 create bucket
+can use. For example, after you successfully call an |S3| create bucket
 action, the action returns an output struct with the bucket's location.
 
 For the list of service clients, including their methods and parameters,
-see the `*AWS SDK for Go API
-Reference* <http://docs.aws.amazon.com/sdk-for-go/api/>`__.
+see the |sdk-go-api|_.
 
 Constructing a Service
 ======================
 
-To construct a service client instance, use the ``New()`` function. The
-following example creates an Amazon S3 service client.
+To construct a service client instance, use the :sdk-go-api-deep:`New() <aws/session/#New>` 
+function. The following example creates an |S3| service client.
 
 .. code:: go
 
@@ -43,13 +42,12 @@ following example creates an Amazon S3 service client.
     svc := s3.New(sess)
 
 After you have a service client instance, you can use it to call service
-operations. For more information about configurations, see `Sessions and
-SDK Configuration <configuring-sdk>`__.
+operations. For more information about configurations, see :ref:`configuring-sdk>`.
 
 When you create a service client, you can pass in custom configurations
 so that you don't need to create a session for each configuration. The
 SDK merges the two configurations, overriding session values with your
-custom configuration. For example, in the following snippet, the S3
+custom configuration. For example, in the following snippet, the |S3|
 client uses the ``mySession`` session but overrides the ``Region`` field
 with a custom value (``us-west-2``):
 
@@ -73,8 +71,9 @@ Calling the operation will sync as the request is built, signed, sent,
 and the response is received. If an error occurs during the operation,
 it will be returned. The output or resulting structure won't be valid.
 
-For example, to call the Amazon S3 GET Object API, use the Amazon S3
-service client instance and call its ``GetObject`` method:
+For example, to call the |S3| GET Object API, use the |S3| 
+service client instance and call its :sdk-go-api-deep:``GetObject <service/s3/#S3.GetObject>`` 
+method:
 
 .. code:: go
 
@@ -103,8 +102,7 @@ output struct. The structs follow the naming pattern
 *OperationName*\ ``Input`` and *OperationName*\ ``Output``.
 
 For more information about the parameters of each method, see the
-service client documentation in the `API
-reference <http://docs.aws.amazon.com/sdk-for-go/api/service.html>`__.
+service client documentation in the |sdk-go-api|_.
 
 Calling Operations with the Request Form
 ----------------------------------------
@@ -117,11 +115,12 @@ a struct pointer that is not valid until the request is sent and
 returned successfully.
 
 Calling the request form can be useful when you want to construct a
-number of pre-signed requests, such as pre-signed Amazon S3 URLs. You
+number of pre-signed requests, such as pre-signed |S3| URLs. You
 can also use the request form to modify how the SDK sends a request.
 
 The following example calls the request form of the ``GetObject``
-method. The ``Send`` method signs the request before sending it.
+method. The :sdk-go-api-deep:``Send <aws/request/#Request.Send>`` method signs 
+the request before sending it.
 
 .. code:: go
 
@@ -137,9 +136,9 @@ method. The ``Send`` method signs the request before sending it.
 Handling Operation Response Body
 --------------------------------
 
-Some of the API operations' response output struct will contain a Body
+Some of the API operations' response output struct will contain a ``Body``
 field which is an ``io.ReadCloser``. If you are making request with
-these operations you should always make sure to call Close on the field.
+these operations you should always make sure to call :code:`Close` on the field.
 
 .. code:: go
 
@@ -167,7 +166,7 @@ service client's configuration and request handlers. If you do, the
 service client operations might encounter race conditions. Define
 service client settings before you concurrently use it.
 
-In the following example, an S3 service client is used in multiple
+In the following example, an |S3| service client is used in multiple
 goroutines. The example concurrently outputs all objects in ``bucket1``,
 ``bucket2``, and ``bucket3``, which are all in the same region. To make
 sure all objects from the same bucket are printed together, the example
@@ -226,7 +225,7 @@ Pagination methods iterate over a list operation until the method
 retrieves the last page of results or until the callback function
 returns ``false``. The names of these method use the following pattern:
 *OperationName*\ ``Pages``. For example, the pagination method for the
-S3 list objects operation (``ListObjects``) is ``ListObjectPages``.
+|S3| list objects operation (``ListObjects``) is ``ListObjectPages``.
 
 The following example uses the ``ListObjectPages`` pagination method to
 list, at most, three pages of object keys from the ``ListObject``
@@ -253,7 +252,7 @@ Using Waiters
 =============
 
 The SDK provides waiters that continuously check for completion of a
-job. For example, when you send a request to create an S3 bucket, you
+job. For example, when you send a request to create an |S3| bucket, you
 can use a waiter to check when the bucket has been successfully created.
 That way, subsequent operations on the bucket are done only after the
 bucket has been created.

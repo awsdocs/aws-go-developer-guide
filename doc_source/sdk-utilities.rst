@@ -14,34 +14,34 @@
 SDK Utilities
 #############
 
-Use the AWS SDK for Go utilities to help use AWS services.
+Use the |sdk-go| utilities to help use AWS services.
 
-The AWS SDK for Go includes the following utilities to help you more
+The |sdk-go| includes the following utilities to help you more
 easily use AWS services. SDK utilities are located in their related AWS
 service package.
 
--  Amazon CloudFront URL Signer
--  Amazon DynamoDB Attributes Converter
--  Amazon EC2 Metadata
--  Amazon S3 Transfer Managers
+-  |CFlong| URL Signer
+-  |DDBlong| Attributes Converter
+-  |EC2long| Metadata
+-  |S3long| Transfer Managers
 
 Amazon CloudFront URL Signer
 ============================
 
-The Amazon CloudFront URL signer simplifies the process of creating
+The |CFlong| URL signer simplifies the process of creating
 signed URLs. A signed URL includes information, such as an expiration
 date and time, that enables you to control access to your content.
 Signed URLs are useful when you want to distribute content through the
 Internet, but want to restrict access to certain users (for example, to
 users who have paid a fee).
 
-To sign a URL, create a ``URLSigner`` instance with your Amazon
-CloudFront key pair ID and the associated private key, and then call the
+To sign a URL, create a ``URLSigner`` instance with your |CFlong| key pair ID 
+and the associated private key, and then call the
 ``Sign`` or ``SignWithPolicy`` method and include the URL to sign. For
-more information about Amazon CloudFront key pairs, see `Creating
+more information about |CFlong| key pairs, see :CF-dg-deep:`Creating
 CloudFront Key Pairs for Your Trusted
-Signers <http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html#private-content-creating-cloudfront-key-pairs>`__
-in the *Amazon CloudFront Developer Guide*.
+Signers <private-content-trusted-signers.html#private-content-creating-cloudfront-key-pairs>`
+in the |CF-dg|.
 
 The following example creates a signed URL that's valid for one hour
 after it has been created:
@@ -57,20 +57,19 @@ after it has been created:
     }
 
 For more information about the signing utility, see the
-```sign`` <http://docs.aws.amazon.com/sdk-for-go/api/service/cloudfront/sign.html>`__
-package in the *AWS SDK for Go API Reference*.
+:sdk-go-api-deep:`sign <service/cloudfront/sign.html>` package in the |sdk-go-api|.
 
-Amazon DynamoDB Attributes Converter
+|DDBlong| Attributes Converter
 ====================================
 
-The attributes converter simplifies converting Amazon DynamoDB attribute
+The attributes converter simplifies converting |DDBlong| attribute
 values to and from concrete Go types. Conversions make it easy to work
-with attribute values in Go and to write values to Amazon DynamoDB
+with attribute values in Go and to write values to |DDBlong|
 tables. For example, you can create records in Go and then use the
 converter when you want to write those records as attribute values to an
-Amazon DynamoDB table.
+|DDBlong| table.
 
-The following example converts a structure to an Amazon DynamoDB
+The following example converts a structure to an |DDBlong|
 ``AttributeValues`` map and then puts the data to the ``exampleTable``:
 
 .. code:: go
@@ -101,13 +100,13 @@ The following example converts a structure to an Amazon DynamoDB
     fmt.Println("Item put to dynamodb", result, err)
 
 For more information about the converter utility, see the
-```dynamodbattribute`` <http://docs.aws.amazon.com/sdk-for-go/api/service/dynamodb/dynamodbattribute.html>`__
-package in the *AWS SDK for Go API Reference*.
+:sdk-go-api-deep:`dynamodbattribute <service/dynamodb/dynamodbattribute/>` 
+package in the |sdk-go-api|.
 
-Amazon EC2 Metadata
+|EC2long| Metadata
 ===================
 
-``EC2Metadata`` is a client that interacts with the EC2 metadata
+``EC2Metadata`` is a client that interacts with the |EC2| metadata
 service. The client can help you easily retrieve information about
 instances on which your applications run, such as its region or local IP
 address. Typically, you must create and submit HTTP requests to retrieve
@@ -128,9 +127,9 @@ category like ``local-ipv4`` (the private IP address of the instance):
         return
     }
 
-For a list of all metadata categories, see `Instance Metadata
-Categories <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html#instancedata-data-categories>`__
-in the *Amazon Elastic Compute Cloud User Guide*.
+For a list of all metadata categories, see :ec2-ug-deep:`Instance Metadata
+Categories <ec2-instance-metadata.html#instancedata-data-categories>`
+in the |ec2-ug|.
 
 Retrieving an Instance's Region
 -------------------------------
@@ -147,27 +146,29 @@ an instance's region:
     }
 
 For more information about the EC2 metadata utility, see the
-```ec2metadata`` <http://docs.aws.amazon.com/sdk-for-go/api/aws/ec2metadata.html>`__
-package in the *AWS SDK for Go API Reference*.
+:sdk-go-api-deep:`ec2metadata <aws/ec2metadata/>` 
+package in the |sdk-go-api|.
 
-Amazon S3 Transfer Managers
+.. _s3-transfer-managers
+
+|S3long| Transfer Managers
 ===========================
 
-The Amazon S3 upload and download managers can break up large objects so
+The |S3long| upload and download managers can break up large objects so
 they can be transferred in multiple parts, in parallel, which makes it
 easy to resume interrupted transfers.
 
 Upload Manager
 --------------
 
-The Amazon S3 upload manager determines if a file can be split into
+The |S3long| upload manager determines if a file can be split into
 smaller parts and uploaded in parallel. You can customize the number of
 parallel uploads and the size of the uploaded parts.
 
 Uploading
 ~~~~~~~~~
 
-The following example uses the Amazon S3 ``Uploader`` to upload a file.
+The following example uses the |S3long| ``Uploader`` to upload a file.
 Using ``Uploader`` is similar to the ``s3.PutObject()`` operation.
 
 .. code:: go
@@ -191,15 +192,15 @@ uploaded:
    uploaded. The minimum size per part is 5 MB.
 -  ``Concurrency`` specifies the number of parts to upload in parallel.
 -  ``LeavePartsOnError`` indicates whether to leave successfully
-   uploaded parts in Amazon S3.
+   uploaded parts in |S3long|.
 
 Tweak the ``PartSize`` and ``Concurrency`` configuration values to find
 the optimal configuration. For example, systems with high-bandwidth
 connections can send bigger parts and more uploads in parallel.
 
 For more information about ``Uploader`` and its configurations, see the
-```s3manager`` <http://docs.aws.amazon.com/sdk-for-go/api/service/s3/s3manager.html#type-UploadOptions>`__
-package in the *AWS SDK for Go API Reference*.
+:sdk-go-api-deep:`s3manager <service/s3/s3manager/#Uploader>` 
+package in the |sdk-go-api|.
 
 UploadInput Body Field (io.ReadSeeker vs. io.Reader)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -209,8 +210,8 @@ The ``Body`` field of the ``s3manager.UploadInput`` struct is an
 ``io.ReadSeeker`` interface.
 
 For ``io.ReadSeeker`` types, the ``Uploader`` doesn't buffer the body
-contents before sending it to Amazon S3. ``Uploader`` calculates the
-expected number of parts before uploading the file to Amazon S3. If the
+contents before sending it to |S3long|. ``Uploader`` calculates the
+expected number of parts before uploading the file to |S3long|. If the
 current value of ``PartSize`` requires more than 10,000 parts to upload
 the file, ``Uploader`` increases the part size value so that fewer parts
 are required.
@@ -225,7 +226,7 @@ memory will be at least 1 GB.
 
 Because an ``io.Reader`` type cannot determine its size before reading
 its bytes, ``Uploader`` cannot calculate how many parts must be
-uploaded. Consequently, ``Uploader`` can reach the Amazon S3 upload
+uploaded. Consequently, ``Uploader`` can reach the |S3long| upload
 limit of 10,000 parts for large files if you set the ``PartSize`` too
 low. If you try to upload more than 10,000 parts, the upload stops and
 returns an error.
@@ -233,10 +234,10 @@ returns an error.
 Handling Partial Uploads
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-If an upload to Amazon S3 fails, by default, ``Uploader`` uses the
-Amazon S3 ``AbortMultipartUpload`` operation to remove the uploaded
+If an upload to |S3long| fails, by default, ``Uploader`` uses the
+|S3long| ``AbortMultipartUpload`` operation to remove the uploaded
 parts. This functionality ensures that failed uploads do not consume
-Amazon S3 storage.
+|S3long| storage.
 
 You can set ``LeavePartsOnError`` to true so that the ``Uploader``
 doesn't delete successfully uploaded parts, which is useful for resuming
@@ -259,12 +260,12 @@ get the ``UploadID``:
         }
     }
 
-Example: Upload Folder to Amazon S3
+Example: Upload Folder to |S3long|
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following examples use the ``path/filepath`` package to recursively
-gather a list of files and upload them to the specified Amazon S3
-bucket. The keys of the Amazon S3 objects are prefixed with the file's
+gather a list of files and upload them to the specified |S3long|
+bucket. The keys of the |S3long| objects are prefixed with the file's
 relative path.
 
 .. code:: go
@@ -343,11 +344,11 @@ relative path.
         return nil
     }
 
-Example: Upload File to Amazon S3 and Send Location to Amazon SQS
+Example: Upload File to |S3long| and Send Location to |SQSlong|
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following example uploads a file to an Amazon S3 bucket and then
-sends a notification message of the file's location to an Amazon SQS
+The following example uploads a file to an |S3long| bucket and then
+sends a notification message of the file's location to an |SQSlong|
 queue:
 
 .. code:: go
@@ -411,14 +412,14 @@ queue:
 Download Manager
 ----------------
 
-The Amazon S3 download manager determines if a file can be split into
+The |S3long| download manager determines if a file can be split into
 smaller parts and downloaded in parallel. You can customize the number
 of parallel downloads and the size of the downloaded parts.
 
 Downloading
 ~~~~~~~~~~~
 
-The following example uses the Amazon S3 ``Downloader`` to download a
+The following example uses the |S3long| ``Downloader`` to download a
 file. Using ``Downloader`` is similar to the ``s3.GetObject()``
 operation.
 
@@ -452,15 +453,14 @@ the optimal configuration. For example, systems with high-bandwidth
 connections can receive bigger parts and more downloads in parallel.
 
 For more information about ``Downloader`` and its configurations, see
-the
-```s3manager`` <http://docs.aws.amazon.com/sdk-for-go/api/service/s3/s3manager.html#type-DownloadOptions>`__
-package in the *AWS SDK for Go API Reference*.
+the :sdk-go-api-deep:`s3manager <service/s3/s3manager/#Downloader>` 
+package in the |sdk-go-api|.
 
 Example: Download All Objects in a Bucket
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following example uses pagination to gather a list of objects from
-an Amazon S3 bucket and then downloads each object to a local file:
+an |S3long| bucket and then downloads each object to a local file:
 
 .. code:: go
 

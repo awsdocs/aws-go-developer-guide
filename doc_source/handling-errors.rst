@@ -14,12 +14,11 @@
 Handling Errors
 ###############
 
-Use the Error interface to handle errors from the AWS SDK for Go or AWS
-service.
+Use the Error interface to handle errors from the |sdk-go| or AWS service.
 
 The AWS SDK for Go returns errors that satisfy the Go ``error``
-interface type and the ``Error`` interface in the ``aws/awserr``
-package. You can use the ``Error()`` method to get a formatted string of
+interface type and the :sdk-go-api-deep:``Error <aws/awserr/#Error>`` interface in the 
+``aws/awserr`` package. You can use the ``Error()`` method to get a formatted string of
 the SDK error message without any special handling.
 
 .. code:: go
@@ -51,7 +50,8 @@ Specific Error Interfaces
 -------------------------
 
 Other packages might provide their own error interfaces. For example,
-the ``service/s3/s3manager`` package provides a ``MultiUploadFailure``
+the :sdk-go-api-deep:``service/s3/s3manager <service/s3/s3manager>`` package 
+provides a :sdk-go-api-deep:``MultiUploadFailure <service/s3/s3manager/#MultiUploadFailure>``
 interface to retrieve the upload ID, which is helpful when you must
 manually clean up a failed multi-part upload.
 
@@ -69,5 +69,5 @@ manually clean up a failed multi-part upload.
     }
 
 For more information, see the
-`s3manager.MultiUploadFailure <http://docs.aws.amazon.com/sdk-for-go/api/service/s3/s3manager/MultiUploadFailure.html>`__
-interface in the *AWS SDK for Go API Reference*.
+:sdk-go-api-deep:``s3Manager.MultiUploadFailure <service/s3/s3manager/#MultiUploadFailure>``
+interface in the |sdk-go-api|.
