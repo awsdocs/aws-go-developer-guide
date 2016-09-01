@@ -8,7 +8,6 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-.. _sessions:
 
 ########
 Sessions
@@ -17,7 +16,7 @@ Sessions
 Use sessions to define configurations for service clients.
 
 In the AWS SDK for Go, a session is an object that contains
-configuration information for :ref:`service clients <making-requests>`,
+configuration information for :doc:`service clients <making-requests>`,
 which you use to interact with AWS services. For example, sessions can
 include information about the region where requests will be sent, which
 credentials to use, or additional request handlers. Whenever you create
@@ -35,6 +34,8 @@ files each time the Session is created. Sharing the Session value across
 all of your service clients will ensure the configuration is loaded the
 fewest number of times possible.
 
+.. _concurrency:
+
 Concurrency
 ===========
 
@@ -42,6 +43,8 @@ Sessions are safe to use concurrently as long as the Session is not
 being modified. The SDK will not modify the Session once the Session has
 been created. Creating service clients concurrently from a shared
 Session is safe.
+
+.. _sessions-with-shared-config:
 
 Sessions with Shared Config
 ===========================
@@ -54,6 +57,8 @@ configure how the Session will be created. Using the
 ``NewSessionWithOptions`` with ``SharedConfigState`` set to
 ``SharedConfigEnabled`` will create the session as if the
 ``AWS_SDK_LOAD_CONFIG`` environment variable was set.
+
+.. _creating-sessions:
 
 Creating Sessions
 =================
@@ -102,6 +107,8 @@ Create an |S3| client instance from a session:
     }
     svc := s3.New(sess)
 
+.. _create-session-with-option-overrides:
+    
 Create Session With Option Overrides
 ====================================
 
@@ -167,6 +174,8 @@ credentials file (:file:`~/.aws/config`).
 See the :sdk-go-api-deep:`session package's documentation <aws/session/>`
 for more information on shared config setup.
 
+.. _environment-variables:
+
 Environment Variables
 =====================
 
@@ -179,6 +188,8 @@ unless otherwise noted.
 
 See the :sdk-go-api-deep:`session package's documentation <aws/session/>`
 for more information on environment variable setup.
+
+.. _adding-request-handlers:
 
 Adding Request Handlers
 =======================
@@ -199,10 +210,12 @@ service client:
             r.ClientInfo.ServiceName, r.Operation, r.Params)
     })
 
+.. _copying-a-session:
+    
 Copying a Session
 =================
 
-You can use the :sdk-go-api-deep:`Copy <aws/session/#SessionCopy` method to create 
+You can use the :sdk-go-api-deep:`Copy <aws/session/#SessionCopy>` method to create 
 copies of sessions. Copying sessions is useful when you want to create multiple 
 sessions that have similar settings. Each time you copy a session, you can specify
 different values for any field. For example, the following snippet

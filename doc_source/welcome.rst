@@ -8,8 +8,6 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-.. _welcome:
-
 #####################
 What is the |sdk-go|?
 #####################
@@ -28,6 +26,8 @@ The SDK also includes helpful utilities. For example, the |S3|
 download and upload manager can automatically break up large objects
 into multiple parts and transfer them in parallel.
 
+.. _about-the-go-sdk-dev-guide:
+
 About the |sdk-go| Developer Guide
 ==================================
 
@@ -36,11 +36,11 @@ The guide provides configuration information, sample code, and an
 introduction to the SDK utilities.
 
 -  For information about everything you need before you start using the
-   |sdk-go|, see :ref:`setting-up`.
--  For code examples, see :ref:`common-examples`.
--  For information about the SDK utilities, see :ref:`sdk-utilities`.
+   |sdk-go|, see :doc:`setting-up`.
+-  For code examples, see :doc:`common-examples`.
+-  For information about the SDK utilities, see :doc:`sdk-utilities`.
 -  For information about the types and functionality provided by the
    library, see the |sdk-go-api|_.
 -  To view a video introduction of the SDK and a sample application demonstration, see 
-   `AWS SDK For Go: Gophers Get Going with AWS <https://youtu.be/iOGIKG3EptI>`__ from AWS 
+   `AWS SDK For Go: Gophers Get Going with AWS <https://youtu.be/iOGIKG3EptI>`_ from AWS 
    re:Invent 2015.

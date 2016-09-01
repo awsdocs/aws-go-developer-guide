@@ -8,7 +8,6 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-.. _sdk-utilities:
 
 #############
 SDK Utilities
@@ -25,7 +24,10 @@ service package.
 -  |EC2long| Metadata
 -  |S3long| Transfer Managers
 
-Amazon CloudFront URL Signer
+
+.. _cf-url-signer:
+
+|CFlong| URL Signer
 ============================
 
 The |CFlong| URL signer simplifies the process of creating
@@ -58,6 +60,8 @@ after it has been created:
 
 For more information about the signing utility, see the
 :sdk-go-api-deep:`sign <service/cloudfront/sign.html>` package in the |sdk-go-api|.
+
+.. _ddb-attributes-converter:
 
 |DDBlong| Attributes Converter
 ====================================
@@ -102,6 +106,9 @@ The following example converts a structure to an |DDBlong|
 For more information about the converter utility, see the
 :sdk-go-api-deep:`dynamodbattribute <service/dynamodb/dynamodbattribute/>` 
 package in the |sdk-go-api|.
+
+
+.. _ec2-metadata:
 
 |EC2long| Metadata
 ===================
@@ -149,7 +156,8 @@ For more information about the EC2 metadata utility, see the
 :sdk-go-api-deep:`ec2metadata <aws/ec2metadata/>` 
 package in the |sdk-go-api|.
 
-.. _s3-transfer-managers
+
+.. _s3-transfer-managers:
 
 |S3long| Transfer Managers
 ===========================

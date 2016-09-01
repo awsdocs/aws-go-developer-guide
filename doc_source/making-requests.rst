@@ -8,7 +8,6 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-.. _making-requests:
 
 ##################
 Using AWS Services
@@ -30,6 +29,8 @@ action, the action returns an output struct with the bucket's location.
 For the list of service clients, including their methods and parameters,
 see the |sdk-go-api|_.
 
+.. _constructing-a-service:
+
 Constructing a Service
 ======================
 
@@ -42,7 +43,7 @@ function. The following example creates an |S3| service client.
     svc := s3.New(sess)
 
 After you have a service client instance, you can use it to call service
-operations. For more information about configurations, see :ref:`configuring-sdk>`.
+operations. For more information about configurations, see :doc:`configuring-sdk`.
 
 When you create a service client, you can pass in custom configurations
 so that you don't need to create a session for each configuration. The
@@ -55,6 +56,9 @@ with a custom value (``us-west-2``):
 
     svc := s3.New(mySession, aws.NewConfig().WithRegion("us-west-2"))
 
+    
+.. _service_operation_calls:
+    
 Service Operation Calls
 =======================
 
@@ -72,7 +76,7 @@ and the response is received. If an error occurs during the operation,
 it will be returned. The output or resulting structure won't be valid.
 
 For example, to call the |S3| GET Object API, use the |S3| 
-service client instance and call its :sdk-go-api-deep:``GetObject <service/s3/#S3.GetObject>`` 
+service client instance and call its :sdk-go-api-deep:`GetObject <service/s3/#S3.GetObject>` 
 method:
 
 .. code:: go
@@ -119,7 +123,7 @@ number of pre-signed requests, such as pre-signed |S3| URLs. You
 can also use the request form to modify how the SDK sends a request.
 
 The following example calls the request form of the ``GetObject``
-method. The :sdk-go-api-deep:``Send <aws/request/#Request.Send>`` method signs 
+method. The :sdk-go-api-deep:`Send <aws/request/#Request.Send>` method signs 
 the request before sending it.
 
 .. code:: go
@@ -156,6 +160,9 @@ these operations you should always make sure to call :code:`Close` on the field.
         return
     }
 
+    
+.. _concurrently-using-service-clients:
+    
 Concurrently Using Service Clients
 ==================================
 
@@ -212,6 +219,8 @@ uses a channel.
         fmt.Println(key)
     }
 
+.. _using-pagination-methods:
+    
 Using Pagination Methods
 ========================
 
@@ -248,6 +257,9 @@ the ``MaxKeys`` field.
         return pageNum < 3
     })
 
+    
+.. _using-waiters:
+    
 Using Waiters
 =============
 

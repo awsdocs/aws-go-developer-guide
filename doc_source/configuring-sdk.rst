@@ -8,7 +8,6 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-.. _configuring-sdk:
 
 #################
 SDK Configuration
@@ -24,6 +23,8 @@ and your credentials. The SDK uses these values to send requests to the
 correct AWS region and sign requests with the correct credentials. You
 can specify these values as part of a session or as environment
 variables.
+
+.. _specifying-the-region:
 
 Specifying the Region
 =====================
@@ -58,13 +59,16 @@ The following snippet specifies the region in a session:
 
     sess := session.New(&aws.Config{Region: aws.String("us-west-2")})
 
+    
+.. _specifying-credentials:
+
 Specifying Credentials
 ======================
 
 The |sdk-go| requires credentials (an access key and secret access
 key) to sign requests to AWS. You can specify your credentials in
 several different locations, depending on your particular use case. For
-information about obtaining credentials, see :ref:`Setting Up <setting-up>`.
+information about obtaining credentials, see :doc:`Setting Up <setting-up>`.
 
 When you initialize a new service client without providing any
 credential arguments, the SDK uses the :sdk-go-api-deep:`default credential provider
@@ -147,7 +151,7 @@ following content to your credentials file, replacing
 :code:`<YOUR_ACCESS_KEY_ID>` and :code:`<YOUR_SECRET_ACCESS_KEY>` with your
 credentials:
 
-.. code:: ini
+.. code-block:: ini
 
     [default]
     aws_access_key_id = <YOUR_ACCESS_KEY_ID>
@@ -159,7 +163,7 @@ which the SDK will use unless you configure it to use another profile.
 You can also use temporary security credentials by adding the session
 tokens to your profile, as shown in the following example:
 
-.. code:: ini
+.. code-block:: ini
 
     [temp]
     aws_access_key_id = <YOUR_TEMP_ACCESS_KEY_ID>
@@ -173,16 +177,16 @@ You can include multiple access keys in the same configuration file by
 associating each set of access keys with a profile. For example, in your
 credentials file, you can declare multiple profiles:
 
-.. code:: ini
+.. code-block:: ini
 
     [default]
     aws_access_key_id = <YOUR_DEFAULT_ACCESS_KEY_ID>
     aws_secret_access_key = <YOUR_DEFAULT_SECRET_ACCESS_KEY>
-
+    
     [test-account]
     aws_access_key_id = <YOUR_TEST_ACCESS_KEY_ID>
     aws_secret_access_key = <YOUR_TEST_SECRET_ACCESS_KEY>
-
+    
     [prod-account] ; work profile
     aws_access_key_id = <YOUR_PROD_ACCESS_KEY_ID>
     aws_secret_access_key = <YOUR_PROD_SECRET_ACCESS_KEY>
@@ -195,7 +199,7 @@ If you have an application named ``myapp`` that uses the SDK, you can
 run it with the test credentials by setting the variable to
 ``test-account myapp``, as shown in the following command:
 
-.. code:: sh
+.. code-block:: sh
 
     $ AWS_PROFILE=test-account myapp
 
@@ -204,7 +208,7 @@ You can also use the SDK to select a profile by specifying
 service clients or by manually setting the credential provider, as shown
 in the following example:
 
-.. code:: go
+.. code-block:: go
 
     sess := session.New(&aws.Config{
         Region:      aws.String("us-west-2"),
@@ -213,7 +217,7 @@ in the following example:
 
 In addition, checking if your credentials have been found is fairly easy.
 
-.. code:: go
+.. code-block:: go
 
     _, err := sess.Config.Credentials.Get()
 
@@ -241,7 +245,7 @@ The following examples show how you configure the environment variables.
 
 **Linux, OS X, or Unix**
 
-.. code:: bash
+.. code-block:: bash
 
     $ export AWS_ACCESS_KEY_ID=YOUR_AKID
     $ export AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
@@ -249,7 +253,7 @@ The following examples show how you configure the environment variables.
 
 **Windows**
 
-.. code:: sh
+.. code-block:: sh
 
     > set AWS_ACCESS_KEY_ID=YOUR_AKID
     > set AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
@@ -265,7 +269,7 @@ Hard-Coded Credentials in an Application (not recommended)
 You can hard-code credentials in your application by passing the access
 keys to a configuration instance, as shown in the following snippet:
 
-.. code:: go
+.. code-block:: go
 
     sess := session.New(&aws.Config{
         Region:      aws.String("us-west-2"),
@@ -280,6 +284,8 @@ The SDK provides other methods for retrieving credentials in the
 security credentials from AWS Security Token Service or credentials from
 encrypted storage. For more information, see :sdk-go-api-deep:`Credentials 
 <aws/credentials/>`.
+
+.. _configuring-a-proxy:
 
 Configuring a Proxy
 ===================

@@ -8,7 +8,6 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-.. _setting-up:
 
 ##########
 Setting Up
@@ -37,6 +36,9 @@ SDK's runtime dependancies are vendored in the ``vendor/`` folder.
 
     go get -u github.com/aws/aws-sdk-go
 
+    
+.. _get-aws-credentials:
+
 Get AWS Credentials
 ===================
 
@@ -50,7 +52,9 @@ For more information about how and when to generate access keys, and
 which type to use for your scenario, see :aws-gr:`Best Practices for Managing 
 AWS Access Keys <aws-access-keys-best-practices>`.
 
-To set up your credentials for use with the AWS SDK for Go, see :ref:`configuring-sdk`.
+To set up your credentials for use with the AWS SDK for Go, see :doc:`configuring-sdk`.
+
+.. _packages:
 
 Packages
 ========
