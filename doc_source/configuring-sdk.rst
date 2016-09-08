@@ -187,7 +187,8 @@ credentials file, you can declare multiple profiles:
     aws_access_key_id = <YOUR_TEST_ACCESS_KEY_ID>
     aws_secret_access_key = <YOUR_TEST_SECRET_ACCESS_KEY>
     
-    [prod-account] ; work profile
+    [prod-account] 
+    ; work profile
     aws_access_key_id = <YOUR_PROD_ACCESS_KEY_ID>
     aws_secret_access_key = <YOUR_PROD_SECRET_ACCESS_KEY>
 
