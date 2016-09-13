@@ -19,10 +19,9 @@ The |sdk-go| includes the following utilities to help you more
 easily use AWS services. SDK utilities are located in their related AWS
 service package.
 
--  |CFlong| URL Signer
--  |DDBlong| Attributes Converter
--  |EC2long| Metadata
--  |S3long| Transfer Managers
+.. contents::
+   :local:
+   :depth: 1
 
 
 .. _cf-url-signer:

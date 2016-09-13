@@ -299,3 +299,5 @@ struct to specify a custom HTTP client. For more information about how
 to create an HTTP client to use a proxy, see the
 `Transport <http://golang.org/pkg/net/http/#Transport>`_ struct in
 the Go ``http`` package.
+
+

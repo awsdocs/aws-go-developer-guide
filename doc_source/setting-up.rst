@@ -69,3 +69,4 @@ applications to use the SDK, as shown in the following example:
 For more information about the packages provided by the AWS SDK for Go,
 see the list of :sdk-go-api-deep:`packages <service.html>` in
 the |sdk-go-api|.
+

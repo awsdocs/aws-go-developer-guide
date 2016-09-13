@@ -20,6 +20,10 @@ The examples assume you have already set up and configured the SDK (that
 is, all required packages are imported and your credentials and region
 are set). For more information, see :doc:`setting-up` and :doc:`configuring-sdk`.
 
+.. contents::
+   :local:
+   :depth: 1
+
 .. _examples-ec2:
 
 |EC2|

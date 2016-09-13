@@ -72,3 +72,5 @@ manually clean up a failed multi-part upload.
 For more information, see the
 :sdk-go-api-deep:`s3Manager.MultiUploadFailure <service/s3/s3manager/#MultiUploadFailure>`
 interface in the |sdk-go-api|.
+
+
