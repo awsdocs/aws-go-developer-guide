@@ -24,6 +24,22 @@ are set). For more information, see :doc:`setting-up` and :doc:`configuring-sdk`
    :local:
    :depth: 1
 
+.. _examples-requests:
+
+|SDK Requests|
+==============
+
+Using context.Context with SDK Requests
+---------------------------------------
+
+With Go 1.7 the ``context.Context`` type was added to ``http.Request``. This type provides a easy way to implement deadlines, and cancelations on requests.
+
+To use this pattern with the SDK all you need to do is call the ``WithContext`` on the ``HTTPRequest`` field of the SDK's ``request.Request`` type, providing your Context value. The following example highlights this process with a timeout on a SQS ReceiveMessage API call.
+
+.. literalinclude:: example_code/extending_sdk/request_context.go
+   :dedent: 4
+   :lines: 15-
+
 .. _examples-ec2:
 
 |EC2|
