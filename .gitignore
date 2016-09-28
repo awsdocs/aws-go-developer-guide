@@ -8,3 +8,4 @@ output/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
+.DS_Store
