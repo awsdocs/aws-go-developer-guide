@@ -4,3 +4,7 @@ doc_output/
 shared_content/
 example_code
 output/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
