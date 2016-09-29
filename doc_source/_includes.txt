@@ -1,6 +1,5 @@
 .. add project-specific includes here ..
 
-.. |sdk-go| replace:: AWS SDK for Go
 .. _sdk-go: https://aws.amazon.com/sdk-for-go/
 
 .. |sdk-go-api| replace:: AWS SDK for Go API Reference
