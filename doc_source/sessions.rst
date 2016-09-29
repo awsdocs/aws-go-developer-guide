@@ -13,7 +13,11 @@
 Sessions
 ########
 
-Use sessions to define configurations for service clients.
+.. meta::
+   :description: Use sessions to define configurations for service clients.
+   :keywords: session
+
+
 
 In the AWS SDK for Go, a session is an object that contains
 configuration information for :doc:`service clients <making-requests>`,
