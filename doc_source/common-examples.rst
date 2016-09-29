@@ -86,7 +86,7 @@ List All Buckets
 ----------------
 
 The following example uses the |S3| 
-:sdk-go-api-deep:`ListBuckets <services/s3/#S3.ListBuckets>` operation to
+:sdk-go-api-deep:`ListBuckets <service/s3/#S3.ListBuckets>` operation to
 list all buckets in your AWS account:
 
 .. literalinclude:: example_code/s3/list_all_buckets.go
@@ -97,9 +97,9 @@ list all buckets in your AWS account:
 Create a New Bucket and Object
 ------------------------------
 
-The |S3| :sdk-go-api-deep:`CreateBucket <services/s3/#S3.CreateBucket>` operation 
+The |S3| :sdk-go-api-deep:`CreateBucket <service/s3/#S3.CreateBucket>` operation 
 creates a bucket in your account. You must specify a globally unique name for the bucket. 
-The :sdk-go-api-deep:`PutObject <services/s3/#S3.PutObject>` operation creates a file in 
+The :sdk-go-api-deep:`PutObject <service/s3/#S3.PutObject>` operation creates a file in 
 a bucket. The following example uses these two operations to create a bucket and add to it a
 text file with the string ``Hello World!``:
 
