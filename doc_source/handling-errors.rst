@@ -13,8 +13,6 @@
 Handling Errors
 ###############
 
-Use the Error interface to handle errors from the |sdk-go| or AWS service.
-
 The AWS SDK for Go returns errors that satisfy the Go ``error``
 interface type and the :sdk-go-api-deep:`Error <aws/awserr/#Error>` interface in the 
 ``aws/awserr`` package. You can use the ``Error()`` method to get a formatted string of
@@ -74,3 +72,14 @@ For more information, see the
 interface in the |sdk-go-api|.
 
 
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   handle-service-error-codes
+
+
+.. meta::
+   :description: Use the Error interface to handle errors from the |sdk-go| or AWS service.
+   :keywords: errors, error handling, error interface

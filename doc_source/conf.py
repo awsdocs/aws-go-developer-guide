@@ -370,6 +370,8 @@ highlight_language = 'go'
 
 aws_docs_url = 'http://docs.aws.amazon.com/'
 aws_url = 'https://aws.amazon.com/'
+aws_github_url = 'https://github.com/aws/' 
+aws_go_sdk_url = aws_github_url + 'aws-sdk-go/'
 
 if 'extlinks' not in vars():
     extlinks = {}
@@ -392,3 +394,8 @@ extlinks['ec2-ug-deep'] = (
     aws_docs_url + 'AWSEC2/latest/UserGuide/%s', ''
 )
 
+# https://github.com/aws/aws-sdk-go/tree/master/example
+# :go-sdk-examples:`aws/request/handleServiceErrorCodes/handleServiceErrorCodes.go`
+extlinks['go-sdk-examples'] = (
+    aws_go_sdk_url + 'tree/master/example/%s', ''
+)

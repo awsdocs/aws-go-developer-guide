@@ -13,8 +13,10 @@
 SDK Configuration
 #################
 
-Configure the |sdk-go| to specify which credentials to use and to
-which region to send requests.
+
+.. meta::
+   :description: Configure the |sdk-go| to specify which credentials to use and to which region to send requests.
+   :keywords: configuration, specify region, region, credentials, proxy
 
 In the |sdk-go|, you can configure settings for service clients,
 such as the log level and maximum number of retries. Most settings are

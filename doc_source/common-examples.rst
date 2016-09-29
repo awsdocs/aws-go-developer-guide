@@ -13,7 +13,9 @@
 Examples of Using the SDK
 #########################
 
-Use code examples to write your own Go applications.
+.. meta::
+   :description: Use code examples to write your own Go applications.
+   :keywords: examples
 
 The |sdk-go| examples can help you write your own applications.
 The examples assume you have already set up and configured the SDK (that
@@ -232,6 +234,4 @@ uploaded.
 .. literalinclude:: example_code/glacier/upload_archive.go
    :dedent: 4 
    :lines: 15-
-
-
 

@@ -27,3 +27,7 @@ This documentation is for the |sdk-go|.
    handling-errors
    common-examples
    sdk-utilities
+
+.. meta::
+   :description: Developer guide for the |sdk-go|.
+   :keywords: AWS, |sdk-go|, Golang, Go

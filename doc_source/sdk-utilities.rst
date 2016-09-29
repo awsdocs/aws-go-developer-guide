@@ -13,7 +13,11 @@
 SDK Utilities
 #############
 
-Use the |sdk-go| utilities to help use AWS services.
+
+.. meta::
+   :description: Use the |sdk-go| utilities to help use AWS services.
+   :keywords: utilities, url signer, attributes converter, transfer manager, upload, download
+
 
 The |sdk-go| includes the following utilities to help you more
 easily use AWS services. SDK utilities are located in their related AWS

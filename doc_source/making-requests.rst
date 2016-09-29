@@ -13,8 +13,11 @@
 Using AWS Services
 ##################
 
-Construct service clients and make operation calls to send requests to
-AWS services.
+
+.. meta::
+   :description: Construct service clients and make operation calls to send requests to AWS services.
+   :keywords: clients, service clients
+
 
 To make calls to an AWS service, you must first construct a service
 client instance with a session. A service client provides low-level

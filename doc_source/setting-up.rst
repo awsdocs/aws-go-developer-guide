@@ -13,8 +13,10 @@
 Setting Up
 ##########
 
-Get the latest AWS SDK for Go and the credentials required to use the
-SDK.
+.. meta::
+   :description: Get the latest |sdk-go| and the credentials required to use the SDK.
+   :keywords: set up, install, installation
+
 
 The AWS SDK for Go requires Go 1.5 or later. You can view your current
 version of Go by running the ``go version`` command. For information

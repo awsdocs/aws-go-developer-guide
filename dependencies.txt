@@ -9,4 +9,5 @@
 # ---------------------------------------------------   ------------------------------------------
 https://github.com/awsdocs/aws-doc-shared-content.git   sphinx_shared
 https://github.com/awsdocs/aws-doc-sdk-examples.git     go
+https://github.com/aws/aws-sdk-go.git                   example
 

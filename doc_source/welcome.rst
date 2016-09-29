@@ -12,7 +12,8 @@
 What is the |sdk-go|?
 #####################
 
-Use the |sdk-go| to build Go applications that use AWS services.
+.. meta::
+   :description: Use the |sdk-go| to build Go applications that use AWS services.
 
 The |sdk-go| provides APIs and utilities that developers can use
 to build Go applications that use AWS services, such as |EC2long| (|EC2|) and 
