@@ -37,6 +37,33 @@ methods, which provide classification and information about the error.
    wrapped by the ``awserr.Error`` interface, such as a standard library
    error or a service error.
 
+Handling Specific Service Error Codes
+=====================================
+
+.. meta::
+   :description: Handle error codes returned by AWS services in the |sdk-go|.
+   :keywords: errors, error handling, error interface
+
+The example below demonstrates how to handle error codes that you encounter while using the 
+|sdk-go|. The example assumes you have already set up and configured the SDK (that
+is, all required packages are imported and your credentials and region
+are set). For more information, see :doc:`setting-up` and :doc:`configuring-sdk`.
+
+This example highlights how you can use the `awserr.Error` type to perform logic based on specific error codes 
+returned by service API operations.
+
+In this example the `S3` `GetObject` API operation is used to request the contents of an object in S3. The 
+example handles the `NoSuchBucket` and `NoSuchKey` error codes, printing custom messages to stderr. If any 
+other error is received, a generic message is printed.
+
+.. literalinclude:: aws/request/handleServiceErrorCodes/handleServiceErrorCodes.go
+   :lines: 39-62
+   :dedent: 1
+
+You can see the complete example code on :go-sdk-examples:`GitHub <aws/request/handleServiceErrorCodes/handleServiceErrorCodes.go>`.
+
+
+
 .. _additional-error-information:
    
 Additional Error Information
@@ -70,14 +97,6 @@ manually clean up a failed multi-part upload.
 For more information, see the
 :sdk-go-api-deep:`s3Manager.MultiUploadFailure <service/s3/s3manager/#MultiUploadFailure>`
 interface in the |sdk-go-api|.
-
-
-
-.. toctree::
-   :titlesonly:
-   :maxdepth: 1
-
-   handle-service-error-codes
 
 
 .. meta::

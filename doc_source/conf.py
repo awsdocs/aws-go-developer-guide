@@ -376,7 +376,7 @@ aws_go_sdk_url = aws_github_url + 'aws-sdk-go/'
 if 'extlinks' not in vars():
     extlinks = {}
 
-extlinks['sdk-examples-go'] = (
+extlinks['doc-examples-go'] = (
     'https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/go/example_code/%s',
     '')
     
