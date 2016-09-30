@@ -10,9 +10,9 @@
 
 .. _handling-specific-service-error-codes:
 
-#########################
+#####################################
 Handling Specific Service Error Codes
-#########################
+#####################################
 
 .. meta::
    :description: Handle error codes returned by AWS services in the |sdk-go|.
