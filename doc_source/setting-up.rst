@@ -17,11 +17,19 @@ Setting Up
    :description: Get the latest |sdk-go| and the credentials required to use the SDK.
    :keywords: set up, install, installation
 
-
-The AWS SDK for Go requires Go 1.5 or later. You can view your current
+The |sdk-go| requires Go 1.5 or later. You can view your current
 version of Go by running the ``go version`` command. For information
 about installing or upgrading your version of Go, see
 https://golang.org/doc/install.
+
+.. contents::
+   :local:
+   :depth: 1
+
+.. _install_go_sdk:
+
+Install the |sdk-go|
+====================
 
 To install the SDK and its dependencies, run the following Go command:
 
@@ -44,7 +52,7 @@ SDK's runtime dependancies are vendored in the ``vendor/`` folder.
 Get AWS Credentials
 ===================
 
-The AWS SDK for Go requires AWS access keys to sign requests you send to
+The |sdk-go| requires AWS access keys to sign requests you send to
 AWS. This is how AWS authenticates your requests. AWS access keys
 consist of an access key ID and a secret access key.
 
@@ -54,7 +62,7 @@ For more information about how and when to generate access keys, and
 which type to use for your scenario, see :aws-gr:`Best Practices for Managing 
 AWS Access Keys <aws-access-keys-best-practices>`.
 
-To set up your credentials for use with the AWS SDK for Go, see :doc:`configuring-sdk`.
+To set up your credentials for use with the |sdk-go|, see :doc:`configuring-sdk`.
 
 .. _packages:
 
@@ -68,7 +76,7 @@ applications to use the SDK, as shown in the following example:
 
     import "github.com/aws/aws-sdk-go/service/s3"
 
-For more information about the packages provided by the AWS SDK for Go,
+For more information about the packages provided by the |sdk-go|,
 see the list of :sdk-go-api-deep:`packages <service.html>` in
 the |sdk-go-api|.
 

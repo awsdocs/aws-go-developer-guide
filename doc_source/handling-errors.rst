@@ -37,6 +37,10 @@ methods, which provide classification and information about the error.
    wrapped by the ``awserr.Error`` interface, such as a standard library
    error or a service error.
 
+.. contents::
+   :local:
+   :depth: 1
+
 Handling Specific Service Error Codes
 =====================================
 
@@ -61,8 +65,6 @@ other error is received, a generic message is printed.
    :dedent: 1
 
 You can see the complete example code on :go-sdk-examples:`GitHub <aws/request/handleServiceErrorCodes/handleServiceErrorCodes.go>`.
-
-
 
 .. _additional-error-information:
    

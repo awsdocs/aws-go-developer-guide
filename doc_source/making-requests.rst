@@ -32,6 +32,10 @@ action, the action returns an output struct with the bucket's location.
 For the list of service clients, including their methods and parameters,
 see the |sdk-go-api|_.
 
+.. contents::
+   :local:
+   :depth: 1
+
 .. _constructing-a-service:
 
 Constructing a Service
@@ -60,7 +64,7 @@ with a custom value (``us-west-2``):
     svc := s3.New(mySession, aws.NewConfig().WithRegion("us-west-2"))
 
     
-.. _service_operation_calls:
+.. _service-operation-calls:
     
 Service Operation Calls
 =======================
@@ -70,6 +74,8 @@ you call a service operation, the SDK synchronously validates the input,
 builds the request, signs it with your credentials, sends it to AWS, and
 then gets a response or an error. In most cases, you can call service
 operations directly.
+
+.. _calling-operations:
 
 Calling Operations
 ------------------
@@ -87,6 +93,8 @@ method:
     result, err := s3Svc.GetObject(&s3.GetObjectInput{...})
     // result is a *s3.GetObjectOutput struct pointer
     // err is a error which can be cast to awserr.Error.
+
+.. _passing_parameters_to_a_service_operation:
 
 Passing Parameters to a Service Operation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -110,6 +118,8 @@ output struct. The structs follow the naming pattern
 
 For more information about the parameters of each method, see the
 service client documentation in the |sdk-go-api|_.
+
+.. _calling-operations-with-the-request-form:
 
 Calling Operations with the Request Form
 ----------------------------------------
@@ -139,6 +149,8 @@ the request before sending it.
         return
     }
     // Process result
+
+.. _handling-operation-response-body:
 
 Handling Operation Response Body
 --------------------------------

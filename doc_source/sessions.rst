@@ -18,7 +18,6 @@ Sessions
    :keywords: session
 
 
-
 In the AWS SDK for Go, a session is an object that contains
 configuration information for :doc:`service clients <making-requests>`,
 which you use to interact with AWS services. For example, sessions can
@@ -37,6 +36,10 @@ will load all configuration values from the environment, and config
 files each time the Session is created. Sharing the Session value across
 all of your service clients will ensure the configuration is loaded the
 fewest number of times possible.
+
+.. contents::
+   :local:
+   :depth: 1
 
 .. _concurrency:
 

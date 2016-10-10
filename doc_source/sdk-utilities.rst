@@ -141,6 +141,8 @@ For a list of all metadata categories, see :ec2-ug-deep:`Instance Metadata
 Categories <ec2-instance-metadata.html#instancedata-data-categories>`
 in the |ec2-ug|.
 
+.. _retrieving-an-instances-region:
+
 Retrieving an Instance's Region
 -------------------------------
 
@@ -169,12 +171,16 @@ The |S3long| upload and download managers can break up large objects so
 they can be transferred in multiple parts, in parallel, which makes it
 easy to resume interrupted transfers.
 
+.. _upload-manager:
+
 Upload Manager
 --------------
 
 The |S3long| upload manager determines if a file can be split into
 smaller parts and uploaded in parallel. You can customize the number of
 parallel uploads and the size of the uploaded parts.
+
+.. _uploading:
 
 Uploading
 ~~~~~~~~~
@@ -213,6 +219,8 @@ For more information about ``Uploader`` and its configurations, see the
 :sdk-go-api-deep:`s3manager <service/s3/s3manager/#Uploader>` 
 package in the |sdk-go-api|.
 
+.. _uploadinput-body-field:
+
 UploadInput Body Field (io.ReadSeeker vs. io.Reader)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -241,6 +249,8 @@ uploaded. Consequently, ``Uploader`` can reach the |S3long| upload
 limit of 10,000 parts for large files if you set the ``PartSize`` too
 low. If you try to upload more than 10,000 parts, the upload stops and
 returns an error.
+
+.. _handling-partial-uploads:
 
 Handling Partial Uploads
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -355,6 +365,8 @@ relative path.
         return nil
     }
 
+.. _upload-file-to-s3:
+
 Example: Upload File to |S3long| and Send Location to |SQSlong|
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -420,12 +432,16 @@ queue:
         }
     }
 
+.. _download-manager:
+
 Download Manager
 ----------------
 
 The |S3long| download manager determines if a file can be split into
 smaller parts and downloaded in parallel. You can customize the number
 of parallel downloads and the size of the downloaded parts.
+
+.. _downloading:
 
 Downloading
 ~~~~~~~~~~~
@@ -447,6 +463,8 @@ The ``downloadFile`` parameter is an ``io.WriterAt`` type. The
 ``WriterAt`` interface enables the ``Downloader`` to write multiple
 parts of the file in parallel.
 
+.. _configuration-options:
+
 Configuration Options
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -466,6 +484,8 @@ connections can receive bigger parts and more downloads in parallel.
 For more information about ``Downloader`` and its configurations, see
 the :sdk-go-api-deep:`s3manager <service/s3/s3manager/#Downloader>` 
 package in the |sdk-go-api|.
+
+.. _download-all-objects-in-a-bucket:
 
 Example: Download All Objects in a Bucket
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -534,3 +554,4 @@ an |S3long| bucket and then downloads each object to a local file:
         params := &s3.GetObjectInput{Bucket: &d.bucket, Key: &key}
         d.Download(fd, params)
     }
+    
