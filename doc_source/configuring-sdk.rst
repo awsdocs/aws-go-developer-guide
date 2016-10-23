@@ -63,7 +63,7 @@ The following snippet specifies the region in a session:
 
 .. code-block:: go
 
-    sess := session.New(&aws.Config{Region: aws.String("us-west-2")})
+    sess, err := session.NewSession(&aws.Config{Region: aws.String("us-west-2")})
 
     
 .. _specifying-credentials:
