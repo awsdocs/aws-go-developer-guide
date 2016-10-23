@@ -217,7 +217,7 @@ in the following example:
 
 .. code-block:: go
 
-    sess := session.New(&aws.Config{
+    sess, err := session.NewSession(&aws.Config{
         Region:      aws.String("us-west-2"),
         Credentials: credentials.NewSharedCredentials("", "test-account"),
     })
@@ -278,7 +278,7 @@ keys to a configuration instance, as shown in the following snippet:
 
 .. code-block:: go
 
-    sess := session.New(&aws.Config{
+    sess, err := session.NewSession(&aws.Config{
         Region:      aws.String("us-west-2"),
         Credentials: credentials.NewStaticCredentials("AKID", "SECRET_KEY", "TOKEN"),
     })
