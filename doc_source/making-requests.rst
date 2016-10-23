@@ -41,12 +41,12 @@ see the |sdk-go-api|_.
 Constructing a Service
 ======================
 
-To construct a service client instance, use the :sdk-go-api-deep:`New() <aws/session/#New>` 
+To construct a service client instance, use the :sdk-go-api-deep:`NewSession() <aws/session/#NewSession>` 
 function. The following example creates an |S3| service client.
 
 .. code:: go
 
-    sess := session.New()
+    sess := session.NewSession()
     svc := s3.New(sess)
 
 After you have a service client instance, you can use it to call service
@@ -196,7 +196,10 @@ uses a channel.
 
 .. code:: go
 
-    sess := session.New()
+    sess, err := session.NewSession()
+    if err != nil {
+        fmt.Println("Error creating session ", err)
+    }
     var wg sync.WaitGroup
     keysCh := make(chan string, 10)
 
@@ -211,7 +214,7 @@ uses a channel.
         go func(param *s3.ListObjectsInput) {
             defer wg.Done()
 
-            err := svc.ListObjectsPages(params,
+            err = svc.ListObjectsPages(params,
                 func(page *s3.ListObjectsOutput, last bool) bool {
                     // Add the objects to the channel for each page
                     for _, object := range page.Contents {
@@ -258,7 +261,10 @@ the ``MaxKeys`` field.
 
 .. code:: go
 
-    svc := s3.New(sess)
+    svc, err := s3.NewSession(sess)
+    if err != nil {
+        fmt.Println("Error creating session ", err)
+    }
     inputparams := &s3.ListObjectsInput{
         Bucket:  aws.String("mybucket"),
         MaxKeys: aws.Int64(10),
@@ -289,13 +295,16 @@ have stopped:
 
 .. code:: go
 
-    sess := session.New(aws.NewConfig().WithRegion("us-west-2"))
+    sess, err := session.NewSession(aws.NewConfig().WithRegion("us-west-2"))
+    if err != nil {
+        fmt.Println("Error creating session ", err)
+    }
     // Create an EC2 client.
     ec2client := ec2.New(sess)
     // Specify two instances to stop.
     instanceIDsToStop := aws.StringSlice([]string{"i-12345678", "i-23456789"})
     // Send request to stop instances.
-    _, err := ec2client.StopInstances(&ec2.StopInstancesInput{
+    _, err = ec2client.StopInstances(&ec2.StopInstancesInput{
       InstanceIds: instanceIDsToStop,
     })
     if err != nil {
