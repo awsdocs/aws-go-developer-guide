@@ -22,9 +22,6 @@ version of Go by running the ``go version`` command. For information
 about installing or upgrading your version of Go, see
 https://golang.org/doc/install.
 
-.. contents::
-   :local:
-   :depth: 1
 
 .. _install_go_sdk:
 

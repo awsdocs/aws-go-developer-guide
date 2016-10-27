@@ -37,10 +37,6 @@ methods, which provide classification and information about the error.
    wrapped by the ``awserr.Error`` interface, such as a standard library
    error or a service error.
 
-.. contents::
-   :local:
-   :depth: 1
-
 Handling Specific Service Error Codes
 =====================================
 

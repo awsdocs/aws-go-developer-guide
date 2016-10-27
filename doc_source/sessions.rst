@@ -37,9 +37,6 @@ files each time the Session is created. Sharing the Session value across
 all of your service clients will ensure the configuration is loaded the
 fewest number of times possible.
 
-.. contents::
-   :local:
-   :depth: 1
 
 .. _concurrency:
 

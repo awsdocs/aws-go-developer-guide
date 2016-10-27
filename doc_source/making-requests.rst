@@ -32,10 +32,6 @@ action, the action returns an output struct with the bucket's location.
 For the list of service clients, including their methods and parameters,
 see the |sdk-go-api|_.
 
-.. contents::
-   :local:
-   :depth: 1
-
 .. _constructing-a-service:
 
 Constructing a Service

@@ -23,10 +23,6 @@ The |sdk-go| includes the following utilities to help you more
 easily use AWS services. SDK utilities are located in their related AWS
 service package.
 
-.. contents::
-   :local:
-   :depth: 1
-
 
 .. _cf-url-signer:
 

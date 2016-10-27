@@ -26,10 +26,6 @@ correct AWS region and sign requests with the correct credentials. You
 can specify these values as part of a session or as environment
 variables.
 
-.. contents::
-   :local:
-   :depth: 1
-
 .. _specifying-the-region:
 
 Specifying the Region
