@@ -38,6 +38,20 @@ To use this pattern with the SDK all you need to do is call ``WithContext`` on t
 .. literalinclude:: example_code/extending_sdk/request_context.go
    :lines: 15-
 
+
+Using API field setters with SDK Requests
+-----------------------------------------
+
+In addition to setting API parameters via struct fields you can also use chainable setters on the API operation parameter fields. This allows you to use a chain of setters to set the fields of the API struct.
+
+.. literalinclude:: example_code/extending_sdk/s3/put_object_with_setters.go
+   :lines: 15-
+
+This pattern can also be used with nested fields in API operation requets.
+
+.. literalinclude:: example_code/extending_sdk/ecs/update_deployment_with_setters.go
+   :lines: 15-
+
 .. _examples-ec2:
 
 |EC2|
