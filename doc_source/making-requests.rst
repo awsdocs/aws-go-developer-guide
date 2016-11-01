@@ -46,7 +46,11 @@ function. The following example creates an |S3| service client.
 
 .. code:: go
 
-    sess := session.NewSession()
+    sess, err := session.NewSession()
+    if err != nil {
+        fmt.Println("Error creating session ", err)
+        return
+    }
     svc := s3.New(sess)
 
 After you have a service client instance, you can use it to call service
