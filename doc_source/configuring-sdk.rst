@@ -59,7 +59,7 @@ The following snippet specifies the region in a session:
 
 .. code-block:: go
 
-    sess := session.New(&aws.Config{Region: aws.String("us-west-2")})
+    sess, err := session.NewSession(&aws.Config{Region: aws.String("us-west-2")})
 
     
 .. _specifying-credentials:
@@ -213,7 +213,7 @@ in the following example:
 
 .. code-block:: go
 
-    sess := session.New(&aws.Config{
+    sess, err := session.NewSession(&aws.Config{
         Region:      aws.String("us-west-2"),
         Credentials: credentials.NewSharedCredentials("", "test-account"),
     })
@@ -274,7 +274,7 @@ keys to a configuration instance, as shown in the following snippet:
 
 .. code-block:: go
 
-    sess := session.New(&aws.Config{
+    sess, err := session.NewSession(&aws.Config{
         Region:      aws.String("us-west-2"),
         Credentials: credentials.NewStaticCredentials("AKID", "SECRET_KEY", "TOKEN"),
     })

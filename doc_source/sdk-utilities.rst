@@ -186,7 +186,7 @@ Using ``Uploader`` is similar to the ``s3.PutObject()`` operation.
 
 .. code:: go
 
-    mySession := session.New()
+    mySession, _ := session.NewSession()
     uploader := s3manager.NewUploader(mySession)
     result, err := uploader.Upload(&s3manager.UploadInput{
         Bucket: &uploadBucket,
