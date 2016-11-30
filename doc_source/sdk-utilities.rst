@@ -58,7 +58,7 @@ after it has been created:
     }
 
 For more information about the signing utility, see the
-:sdk-go-api-deep:`sign <service/cloudfront/sign.html>` package in the |sdk-go-api|.
+:sdk-go-api-deep:`sign <service/cloudfront/sign/>` package in the |sdk-go-api|.
 
 .. _ddb-attributes-converter:
 

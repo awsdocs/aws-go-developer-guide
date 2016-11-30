@@ -43,5 +43,5 @@ introduction to the SDK utilities.
 -  For information about the types and functionality provided by the
    library, see the |sdk-go-api|_.
 -  To view a video introduction of the SDK and a sample application demonstration, see 
-   `AWS SDK For Go: Gophers Get Going with AWS <https://youtu.be/iOGIKG3EptI>`_ from AWS 
+   `AWS SDK For Go: Gophers Get Going with AWS <https://www.youtube.com/watch?v=iOGIKG3EptI&feature=youtu.be>`_ from AWS 
    re:Invent 2015.

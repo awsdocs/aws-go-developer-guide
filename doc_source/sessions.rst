@@ -24,7 +24,7 @@ which you use to interact with AWS services. For example, sessions can
 include information about the region where requests will be sent, which
 credentials to use, or additional request handlers. Whenever you create
 a service client, you must specify a session. For more information about
-sessions, see the :sdk-go-api-deep:`session <aws/session.html>` 
+sessions, see the :sdk-go-api-deep:`session <aws/session/>` 
 package in the |sdk-go-api|.
 
 Sessions can be shared across all service clients that share the same
@@ -88,7 +88,7 @@ config automatically. Requires the ``AWS_PROFILE`` to be set, or
 
     sess, err := session.NewSession()
 
-The SDK provides a :sdk-go-api-deep:`default configuration <aws/defaults/`>, 
+The SDK provides a :sdk-go-api-deep:`default configuration <aws/defaults/>`, 
 which is used by all sessions unless you override a field. For example, 
 you can specify an AWS region when you create a session by using the 
 ``aws.Config`` struct. For more information about the fields you can 
@@ -219,7 +219,7 @@ service client:
 Copying a Session
 =================
 
-You can use the :sdk-go-api-deep:`Copy <aws/session/#SessionCopy>` method to create 
+You can use the :sdk-go-api-deep:`Copy <aws/session/#Session.Copy>` method to create 
 copies of sessions. Copying sessions is useful when you want to create multiple 
 sessions that have similar settings. Each time you copy a session, you can specify
 different values for any field. For example, the following snippet

@@ -299,7 +299,7 @@ configure your proxy. Use the
 :sdk-go-api-deep:`Config.HTTPClient <aws/#Config.WithHTTPClient>` 
 struct to specify a custom HTTP client. For more information about how
 to create an HTTP client to use a proxy, see the
-`Transport <http://golang.org/pkg/net/http/#Transport>`_ struct in
+`Transport <https://golang.org/pkg/net/http/#Transport>`_ struct in
 the Go ``http`` package.
 
 

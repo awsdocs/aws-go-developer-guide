@@ -397,5 +397,5 @@ extlinks['ec2-ug-deep'] = (
 # https://github.com/aws/aws-sdk-go/tree/master/example
 # :go-sdk-examples:`aws/request/handleServiceErrorCodes/handleServiceErrorCodes.go`
 extlinks['go-sdk-examples'] = (
-    aws_go_sdk_url + 'tree/master/example/%s', ''
+    aws_go_sdk_url + 'blob/master/example/%s', ''
 )
