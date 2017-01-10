@@ -379,6 +379,12 @@ if 'extlinks' not in vars():
 extlinks['doc-examples-go'] = (
     'https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/%s',
     '')
+
+# https://github.com/aws/aws-sdk-go/blob/master/example/...
+# :go-sdk-examples:`aws/request/handleServiceErrorCodes/handleServiceErrorCodes.go`
+extlinks['go-sdk-examples'] = (
+    aws_go_sdk_url + 'blob/master/example/%s', ''
+)
     
 # sample deep api url: http://docs.aws.amazon.com/sdk-for-go/api/aws/Config.html#HTTPClient-field
 # :sdk-go-api-deep:`aws/Config.html#HTTPClient-field`
@@ -392,10 +398,4 @@ extlinks['cf-dg-deep'] = (
 
 extlinks['ec2-ug-deep'] = (
     aws_docs_url + 'AWSEC2/latest/UserGuide/%s', ''
-)
-
-# https://github.com/aws/aws-sdk-go/tree/master/example
-# :go-sdk-examples:`aws/request/handleServiceErrorCodes/handleServiceErrorCodes.go`
-extlinks['go-sdk-examples'] = (
-    aws_go_sdk_url + 'blob/master/example/%s', ''
 )
