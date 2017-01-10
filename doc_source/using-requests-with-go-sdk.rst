@@ -1,0 +1,61 @@
+.. Copyright 2010-2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+   International License (the "License"). You may not use this file except in compliance with the
+   License. A copy of the License is located at http://creativecommons.org/licenses/by-nc-sa/4.0/.
+
+   This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+   either express or implied. See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+#########################
+|sdk-go| Request Examples
+#########################
+
+.. meta::
+   :description: Learn how to work with requests in your Go applications.
+   :keywords: examples, requests
+
+
+
+The |sdk-go| examples can help you write your own applications.
+The examples assume you have already set up and configured the SDK (that
+is, you have imported all required packages and set your credentials and region). For more
+information, see :doc:`setting-up` and :doc:`configuring-sdk`.
+
+
+.. _using-context-context-with-requests:
+
+Using context.Context with SDK Requests
+=======================================
+
+In Go 1.7, the ``context.Context`` type was added to ``http.Request``. This type provides an easy
+way to implement deadlines and cancellations on requests.
+
+To use this pattern with the SDK, you call ``WithContext`` on the ``HTTPRequest`` field
+of the SDK's ``request.Request`` type, and provide your ``Context value``. The following example
+highlights this process with a timeout on an |SQS| ``ReceiveMessage`` API call.
+
+.. literalinclude:: example_code/extending_sdk/request_context.go
+   :lines: 15-
+   :dedent: 1
+
+.. _using-api-field-setters:
+
+Using API Field Setters with SDK Requests
+=========================================
+
+In addition to setting API parameters by using struct fields, you can also use chainable
+setters on the API operation parameter fields. This enables you to use a chain of setters
+to set the fields of the API struct.
+
+.. literalinclude:: example_code/s3/put_object_with_setters.go
+   :lines: 15-
+
+You can also use this pattern with nested fields in API operation requests.
+
+.. literalinclude:: example_code/extending_sdk/ecs/update_deployment_with_setters.go
+   :lines: 15-
+
+
