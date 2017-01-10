@@ -377,7 +377,7 @@ if 'extlinks' not in vars():
     extlinks = {}
 
 extlinks['doc-examples-go'] = (
-    'https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/go/example_code/%s',
+    'https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/%s',
     '')
     
 # sample deep api url: http://docs.aws.amazon.com/sdk-for-go/api/aws/Config.html#HTTPClient-field
