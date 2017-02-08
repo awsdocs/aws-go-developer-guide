@@ -36,7 +36,7 @@ These examples demonstrate sending, receiving, and deleting messages from an |SQ
 
 The code uses these methods of the |SQS| client class:
 
-* :sdk-go-api-deep:`SendMessage <service/sqs/#SQS.GetQueueUrl>`
+* :sdk-go-api-deep:`SendMessage <service/sqs/#SQS.SendMessage>`
 * :sdk-go-api-deep:`ReceiveMessage <service/sqs/#SQS.ReceiveMessage>`
 * :sdk-go-api-deep:`DeleteMessage <service/sqs/#SQS.DeleteMessage>`
 * :sdk-go-api-deep:`GetQueueUrl <service/sqs/#SQS.GetQueueUrl>`
