@@ -146,6 +146,13 @@ when you want to provide the config profile, or override the shared config state
         SharedConfigState: SharedConfigEnable,
     })
 
+    // Assume an IAM role with MFA promting for token code on stdin.
+    sess := session.Must(session.NewSessionWithOptions(session.Options{
+        AssumeRoleTokenProvider: stscreds.StdinTokenProvider,
+        SharedConfigState: SharedConfigEnable,
+    }))
+
+
 Deprecated ``New``
 ------------------
 
