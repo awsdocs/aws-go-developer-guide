@@ -105,7 +105,7 @@ the
 bucket was created, and then notify the user of success.
 
 .. literalinclude:: example_code/s3/s3_create_bucket.go
-   :lines: 54-64
+   :lines: 46-64
 
 If an error does occur, print the error details and exit the routine.
 
