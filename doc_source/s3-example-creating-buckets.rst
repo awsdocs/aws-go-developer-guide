@@ -1,3 +1,4 @@
+
 .. Copyright 2010-2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
@@ -146,12 +147,17 @@ Create a function we use to display errors and exit.
 .. literalinclude:: example_code/s3/s3_list_objects.go
    :lines: 67-70
 
+The program requires one command-line argument, the name of the bucket.
+
+.. literalinclude:: example_code/s3/s3_list_objects.go
+   :lines: 31-37
+
 Initialize the session that the SDK uses to load configuration, credential,
 and region information from the shared config file *~/.aws/config*,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_list_objects.go
-   :lines: 31-46
+   :lines: 41-46
 
 Call :sdk-go-api-deep:`ListObjects <service/s3/#S3.ListObjects>`,
 passing in the name of the bucket.
@@ -187,14 +193,14 @@ and region information from the shared config file *~/.aws/config*,
 and create a ``NewUploader`` object.
 
 .. literalinclude:: example_code/s3/s3_upload_object.go
-   :lines: 31, 42-44, 58
+   :lines: 42-44, 58
 
 Get the bucket and filename from the command-line arguments,
 open the file, and defer the file closing until we are done with it.
 If an error occurs, call ``exitErrorF``.
 
 .. literalinclude:: example_code/s3/s3_upload_object.go
-   :lines: 32-38, 46-52
+   :lines: 31-38, 46-52
 
 Upload the file to the bucket.
 If an error occurs, call ``exitErrorF``.
@@ -228,13 +234,13 @@ and region information from the shared config file *~/.aws/config*,
 and create a ``NewDownloader`` object.
 
 .. literalinclude:: example_code/s3/s3_download_object.go
-   :lines: 32, 43-45, 55
+   :lines: 43-45, 55
 
 Get the bucket and filename from the command-line arguments.
 If there aren't two arguments, call ``exitErrorf``.
 
 .. literalinclude:: example_code/s3/s3_download_object.go
-   :lines: 33-39
+   :lines: 32-39
 
 Create the file and defer file closing until we are done downloading.
 If an error occurs, call ``exitErrorf``.
@@ -274,7 +280,7 @@ and the name of the bucket to which the item is copied.
 If there aren't four command-line arguments, call ``exitErrorf``.
 
 .. literalinclude:: example_code/s3/s3_copy_object.go
-   :lines: 31-37
+   :lines: 30-37
 
 Initialize the session that the SDK uses to load configuration, credential,
 and region information from the shared config file *~/.aws/config*,
