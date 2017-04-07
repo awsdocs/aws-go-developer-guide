@@ -16,7 +16,7 @@ Basic |S3| Bucket Operations in Go
 ##################################
 
 .. meta::
-   :description: Use S3 code examples to create and use buckets in your own Go applications.
+   :description: Use code examples to create and use |S3| buckets in Go applications.
    :keywords: AWS SDK for Go examples, |S3|, create bucket, list buckets, add file to bucket
 
 The following examples use |sdk-go| functions to:
@@ -34,7 +34,7 @@ The following examples use |sdk-go| functions to:
 
 You can get these examples from the :doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
 
-.. _s3-scenario-prerequisites:
+.. _s3-creating-buckets-prerequisites:
 
 Prerequisites
 =============
