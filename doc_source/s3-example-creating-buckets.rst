@@ -209,8 +209,8 @@ Otherwise notify the user that the upload succeeded.
 .. literalinclude:: example_code/s3/s3_upload_object.go
    :lines: 62-63, 68, 74-82
 
-See the `complete example
- <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_upload_object.go>`_
+See the `complete example 
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_upload_object.go>`_
 on GitHub.
 
 .. _s3-example-download-file-from-bucket:
@@ -432,8 +432,9 @@ and create a new |S3| service client.
 .. literalinclude:: example_code/s3/s3_delete_objects.go
    :lines: 43-48
 
-Call :sdk-go-api-deep:`DeleteObjects <service/s3/#S3.DeleteObjects>`,
-passing in the names of the bucket and objects to delete.
+Create the list of objects to delete from the command-line arguments
+and call :sdk-go-api-deep:`DeleteObjects <service/s3/#S3.DeleteObjects>`,
+passing in the names of the bucket and the list of objects to delete.
 If an error occurs, call ``exitErrorf``.
 If no error occurs, inform the user that the objects were deleted.
 
