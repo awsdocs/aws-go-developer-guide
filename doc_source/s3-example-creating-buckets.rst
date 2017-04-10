@@ -22,7 +22,7 @@ These Go examples show you how to:
 
 * Obtain and display a list of |S3| buckets in your account
 * Create an |S3| bucket
-* Upload an object to a specified S3 bucket
+* Upload an object to a specified |S3| bucket
 
 You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
 
@@ -31,7 +31,8 @@ You can download complete versions of these example files from the :doc-examples
 The Scenario
 ============
 
-In this example, you use a series of Go routines to get a list of existing |S3| buckets, create a bucket, and upload a file to a specified bucket. These routines use the |sdk-go| to get information from and upload files to an |S3| bucket using these methods of the |S3| client class:
+In this example, you use a series of Go routines to get a list of existing |S3| buckets, create a bucket,
+and upload a file to a specified bucket. These routines use the |sdk-go| to get information from and upload files to an |S3| bucket by using these methods of the |S3| client class:
 
 * :sdk-go-api-deep:`ListBuckets <service/s3/#S3.ListBuckets>`
 * :sdk-go-api-deep:`CreateBucket <service/s3/#S3.CreateBucket>`
@@ -49,20 +50,23 @@ Prerequisites
 
 .. _s3-example-list-buckets:
 
-Displaying a List of |S3| Buckets
-=================================
+Display a List of |S3| Buckets
+==============================
 
 Create a new Go file named :file:`s3_list_buckets.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
 .. literalinclude:: example_code/s3/s3_list_buckets.go
    :lines: 15-24
 
-Initialize a session that the SDK will use to load configuration, credentials, and region information from the shared config file, ~/.aws/config, and create a new S3 service client.
+Initialize a session that the SDK will use to load configuration, credentials, and region information
+from
+the shared config file, ~/.aws/config. Then create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_list_buckets.go
    :lines: 26-34
 
-Call :sdk-go-api-deep:`ListBuckets <service/s3/#S3.ListBuckets>`. Passing ``nil`` into the call means no filters will be applied to the returned list. If no error occurs, the code will loop through the buckets, printing the name and creation date of the bucket.
+Call :sdk-go-api-deep:`ListBuckets <service/s3/#S3.ListBuckets>`. Passing ``nil`` into the call means
+no filters are applied to the returned list. If no error occurs, the code loops through the buckets, printing the name and creation date of the bucket.
 
 .. literalinclude:: example_code/s3/s3_list_buckets.go
    :lines: 36-46
@@ -74,10 +78,13 @@ If an error does occur, print the error details and exit the routine.
 
 .. _s3-example-create-a-new-bucket:
 
-Creating a New |S3| Bucket and Object
-=====================================
+Create a New |S3| Bucket and Object
+===================================
 
-The |S3| :sdk-go-api-deep:`CreateBucket <service/s3/#S3.CreateBucket>` operation creates a bucket in your account. You must specify a globally unique name for the bucket. The :sdk-go-api-deep:`PutObject <service/s3/#S3.PutObject>` operation creates a file in a bucket. The following example creates a bucket with a name specified in an argument.
+The |S3| :sdk-go-api-deep:`CreateBucket <service/s3/#S3.CreateBucket>` operation creates a bucket in your
+account. You must specify a globally unique name for the bucket. The :sdk-go-api-deep:`PutObject <service/s3/#S3.PutObject>`
+operation creates a file in a bucket. The following example creates a bucket with a name you specify
+in an argument.
 
 Create a new Go file named :file:`s3_create_bucket.go`. You must import the relevant Go and
 |sdk-go| packages by adding the following lines.
@@ -85,8 +92,8 @@ Create a new Go file named :file:`s3_create_bucket.go`. You must import the rele
 .. literalinclude:: example_code/s3/s3_create_bucket.go
    :lines: 15-24
 
-Creating the |S3| Bucket
-------------------------
+Create the |S3| Bucket
+----------------------
 
 This routine requires you to pass in an argument containing the name of the bucket you want to create.
 
@@ -94,7 +101,7 @@ This routine requires you to pass in an argument containing the name of the buck
    :lines: 31-35
 
 Initialize a session that the SDK will use to load configuration, credentials,
-and region information from the shared config file, ~/.aws/config, and create a new S3 service client.
+and region information from the shared config file, ~/.aws/config. Then create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_create_bucket.go
    :lines: 39-44
@@ -115,8 +122,8 @@ If an error does occur, print the error details and exit the routine.
 
 .. _s3-example-uploading-object-to-bucket:
 
-Uploading an Object to the |S3| Bucket
-======================================
+Upload an Object to the |S3| Bucket
+===================================
 
 The :sdk-go-api-deep:`s3manager <service/s3/s3manager/>` provides utilities to upload and
 download objects from |S3| concurrently. This is helpful when you're working with large objects.
@@ -131,8 +138,8 @@ Create a new Go file named :file:`s3_upload.go`. You must import the relevant Go
 
 .. _s3-example-upload-file:
 
-Uploading a File to the |S3| Bucket
-===================================
+Upload a File to the |S3| Bucket
+================================
 
 This routine requires you to pass in the name of the file you want to upload and the name of the
 bucket to upload it to.
@@ -141,7 +148,7 @@ bucket to upload it to.
    :lines: 31-37
 
 As with the previous examples, you have to initialize a session that the SDK will use to load
-configuration, credentials, and region information from the shared config file, ~/.aws/config, and
+configuration, credentials, and region information from the shared config file, ~/.aws/config. Then you
 create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_upload.go

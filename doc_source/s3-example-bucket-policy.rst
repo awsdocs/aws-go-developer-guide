@@ -27,8 +27,8 @@ This Go example show you how to retrieve, display, and set |S3| bucket polices. 
 The Scenario
 ============
 
-In this example, a series Go routines are used to retrieve or set a bucket policy on an
-|S3| bucket. The routines use the |sdk-go| to configure policy for a selected |S3| bucket using
+In this example, you use a series of Go routines to retrieve or set a bucket policy on an
+|S3| bucket. The routines use the |sdk-go| to configure policy for a selected |S3| bucket by using
 these methods of the |S3| client class:
 
 * :sdk-go-api-deep:`GetBucketPolicy <service/s3/#S3.GetBucketPolicy>`
@@ -43,13 +43,13 @@ For more information about bucket policies for |S3| buckets, see
 Prerequisites
 =============
 
-* You have  :doc:`set up <setting-up>`, and :doc:`configured <configuring-sdk>` the |sdk-go|.
+* You have  :doc:`set up <setting-up>` and :doc:`configured <configuring-sdk>` the |sdk-go|.
 * You are familiar with |S3| bucket polices. To learn more, see :s3-dg:`Using Bucket Policies and User Policies <using-iam-policies>` in the |S3-dg|.
 
 .. _s3-example-get-policy:
 
-Retrieving and Displaying a Bucket Policy
-=========================================
+Retrieve and Display a Bucket Policy
+====================================
 
 Create a new Go file named :file:`s3_get_bucket_policy.go`. You must import the relevant
 Go and |sdk-go| packages by adding the following lines.
@@ -64,7 +64,7 @@ an error, an error message is printed instead. It requires the bucket name as in
    :lines: 35-40
 
 Initialize a session that the SDK will use to load configuration, credentials,
-and region information from the shared config file, ~/.aws/config, and create a new S3 service client.
+and region information from the shared config file, ~/.aws/config. Then create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
    :lines: 44-49
@@ -80,18 +80,19 @@ Use Go's JSON package to print the Policy JSON returned by the call.
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
    :lines: 69-77
 
-The ``exitError`` function is used to deal with printing any errors.
+The ``exitError`` function is used to handle printing any errors.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
    :lines: 79-82
 
 .. _s3-example-set-policy:
 
-Setting Bucket Policy
-=====================
+Set Bucket Policy
+=================
 
 This routine sets the policy for a bucket. If the bucket doesn't exist, or there was
-an error, an error message will be printed instead. It requires the bucket name as input. It also requires the same Go and |sdk-go| packages as the previous example, except for the ``bytes`` Go package.
+an error, an error message is printed instead. It requires the bucket name as input. It also requires
+the same Go and |sdk-go| packages as the previous example, except for the ``bytes`` Go package.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
    :lines: 17-27
@@ -102,7 +103,7 @@ Add the main function and parse the arguments to get the bucket name.
    :lines: 34-39
 
 Initialize a session that the SDK will use to load configuration, credentials,
-and region information from the shared config file, ~/.aws/config, and create a new S3 service client.
+and region information from the shared config file, ~/.aws/config. Then create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
    :lines: 43-48
@@ -124,7 +125,7 @@ to PUT the policy for the bucket and print the results.
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
    :lines: 76-90
 
-The ``exitError`` function is used to deal with printing any errors.
+The ``exitError`` function is used to handle printing any errors.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
    :lines: 92-95

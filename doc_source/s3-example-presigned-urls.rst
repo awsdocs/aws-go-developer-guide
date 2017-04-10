@@ -15,7 +15,7 @@ Creating Pre-Signed URLs for |S3| Buckets with Go
 #################################################
 
 .. meta::
-   :description: Use S3 code examples to create presigned URLS to S3 buckets in your Go applications.
+   :description: Use S3 code examples to create pre-signed URLS to S3 buckets in your Go applications.
    :keywords: examples, S3, create, presigned, URLs
 
 
@@ -28,7 +28,7 @@ The Scenario
 ============
 
 In this example, a series of Go routines are used to obtain a pre-signed URL for
-an |S3| bucket using either GetObject or a PUT operation. A pre-signed URL allows you
+an |S3| bucket using either :code:`GetObject` or a PUT operation. A pre-signed URL allows you
 to grant temporary access to users who don't have permission to directly run AWS operations
 in your account. A pre-signed URL is signed with your credentials and can be used by any
 user.

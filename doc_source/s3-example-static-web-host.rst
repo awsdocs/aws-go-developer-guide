@@ -31,8 +31,8 @@ In this example, you use a series of Go routines to configure any of your
 buckets to act as a static web host. The routines use the |sdk-go| to configure a selected |S3|
 bucket using these methods of the |S3| client class:
 
-* GetBucketWebsite
-* PutBucketWebsite
+* :sdk-go-api-deep:`GetBucketWebsite <service/s3/#S3.GetBucketWebsite>`
+* :sdk-go-api-deep:`PutBucketWebsite <service/s3/#S3.PutBucketWebsite>`
 * DeleteBucketWebsite
 
 For more information about using an |S3| bucket as a static web host, see
@@ -43,14 +43,14 @@ For more information about using an |S3| bucket as a static web host, see
 Prerequisites
 =============
 
-* You have :doc:`set up <setting-up>`, and :doc:`configured <configuring-sdk>` the |sdk-go|.
+* You have :doc:`set up <setting-up>` and :doc:`configured <configuring-sdk>` the |sdk-go|.
 * You are familiar with hosting static websites on |S3|. To learn more,
   see :s3-dg:`Hosting a Static Website on Amazon S3 <WebsiteHosting>` in the |S3-dg|.
 
 .. _s3-example-retrieve-config:
 
-Retrieving a Bucket's Website Configuration
-===========================================
+Retrieve a Bucket's Website Configuration
+=========================================
 
 Create a new Go file named :file:`s3_get_bucket_website.go`. You must import the
 relevant Go and |sdk-go| packages by adding the following lines.
@@ -84,8 +84,8 @@ Print the bucket's website configuration.
 
 .. _s3-example-set-bucket-website:
 
-Setting a Bucket's Website Configuration
-========================================
+Set a Bucket's Website Configuration
+====================================
 
 Create a Go file named :file:`s3_set_bucket_website.go` and add the code below. The |S3|
 :sdk-go-api-deep:`PutBucketWebsite <service/s3/#S3.PutBucketWebsite>` operation
@@ -124,8 +124,8 @@ print the errordetails and exit the routine.
 
 .. _s3-example-delete-website:
 
-Deleting Website Configuration on a Bucket
-==========================================
+Delete Website Configuration on a Bucket
+========================================
 
 Create a Go file named :file:`s3_delete_bucket_website.go`. The following code
 shows you how to delete the bucket's

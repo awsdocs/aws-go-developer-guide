@@ -26,7 +26,7 @@ CORS and bucket logging. You can download complete versions of these example fil
 .. _s3-cors-scenario:
 
 The Scenario
-================
+============
 
 In this example, a series of Go routines are used to list your |S3| buckets and to configure
 CORS and bucket logging. The routines use the |sdk-go| to configure a selected
@@ -49,8 +49,8 @@ Prerequisites
 
 .. _s3-example-cors-config:
 
-Configuring CORS on the Bucket
-==============================
+Configure CORS on the Bucket
+============================
 
 Create a new Go file named :file:`s3_set_cors.go`. You must import the relevant Go and
 |sdk-go| packages by adding the following lines.
