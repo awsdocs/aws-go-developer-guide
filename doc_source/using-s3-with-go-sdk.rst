@@ -27,8 +27,9 @@ You can download complete versions of these example files from the :doc-examples
    :caption: Amazon S3 Example Topics
    :maxdepth: 1
 
-   s3-example-creating-buckets
+   s3-example-basic-bucket-operations
    s3-example-presigned-urls
    s3-example-static-web-host
    s3-example-cors
    s3-example-bucket-policy
+   s3-example-bucket-acls
