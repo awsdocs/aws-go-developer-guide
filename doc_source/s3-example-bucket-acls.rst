@@ -58,9 +58,12 @@ Prerequisites
 Getting a Bucket ACL
 ====================
 
-This example gets the ACLs for a bucket.
-One command-line argument is required,
-the name of the bucket.
+The
+:sdk-go-api-deep:`GetBucketAcl <service/s3/#S3.GetBucketAcl>`
+function gets the ACLs on a bucket.
+
+The following example gets the ACLs on a bucket with the name specified as
+a command-line argument.
 
 Create the file *s3_get_bucket_acl.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
@@ -104,10 +107,14 @@ on GitHub.
 Setting a Bucket ACL
 ====================
 
-This example gives a user, by email address, access to a bucket.
-There are two required input parameters, the bucket name 
-and the email address of the user.
-In addition, the user can supply an optional permission argumement.
+The
+:sdk-go-api-deep:`PutBucketAcl <service/s3/#S3.PutBucketAcl>`
+function sets the ACLs on a bucket.
+
+The following example gives a user, by email address, access to a bucket
+with the bucket name and email address specified as command-line arguments.
+The user can also supply a permission argumement,
+but if it is not supplied, the user is given READ access to the bucket.
 
 Create the file *s3_put_bucket_acl.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
@@ -165,9 +172,12 @@ on GitHub.
 Getting a Bucket Object ACL
 ===========================
 
-This example gets the ACLs for a bucket object.
-Two command-line arguments are required,
-the names of the bucket and object.
+The
+:sdk-go-api-deep:`PutObjectAcl <service/s3/#S3.PutObjectAcl>`
+function sets the ACLs on a bucket item.
+
+The following example gets the ACLs for a bucket item
+with the bucket and item name specified as command-line arguments.
 
 Create the file *s3_get_bucket_object_acl.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
@@ -211,10 +221,14 @@ on GitHub.
 Setting a Bucket Object ACL
 ===========================
 
-This example gives a user, by email address, access to a bucket object.
-There are three required input parameters, the bucket name, the object name,
-and the email address of the user.
-In addition, the user can supply an optional permission argumement.
+The
+:sdk-go-api-deep:`PutObjectAcl <service/s3/#S3.PutObjectAcl>`
+function sets the ACLs on a bucket item.
+
+The following example gives a user, by email address, access to a bucket item
+with the bucket and item names and email address specified as command-line arguments.
+The user can also supply a permission argumement,
+but if it is not supplied, the user is given READ access to the bucket.
 
 Create the file *s3_put_bucket_object_acl.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
