@@ -172,25 +172,25 @@ the names of the bucket and object.
 Create the file *s3_get_bucket_object_acl.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: example_code/s3/s3_get_bucket_objec_acl.go
+.. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
    :lines: 15-23
 
 Create a function to display errors and exit.
 
-.. literalinclude:: example_code/s3/s3_get_bucket_objec_acl.go
+.. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
    :lines: 65-68
 
 This example requires two input parameters, the names of the bucket and object.
 If either name is not supplied, call the error function and exit.
 
-.. literalinclude:: example_code/s3/s3_get_bucket_objec_acl.go
+.. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
    :lines: 29-35
 
 Initialize the session that the SDK uses to load configuration, credential,
 and region information from the shared config file *~/.aws/config*,
 and create a new |S3| service client.
 
-.. literalinclude:: example_code/s3/s3_get_bucket_objec_acl.go
+.. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
    :lines: 39-44
 
 Call :sdk-go-api-deep:`GetObjectAcl <service/s3/#S3.GetObjectAcl>`,
@@ -199,7 +199,7 @@ If an error occurs, call ``exitErrorf``.
 If no error occurs, loop through the results
 and print out the name, type, and permssion for the grantees.
 
-.. literalinclude:: example_code/s3/s3_get_bucket_objec_acl.go
+.. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
    :lines: 47-62
 
 See the `complete example 
