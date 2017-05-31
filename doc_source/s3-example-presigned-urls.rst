@@ -89,5 +89,5 @@ object.
 This example shows the enforcing of Content-MD5.
 
 .. literalinclude:: example_code/s3/enforce_content_md5.go
-   :dedent: 4
-   :lines: 15-
+    :dedent: 1
+    :lines: 31-60
