@@ -20,7 +20,7 @@ Basic |S3| Bucket Operations in Go
    :keywords: AWS SDK for Go examples, |S3|, list buckets, create bucket,
               list bucket items, add file to bucket, download file from
               bucket, copy bucket item to another bucket, delete bucket
-              item, delete all bucket items, restore bucket item, 
+              item, delete all bucket items, restore bucket item,
               delete bucket
 
 These Go examples show you how to perform the following operations on |S3|
@@ -109,7 +109,7 @@ If no error occurs, loop through the buckets, printing the name and creation dat
 .. literalinclude:: example_code/s3/s3_list_buckets.go
    :lines: 36-47
 
-See the `complete example 
+See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_list_buckets.go>`_
 on GitHub.
 
@@ -149,8 +149,8 @@ and create a new S3 service client.
 .. literalinclude:: example_code/s3/s3_create_bucket.go
    :lines: 40-45
 
-Call :sdk-go-api-deep:`CreateBucket <service/s3/#S3.CreateBucket>`, 
-passing in the bucket name defined previously. 
+Call :sdk-go-api-deep:`CreateBucket <service/s3/#S3.CreateBucket>`,
+passing in the bucket name defined previously.
 If an error occurs, call ``exitErrorf``.
 If there are no errors,
 wait for a notification that the bucket was created.
@@ -213,7 +213,7 @@ last modified date, size, and storage class of each item.
 .. literalinclude:: example_code/s3/s3_list_objects.go
    :lines: 49-61
 
-See the `complete example 
+See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_list_objects.go>`_
 on GitHub.
 
@@ -261,7 +261,7 @@ Otherwise notify the user that the upload succeeded.
 .. literalinclude:: example_code/s3/s3_upload_object.go
    :lines: 62-63, 68, 74-82
 
-See the `complete example 
+See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_upload_object.go>`_
 on GitHub.
 
@@ -286,7 +286,7 @@ Add the following statements to import the Go and |sdk-go| packages used in the 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_download_object.go
-   :lines: 70=73
+   :lines: 70-73
 
 Initialize the session that the SDK uses to load configuration, credential,
 and region information from the shared config file *~/.aws/config*,
@@ -371,7 +371,7 @@ otherwise notify the user that the copy succeeded.
 .. literalinclude:: example_code/s3/s3_copy_object.go
    :lines: 60-64
 
-See the `complete example 
+See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_copy_object.go>`_
 on GitHub.
 
@@ -424,7 +424,7 @@ Otherwise, inform the user that the object was successfully deleted.
 .. literalinclude:: example_code/s3/s3_delete_object.go
    :lines: 61-63
 
-See the `complete example 
+See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_delete_object.go>`_
 on GitHub.
 
@@ -477,7 +477,7 @@ If no error occurs, inform the user of the number of objects deleted.
 .. literalinclude:: example_code/s3/s3_delete_objects.go
    :lines: 70-76
 
-See the `complete example 
+See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_delete_objects.go>`_
 on GitHub.
 
@@ -517,17 +517,17 @@ and create a new |S3| service client.
 .. literalinclude:: example_code/s3/s3_restore_object.go
    :lines: 42-47
 
-Call :sdk-go-api-deep:`RestoreObject <service/s3/#S3.RestoreObject>`, 
+Call :sdk-go-api-deep:`RestoreObject <service/s3/#S3.RestoreObject>`,
 passing in the bucket and object names and the number of days to
 temporarily restore.
 If an error occurs, call ``exitErrorf``.
-Otherwise, inform the user that they bucket 
+Otherwise, inform the user that they bucket
 should be restored in the next 4 hours or so.
 
 .. literalinclude:: example_code/s3/s3_restore_object.go
    :lines: 50-56
 
-See the `complete example 
+See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_restore_object.go>`_
 on GitHub.
 
@@ -582,7 +582,6 @@ Otherwise, inform the user that the bucket was successfully deleted.
 .. literalinclude:: example_code/s3/s3_delete_bucket.go
    :lines: 64-68
 
-See the `complete example 
+See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_delete_bucket.go>`_
 on GitHub.
-
