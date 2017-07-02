@@ -66,7 +66,7 @@ You must import the relevant Go and |sdk-go| packages by adding the following li
    :lines: 15-23
 
 Initialize a session that the SDK will use to load configuration, credentials, and region
-infornmation from the shared config file, ~/.aws/config.
+information from the shared config file, ~/.aws/config.
 
 .. literalinclude:: example_code/sqs/sqs_sendmessage.go
    :lines: 27-35
