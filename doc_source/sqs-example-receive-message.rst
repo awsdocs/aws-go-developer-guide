@@ -72,7 +72,7 @@ information from the shared config file, ~/.aws/config.
    :lines: 27-35
 
 Now you're ready to send your message. In the example, the message input passed to ``SendMessage``
-represents informaton about a fiction best seller for a particular week and defines title,
+represents information about a fiction best seller for a particular week and defines title,
 author, and weeks on the list values.
 
 .. literalinclude:: example_code/sqs/sqs_sendmessage.go
