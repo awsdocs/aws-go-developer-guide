@@ -14,7 +14,8 @@
 Displaying Information about All |LAM| Functions
 ################################################
 
-The following example displays the name, ARN, and role of all of your |LAM| functions in the :code:`us-west-2` region.
+The following example displays the names and descriptions of your
+|LAM| functions in the :code:`us-west-2` region.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-show-functions.go
    :lines: 14-36
