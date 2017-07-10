@@ -15,7 +15,12 @@ Document History
 This topic describes important changes to the |sdk-go-dg| over the course
 of its history.
 
-**This documentation was built on:** |today|
+To view the list of changes to the |sdk-go| and its documentation, see the 
+`CHANGELOG.md <https://github.com/aws/aws-sdk-go/blob/master/CHANGELOG.md>`_ file in the 
+:code:`aws/aws-sdk-go` repository in GitHub.
+
+Jul 10, 2017
+   Added the document history topic
 
 Jun 14, 2017
    Updated error handling example code
@@ -49,3 +54,5 @@ Sep 28, 2016
 
 Aug 31, 2016
    Initial release of the AWS SDK for Go Developer Guide.
+
+**This documentation was built on:** |today|
