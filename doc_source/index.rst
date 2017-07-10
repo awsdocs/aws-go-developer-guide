@@ -13,7 +13,7 @@
 |sdk-go| Developer Guide
 ########################
 
-This documentation is for the |sdk-go|. 
+This documentation is for the |sdk-go|.
 
 .. toctree::
    :titlesonly:
@@ -27,6 +27,7 @@ This documentation is for the |sdk-go|.
    handling-errors
    common-examples
    sdk-utilities
+   document-history
 
 .. meta::
    :description: Developer guide for the |sdk-go|.
