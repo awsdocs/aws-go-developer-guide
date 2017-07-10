@@ -17,7 +17,7 @@ SDK for Go Code Examples
    :description: Use AWS SDK for Go code examples to write your Go applications.
    :keywords: examples
 
-The |sdk-go| examples can help you write your own Go applications that use Amazon Web Services. 
+The |sdk-go| examples can help you write your own Go applications that use Amazon Web Services.
 The examples assume you have already set up and configured the SDK (that
 is, you have imported all required packages and set your credentials and region). For more information,
 see :doc:`setting-up` and :doc:`configuring-sdk`.
@@ -33,6 +33,7 @@ see :doc:`setting-up` and :doc:`configuring-sdk`.
    using-ec2-with-go-sdk
    using-glacier-with-go-sdk
    using-iam-with-go-sdk
+   using-lambda-with-go-sdk
    using-s3-with-go-sdk
    using-sqs-with-go-sdk
 
