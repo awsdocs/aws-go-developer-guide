@@ -14,10 +14,13 @@
 Displaying Information about All |LAM| Functions
 ################################################
 
-The following example displays the names and descriptions of your
+The following example displays the names and descriptions of the
 |LAM| functions in the :code:`us-west-2` region.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-show-functions.go
-   :lines: 14-36
+   :lines: 14-37
    :dedent: 0
    :language: go
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/lambda/aws-go-sdk-lambda-example-show-functions.go>`_ on GitHub.

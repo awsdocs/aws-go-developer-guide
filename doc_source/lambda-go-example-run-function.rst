@@ -15,7 +15,7 @@ Running a |LAM| Function
 ########################
 
 The following example rus the |LAM| function :code:`MyGetitemsFunction` in the :code:`us-west-2` region.
-This function returns a list of items from a database. The input JSON looks like:
+This Node.js function returns a list of items from a database. The input JSON looks like:
 
 .. code-block:: json
 
@@ -68,14 +68,6 @@ where:
 
 The first step is to import the packages we use:
 
-* :code:`encoding/json` loads the JSON module we use to marshall and unmarshall the request and response payloads.
-* :code:`fmt` is for displaying information to the user.
-* :code:`os` is so we can terminate the application when we've entountered an error.
-* :code:`strconv` is for converting an integer into a string.
-* :code:`aws` loads the AWS SDK for Go package we use to invoke the |lam| function.
-* :code:`session` is for creating a session.
-* :code:`lambda` is for creating a |lam| client to invoke our function.
-
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-run-function.go
    :lines: 17-26
    :dedent: 0
@@ -89,9 +81,10 @@ We then create the |lam| client we use to invoke the |lam| function.
    :language: go
 
 Next we create the request argument and call :code:`MyGetItemsFunction`.
+If there is an error, we display a message and quit.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-run-function.go
-   :lines: 66-76
+   :lines: 66-81
    :dedent: 4
    :language: go
 

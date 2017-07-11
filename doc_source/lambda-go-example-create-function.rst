@@ -14,25 +14,44 @@
 Creating a |LAM| Function
 #########################
 
-The following example creates the |LAM| function :code:`my-notification-function`
-in the :code:`us-west-2` region using these values:
+The following example creates the |LAM| function :code:`functionName`
+in the :code:`us-west-2` region using the following values:
 
-* Role ARN: :code:`my-resource-arn`.
+* Role ARN: :code:`resourceArn`.
   In most cases, you need to attach only the
   :code:`AWSLambdaExecute` managed policy
   to the policy for this role.
 
-* Function entry point: :code:`my-package.my-class`
+* Function entry point: :code:`handler`
 
-* Runtime: :code:`java8`
+* Runtime: :code:`runtime`
 
-* Zip file: :code:`my-zip-file.zip`
+* Zip file: :code:`zipFileName` + :code:`.zip`
 
-* Bucket: :code:`my-notification-bucket`
+* Bucket: :code:`bucketName`
 
-* Key: :code:`my-zip-file`
+* Key: :code:`zipFileName`
+
+The first step is to create the session and |LAM| client:
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
-   :lines: 13-52
+   :lines: 16-28
    :dedent: 0
    :language: go
+
+Next we create the structures for the input argument to the **CreateFunction** function:
+
+.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
+   :lines: 30-43
+   :dedent: 0
+   :language: go
+
+Finally, we call **CreateFunction** and display a message with the result of the call:
+
+.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
+   :lines: 45-51
+   :dedent: 0
+   :language: go
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/lambda/aws-go-sdk-lambda-example-create-function.go>`_ on GitHub.
