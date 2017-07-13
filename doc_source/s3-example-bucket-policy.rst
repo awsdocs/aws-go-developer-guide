@@ -10,16 +10,17 @@
 
 .. _examples-s3-bucket-policies:
 
-#########################################
-Working with |S3| Bucket Policies with Go
-#########################################
+###################################################
+Working with |S3| Bucket Policies with the |sdk-go|
+###################################################
 
 .. meta::
    :description: Use this code example to learn how to work with Amazon S3 bucket policies.
    :keywords: AWS SDK for Go examples, S3, policy, ACL, permissions
 
 
-This Go example show you how to retrieve, display, and set |S3| bucket polices. You can download complete versions of these example files from the
+This |sdk-go| example shows you how to retrieve, display, and set |S3| bucket polices. You can download
+complete versions of these example files from the
 :doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
 
 .. _s3-bucket-policies-scenario:
@@ -27,7 +28,7 @@ This Go example show you how to retrieve, display, and set |S3| bucket polices. 
 The Scenario
 ============
 
-In this example, a series Go routines are used to retrieve or set a bucket policy on an
+In this example, you use a series of Go routines to retrieve or set a bucket policy on an
 |S3| bucket. The routines use the |sdk-go| to configure policy for a selected |S3| bucket using
 these methods of the |S3| client class:
 
@@ -48,8 +49,8 @@ Prerequisites
 
 .. _s3-example-get-policy:
 
-Retrieving and Displaying a Bucket Policy
-=========================================
+Retrieve and Display a Bucket Policy
+====================================
 
 Create a new Go file named :file:`s3_get_bucket_policy.go`. You must import the relevant
 Go and |sdk-go| packages by adding the following lines.
@@ -87,8 +88,8 @@ The ``exitError`` function is used to deal with printing any errors.
 
 .. _s3-example-set-policy:
 
-Setting Bucket Policy
-=====================
+Set Bucket Policy
+=================
 
 This routine sets the policy for a bucket. If the bucket doesn't exist, or there was
 an error, an error message will be printed instead. It requires the bucket name as input. It also requires the same Go and |sdk-go| packages as the previous example, except for the ``bytes`` Go package.

@@ -10,18 +10,17 @@
 
 .. _examples-sqs-using-dead-letter-queues:
 
-#########################################
-Using Dead Letter Queues in |SQS| with Go
-#########################################
+###################################################
+Using Dead Letter Queues in |SQS| with the |sdk-go|
+###################################################
 
 .. meta::
    :description: Use these code examples to use an Amazon SQS queue to receive and hold messages.
    :keywords: AWS SDK for Go examples, SQS, create queue
 
 
-This Go example shows you how to:
-
- * Configure source |SQS| queues that send messages to a dead letter queue
+This |sdk-go| example shows you how to configure source |SQS| queues that send messages to
+a dead letter queue.
 
 You can download complete versions of these example files from the
 :doc-examples-go:`aws-doc-sdk-examples <sqs>` repository on GitHub.
@@ -52,8 +51,8 @@ Prerequisites
 
 .. _sqs-example-configure-source-queues:
 
-Configuring Source Queues
-==========================
+Configure Source Queues
+=======================
 
 After you create a queue to act as a dead letter queue, you must configure the other queues
 that route unprocessed messages to the dead letter queue. To do this, specify a redrive policy

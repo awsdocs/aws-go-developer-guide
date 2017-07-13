@@ -10,9 +10,9 @@
 
 .. _examples-s3:
 
-#####################
-|S3| with Go Examples
-#####################
+################################
+|S3| Examples Using the |sdk-go|
+################################
 
 .. meta::
    :description: Use S3 code examples to write your own Go applications.
@@ -24,12 +24,11 @@ You can download complete versions of these example files from the :doc-examples
 
 .. toctree::
    :titlesonly:
-   :caption: Amazon S3 Example Topics
    :maxdepth: 1
 
-   s3-example-basic-bucket-operations
-   s3-example-presigned-urls
-   s3-example-static-web-host
-   s3-example-cors
-   s3-example-bucket-policy
-   s3-example-bucket-acls
+   Basic Amazon S3 Bucket Operations <s3-example-basic-bucket-operations>
+   Creating Presigned URLs for Amazon S3 Buckets <s3-example-presigned-urls>
+   Using an Amazon S3 Bucket as a Static Web Host <s3-example-static-web-host>
+   Working with Amazon S3 CORS Permissions <s3-example-cors>
+   Working with Amazon S3 Bucket Policies <s3-example-bucket-policy>
+   Working with Amazon S3 Bucket ACLs <s3-example-bucket-acls>

@@ -10,9 +10,9 @@
 
 .. _examples-ec2-allocate-address:
 
-###########################################
-Using Elastic IP Addresses in |EC2| with Go
-###########################################
+#####################################################
+Using Elastic IP Addresses in |EC2| with the |sdk-go|
+#####################################################
 
 .. meta::
    :description: Use this code example to learn how to allocate Elastic IP addresses in Amazon EC2.
@@ -59,8 +59,8 @@ Prerequisites
 
 .. _ec2-example-describe:
 
-Describing Instance IP Addresses
-================================
+Describe Instance IP Addresses
+==============================
 
 Create a new Go file named :file:`ec2_describe_addresses.go`.
 
@@ -69,8 +69,8 @@ You must import the relevant Go and |sdk-go| packages by adding the following li
 .. literalinclude:: example_code/ec2/ec2_describe_addresses.go
    :lines: 15-24
 
-Getting the Address Descriptions
---------------------------------
+Get the Address Descriptions
+----------------------------
 
 This routine prints out the Elastic IP Addresses for the account's VPC. Initialize a session that the
 SDK will use to load configuration, credentials, and region information from the shared config file,
@@ -91,8 +91,8 @@ The ``fmtAddress`` and ``exitErrorf`` functions are utility functions used in th
 
 .. _ec2-example-allocate:
 
-Allocating Addresses to Instances
-=================================
+Allocate Addresses to Instances
+===============================
 
 Create a new Go file named :file:`ec2_allocate_address.go`.
 
@@ -132,8 +132,8 @@ This example also uses the ``exitErrorf`` utility function.
    :lines: 70-73
 
 
-Releasing Instance IP Addresses
-===============================
+Release Instance IP Addresses
+=============================
 
 This routine releases an Elastic IP address allocation ID. If the address is associated
 with an |EC2| instance, the association is removed.

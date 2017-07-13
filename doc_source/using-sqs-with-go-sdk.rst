@@ -10,9 +10,9 @@
 
 .. _examples-sqs:
 
-######################
-|SQS| with Go Examples
-######################
+#################################
+|SQS| Examples Using the |sdk-go|
+#################################
 
 .. meta::
    :description: Use Amazon SQS code examples to write your own Go applications.
@@ -27,15 +27,14 @@ You can download complete versions of these example files from the
 
 .. toctree::
    :titlesonly:
-   :caption: Amazon SQS Example Topics
    :maxdepth: 1
 
-   sqs-example-create-queue
-   sqs-example-receive-message
-   sqs-example-managing-visibility-timeout
-   sqs-example-enable-long-polling
-   sqs-example-dead-letter-queues
-   sqs-example-set-attributes
+   Using |SQS| queues <sqs-example-create-queue>
+   Sending and Receiving Messages in |SQS| <sqs-example-receive-message>
+   Managing Visibility Timeout in |SQS| Queues <sqs-example-managing-visibility-timeout>
+   Enabling Long Polling in |SQS| Queues <sqs-example-enable-long-polling>
+   Using Dead Letter Queues in |SQS| <sqs-example-dead-letter-queues>
+   Setting Attributes on an |SQS| <sqs-example-set-attributes>
 
 
 

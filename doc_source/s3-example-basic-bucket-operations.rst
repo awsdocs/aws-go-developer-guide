@@ -11,9 +11,9 @@
 
 .. _s3-examples-bucket-ops:
 
-##################################
-Basic |S3| Bucket Operations in Go
-##################################
+##############################################
+Basic |S3| Bucket Operations with the |sdk-go|
+##############################################
 
 .. meta::
    :description: Use S3 code examples to create and use |S3| buckets in Go applications.
@@ -23,7 +23,7 @@ Basic |S3| Bucket Operations in Go
               item, delete all bucket items, restore bucket item,
               delete bucket
 
-These Go examples show you how to perform the following operations on |S3|
+These |sdk-go| examples show you how to perform the following operations on |S3|
 buckets and bucket items:
 
 * List the buckets in your account
@@ -73,15 +73,15 @@ Prerequisites
 
 .. _s3-examples-bucket-ops-list-buckets:
 
-Listing Buckets
-===============
+List Buckets
+============
 
 The
 :sdk-go-api-deep:`ListBuckets <service/s3/#S3.ListBuckets>`
 function lists the buckets in your account.
 
 The following example lists the buckets in your account.
-There are no command-line arguments.
+There are no command line arguments.
 
 Create the file *s3_list_buckets.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
@@ -115,15 +115,15 @@ on GitHub.
 
 .. _s3-examples-bucket-ops-create-bucket:
 
-Creating a Bucket
-=================
+Create a Bucket
+===============
 
 The
 :sdk-go-api-deep:`CreateBucket <service/s3/#S3.CreateBucket>`
 function creates a bucket in your account.
 
 The following example creates a bucket with the name specified as a
-command-line argument.
+command line argument.
 You must specify a globally unique name for the bucket.
 
 Create the file *s3_create_bucket.go*.
@@ -171,15 +171,15 @@ on GitHub.
 
 .. _s3-examples-bucket-ops-list-bucket-items:
 
-Listing Bucket Items
-====================
+List Bucket Items
+=================
 
 The
 :sdk-go-api-deep:`ListObjects <service/s3/#S3.ListObjects>`
 function lists the items in a bucket.
 
 The following example lists the items in the bucket with the name specified as a
-command-line argument.
+command line argument.
 
 Create the file *s3_list_objects.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
@@ -192,7 +192,7 @@ Create a function we use to display errors and exit.
 .. literalinclude:: example_code/s3/s3_list_objects.go
    :lines: 67-70
 
-The program requires one command-line argument, the name of the bucket.
+The program requires one command line argument, the name of the bucket.
 
 .. literalinclude:: example_code/s3/s3_list_objects.go
    :lines: 31-37
@@ -219,15 +219,15 @@ on GitHub.
 
 .. _s3-examples-bucket-ops-upload-file-to-bucket:
 
-Uploading a File to a Bucket
-============================
+Upload a File to a Bucket
+=========================
 
 The
 :sdk-go-api-deep:`Upload <service/s3/s3manager/#Uploader.Upload>`
 function uploads an object to a bucket.
 
 The following example uploads a file to a bucket
-with the names specified as command-line arguments.
+with the names specified as command line arguments.
 
 Create the file *s3_upload_object.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
@@ -247,7 +247,7 @@ and create a ``NewUploader`` object.
 .. literalinclude:: example_code/s3/s3_upload_object.go
    :lines: 42-44, 58
 
-Get the bucket and filename from the command-line arguments,
+Get the bucket and file name from the command line arguments,
 open the file, and defer the file closing until we are done with it.
 If an error occurs, call ``exitErrorF``.
 
@@ -256,7 +256,7 @@ If an error occurs, call ``exitErrorF``.
 
 Upload the file to the bucket.
 If an error occurs, call ``exitErrorF``.
-Otherwise notify the user that the upload succeeded.
+Otherwise, notify the user that the upload succeeded.
 
 .. literalinclude:: example_code/s3/s3_upload_object.go
    :lines: 62-63, 68, 74-82
@@ -267,15 +267,15 @@ on GitHub.
 
 .. _s3-examples-bucket-ops-download-file-from-bucket:
 
-Downloading a File from a Bucket
-================================
+Download a File from a Bucket
+=============================
 
 The
 :sdk-go-api-deep:`Download <service/s3/s3manager/#Downloader.Download>`
 function downloads an object from a bucket.
 
 The following example downloads an item from a bucket
-with the names specified as command-line arguments.
+with the names specified as command line arguments.
 
 Create the file *s3_download_object.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
@@ -295,7 +295,7 @@ and create a ``NewDownloader`` object.
 .. literalinclude:: example_code/s3/s3_download_object.go
    :lines: 43-45, 55
 
-Get the bucket and filename from the command-line arguments.
+Get the bucket and file name from the command line arguments.
 If there aren't two arguments, call ``exitErrorf``.
 
 .. literalinclude:: example_code/s3/s3_download_object.go
@@ -309,7 +309,7 @@ If an error occurs, call ``exitErrorf``.
 
 Download the item from the bucket.
 If an error occurs, call ``exitErrorf``.
-Otherwise notify the user that the download succeeded.
+Otherwise, notify the user that the download succeeded.
 
 .. literalinclude:: example_code/s3/s3_download_object.go
    :lines: 57-67
@@ -320,15 +320,15 @@ on GitHub.
 
 .. _s3-examples-bucket-ops-copy-bucket-item:
 
-Copying an Item from one Bucket to Another
-==========================================
+Copy an Item from one Bucket to Another
+=======================================
 
 The
 :sdk-go-api-deep:`CopyObject <service/s3/#S3.CopyObject>`
 function copies an object from one bucket to another.
 
 The following example copies an item from one bucket
-to another with the names specified as command-line arguments.
+to another with the names specified as command line arguments.
 
 Create the file *s3_copy_object.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
@@ -343,7 +343,7 @@ Create a function we use to display errors and exit.
 
 Get the names of the bucket containing the item, the item to copy,
 and the name of the bucket to which the item is copied.
-If there aren't four command-line arguments, call ``exitErrorf``.
+If there aren't four command line arguments, call ``exitErrorf``.
 
 .. literalinclude:: example_code/s3/s3_copy_object.go
    :lines: 30-37
@@ -366,7 +366,7 @@ If no error occurs, wait for the item to be copied.
 
 If the ``WaitUntilObjectExists`` call returns an error,
 If an error occurs, call ``exitErrorf``,
-otherwise notify the user that the copy succeeded.
+otherwise, notify the user that the copy succeeded.
 
 .. literalinclude:: example_code/s3/s3_copy_object.go
    :lines: 60-64
@@ -377,15 +377,15 @@ on GitHub.
 
 .. _s3-examples-bucket-ops-delete-bucket-item:
 
-Deleting an Item in a Bucket
-============================
+Delete an Item in a Bucket
+==========================
 
 The
 :sdk-go-api-deep:`DeleteObject <service/s3/#S3.DeleteObject>`
 function deletes an object from a bucket.
 
 The following example deletes an item from a bucket
-with the names specified as command-line arguments.
+with the names specified as command line arguments.
 
 Create the file *s3_delete_object.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
@@ -430,15 +430,15 @@ on GitHub.
 
 .. _s3-examples-bucket-ops-delete-all-bucket-items:
 
-Deleting all the Items in a Bucket
-==================================
+Delete All the Items in a Bucket
+================================
 
 The
 :sdk-go-api-deep:`DeleteObjects <service/s3/#S3.DeleteObjects>`
 function deletes objects from a bucket.
 
-The following example deletes all of the items from a bucket
-with the bucket name specified as a command-line argument.
+The following example deletes all the items from a bucket
+with the bucket name specified as a command line argument.
 
 Create the file *s3_delete_objects.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
@@ -483,15 +483,15 @@ on GitHub.
 
 .. _s3-examples-bucket-ops-restore-bucket-item:
 
-Restoring a Bucket Item
-=======================
+Restore a Bucket Item
+=====================
 
 The
 :sdk-go-api-deep:`RestoreObject <service/s3/#S3.RestoreObject>`
 function restores an item in a bucket.
 
 The following example restores the items in a bucket
-with the names specified as command-line arguments.
+with the names specified as command line arguments.
 
 Create the file *s3_restore_object.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
@@ -521,8 +521,8 @@ Call :sdk-go-api-deep:`RestoreObject <service/s3/#S3.RestoreObject>`,
 passing in the bucket and object names and the number of days to
 temporarily restore.
 If an error occurs, call ``exitErrorf``.
-Otherwise, inform the user that they bucket
-should be restored in the next 4 hours or so.
+Otherwise, inform the user that the bucket
+should be restored in the next four hours or so.
 
 .. literalinclude:: example_code/s3/s3_restore_object.go
    :lines: 50-56
@@ -533,15 +533,15 @@ on GitHub.
 
 .. _s3-examples-bucket-ops-delete-bucket:
 
-Deleting a Bucket
-=================
+Delete a Bucket
+===============
 
 The
 :sdk-go-api-deep:`DeleteBucket <service/s3/#S3.DeleteBucket>`
 function deletes a bucket.
 
 The following example deletes the bucket
-with the name specified as a command-line argument.
+with the name specified as a command line argument.
 
 Create the file *s3_delete_bucket.go*.
 Import the following Go and |sdk-go| packages.

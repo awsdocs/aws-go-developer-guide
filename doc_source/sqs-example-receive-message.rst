@@ -10,15 +10,15 @@
 
 .. _examples-sqs-receive-message:
 
-###############################################
-Sending and Receiving Messages in |SQS| with Go
-###############################################
+#########################################################
+Sending and Receiving Messages in |SQS| with the |sdk-go|
+#########################################################
 
 .. meta::
    :description: Use this code example to learn how to send or receive a message from an Amazon SQS queue.
    :keywords: AWS SDK for Go examples, SQS queues
 
-These Go examples show you how to:
+These |sdk-go| examples show you how to:
 
 * Send a message to an |SQS| queue
 * Receive and delete a message from an |SQS| queue
@@ -55,8 +55,8 @@ Prerequisites
 
 .. _sqs-example-send-message:
 
-Sending a Message to a Queue
-============================
+Send a Message to a Queue
+=========================
 
 Create a new Go file named :file:`sqs_sendmessage.go`.
 
@@ -80,8 +80,8 @@ author, and weeks on the list values.
 
 .. _sqs-example-receive-delete-message:
 
-Receiving and Deleting a Message from a Queue
-=============================================
+Receive and Delete a Message from a Queue
+=========================================
 
 Create a new Go file named :file:`sqs_deletemessage.go`.
 
@@ -110,8 +110,8 @@ returned from the previous call.
 
 .. _sqs-example-send-receive-message:
 
-Sending and Receiving Messages
-==============================
+Send and Receive Messages
+=========================
 
 Create a new Go file named :file:`sqs_longpolling_receive_message.go`.
 

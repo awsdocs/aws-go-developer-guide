@@ -8,15 +8,15 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-#####################
-What is the |sdk-go|?
-#####################
+###########
+|sdk-go-dg|
+###########
 
 .. meta::
    :description: Use the |sdk-go| to build Go applications that use AWS services.
 
 The |sdk-go| provides APIs and utilities that developers can use
-to build Go applications that use AWS services, such as |EC2long| (|EC2|) and 
+to build Go applications that use AWS services, such as |EC2long| (|EC2|) and
 |S3long| (|S3|).
 
 The SDK removes the complexity of coding directly against a web service
@@ -27,21 +27,19 @@ The SDK also includes helpful utilities. For example, the |S3|
 download and upload manager can automatically break up large objects
 into multiple parts and transfer them in parallel.
 
-.. _about-the-go-sdk-dev-guide:
-
-About the |sdk-go| Developer Guide
-==================================
-
-Use the developer guide to help you install, configure, and use the SDK.
+Use the |sdk-go-dg| to help you install, configure, and use the SDK.
 The guide provides configuration information, sample code, and an
 introduction to the SDK utilities.
 
--  For information about everything you need before you start using the
+More Info
+=========
+
+-  To learn about everything you need before you can start using the
    |sdk-go|, see :doc:`setting-up`.
 -  For code examples, see :doc:`common-examples`.
--  For information about the SDK utilities, see :doc:`sdk-utilities`.
--  For information about the types and functionality provided by the
-   library, see the |sdk-go-api|_.
--  To view a video introduction of the SDK and a sample application demonstration, see 
-   `AWS SDK For Go: Gophers Get Going with AWS <https://www.youtube.com/watch?v=iOGIKG3EptI&feature=youtu.be>`_ from AWS 
+-  To learn about the SDK utilities, see :doc:`sdk-utilities`.
+-  For learn about the types and functionality that the library provides,
+   see the |sdk-go-api|_.
+-  To view a video introduction of the SDK and a sample application demonstration, see
+   `AWS SDK For Go: Gophers Get Going with AWS <https://www.youtube.com/watch?v=iOGIKG3EptI&feature=youtu.be>`_ from AWS
    re:Invent 2015.

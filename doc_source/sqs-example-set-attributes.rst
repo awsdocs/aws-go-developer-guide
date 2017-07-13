@@ -10,17 +10,15 @@
 
 .. _examples-sqs-set-attributes:
 
-############################################
-Setting Attributes on an |SQS| Queue with Go
-############################################
+######################################################
+Setting Attributes on an |SQS| Queue with the |sdk-go|
+######################################################
 
 .. meta::
    :description: Use this code example to learn how to set attributes on an Amazon SQS queue.
    :keywords: AWS SDK for Go examples, SQS, create queue
 
-This Go example shows you how to:
-
-* Set attributes on an existing |SQS| queue
+This Go example shows you how to set attributes on an existing |SQS| queue.
 
 You can download complete versions of these example files from the
 :doc-examples-go:`aws-doc-sdk-examples <sqs>` repository on GitHub.

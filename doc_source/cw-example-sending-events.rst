@@ -11,9 +11,9 @@
 
 .. _examples-cw-sending-events:
 
-###################################
-Sending Events to |CWElong| with Go
-###################################
+#############################################
+Sending Events to |CWElong| with the |sdk-go|
+#############################################
 
 .. meta::
    :description: Use this code example to learn how to work with the CloudWatch Events service in Go.
@@ -110,8 +110,8 @@ Use the following trust relationship when creating the |IAM| role.
 
 .. _cw-example-scheduled-rule:
 
-Creating a Scheduled Rule
-=========================
+Create a Scheduled Rule
+=======================
 
 Create a new Go file named :file:`events_schedule_rule.go`.
 
@@ -132,8 +132,8 @@ Print any errors, or a success message.
 .. literalinclude:: example_code/cloudwatch/events_put_events.go
    :lines: 36-48
 
-Adding a Lambda Function Target
-===============================
+Add a Lambda Function Target
+============================
 
 Create a new Go file named :file:`events_put_targets.go`.
 
@@ -157,8 +157,8 @@ you created, and the ID of the rule. Print any errors, or a success message.
 .. literalinclude:: example_code/cloudwatch/events_put_targets.go
    :lines: 36-52
 
-Sending Events
-==============
+Send Events
+===========
 
 Create a new Go file named :file:`events_put_events.go`.
 

@@ -9,9 +9,9 @@
    limitations under the License.
 
 
-#################
-SDK Configuration
-#################
+########################
+Configuring the |sdk-go|
+########################
 
 
 .. meta::
@@ -20,20 +20,20 @@ SDK Configuration
 
 In the |sdk-go|, you can configure settings for service clients,
 such as the log level and maximum number of retries. Most settings are
-optional; however, for each service client, you must specify a region
+optional. However, for each service client, you must specify a region
 and your credentials. The SDK uses these values to send requests to the
-correct AWS region and sign requests with the correct credentials. You
+correct AWS Region and sign requests with the correct credentials. You
 can specify these values as part of a session or as environment
 variables.
 
 .. _specifying-the-region:
 
-Specifying the Region
-=====================
+Specifying the AWS Region
+=========================
 
 When you specify the region, you specify where to send requests, such as
-``us-west-2`` or ``us-east-1.`` The SDK does not select a default
-region. For a list of regions for each service, see |regions-and-endpoints|_ 
+``us-west-2`` or ``us-east-2.`` The SDK does not select a default
+region. For a list of regions for each service, see |regions-and-endpoints|_
 in the |AWS-gr|.
 
 To specify the region, set the ``AWS_REGION`` environment variable or
@@ -61,7 +61,7 @@ The following snippet specifies the region in a session:
 
     sess, err := session.NewSession(&aws.Config{Region: aws.String("us-west-2")})
 
-    
+
 .. _specifying-credentials:
 
 Specifying Credentials
@@ -74,7 +74,7 @@ information about obtaining credentials, see :doc:`Setting Up <setting-up>`.
 
 When you initialize a new service client without providing any
 credential arguments, the SDK uses the :sdk-go-api-deep:`default credential provider
-chain <aws/defaults/#CredChain>` to find AWS credentials. The SDK uses the first provider 
+chain <aws/defaults/#CredChain>` to find AWS credentials. The SDK uses the first provider
 in the chain that returns credentials without an error. The default provider chain
 looks for credentials in the following order:
 
@@ -84,7 +84,7 @@ looks for credentials in the following order:
 
 The SDK detects and uses the built-in providers automatically, without
 requiring manual configurations. For example, if you use |IAM| roles for
-|EC2| instances, your applications will automatically use the
+|EC2| instances, your applications automatically use the
 instance's credentials. You don't need to manually configure credentials
 in your application.
 
@@ -100,9 +100,9 @@ following order:
 
 2. Use a shared credentials file.
 
-   This credentials file is the same one used by other SDKs and the |CLI|
-   If you're already using a shared credentials file, you can use
-   it for this purpose, too.
+   This credentials file is the same one used by other SDKs and the |CLI|.
+   If you're already using a shared credentials file, you can also use
+   it for this purpose.
 
 3. Use environment variables.
 
@@ -112,8 +112,8 @@ following order:
 4. Hard-code credentials (not recommended).
 
    Hard-coding credentials in your application can make it difficult to
-   manage and rotate those credentials. Use this method for small
-   personal scripts or testing purposes only. Do not submit code with
+   manage and rotate those credentials. Use this method only for small
+   personal scripts or testing purposes. Do not submit code with
    credentials to source control.
 
 |IAM| Roles for |EC2| Instances
@@ -123,7 +123,7 @@ If you are running your application on an |EC2| instance, you can
 use the instance's :ec2-ug:`IAM role <iam-roles-for-amazon-ec2>`
 to get temporary security credentials to make calls to AWS.
 
-If you have configured your instance to use |IAM| roles, the SDK will use
+If you have configured your instance to use |IAM| roles, the SDK uses
 these credentials for your application automatically. You don't need to
 manually specify these credentials.
 
@@ -138,7 +138,7 @@ operating system. In Windows, you can refer to your home directory by
 using the environment variable :code:`%UserProfile%`. In Unix-like systems, you
 can use the environment variable :code:`$HOME` or :code:`~` (tilde).
 
-If you already use this file for other SDKs and tools (like the |CLI|), 
+If you already use this file for other SDKs and tools (like the |CLI|),
 you don't need to change anything to use the files in this SDK. If
 you use different credentials for different tools or applications, you
 can use *profiles* to configure multiple access keys in the same
@@ -147,11 +147,11 @@ configuration file.
 Creating the Credentials File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you do not have a shared credentials file (:file:`.aws/credentials`), you
+If you don't have a shared credentials file (:file:`.aws/credentials`), you
 can use any text editor to create one in your home directory. Add the
 following content to your credentials file, replacing
 :code:`<YOUR_ACCESS_KEY_ID>` and :code:`<YOUR_SECRET_ACCESS_KEY>` with your
-credentials:
+credentials.
 
 .. code-block:: ini
 
@@ -177,19 +177,19 @@ Specifying Profiles
 
 You can include multiple access keys in the same configuration file by
 associating each set of access keys with a profile. For example, in your
-credentials file, you can declare multiple profiles:
+credentials file, you can declare multiple profiles, as follows.
 
 .. code-block:: ini
 
     [default]
     aws_access_key_id = <YOUR_DEFAULT_ACCESS_KEY_ID>
     aws_secret_access_key = <YOUR_DEFAULT_SECRET_ACCESS_KEY>
-    
+
     [test-account]
     aws_access_key_id = <YOUR_TEST_ACCESS_KEY_ID>
     aws_secret_access_key = <YOUR_TEST_SECRET_ACCESS_KEY>
-    
-    [prod-account] 
+
+    [prod-account]
     ; work profile
     aws_access_key_id = <YOUR_PROD_ACCESS_KEY_ID>
     aws_secret_access_key = <YOUR_PROD_SECRET_ACCESS_KEY>
@@ -200,7 +200,7 @@ the SDK uses the default profile.
 
 If you have an application named ``myapp`` that uses the SDK, you can
 run it with the test credentials by setting the variable to
-``test-account myapp``, as shown in the following command:
+``test-account myapp``, as shown in the following command.
 
 .. code-block:: sh
 
@@ -209,7 +209,7 @@ run it with the test credentials by setting the variable to
 You can also use the SDK to select a profile by specifying
 :code:`os.Setenv("AWS_PROFILE", test-account)` before constructing any
 service clients or by manually setting the credential provider, as shown
-in the following example:
+in the following example.
 
 .. code-block:: go
 
@@ -224,7 +224,7 @@ In addition, checking if your credentials have been found is fairly easy.
 
     _, err := sess.Config.Credentials.Get()
 
-If :code:`ChainProvider` is being used, set :code:`CredentialsChainVerboseErrors` to 
+If :code:`ChainProvider` is being used, set :code:`CredentialsChainVerboseErrors` to
 :code:`true` in the session config.
 
 .. note::
@@ -262,7 +262,7 @@ The following examples show how you configure the environment variables.
     > set AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
     > set AWS_SESSION_TOKEN=TOKEN
 
-Hard-Coded Credentials in an Application (not recommended)
+Hard-Coded Credentials in an Application (Not Recommended)
 ----------------------------------------------------------
 
 .. warning::
@@ -270,7 +270,7 @@ Hard-Coded Credentials in an Application (not recommended)
    method only for testing purposes.
 
 You can hard-code credentials in your application by passing the access
-keys to a configuration instance, as shown in the following snippet:
+keys to a configuration instance, as shown in the following snippet.
 
 .. code-block:: go
 
@@ -284,8 +284,8 @@ Other Credentials Providers
 
 The SDK provides other methods for retrieving credentials in the
 :code:`aws/credentials` package. For example, you can retrieve temporary
-security credentials from AWS Security Token Service or credentials from
-encrypted storage. For more information, see :sdk-go-api-deep:`Credentials 
+security credentials from |STSlong| or credentials from
+encrypted storage. For more information, see :sdk-go-api-deep:`Credentials
 <aws/credentials/>`.
 
 .. _configuring-a-proxy:
@@ -293,10 +293,10 @@ encrypted storage. For more information, see :sdk-go-api-deep:`Credentials
 Configuring a Proxy
 ===================
 
-If you cannot directly connect to the Internet, you can use Go-supported
+If you cannot directly connect to the internet, you can use Go-supported
 environment variables (``HTTP_PROXY``) or create a custom HTTP client to
 configure your proxy. Use the
-:sdk-go-api-deep:`Config.HTTPClient <aws/#Config.WithHTTPClient>` 
+:sdk-go-api-deep:`Config.HTTPClient <aws/#Config.WithHTTPClient>`
 struct to specify a custom HTTP client. For more information about how
 to create an HTTP client to use a proxy, see the
 `Transport <https://golang.org/pkg/net/http/#Transport>`_ struct in

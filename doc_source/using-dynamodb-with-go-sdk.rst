@@ -10,9 +10,9 @@
 
 .. _examples-dynamodb:
 
-##########################
-|DDBlong| with Go Examples
-##########################
+#####################################
+|DDBlong| Examples Using the |sdk-go|
+#####################################
 
 .. meta::
    :description: Use DynamoDB code examples to write your own Go applications.
@@ -24,8 +24,8 @@ is, you have imported all required packages and set your credentials and region)
 
 .. _list-tables:
 
-Listing Tables
-==============
+List Tables
+===========
 
 The following example uses the |DDB|
 :sdk-go-api-deep:`ListTables <service/dynamodb/#DynamoDB.ListTables>` operation

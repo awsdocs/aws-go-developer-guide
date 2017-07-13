@@ -10,9 +10,9 @@
 
 .. _s3-examples-bucket-acls:
 
-###################################
-Working with |S3| Bucket ACLs in Go
-###################################
+#############################################
+Working with |S3| Bucket ACLs in the |sdk-go|
+#############################################
 
 .. meta::
    :description: Use S3 code examples to manage |S3| bucket ACLs in
@@ -21,7 +21,7 @@ Working with |S3| Bucket ACLs in Go
 
 The following examples use |sdk-go| functions to:
 
-* Get the ACLs on a bucket
+* Get the access control lists (ACLs) on a bucket
 * Get the ACLs on a bucket item
 * Add a new user to the ACLs on a bucket
 * Add a new user to the ACLs on a bucket item
@@ -55,15 +55,15 @@ Prerequisites
 
 .. _s3-examples-bucket-acls-get-bucket-acl:
 
-Getting a Bucket ACL
-====================
+Get a Bucket ACL
+================
 
 The
 :sdk-go-api-deep:`GetBucketAcl <service/s3/#S3.GetBucketAcl>`
 function gets the ACLs on a bucket.
 
 The following example gets the ACLs on a bucket with the name specified as
-a command-line argument.
+a command line argument.
 
 Create the file *s3_get_bucket_acl.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
@@ -98,23 +98,23 @@ and print out the name, type, and permssion for the grantees.
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
    :lines: 46-61
 
-See the `complete example 
+See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_get_bucket_acl.go>`_
 on GitHub.
 
 .. _s3-examples-bucket-acls-set-bucket-acl:
 
-Setting a Bucket ACL
-====================
+Set a Bucket ACL
+================
 
 The
 :sdk-go-api-deep:`PutBucketAcl <service/s3/#S3.PutBucketAcl>`
 function sets the ACLs on a bucket.
 
-The following example gives a user, by email address, access to a bucket
-with the bucket name and email address specified as command-line arguments.
-The user can also supply a permission argumement,
-but if it is not supplied, the user is given READ access to the bucket.
+The following example gives a user access by email address to a bucket
+with the bucket name and email address specified as command line arguments.
+The user can also supply a permission argumement. However,
+if it isn'o't supplied, the user is given READ access to the bucket.
 
 Create the file *s3_put_bucket_acl.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
@@ -158,26 +158,26 @@ ACLs and the new user information.
 Call :sdk-go-api-deep:`PutBucketAcl <service/s3/#S3.PutBucketAcl>`,
 passing in the parameter list.
 If an error occurs, display a message and quit.
-Otherwise display a message indicating success.
+Otherwise, display a message indicating success.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
    :lines: 93-99
 
-See the `complete example 
+See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_put_bucket_acl.go>`_
 on GitHub.
 
 .. _s3-examples-bucket-acls-get-bucket-object-acl:
 
-Getting a Bucket Object ACL
-===========================
+Get a Bucket Object ACL
+=======================
 
 The
 :sdk-go-api-deep:`PutObjectAcl <service/s3/#S3.PutObjectAcl>`
 function sets the ACLs on a bucket item.
 
 The following example gets the ACLs for a bucket item
-with the bucket and item name specified as command-line arguments.
+with the bucket and item name specified as command line arguments.
 
 Create the file *s3_get_bucket_object_acl.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
@@ -212,23 +212,23 @@ and print out the name, type, and permssion for the grantees.
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
    :lines: 47-62
 
-See the `complete example 
+See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_get_bucket_object_acl.go>`_
 on GitHub.
 
 .. _s3-examples-bucket-acls-set-bucket-object-acl:
 
-Setting a Bucket Object ACL
-===========================
+Set a Bucket Object ACL
+=======================
 
 The
 :sdk-go-api-deep:`PutObjectAcl <service/s3/#S3.PutObjectAcl>`
 function sets the ACLs on a bucket item.
 
-The following example gives a user, by email address, access to a bucket item
-with the bucket and item names and email address specified as command-line arguments.
-The user can also supply a permission argumement,
-but if it is not supplied, the user is given READ access to the bucket.
+The following example gives a user access by email address to a bucket item,
+with the bucket and item names and email address specified as command line arguments.
+The user can also supply a permission argumement.
+However, if it isn't supplied, the user is given READ access to the bucket.
 
 Create the file *s3_put_bucket_object_acl.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
@@ -265,11 +265,11 @@ ACLs and the new user information.
 Call :sdk-go-api-deep:`PutObjectAcl <service/s3/#S3.PutObjectAcl>`,
 passing in the parameter list.
 If an error occurs, display a message and quit.
-Otherwise display a message indicating success.
+Otherwise, display a message indicating success.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
    :lines: 95-101
 
-See the `complete example 
+See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_put_bucket_object_acl.go>`_
 on GitHub.
