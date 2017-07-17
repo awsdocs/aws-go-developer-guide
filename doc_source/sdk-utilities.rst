@@ -545,7 +545,7 @@ an |S3| bucket. Then it downloads each object to a local file.
         }
         defer fd.Close()
 
-        // Download the file using the AWS SDK
+        // Download the file using the AWS SDK for Go
         fmt.Printf("Downloading s3://%s/%s to %s...\n", d.bucket, key, file)
         params := &s3.GetObjectInput{Bucket: &d.bucket, Key: &key}
         d.Download(fd, params)

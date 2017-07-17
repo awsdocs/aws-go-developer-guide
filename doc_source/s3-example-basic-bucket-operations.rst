@@ -365,8 +365,7 @@ If no error occurs, wait for the item to be copied.
    :lines: 39, 51-58
 
 If the ``WaitUntilObjectExists`` call returns an error,
-If an error occurs, call ``exitErrorf``,
-otherwise, notify the user that the copy succeeded.
+call ``exitErrorf``. Otherwise, notify the user that the copy succeeded.
 
 .. literalinclude:: example_code/s3/s3_copy_object.go
    :lines: 60-64

@@ -156,9 +156,9 @@ the request before sending it.
 Handling Operation Response Body
 --------------------------------
 
-Some of the API operations' response output struct will contain a ``Body``
-field which is an ``io.ReadCloser``. If you are making request with
-these operations you should always make sure to call :code:`Close` on the field.
+Some API operations return a response struct that contain a ``Body``
+field that is an ``io.ReadCloser``. If you're making requests with
+these operations, always be sure to call :code:`Close` on the field.
 
 .. code:: go
 
