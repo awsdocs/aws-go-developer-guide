@@ -10,9 +10,9 @@
 
 .. _lambda-go-example-create-function:
 
-#########################
-Creating a |LAM| Function
-#########################
+###########################################
+Creating a |LAM| Function with the |sdk-go|
+###########################################
 
 The following example creates the |LAM| function :code:`functionName`
 in the :code:`us-west-2` region using the following values:
@@ -32,21 +32,21 @@ in the :code:`us-west-2` region using the following values:
 
 * Key: :code:`zipFileName`
 
-The first step is to create the session and |LAM| client:
+The first step is to create the session and |LAM| client.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
    :lines: 16-28
    :dedent: 0
    :language: go
 
-Next we create the structures for the input argument to the **CreateFunction** function:
+Next, create the structures for the input argument to the :code:`CreateFunction` function.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
    :lines: 30-43
    :dedent: 0
    :language: go
 
-Finally, we call **CreateFunction** and display a message with the result of the call:
+Finally, call :code:`CreateFunction` and display a message with the result of the call.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
    :lines: 45-51

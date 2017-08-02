@@ -10,16 +10,16 @@
 
 .. _examples-s3-website:
 
-#################################################
-Using an |S3| Bucket as a Static Web Host with Go
-#################################################
+###########################################################
+Using an |S3| Bucket as a Static Web Host with the |sdk-go|
+###########################################################
 
 .. meta::
    :description: Use S3 code examples to learn how to set up an Amazon S3 bucket as a static web host in your own Go applications.
    :keywords: AWS SDK for Go examples, S3 static web host
 
 
-This Go example shows you how to configure an |S3| bucket to act as a static web host. You can download
+This |sdk-go| example shows you how to configure an |S3| bucket to act as a static web host. You can download
 complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
 
 .. _s3-website-scenario:
@@ -49,8 +49,8 @@ Prerequisites
 
 .. _s3-example-retrieve-config:
 
-Retrieving a Bucket's Website Configuration
-===========================================
+Retrieve a Bucket's Website Configuration
+=========================================
 
 Create a new Go file named :file:`s3_get_bucket_website.go`. You must import the
 relevant Go and |sdk-go| packages by adding the following lines.
@@ -84,8 +84,8 @@ Print the bucket's website configuration.
 
 .. _s3-example-set-bucket-website:
 
-Setting a Bucket's Website Configuration
-========================================
+Set a Bucket's Website Configuration
+====================================
 
 Create a Go file named :file:`s3_set_bucket_website.go` and add the code below. The |S3|
 :sdk-go-api-deep:`PutBucketWebsite <service/s3/#S3.PutBucketWebsite>` operation
@@ -124,8 +124,8 @@ print the errordetails and exit the routine.
 
 .. _s3-example-delete-website:
 
-Deleting Website Configuration on a Bucket
-==========================================
+Delete Website Configuration on a Bucket
+========================================
 
 Create a Go file named :file:`s3_delete_bucket_website.go`. The following code
 shows you how to delete the bucket's
@@ -150,7 +150,7 @@ create a new S3 service client.
 .. literalinclude:: example_code/s3/s3_delete_bucket_website.go
    :lines: 45-50
 
-Call `DeleteBucketWebsite` and pass in the name of the bucket to complete the action.
+Call ``DeleteBucketWebsite`` and pass in the name of the bucket to complete the action.
 
 .. literalinclude:: example_code/s3/s3_delete_bucket_website.go
    :lines: 55-

@@ -10,16 +10,16 @@
 
 .. _examples-s3-cors:
 
-##########################################
-Working with |S3| CORS Permissions with Go
-##########################################
+####################################################
+Working with |S3| CORS Permissions with the |sdk-go|
+####################################################
 
 .. meta::
    :description: Use this code example to learn how to work with cross origin resource sharing (CORS) an Amazon S3 bucket.
    :keywords: AWS SDK for Go examples, S3, cross origin resource sharing, CORS
 
 
-This Go example shows you how to list |S3| buckets and configure
+This |sdk-go| example shows you how to list |S3| buckets and configure
 CORS and bucket logging. You can download complete versions of these example files from the
 :doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
 
@@ -35,7 +35,7 @@ CORS and bucket logging. The routines use the |sdk-go| to configure a selected
 * :sdk-go-api-deep:`GetBucketCors <service/s3/#S3.GetBucketCors>`
 * :sdk-go-api-deep:`PutBucketCors <service/s3/#S3.PutBucketCors>`
 
-If you are unfamiliar with using CORS configuration with an |S3| bucket, it is worth your time
+If you are unfamiliar with using CORS configuration with an |S3| bucket, it's worth your time
 to read :s3-dg:`Cross-Origin Resource Sharing (CORS) <cors>` in the |S3-dg| before proceeding.
 
 .. _s3-cors-prerequisites:
@@ -49,8 +49,8 @@ Prerequisites
 
 .. _s3-example-cors-config:
 
-Configuring CORS on the Bucket
-==============================
+Configure CORS on the Bucket
+============================
 
 Create a new Go file named :file:`s3_set_cors.go`. You must import the relevant Go and
 |sdk-go| packages by adding the following lines.
@@ -60,7 +60,7 @@ Create a new Go file named :file:`s3_set_cors.go`. You must import the relevant 
 
 This routine configures CORS rules for a bucket by setting the allowed HTTP methods.
 
-It requires the bucket name, and can also take a space-separated list of HTTP methods. Using the
+It requires the bucket name and can also take a space-separated list of HTTP methods. Using the
 Go Language's ``flag`` package, it parses the input and validates the bucket name.
 
 .. literalinclude:: example_code/s3/s3_set_cors.go

@@ -10,9 +10,9 @@
 
 .. _examples-iam-aliases:
 
-######################################
-Managing |IAM| Account Aliases with Go
-######################################
+################################################
+Managing |IAM| Account Aliases with the |sdk-go|
+################################################
 
 .. meta::
    :description: Use this code example to learn how to manage IAM account aliases in Go.
@@ -43,8 +43,8 @@ Prerequisites
 
 .. _iam-example-create-alias:
 
-Creating a New IAM Account Alias
-================================
+Create a New IAM Account Alias
+==============================
 
 .. Intro para for this should mention alias, no? Maybe an example of when/why you'd create the new alias? and should first sentence below say "new IAM account alias"?
 
@@ -67,8 +67,8 @@ The code takes the new alias as an argument, and then calls ``CreateAccountAlias
 
 .. _iam-example-list-aliases:
 
-Listing |IAM| Account Aliases
-=============================
+List |IAM| Account Aliases
+==========================
 
 This code lists the aliases for your |IAM| account.
 
@@ -89,8 +89,8 @@ The code calls ``ListAccountAliases``, specifying to return a maximum of 10 item
 
 .. _iam-example-delete-aliases:
 
-Deleting an |IAM| Account Alias
-===============================
+Delete an |IAM| Account Alias
+=============================
 
 This code deletes a specified |IAM| account alias.
 

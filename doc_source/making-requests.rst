@@ -9,9 +9,9 @@
    limitations under the License.
 
 
-##################
-Using AWS Services
-##################
+####################################
+Using the |sdk-go| with AWS Services
+####################################
 
 
 .. meta::
@@ -32,12 +32,13 @@ action, the action returns an output struct with the bucket's location.
 For the list of service clients, including their methods and parameters,
 see the |sdk-go-api|_.
 
+
 .. _constructing-a-service:
 
 Constructing a Service
 ======================
 
-To construct a service client instance, use the :sdk-go-api-deep:`NewSession() <aws/session/#NewSession>` 
+To construct a service client instance, use the :sdk-go-api-deep:`NewSession() <aws/session/#NewSession>`
 function. The following example creates an |S3| service client.
 
 .. code:: go
@@ -63,9 +64,9 @@ with a custom value (``us-west-2``):
 
     svc := s3.New(mySession, aws.NewConfig().WithRegion("us-west-2"))
 
-    
+
 .. _service-operation-calls:
-    
+
 Service Operation Calls
 =======================
 
@@ -84,8 +85,8 @@ Calling the operation will sync as the request is built, signed, sent,
 and the response is received. If an error occurs during the operation,
 it will be returned. The output or resulting structure won't be valid.
 
-For example, to call the |S3| GET Object API, use the |S3| 
-service client instance and call its :sdk-go-api-deep:`GetObject <service/s3/#S3.GetObject>` 
+For example, to call the |S3| GET Object API, use the |S3|
+service client instance and call its :sdk-go-api-deep:`GetObject <service/s3/#S3.GetObject>`
 method:
 
 .. code:: go
@@ -136,7 +137,7 @@ number of pre-signed requests, such as pre-signed |S3| URLs. You
 can also use the request form to modify how the SDK sends a request.
 
 The following example calls the request form of the ``GetObject``
-method. The :sdk-go-api-deep:`Send <aws/request/#Request.Send>` method signs 
+method. The :sdk-go-api-deep:`Send <aws/request/#Request.Send>` method signs
 the request before sending it.
 
 .. code:: go
@@ -155,9 +156,9 @@ the request before sending it.
 Handling Operation Response Body
 --------------------------------
 
-Some of the API operations' response output struct will contain a ``Body``
-field which is an ``io.ReadCloser``. If you are making request with
-these operations you should always make sure to call :code:`Close` on the field.
+Some API operations return a response struct that contain a ``Body``
+field that is an ``io.ReadCloser``. If you're making requests with
+these operations, always be sure to call :code:`Close` on the field.
 
 .. code:: go
 
@@ -175,9 +176,9 @@ these operations you should always make sure to call :code:`Close` on the field.
         return
     }
 
-    
+
 .. _concurrently-using-service-clients:
-    
+
 Concurrently Using Service Clients
 ==================================
 
@@ -238,7 +239,7 @@ uses a channel.
     }
 
 .. _using-pagination-methods:
-    
+
 Using Pagination Methods
 ========================
 
@@ -278,9 +279,9 @@ the ``MaxKeys`` field.
         return pageNum < 3
     })
 
-    
+
 .. _using-waiters:
-    
+
 Using Waiters
 =============
 
@@ -291,7 +292,7 @@ That way, subsequent operations on the bucket are done only after the
 bucket has been created.
 
 The following example uses a waiter that waits until specific instances
-have stopped:
+have stopped.
 
 .. code:: go
 
@@ -299,18 +300,18 @@ have stopped:
     if err != nil {
         fmt.Println("Error creating session ", err)
     }
-    // Create an EC2 client.
+    // Create an EC2 client
     ec2client := ec2.New(sess)
-    // Specify two instances to stop.
+    // Specify two instances to stop
     instanceIDsToStop := aws.StringSlice([]string{"i-12345678", "i-23456789"})
-    // Send request to stop instances.
+    // Send request to stop instances
     _, err = ec2client.StopInstances(&ec2.StopInstancesInput{
       InstanceIds: instanceIDsToStop,
     })
     if err != nil {
       panic(err)
     }
-    // Use a waiter function to wait until the instances are stopped.
+    // Use a waiter function to wait until the instances are stopped
     describeInstancesInput := &ec2.DescribeInstancesInput{
       InstanceIds: instanceIDsToStop,
     }

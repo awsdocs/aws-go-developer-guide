@@ -10,9 +10,9 @@
 
 .. _examples-ec2-manage-instances:
 
-################################
-Managing |EC2| Instances with Go
-################################
+##########################################
+Managing |EC2| Instances with the |sdk-go|
+##########################################
 
 .. meta::
    :description: Use this code example to learn how to manage Amazon EC2 instances with Go.
@@ -57,8 +57,8 @@ Prerequisites
 
 .. _describing-your-instances:
 
-Describing Your Instances
-=========================
+Describe Your Instances
+=======================
 
 Create a new Go file named :file:`describing_instances.go`.
 
@@ -82,8 +82,8 @@ Call ``DescribeInstances`` to get detailed information for each instance.
 
 .. _ec2-manage-instance-monitoring:
 
-Managing Instance Monitoring
-============================
+Manage Instance Monitoring
+==========================
 
 Create a new Go file named :file:`monitoring_instances.go`.
 
@@ -108,8 +108,8 @@ to change instance monitoring.
 
 .. _scenario-starting-stopping:
 
-Starting and Stoppping Instances
-================================
+Start and Stop Instances
+========================
 
 Create a new Go file named :file:`start_stop_instances.go`.
 
@@ -133,8 +133,8 @@ test whether you have permission to start or stop them.
    :lines: 40, 43-51, 54-87
 
 
-Rebooting Instances
-===================
+Reboot Instances
+================
 
 Create a new Go file named :file:`reboot_instances.go`.
 

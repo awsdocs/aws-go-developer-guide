@@ -10,9 +10,9 @@
 
 .. _examples-glacier:
 
-#########################
-|GLlong| with Go Examples
-#########################
+###################################
+|GLlong| with the |sdk-go| Examples
+###################################
 
 .. meta::
    :description: Use Amazon Glacier code examples to write your own Go applications.
@@ -41,8 +41,8 @@ Prerequisites
 
 .. _create-a-vault:
 
-Creating a Vault
-================
+Create a Vault
+==============
 
 The following example uses the |GLlong| :sdk-go-api-deep:`CreateVault <service/glacier/#Glacier.CreateVault>`
 operation to create a vault named ``YOUR_VAULT_NAME``.
@@ -52,8 +52,8 @@ operation to create a vault named ``YOUR_VAULT_NAME``.
    :lines: 15-
 
 
-Uploading an Archive
-====================
+Upload an Archive
+=================
 
 The following example assumes you have a vault named ``YOUR_VAULT_NAME``. It uses the |GLlong|
 :sdk-go-api-deep:`UploadArchive <service/glacier/#Glacier.UploadArchive>` operation to upload a

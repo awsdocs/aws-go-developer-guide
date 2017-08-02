@@ -10,9 +10,9 @@
 
 .. _examples-s3-presigned-urls:
 
-#################################################
-Creating Pre-Signed URLs for |S3| Buckets with Go
-#################################################
+###########################################################
+Creating Pre-Signed URLs for |S3| Buckets with the |sdk-go|
+###########################################################
 
 .. meta::
    :description: Use S3 code examples to create presigned URLS to S3 buckets in your Go applications.

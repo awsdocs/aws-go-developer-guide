@@ -10,9 +10,9 @@
 
 .. _examples-iam-users:
 
-############################
-Managing |IAM| Users with Go
-############################
+######################################
+Managing |IAM| Users with the |sdk-go|
+######################################
 
 .. meta::
    :description: Use this code example to learn how to manage IAM users in Go.
@@ -47,8 +47,8 @@ Prerequisites
 
 .. _iam-example-create-user:
 
-Creating a New |IAM| User
-=========================
+Create a New |IAM| User
+=======================
 
 This code creates a new |IAM| user.
 
@@ -70,8 +70,8 @@ If you receive a ``NoSuchEntity`` error, call ``CreateUser`` because the user do
 
 .. _iam-example-list-user:
 
-Listing |IAM| Users in Your Account
-===================================
+List |IAM| Users in Your Account
+================================
 
 You can get a list of the users in your account and print the list to the console.
 
@@ -93,8 +93,8 @@ Call ``ListUsers`` and print the results.
 
 .. _iam_example_update_user:
 
-Updating a User's Name
-======================
+Update a User's Name
+====================
 
 In this example, you change the name of an IAM user to a new value.
 
@@ -115,8 +115,8 @@ Call ``UpdateUser``, passing in the original user name and the new name, and pri
 
 .. _iam_example_delete_user:
 
-Deleting an IAM User
-====================
+Delete an IAM User
+==================
 
 In this example, you delete an |IAM| user.
 

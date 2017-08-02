@@ -10,9 +10,9 @@
 
 .. _examples-cw-getting-metrics:
 
-#################################
-Getting Metrics from |CW| with Go
-#################################
+###########################################
+Getting Metrics from |CW| with the |sdk-go|
+###########################################
 
 .. meta::
    :description: Use this code example to learn how to retrieve a list of published CloudWatch metrics and publish data points to CloudWatch metrics in Go.
@@ -52,8 +52,8 @@ Prerequisites
 
 .. _cw-example-list-metrics:
 
-Listing Metrics
-===============
+List Metrics
+============
 
 Create a new Go file named :file:`listing_metrics.go`.
 
@@ -76,8 +76,8 @@ Call ``ListMetrics``, supplying the metric name, namespace, and dimensions. Prin
 
 .. _cw-example-custom-metrics:
 
-Submitting Custom Metrics
-=========================
+Submit Custom Metrics
+=====================
 
 Create a new Go file named :file:`custom_metrics.go`.
 

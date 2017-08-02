@@ -10,9 +10,9 @@
 
 .. _examples-iam-access-keys:
 
-##################################
-Managing |IAM| Access Keys with Go
-##################################
+############################################
+Managing |IAM| Access Keys with the |sdk-go|
+############################################
 
 .. meta::
    :description: Use this code example to learn how to manage IAM access keys in Go.
@@ -46,8 +46,8 @@ Prerequisites
 
 .. _iam-example-create-access-key:
 
-Creating a New IAM Access Key
-=============================
+Create a New IAM Access Key
+===========================
 
 This code creates a new |IAM| access key for the |IAM| user named IAM_USER_NAME.
 
@@ -68,8 +68,8 @@ Call ``CreateAccessKey`` and print the results.
 
 .. _iam-example-list-access-keys:
 
-Listing a User's Access Keys
-============================
+List a User's Access Keys
+=========================
 
 In this example, you get a list of the access keys for a user and print the list to the console.
 
@@ -90,8 +90,8 @@ Call ``ListAccessKeys`` and print the results.
 
 .. _iam_example_last_use:
 
-Getting the Last Use for an Access Key
-======================================
+Get the Last Use for an Access Key
+==================================
 
 In this example, you find out when an access key was last used.
 
@@ -112,8 +112,8 @@ Call ``GetAccessKeyLastUsed``, passing in the access key ID, and print the resul
 
 .. _iam_example_update-access-key:
 
-Updating Access Key Status
-==========================
+Update Access Key Status
+========================
 
 .. There's nothing in the code that's about deleting a user--is this correct?
 
@@ -136,8 +136,8 @@ Call ``UpdateAccessKey``, passing in the access key ID, status (making it active
 
 .. _iam-example-delete-access-key:
 
-Deleting an Access Key
-======================
+Delete an Access Key
+====================
 
 In this example, you delete an access key.
 

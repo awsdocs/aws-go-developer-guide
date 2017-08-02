@@ -10,16 +10,16 @@
 
 .. _examples-sqs-long-polling:
 
-##############################################
-Enabling Long Polling in |SQS| Queues with Go
-##############################################
+#######################################################
+Enabling Long Polling in |SQS| Queues with the |sdk-go|
+#######################################################
 
 .. meta::
    :description: Use these code examples to learn enable long polling with Amazon SQS queues.
    :keywords: AWS SDK for Go examples, SQS, create queue
 
 
-These Go examples show you how to:
+These |sdk-go| examples show you how to:
 
 * Enable long polling when you create an |SQS| queue
 * Enable long polling on an existing |SQS| queue
@@ -59,11 +59,11 @@ Prerequisites
 
 .. _sqs-example-create-queue-long-pollling:
 
-Enabling Long Polling When Creating a Queue
-============================================
+Enable Long Polling When Creating a Queue
+=========================================
 
 This example creates a queue with long polling enabled. If the queue already exists,
-no error will be returned.
+no error is returned.
 
 Create a new Go file named :file:`sqs_longpolling_create_queue.go`. You must import the
 relevant Go and |sdk-go| packages by adding the following lines.
@@ -93,8 +93,8 @@ The example uses this utility function.
    :lines: 69-72
 
 
-Enabling Long Polling on an Existing Queue
-==========================================
+Enable Long Polling on an Existing Queue
+========================================
 
 Create a new Go file named :file:`sqs_longpolling_existing_queue.go`.
 
@@ -128,8 +128,8 @@ queue URL. Print any errors or a success message.
 .. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
    :lines: 68-84
 
-Enabling Long Polling on Message Receipt
-=========================================
+Enable Long Polling on Message Receipt
+======================================
 
 Create a new Go file named :file:`sqs_longpolling_receive_message.go`.
 

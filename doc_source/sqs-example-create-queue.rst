@@ -10,16 +10,16 @@
 
 .. _examples-sqs-using-queues:
 
-##########################
-Using |SQS| Queues with Go
-##########################
+####################################
+Using |SQS| Queues with the |sdk-go|
+####################################
 
 .. meta::
    :description: Use these code examples to learn how to work with Amazon SQS queues.
    :keywords: AWS SDK for Go examples, SQS, create queue
 
 
-These Go examples show you how to:
+These |sdk-go| examples show you how to:
 
 *  List |SQS| queues
 *  Create |SQS| queues
@@ -34,7 +34,7 @@ You can download complete versions of these example files from the
 The Scenario
 ============
 
-These examples work with |SQS| queues.
+These examples demonstrate how to work with |SQS| queues.
 
 The code uses these methods of the |SQS| client class:
 
@@ -54,8 +54,8 @@ Prerequisites
 
 .. _sqs-example-list-queues:
 
-Listing Queues
-==============
+List Queues
+===========
 
 Create a new Go file named :file:`sqs_listqueues.go`. You must import the relevant Go and
 |sdk-go| packages by adding the following lines.
@@ -74,8 +74,8 @@ message and loop through the queue URLs to print them.
 .. literalinclude:: example_code/sqs/sqs_listqueues.go
    :lines: 37-52
 
-Creating Queues
-===============
+Create Queues
+=============
 
 Create a new Go file named :file:`sqs_createqueues.go`. You must import the relevant Go and
 |sdk-go| packages by adding the following lines.
@@ -95,8 +95,8 @@ or a success message.
    :lines: 37-50
 
 
-Getting a Queue URL
-===================
+Get a Queue URL
+===============
 
 Create a new Go file named :file:`sqs_getqueueurl.go`. You must import the relevant Go and
 |sdk-go| packages by adding the following lines.
@@ -116,8 +116,8 @@ or a success message.
 .. literalinclude:: example_code/sqs/sqs_getqueueurl.go
    :lines: 37-47
 
-Deleting a Queue
-================
+Delete a Queue
+==============
 
 Create a new Go file named :file:`sqs_deletequeue.go`. You must import the relevant Go and
 |sdk-go| packages by adding the following lines.

@@ -10,16 +10,16 @@
 
 .. _examples-sqs-managing-visibility:
 
-###################################################
-Managing Visibility Timeout in |SQS| Queues with Go
-###################################################
+#############################################################
+Managing Visibility Timeout in |SQS| Queues with the |sdk-go|
+#############################################################
 
 .. meta::
    :description: Use these Go examples to learn how to manage visibility timeout with Amazon SQS queues.
    :keywords: AWS SDK for Go examples, creating SQS queues
 
 
-This Go example shows you how to:
+This |sdk-go| example shows you how to:
 
 * Change visibility timeout with |SQS| queues
 
@@ -31,7 +31,7 @@ You can download complete versions of these example files from the
 The Scenario
 ============
 
-This example manages visibility timeout with |SQS| queues, and uses these methods of the
+This example manages visibility timeout with |SQS| queues. It uses these methods of the
 |SQS| client class:
 
 * :sdk-go-api-deep:`CreateQueue <service/sqs/#SQS.CreateQueue>`
@@ -52,8 +52,8 @@ Prerequisites
 
 .. _sqs-example-visibility-timeout:
 
-Changing the Visibility Timeout
-===============================
+Change the Visibility Timeout
+=============================
 
 Create a new Go file named :file:`sqs_changingvisibility.go`.
 
@@ -68,7 +68,7 @@ information from the shared config file, ~/.aws/config.
 .. literalinclude:: example_code/sqs/sqs_changingvisibility.go
    :lines: 27, 30-35
 
-Get a message from the queue. Call ``ReceiveMessage`` passing in the URL of the queue
+Get a message from the queue. Call ``ReceiveMessage``. Pass in the URL of the queue
 to return details of the next message in the queue. Print any errors, or a
 message if no message was received.
 
