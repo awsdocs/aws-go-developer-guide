@@ -8,28 +8,30 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-.. _examples-s3:
+.. _examples-cb:
 
-#####################
-|S3| with Go Examples
-#####################
+##########################
+|ACBlong| with Go Examples
+##########################
 
 .. meta::
-   :description: Use S3 code examples to write your own Go applications.
-   :keywords: AWS SDK Go examples, Amazon S3
+   :description: Use CodeBuild code examples to write your own Go applications.
+   :keywords: AWS SDK Go examples, |ACBlong|
 
-The |sdk-go| examples can integrate |S3| into your applications. The examples assume you have already set up and configured the SDK (that is, you've imported all required packages and set your credentials and region). For more information, see :doc:`setting-up` and :doc:`configuring-sdk`.
+The |sdk-go| examples can integrate |ACBlong| into your applications.
+The examples assume you have already set up and configured the SDK 
+(that is, you've imported all required packages and set your credentials
+and region). 
+For more information, see :doc:`setting-up` and :doc:`configuring-sdk`.
 
-You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
+You can download complete versions of these example files from the 
+:doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
 
 .. toctree::
    :titlesonly:
-   :caption: Amazon S3 Example Topics
+   :caption: |ACB| Example Topics
    :maxdepth: 1
 
-   s3-example-basic-bucket-operations
-   s3-example-presigned-urls
-   s3-example-static-web-host
-   s3-example-cors
-   s3-example-bucket-policy
-   s3-example-bucket-acls
+   cb-example-build-project
+   cb-example-list-builds
+   cb-example-list-projects
