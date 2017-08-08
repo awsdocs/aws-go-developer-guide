@@ -10,9 +10,9 @@
 
 .. _lambda-go-example-show-functions:
 
-################################################
-Displaying Information about All |LAM| Functions
-################################################
+##################################################################
+Displaying Information about All |LAM| Functions with the |sdk-go|
+##################################################################
 
 The following example displays the names and descriptions of the
 |LAM| functions in the :code:`us-west-2` region.

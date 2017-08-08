@@ -10,9 +10,9 @@
 
 .. _examples-iam-certificates:
 
-##############################################
-Working with |IAM| Server Certificates with Go
-##############################################
+########################################################
+Working with |IAM| Server Certificates with the |sdk-go|
+########################################################
 
 .. meta::
    :description: Use this code example to learn how to manage |IAM| server certificates in Go.
@@ -46,8 +46,8 @@ Prerequisites
 
 .. _iam-example-list-certificates:
 
-Listing Your Server Certificates
-================================
+List Your Server Certificates
+=============================
 
 This code lists your certificates.
 
@@ -64,8 +64,8 @@ Call ``ListServerCertificates`` and print the details.
 
 .. _iam-example-get-certificate:
 
-Getting a Server Certificate
-============================
+Get a Server Certificate
+========================
 
 In this example, you retrieve an existing server certificate.
 
@@ -86,8 +86,8 @@ Call ``GetServerCertificate``, passing the name of the certificate, and print th
 
 .. _iam-example-update-certificate:
 
-Updating a Server Certificate
-=============================
+Update a Server Certificate
+===========================
 
 In this example, you update an existing server certificate.
 
@@ -110,8 +110,8 @@ Update the certificate name.
 
 .. _iam_example_delete_server_certificate:
 
-Deleting a Server Certificate
-=============================
+Delete a Server Certificate
+===========================
 
 In this example, you delete an existing server certificate.
 

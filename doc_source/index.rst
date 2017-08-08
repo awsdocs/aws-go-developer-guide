@@ -19,16 +19,16 @@ This documentation is for the |sdk-go|.
    :titlesonly:
    :maxdepth: 1
 
-   welcome
-   setting-up
-   configuring-sdk
-   sessions
-   making-requests
-   handling-errors
-   common-examples
-   sdk-utilities
+   AWS SDK for Go <welcome>
+   Getting Started <setting-up>
+   Configuring the SDK <configuring-sdk>
+   Using Sessions <sessions>
+   Using AWS Services <making-requests>
+   Handling Errors <handling-errors>
+   Code Examples <common-examples>
+   SDK Utilities <sdk-utilities>
    document-history
 
 .. meta::
    :description: Developer guide for the |sdk-go|.
-   :keywords: AWS, |sdk-go|, Golang, Go
+   :keywords: Golang

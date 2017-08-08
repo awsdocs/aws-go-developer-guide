@@ -10,17 +10,14 @@
 
 .. _examples-cloudwatch:
 
-#########################
-|CWlong| with Go Examples
-#########################
+####################################
+|CWlong| Examples Using the |sdk-go|
+####################################
 
 .. meta::
    :description: Use Amazon CloudWatch code examples to write your Go applications.
    :keywords: examples, CloudWatch
 
-.. Below, collect and track performance metrics? And in general, the first paragraph in this
-   topic, giving a quick view into what the specific service is, is terrific. Can you do this
-   for all?
 
 |CWlong| is a web service that monitors your AWS resources and the applications
 you run on AWS in real time. You can use |CW| to collect and track metrics, which are variables you
@@ -29,7 +26,7 @@ changes to the resources you are monitoring based on rules that you define.
 
 The |sdk-go| examples show you how to integrate |CW| into your Go applications.
 The examples assume you have already set up and configured the SDK (that
-is, you have imported all required packages and set your credentials and region). For more information, 
+is, you have imported all required packages and set your credentials and region). For more information,
 see :doc:`setting-up` and :doc:`configuring-sdk`.
 
 You can download complete versions of these example files from the
@@ -37,13 +34,12 @@ You can download complete versions of these example files from the
 
 .. toctree::
    :titlesonly:
-   :caption: CloudWatch Example Topics
    :maxdepth: 1
 
-   cw-example-describing-alarms
-   cw-example-using-alarm-actions
-   cw-example-getting-metrics
-   cw-example-sending-events
+   Describing CloudWatch Alarms <cw-example-describing-alarms>
+   Using Alarms and Alarm Actions with CloudWatch <cw-example-using-alarm-actions>
+   Getting Metrics from CloudWatch <cw-example-getting-metrics>
+   Sending Events to Amazon CloudWatch Events <cw-example-sending-events>
 
 
 

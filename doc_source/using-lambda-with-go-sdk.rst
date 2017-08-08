@@ -8,19 +8,20 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-##############
-|LAM| Examples
-##############
+#################################
+|LAM| Examples Using the |sdk-go|
+#################################
 
 You can use the following examples to access |LAMlong| (|LAM|) using the |sdk-go|. For
 more information about |LAM|, see the `Lambda documentation <http://aws.amazon.com/documentation/lambda/>`_.
 
-**Examples**
+You can download complete versions of these example files from the
+:doc-examples-go:`aws-doc-sdk-examples <lambda>` repository on GitHub.
 
 .. toctree::
    :maxdepth: 2
 
-   lambda-go-example-show-functions
-   lambda-go-example-create-function
-   lambda-go-example-run-function
-   lambda-go-example-configure-function-for-notification
+   Displaying Information about All Lambda Functions <lambda-go-example-show-functions>
+   Creating a Lambda Function <lambda-go-example-create-function>
+   Running a Lambda Function <lambda-go-example-run-function>
+   Configuring a Lambda Function to Receive Notifications <lambda-go-example-configure-function-for-notification>

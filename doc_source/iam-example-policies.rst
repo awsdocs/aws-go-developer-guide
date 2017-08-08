@@ -10,9 +10,9 @@
 
 .. _examples-iam-policies:
 
-###################################
-Working with |IAM| Policies with Go
-###################################
+#############################################
+Working with |IAM| Policies with the |sdk-go|
+#############################################
 
 .. meta::
    :description: Use this code example to learn how to manage IAM policies in Go.
@@ -47,8 +47,8 @@ Prerequisites
 
 .. _iam-example-create-policy:
 
-Creating an IAM Policy
-======================
+Create an IAM Policy
+====================
 
 This code creates a new IAM Policy. Create a new Go file named :file:`iam_createpolicy.go`.
 
@@ -84,8 +84,8 @@ Marshal the policy to JSON and pass to ``CreatePolicy``.
 
 .. _iam-example-get-policy:
 
-Getting an IAM Policy
-=====================
+Get an IAM Policy
+=================
 
 In this example, you retrieve an existing policy from |IAM|. Create a new Go file named :file:`iam_getpolicy.go`.
 
@@ -106,8 +106,8 @@ Call ``GetPolicy``, passing in the ARN for the policy (which is hard coded in th
 
 .. _iam-example-attach-managed-role-policy:
 
-Attaching a Managed Role Policy
-===============================
+Attach a Managed Role Policy
+============================
 
 In this example, you attach an |IAM| managed role policy. Create a new Go file named :file:`iam_attachuserpolicy.go`. You'll call the ``ListAttachedRolePolicies`` method of the |IAM| service object, which returns an array of managed policies.
 
@@ -140,8 +140,8 @@ If your role policy is not attached already, call ``AttachRolePolicy``.
 
 .. _iam-example-detach-managed-role-policy:
 
-Detaching a Managed Role Policy
-===============================
+Detach a Managed Role Policy
+============================
 
 In this example, you detach a role policy. Once again, you call the ``ListAttachedRolePolicies`` method of the |IAM| service object, which returns an array of managed policies.
 

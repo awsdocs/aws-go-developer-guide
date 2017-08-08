@@ -10,9 +10,9 @@
 
 .. _examples-iam:
 
-######################
-|IAM| with Go Examples
-######################
+################################
+|IAM| with the |sdk-go| Examples
+################################
 
 .. meta::
    :description: Use IAM code examples to write your own Go applications.
@@ -32,11 +32,10 @@ You can download complete versions of these example files from the
 
 .. toctree::
    :titlesonly:
-   :caption: IAM Example Topics
    :maxdepth: 1
 
-   iam-example-managing-users
-   iam-example-managing-access-keys
-   iam-example-account-aliases
-   iam-example-policies
-   iam-example-server-certificates
+   Managing IAM Users <iam-example-managing-users>
+   Managing IAM Access Keys <iam-example-managing-access-keys>
+   Managing IAM Account Aliases <iam-example-account-aliases>
+   Working with IAM Policies <iam-example-policies>
+   Working with IAM Server Certificates <iam-example-server-certificates>

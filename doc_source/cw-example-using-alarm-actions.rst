@@ -10,9 +10,9 @@
 
 .. _examples-cw-alarms:
 
-##############################################
-Using Alarms and Alarm Actions in |CW| with Go
-##############################################
+########################################################
+Using Alarms and Alarm Actions in |CW| with the |sdk-go|
+########################################################
 
 .. meta::
    :description: Use this code example to learn how to create alarms and alarm actions to change the state of your EC2 instances in Amazon Cloudwatch.
@@ -57,8 +57,8 @@ Prerequisites
 
 .. _cw-example-alarm-actions:
 
-Creating and Enabling Actions on an Alarm
-=========================================
+Create and Enable Actions on an Alarm
+=====================================
 
 Create a new Go file named :file:`create_enable_alarms.go`.
 
@@ -90,8 +90,8 @@ Call ``EnableAlarmActions`` with the new alarm for the instance.
 .. literalinclude:: example_code/cloudwatch/create_enable_alarms.go
    :lines: 71-
 
-Disabling Actions on an Alarm
-=============================
+Disable Actions on an Alarm
+===========================
 
 Create a new Go file named :file:`disable_alarm.go`.
 

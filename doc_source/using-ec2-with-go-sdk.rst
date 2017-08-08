@@ -10,9 +10,9 @@
 
 .. _examples-ec2:
 
-######################
-|EC2| with Go Examples
-######################
+################################
+|EC2| with the |sdk-go| Examples
+################################
 
 .. meta::
    :description: Use Amazon EC2 code examples to write your own Go applications.
@@ -27,15 +27,15 @@ You can download complete versions of these example files from the
 
 .. toctree::
    :titlesonly:
-   :caption: Amazon EC2 Example Topics
    :maxdepth: 1
 
-   ec2-example-create-images
-   ec2-example-manage-instances
-   ec2-example-working-with-key-pairs
-   ec2-example-regions-availability-zones
-   ec2-example-security-groups
-   ec2-example-elastic-ip-addresses
+
+   Creating Amazon EC2 Instances with Tags or without Block Devices <ec2-example-create-images>
+   Managing Amazon EC2 Instances <ec2-example-manage-instances>
+   Working with Amazon EC2 Key Pairs <ec2-example-working-with-key-pairs>
+   Using Regions and Availability Zones with Amazon EC2 <ec2-example-regions-availability-zones>
+   Working with Security Groups in Amazon EC2 <ec2-example-security-groups>
+   Using Elastic IP Addresses in Amazon EC2 <ec2-example-elastic-ip-addresses>
 
 
 

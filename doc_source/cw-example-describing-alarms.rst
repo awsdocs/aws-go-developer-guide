@@ -10,17 +10,15 @@
 
 .. _examples-cw-describe-alarms:
 
-##############################
-Describing |CW| Alarms with Go
-##############################
+########################################
+Describing |CW| Alarms with the |sdk-go|
+########################################
 
 .. meta::
    :description: Use this code example to learn how to describe alarms in Amazon Cloudwatch.
    :keywords: AWS SDK for Go examples, CloudWatch, alarms
 
-This example shows you how to:
-
-* Retrieve basic information that describes your |CW| alarms
+This example shows you how to retrieve basic information that describes your |CW| alarms.
 
 You can download complete versions of these example files from the
 :doc-examples-go:`aws-doc-sdk-examples <cloudwatch>` repository on GitHub.
@@ -49,8 +47,8 @@ Prerequisites
 
 .. _cw-example-alarms:
 
-Describing Alarms
-=================
+Describe Alarms
+===============
 
 Initialize a session that the SDK will use to load configuration, credentials, and region information
 from the shared config file, ~/.aws/config, and create a new |EC2| service client.

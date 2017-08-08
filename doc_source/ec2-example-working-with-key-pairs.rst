@@ -10,9 +10,9 @@
 
 .. _examples-ec2-key-pairs:
 
-####################################
-Working with |EC2| Key Pairs with Go
-####################################
+##############################################
+Working with |EC2| Key Pairs with the |sdk-go|
+##############################################
 
 .. meta::
    :description: Use this code example to learn how to manage Amazon EC2 key pairs with Go.
@@ -55,8 +55,8 @@ Prerequisites
 
 .. _example-describing-your-key-pairs:
 
-Describing Your Key Pairs
-=========================
+Describe Your Key Pairs
+=======================
 
 Create a new Go file named :file:`ec2_describe_keypairs.go`.
 
@@ -82,8 +82,8 @@ The routine uses the following utility function.
 
 .. _example-create-key-pair:
 
-Creating a Key Pair
-===================
+Create a Key Pair
+=================
 
 Create a new Go file named :file:`ec2_create_keypair.go`.
 
@@ -109,8 +109,8 @@ The routine uses the following utility function.
 
 .. _example-delete-key-pair:
 
-Deleting a Key Pair
-===================
+Delete a Key Pair
+=================
 
 Create a new Go file named :file:`ec2_delete_keypair.go`.
 

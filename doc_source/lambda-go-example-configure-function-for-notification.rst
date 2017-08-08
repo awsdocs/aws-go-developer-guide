@@ -10,28 +10,28 @@
 
 .. _lambda-go-example-configure-function-for-notification:
 
-#####################################################
-Configuring a |LAM| Function to Receive Notifications
-#####################################################
+#######################################################################
+Configuring a |LAM| Function to Receive Notifications with the |sdk-go|
+#######################################################################
 
 The following example configures the |LAM| function :code:`functionName`
 to accept notifications from the resource with the ARN :code:`sourceArn`.
 
-The first step is to create the session and |LAM| client:
+The first step is to create the session and |LAM| client.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-configure-function-for-notification.go
    :lines: 14-20
    :dedent: 0
    :language: go
 
-Next we create the structure for the input argument to the **AddPermission** function:
+Next, we create the structure for the input argument to the :code:`AddPermission` function.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-configure-function-for-notification.go
    :lines: 22-28
    :dedent: 0
    :language: go
 
-Finally, we call **AddPermission** and display a message with the result of the call:
+Finally, we call :code:`AddPermission` and display a message with the result of the call.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-configure-function-for-notification.go
    :lines: 30-37

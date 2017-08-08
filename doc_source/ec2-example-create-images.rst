@@ -10,9 +10,9 @@
 
 .. _examples-ec2-tags-no-block:
 
-###################################################################
-Creating |EC2| Instances with Tags or without Block Devices with Go
-###################################################################
+#############################################################################
+Creating |EC2| Instances with Tags or without Block Devices with the |sdk-go|
+#############################################################################
 
 .. meta::
    :description: Use this code example to learn how to create Amazon EC2 instances with tags or no block devices.
@@ -51,8 +51,8 @@ Prerequisites
 
 .. _create-an-instance-with-tags:
 
-Scenario: Creating an Instance with Tags
-========================================
+Create an Instance with Tags
+============================
 
 The |EC2| service has an operation for creating instances
 (:sdk-go-api-deep:`RunInstances <service/ec2/#EC2.RunInstances>`) and another for
@@ -71,8 +71,8 @@ single ``CreateTags`` operation.
 
 .. _create-image-without-block-device:
 
-Scenario: Creating an Image without a Block Device
-==================================================
+Create an Image without a Block Device
+======================================
 
 Sometimes when you create an |EC2| image, you might want to explicitly exclude certain block devices. To
 do this, you can use the ``NoDevice``

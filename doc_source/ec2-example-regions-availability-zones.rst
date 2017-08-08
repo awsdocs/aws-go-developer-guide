@@ -10,9 +10,9 @@
 
 .. _examples-ec2-regions-and-azs:
 
-#######################################################
-Using Regions and Availability Zones with |EC2| with Go
-#######################################################
+#############################################################
+Using Regions and Availability Zones with |EC2| with |sdk-go|
+#############################################################
 
 .. meta::
    :description: Use this code example to work with regions and Availability Zones in AWS with Go.
@@ -65,8 +65,8 @@ Prerequisites
   :ec2-ug:`Regions and Availability Zones <using-regions-availability-zones>` in the
   |ec2-ug| or :ec2-ug-win:`Regions and Availability Zones <resources>` in the |ec2-ug-win|.
 
-Listing the Groups
-==================
+List the Groups
+===============
 
 This example describes the security groups by IDs that are passed in to the routine. It takes
 a space separated list of group IDs as input.

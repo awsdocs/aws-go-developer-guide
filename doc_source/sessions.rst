@@ -9,33 +9,32 @@
    limitations under the License.
 
 
-########
-Sessions
-########
+###########################################################
+Using Sessions to Configure Service Clients in the |sdk-go|
+###########################################################
 
 .. meta::
    :description: Use sessions to define configurations for service clients.
-   :keywords: session
+   :keywords: service client configuration
 
-
-In the AWS SDK for Go, a session is an object that contains
-configuration information for :doc:`service clients <making-requests>`,
+In the |sdk-go|, a session is an object that contains
+configuration information for :doc:`service clients <making-requests>`.
 which you use to interact with AWS services. For example, sessions can
 include information about the region where requests will be sent, which
 credentials to use, or additional request handlers. Whenever you create
 a service client, you must specify a session. For more information about
-sessions, see the :sdk-go-api-deep:`session <aws/session/>` 
+sessions, see the :sdk-go-api-deep:`session <aws/session/>`
 package in the |sdk-go-api|.
 
 Sessions can be shared across all service clients that share the same
-base configuration. The Session is built from the SDK's default
+base configuration. The session is built from the SDK's default
 configuration and request handlers.
 
-Sessions should be cached when possible, because creating a new Session
-will load all configuration values from the environment, and config
-files each time the Session is created. Sharing the Session value across
-all of your service clients will ensure the configuration is loaded the
-fewest number of times possible.
+You should cache sessions when possible. This is because creating a new session
+loads all configuration values from the environment and configuration
+files each time the session is created. Sharing the session value across
+all of your service clients ensures the configuration is loaded the
+fewest number of times.
 
 
 .. _concurrency:
@@ -43,21 +42,21 @@ fewest number of times possible.
 Concurrency
 ===========
 
-Sessions are safe to use concurrently as long as the Session is not
-being modified. The SDK will not modify the Session once the Session has
-been created. Creating service clients concurrently from a shared
-Session is safe.
+Sessions are safe to use concurrently as long as the session isn't
+being modified. The SDK doesn't modify the session once the session is
+created. Creating service clients concurrently from a shared
+session is safe.
 
 .. _sessions-with-shared-config:
 
-Sessions with Shared Config
-===========================
+Sessions with a Shared Configuration File
+=========================================
 
-Sessions can be created using the method above that will only load the
-additional config if the ``AWS_SDK_LOAD_CONFIG`` environment variable is
-set. Alternatively you can explicitly create a Session with shared
-config enabled. To do this you can use ``NewSessionWithOptions`` to
-configure how the Session will be created. Using the
+Using the previous method, you can create sessions that
+load the additional configuration file only if the ``AWS_SDK_LOAD_CONFIG`` environment variable is
+set. Alternatively you can explicitly create a session with a shared
+configuration enabled. To do this, you can use ``NewSessionWithOptions`` to
+configure how the session is created. Using the
 ``NewSessionWithOptions`` with ``SharedConfigState`` set to
 ``SharedConfigEnabled`` will create the session as if the
 ``AWS_SDK_LOAD_CONFIG`` environment variable was set.
@@ -67,38 +66,37 @@ configure how the Session will be created. Using the
 Creating Sessions
 =================
 
-When creating ``Session`` optional ``aws.Config`` values can be passed
-in that will override the default, or loaded config values the Session
-is being created with. This allows you to provide additional, or case
-based, configuration as needed.
+When you create a ``session``, you can pass in optional ``aws.Config`` values
+that override the default or that override the current configuration values.
+This allows you to provide additional or case-based configuration as needed.
 
-By default ``NewSession`` will only load credentials from the shared
+By default ``NewSession`` only loads credentials from the shared
 credentials file (:file:`~/.aws/credentials`). If the ``AWS_SDK_LOAD_CONFIG``
-environment variable is set to a truthy value the Session will be
-created from the configuration values from the shared config
-(:file:`~/.aws/config`) and shared credentials (:file:`~/.aws/credentials`) files. 
-See the section Sessions from Shared Config for more information.
+environment variable is set to a truthy value, the session is
+created from the configuration values from the shared configuration
+(:file:`~/.aws/config`) and shared credentials (:file:`~/.aws/credentials`) files.
+See `Sessions with a Shared Configuration File`_ for more information.
 
-Create a Session with the default config and request handlers. With
-credentials region, and profile loaded from the environment and shared
-config automatically. Requires the ``AWS_PROFILE`` to be set, or
+Create a session with the default configuration and request handlers. The following example creates
+a session with credentials, region, and profile values from either the environment variables
+or the shared credentials file. It requires that the ``AWS_PROFILE`` is set, or
 ``default`` is used.
 
 .. code:: go
 
     sess, err := session.NewSession()
 
-The SDK provides a :sdk-go-api-deep:`default configuration <aws/defaults/>`, 
-which is used by all sessions unless you override a field. For example, 
-you can specify an AWS region when you create a session by using the 
-``aws.Config`` struct. For more information about the fields you can 
+The SDK provides a :sdk-go-api-deep:`default configuration <aws/defaults/>`
+that all sessions use, unless you override a field. For example,
+you can specify an AWS Region when you create a session by using the
+``aws.Config`` struct. For more information about the fields you can
 specify, see the :sdk-go-api-deep:`aws.Config <aws/#Config>`
 in the |sdk-go-api|.
 
 .. code:: go
 
     sess, err := session.NewSession(&aws.Config{
-        Region: aws.String("us-east-1")},
+        Region: aws.String("us-east-2")},
     )
 
 Create an |S3| client instance from a session:
@@ -112,17 +110,17 @@ Create an |S3| client instance from a session:
     svc := s3.New(sess)
 
 .. _create-session-with-option-overrides:
-    
-Create Session With Option Overrides
-====================================
 
-In addition to ``NewSession``, Sessions can be created using
-``NewSessionWithOptions``. This func allows you to control and override
-how the Session will be created through code instead of being driven by
+Create Sessions with Option Overrides
+=====================================
+
+In addition to ``NewSession``, you can create sessions using
+``NewSessionWithOptions``. This function allows you to control and override
+how the session will be created through code, instead of being driven by
 environment variables only.
 
-Use :sdk-go-api-deep:`NewSessionWithOptions <aws/session/#NewSessionWithOptions>` 
-when you want to provide the config profile, or override the shared config state 
+Use :sdk-go-api-deep:`NewSessionWithOptions <aws/session/#NewSessionWithOptions>`
+when you want to provide the config profile, or override the shared configuration state
 (AWS\_SDK\_LOAD\_CONFIG).
 
 .. code:: go
@@ -137,7 +135,7 @@ when you want to provide the config profile, or override the shared config state
 
     // Specify profile for config and region for requests
     sess, err := session.NewSessionWithOptions(session.Options{
-         Config: aws.Config{Region: aws.String("us-east-1")},
+         Config: aws.Config{Region: aws.String("us-east-2")},
          Profile: "profile_name",
     })
 
@@ -146,7 +144,7 @@ when you want to provide the config profile, or override the shared config state
         SharedConfigState: SharedConfigEnable,
     })
 
-    // Assume an IAM role with MFA promting for token code on stdin.
+    // Assume an IAM role with MFA prompting for token code on stdin
     sess := session.Must(session.NewSessionWithOptions(session.Options{
         AssumeRoleTokenProvider: stscreds.StdinTokenProvider,
         SharedConfigState: SharedConfigEnable,
@@ -156,46 +154,45 @@ when you want to provide the config profile, or override the shared config state
 Deprecated ``New``
 ------------------
 
-The ``New`` function has been deprecated because it does not provide
-good way to return errors that occur when loading the configuration
+The ``New`` function has been deprecated because it doesn't provide
+a good way to return errors that occur when loading the configuration
 files and values. Because of this, ``NewSession`` was created so errors
 can be retrieved when creating a session fails.
 
-Shared Config Fields
---------------------
+Shared Configuration Fields
+---------------------------
 
-By default the SDK will only load the shared credentials file's
-(:file:`~/.aws/credentials`) credentials values, and all other config is
-provided by the environment variables, SDK defaults, and user provided
-aws.Config values.
+By default, the SDK only loads the shared credentials file's
+(:file:`~/.aws/credentials`) credentials values. All other configuration values are
+provided by the environment variables, SDK defaults, and user-provided
+:file:`aws.config` values.
 
 If the ``AWS_SDK_LOAD_CONFIG`` environment variable is set, or
-SharedConfigLoadEnable option is used to create the Session the full
-shared config values will be loaded. This includes credentials, region,
-and support for assume role. In addition the Session will load its
-configuration from both the shared config file (:file:`~/.aws/config`) and
+the SharedConfigLoadEnable option is used to create the session, the full
+shared config values are loaded. This includes credentials, region,
+and support for assumed role. In addition, the session will load its
+configuration from both the shared configuration file (:file:`~/.aws/config`) and
 shared credentials file (:file:`~/.aws/credentials`). Both files have the same
 format.
 
-If both config files are present the configuration from both files will
-be read. The Session will be created from configuration values from the
-shared credentials file (:file:`~/.aws/credentials`) over those in the shared
+If both configuration files are present, the configuration from both files is
+read. The session is created from configuration values from the
+shared credentials file (:file:`~/.aws/credentials`) instead of those in the shared
 credentials file (:file:`~/.aws/config`).
 
 See the :sdk-go-api-deep:`session package's documentation <aws/session/>`
-for more information on shared config setup.
+for more information on shared configuratiobn setup.
 
 .. _environment-variables:
 
 Environment Variables
 =====================
 
-When a Session is created several environment variables can be set to
+When a session is created, you can set several environment variables to
 adjust how the SDK functions, and what configuration data it loads when
-creating Sessions. All environment values are optional, but some values
-like credentials require multiple of the values to set or the partial
-values will be ignored. All environment variable values are strings
-unless otherwise noted.
+creating sessions. Environment values are optional. For credentials, you must set
+both an access key and a secret access key. Otherwise, Go ignores the one you've set. All environment
+variable values are strings unless otherwise noted.
 
 See the :sdk-go-api-deep:`session package's documentation <aws/session/>`
 for more information on environment variable setup.
@@ -208,7 +205,7 @@ Adding Request Handlers
 You can add handlers to a session for processing HTTP requests. All
 service clients that use the session inherit the handlers. For example,
 the following handler logs every request and its payload made by a
-service client:
+service client.
 
 .. code:: go
 
@@ -222,17 +219,17 @@ service client:
     })
 
 .. _copying-a-session:
-    
+
 Copying a Session
 =================
 
-You can use the :sdk-go-api-deep:`Copy <aws/session/#Session.Copy>` method to create 
-copies of sessions. Copying sessions is useful when you want to create multiple 
+You can use the :sdk-go-api-deep:`Copy <aws/session/#Session.Copy>` method to create
+copies of sessions. Copying sessions is useful when you want to create multiple
 sessions that have similar settings. Each time you copy a session, you can specify
 different values for any field. For example, the following snippet
 copies the ``sess`` session while overriding the ``Region`` field to
-``us-east-1``:
+``us-east-2``:
 
 .. code:: go
 
-    usEast1Sess := sess.Copy(&aws.Config{Region: aws.String("us-east-1")})
+    usEast2Sess := sess.Copy(&aws.Config{Region: aws.String("us-east-2")})

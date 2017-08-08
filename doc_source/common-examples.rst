@@ -10,7 +10,7 @@
 
 
 ########################
-SDK for Go Code Examples
+|sdk-go| Code Examples
 ########################
 
 .. meta::
@@ -27,14 +27,14 @@ see :doc:`setting-up` and :doc:`configuring-sdk`.
    :caption: Topics
    :maxdepth: 1
 
-   using-requests-with-go-sdk
-   using-cloudwatch-with-go-sdk
-   using-dynamodb-with-go-sdk
-   using-ec2-with-go-sdk
-   using-glacier-with-go-sdk
-   using-iam-with-go-sdk
-   using-lambda-with-go-sdk
-   using-s3-with-go-sdk
-   using-sqs-with-go-sdk
+   SDK Request Examples <using-requests-with-go-sdk>
+   Amazon CloudWatch Examples <using-cloudwatch-with-go-sdk>
+   Amazon DynamoDB Examples <using-dynamodb-with-go-sdk>
+   Amazon EC2 Examples <using-ec2-with-go-sdk>
+   Amazon Glacier Examples <using-glacier-with-go-sdk>
+   IAM Examples <using-iam-with-go-sdk>
+   AWS Lambda Examples <using-lambda-with-go-sdk>
+   Amazon S3 Examples <using-s3-with-go-sdk>
+   Amazon SQS Examples <using-sqs-with-go-sdk>
 
 
