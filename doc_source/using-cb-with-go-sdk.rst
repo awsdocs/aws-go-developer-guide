@@ -32,6 +32,6 @@ You can download complete versions of these example files from the
    :caption: |ACB| Example Topics
    :maxdepth: 1
 
-   cb-example-build-project
-   cb-example-list-builds
-   cb-example-list-projects
+   Building a Project <cb-example-build-project>
+   Listing your Project Builds <cb-example-list-builds>
+   Getting Information about All Projects <cb-example-list-projects>
