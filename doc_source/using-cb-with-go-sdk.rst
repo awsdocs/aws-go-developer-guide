@@ -19,19 +19,18 @@
    :keywords: AWS SDK Go examples, |ACBlong|
 
 The |sdk-go| examples can integrate |ACBlong| into your applications.
-The examples assume you have already set up and configured the SDK 
+The examples assume you have already set up and configured the SDK
 (that is, you've imported all required packages and set your credentials
-and region). 
+and region).
 For more information, see :doc:`setting-up` and :doc:`configuring-sdk`.
 
-You can download complete versions of these example files from the 
-:doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
+You can download complete versions of these example files from the
+:doc-examples-go:`aws-doc-sdk-examples <codebuild>` repository on GitHub.
 
 .. toctree::
-   :titlesonly:
-   :caption: |ACB| Example Topics
    :maxdepth: 1
 
+   Getting Information about All Projects <cb-example-list-projects>
    Building a Project <cb-example-build-project>
    Listing your Project Builds <cb-example-list-builds>
-   Getting Information about All Projects <cb-example-list-projects>
+

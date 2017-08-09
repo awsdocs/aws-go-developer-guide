@@ -17,7 +17,7 @@ Getting Information about All Projects
 The following example lists the names of up to 100 of your |ACBlong| projects.
 
 .. literalinclude:: ./example_code/codebuild/cb_list_projects.go
-   :lines: 15-52
+   :lines: 15-58
    :dedent: 0
    :language: go
 

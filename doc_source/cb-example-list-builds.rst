@@ -19,7 +19,7 @@ including the name of the project, when the build started, and how long each
 phase of the build took, in seconds.
 
 .. literalinclude:: ./example_code/codebuild/cb_list_builds.go
-   :lines: 15-59
+   :lines: 15-58
    :dedent: 0
    :language: go
 

@@ -18,7 +18,7 @@ The following example builds the |ACBlong| project specified on the command line
 If no command-line argument is supplied, it emits an error and quits.
 
 .. literalinclude:: ./example_code/codebuild/cb_build_project.go
-   :lines: 15-60
+   :lines: 15-653
    :dedent: 0
    :language: go
 
