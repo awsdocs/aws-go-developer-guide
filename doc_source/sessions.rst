@@ -75,7 +75,7 @@ credentials file (:file:`~/.aws/credentials`). If the ``AWS_SDK_LOAD_CONFIG``
 environment variable is set to a truthy value, the session is
 created from the configuration values from the shared configuration
 (:file:`~/.aws/config`) and shared credentials (:file:`~/.aws/credentials`) files.
-See `Sessions with a Shared Configuration File`_ for more information.
+See :ref:`sessions-with-shared-config` for more information.
 
 Create a session with the default configuration and request handlers. The following example creates
 a session with credentials, region, and profile values from either the environment variables
