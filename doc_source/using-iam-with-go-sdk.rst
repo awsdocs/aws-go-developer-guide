@@ -10,9 +10,9 @@
 
 .. _examples-iam:
 
-################################
-|IAM| with the |sdk-go| Examples
-################################
+#################################
+|IAM| Examples Using the |sdk-go|
+#################################
 
 .. meta::
    :description: Use IAM code examples to write your own Go applications.

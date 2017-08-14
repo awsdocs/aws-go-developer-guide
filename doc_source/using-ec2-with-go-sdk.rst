@@ -10,9 +10,9 @@
 
 .. _examples-ec2:
 
-################################
-|EC2| with the |sdk-go| Examples
-################################
+#################################
+|EC2| Examples Using the |sdk-go|
+#################################
 
 .. meta::
    :description: Use Amazon EC2 code examples to write your own Go applications.

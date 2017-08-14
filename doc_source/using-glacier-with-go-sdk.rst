@@ -10,9 +10,9 @@
 
 .. _examples-glacier:
 
-###################################
-|GLlong| with the |sdk-go| Examples
-###################################
+####################################
+|GLlong| Examples Using the |sdk-go|
+####################################
 
 .. meta::
    :description: Use Amazon Glacier code examples to write your own Go applications.

@@ -10,9 +10,9 @@
 
 .. _examples-cb:
 
-##########################
-|ACBlong| with Go Examples
-##########################
+#####################################
+|ACBlong| Examples Using the |sdk-go|
+#####################################
 
 .. meta::
    :description: Use CodeBuild code examples to write your own Go applications.

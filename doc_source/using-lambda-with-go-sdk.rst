@@ -8,9 +8,9 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-#################################
-|LAM| Examples Using the |sdk-go|
-#################################
+#####################################
+|LAMlong| Examples Using the |sdk-go|
+#####################################
 
 You can use the following examples to access |LAMlong| (|LAM|) using the |sdk-go|. For
 more information about |LAM|, see the `Lambda documentation <http://aws.amazon.com/documentation/lambda/>`_.

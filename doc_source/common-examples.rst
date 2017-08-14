@@ -33,9 +33,8 @@ see :doc:`setting-up` and :doc:`configuring-sdk`.
    Amazon DynamoDB Examples <using-dynamodb-with-go-sdk>
    Amazon EC2 Examples <using-ec2-with-go-sdk>
    Amazon Glacier Examples <using-glacier-with-go-sdk>
-   IAM Examples <using-iam-with-go-sdk>
+   AWS IAM Examples <using-iam-with-go-sdk>
+   AWS KMS Examples <using-kms-with-go-sdk>
    AWS Lambda Examples <using-lambda-with-go-sdk>
    Amazon S3 Examples <using-s3-with-go-sdk>
    Amazon SQS Examples <using-sqs-with-go-sdk>
-
-
