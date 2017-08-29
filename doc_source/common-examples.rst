@@ -9,13 +9,13 @@
    limitations under the License.
 
 
-########################
+######################
 |sdk-go| Code Examples
-########################
+######################
 
 .. meta::
-   :description: Use AWS SDK for Go code examples to write your Go applications.
-   :keywords: examples
+   :description: Get examples of how to access AWS services using the AWS SDK for Go code examples.
+   :keywords: AWS SDK for Go code examples
 
 The |sdk-go| examples can help you write your own Go applications that use Amazon Web Services.
 The examples assume you have already set up and configured the SDK (that

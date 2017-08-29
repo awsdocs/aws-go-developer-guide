@@ -10,9 +10,14 @@
 
 .. _lambda-go-example-create-function:
 
-###########################################
-Creating a |LAM| Function with the |sdk-go|
-###########################################
+#########################
+Creating a |LAM| Function
+#########################
+
+.. meta::
+    :description:
+        Create AWS Lambda functions using this AWS SDK for Go code example.
+    :keywords: AWS SDK for Go code examples, Lambda
 
 The following example creates the |LAM| function :code:`functionName`
 in the :code:`us-west-2` region using the following values:

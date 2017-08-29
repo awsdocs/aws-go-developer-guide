@@ -10,13 +10,13 @@
 
 .. _examples-ec2-work-with-security-groups:
 
-#############################################
-Working with Security Groups in |EC2| with Go
-#############################################
+#####################################
+Working with Security Groups in |EC2|
+#####################################
 
 .. meta::
-   :description: Use this Go code example to learn how to work with security groups in AWS.
-   :keywords: AWS SDK for Go examples, EC2 security groups
+   :description: Work with security groups in Amazon EC2 using this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, EC2 security groups
 
 These Go examples show you how to:
 
@@ -29,8 +29,8 @@ You can download complete versions of these example files from the
 
 .. _scenario-security-groups:
 
-The Scenario
-============
+Scenario
+========
 
 An |EC2| security group acts as a virtual firewall that controls the traffic for one or
 more instances. You add rules to each security group to allow traffic to or from its

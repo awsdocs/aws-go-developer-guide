@@ -10,21 +10,21 @@
 
 .. _examples-iam-aliases:
 
-################################################
-Managing |IAM| Account Aliases with the |sdk-go|
-################################################
+##############################
+Managing |IAM| Account Aliases
+##############################
 
 .. meta::
-   :description: Use this code example to learn how to manage IAM account aliases in Go.
-   :keywords: AWS SDK for Go examples, IAM alias
+   :description: Learn to manage IAM account aliases using this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, IAM alias
 
 
 This Go example shows you how to create, list, and delete |IAM| account aliases. You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
 
 .. _iam-aliases-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 You can use a series of Go routines to manage aliases in |IAM|. The routines use the |sdk-go| IAM client methods that follow:
 

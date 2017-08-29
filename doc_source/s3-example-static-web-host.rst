@@ -10,13 +10,13 @@
 
 .. _examples-s3-website:
 
-###########################################################
-Using an |S3| Bucket as a Static Web Host with the |sdk-go|
-###########################################################
+#########################################
+Using an |S3| Bucket as a Static Web Host
+#########################################
 
 .. meta::
-   :description: Use S3 code examples to learn how to set up an Amazon S3 bucket as a static web host in your own Go applications.
-   :keywords: AWS SDK for Go examples, S3 static web host
+   :description: Set up an Amazon S3 bucket as a static web host using this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, S3 static web host
 
 
 This |sdk-go| example shows you how to configure an |S3| bucket to act as a static web host. You can download
@@ -24,8 +24,8 @@ complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-
 
 .. _s3-website-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 In this example, you use a series of Go routines to configure any of your
 buckets to act as a static web host. The routines use the |sdk-go| to configure a selected |S3|

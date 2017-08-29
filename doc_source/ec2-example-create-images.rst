@@ -10,13 +10,14 @@
 
 .. _examples-ec2-tags-no-block:
 
-#############################################################################
-Creating |EC2| Instances with Tags or without Block Devices with the |sdk-go|
-#############################################################################
+###########################################################
+Creating |EC2| Instances with Tags or without Block Devices
+###########################################################
 
 .. meta::
-   :description: Use this code example to learn how to create Amazon EC2 instances with tags or no block devices.
-   :keywords: examples, EC2, tags, block device
+   :description: Create Amazon EC2 instances with tags or no block devices using this AWS SDK for Go code
+   example.
+   :keywords: AWS SDK for Go code examples, EC2, tags, block device
 
 
 This Go example shows you how to:
@@ -28,8 +29,8 @@ You can download complete versions of these example files from the
 
 .. _ec2-tags-scenario:
 
-The Scenarios
-=============
+Scenarios
+=========
 
 In these examples, you use a series of Go routines to create |EC2| instances
 with tags or set up an instance without a block device.

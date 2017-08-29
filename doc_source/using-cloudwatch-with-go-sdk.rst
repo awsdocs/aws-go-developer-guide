@@ -16,7 +16,7 @@
 
 .. meta::
    :description: Use Amazon CloudWatch code examples to write your Go applications.
-   :keywords: examples, CloudWatch
+   :keywords: AWS SDK for Go code examples, CloudWatch
 
 
 |CWlong| is a web service that monitors your AWS resources and the applications
@@ -36,10 +36,10 @@ You can download complete versions of these example files from the
    :titlesonly:
    :maxdepth: 1
 
-   Describing CloudWatch Alarms <cw-example-describing-alarms>
-   Using Alarms and Alarm Actions with CloudWatch <cw-example-using-alarm-actions>
-   Getting Metrics from CloudWatch <cw-example-getting-metrics>
-   Sending Events to Amazon CloudWatch Events <cw-example-sending-events>
+   cw-example-describing-alarms
+   cw-example-using-alarm-actions
+   cw-example-getting-metrics
+   cw-example-sending-events
 
 
 

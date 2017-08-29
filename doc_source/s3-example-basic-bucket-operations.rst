@@ -10,13 +10,13 @@
 
 .. _s3-examples-bucket-ops:
 
-##############################################
-Basic |S3| Bucket Operations with the |sdk-go|
-##############################################
+#######################################
+Performing Basic |S3| Bucket Operations
+#######################################
 
 .. meta::
-   :description: Use S3 code examples to create and use |S3| buckets in Go applications.
-   :keywords: AWS SDK for Go examples, |S3|, list buckets, create bucket,
+   :description: Create and use Amazon S3 buckets using this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, S3, list buckets, create bucket,
               list bucket items, add file to bucket, download file from
               bucket, copy bucket item to another bucket, delete bucket
               item, delete all bucket items, restore bucket item,
@@ -42,8 +42,8 @@ versions of these example files from the
 
 .. _s3-examples-bucket-ops-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 In these examples, a series of Go routines are used to perform operations
 on your |S3| buckets.

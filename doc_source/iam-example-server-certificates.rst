@@ -10,13 +10,13 @@
 
 .. _examples-iam-certificates:
 
-########################################################
-Working with |IAM| Server Certificates with the |sdk-go|
-########################################################
+######################################
+Working with |IAM| Server Certificates
+######################################
 
 .. meta::
-   :description: Use this code example to learn how to manage |IAM| server certificates in Go.
-   :keywords: AWS SDK for Go examples, IAM server certificates
+   :description: Learn to manage |IAM| server certificates using this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, IAM server certificates
 
 This Go example shows you how to carry out basic tasks for managing server certificate HTTPS connections with the |sdk-go|.
 
@@ -24,8 +24,8 @@ You can download complete versions of these example files from the :doc-examples
 
 .. _iam-certificates-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 To enable HTTPS connections to your website or application on AWS, you need an SSL/TLS server certificate. To use a certificate that you obtained from an external provider with your website or application on AWS, you must upload the certificate to |IAM| or import it into AWS Certificate Manager.
 

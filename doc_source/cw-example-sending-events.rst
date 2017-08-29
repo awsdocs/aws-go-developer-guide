@@ -11,13 +11,13 @@
 
 .. _examples-cw-sending-events:
 
-#############################################
-Sending Events to |CWElong| with the |sdk-go|
-#############################################
+###########################
+Sending Events to |CWElong|
+###########################
 
 .. meta::
-   :description: Use this code example to learn how to work with the CloudWatch Events service in Go.
-   :keywords: AWS SDK for Go examples, CloudWatch Events, targets, rules
+   :description: Work with the CloudWatch Events service using this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, CloudWatch Events, targets, rules
 
 
 These Go examples show you how to use the |sdk-go| to:
@@ -31,8 +31,8 @@ You can download complete versions of these example files from the
 
 .. _cw-get-sending-events-scenario:
 
-The Scenario
-=============
+Scenario
+========
 
 |CWE| delivers a near real-time stream of system events that describe changes in AWS resources
 to any of various targets. Using simple rules, you can match events and route them to one or more target

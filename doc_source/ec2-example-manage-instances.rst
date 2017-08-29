@@ -10,13 +10,13 @@
 
 .. _examples-ec2-manage-instances:
 
-##########################################
-Managing |EC2| Instances with the |sdk-go|
-##########################################
+########################
+Managing |EC2| Instances
+########################
 
 .. meta::
-   :description: Use this code example to learn how to manage Amazon EC2 instances with Go.
-   :keywords: AWS SDK for Go examples, EC2 instance management
+   :description: Learn to manage Amazon EC2 instances using this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, EC2 instance management
 
 
 These Go examples show you how to:
@@ -31,8 +31,8 @@ You can download complete versions of these example files from the
 
 .. _ec2-manage-instances-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 In these examples, you use a series of Go routines to perform several basic instance management operations.
 

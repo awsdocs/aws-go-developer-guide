@@ -10,13 +10,14 @@
 
 .. _examples-s3-cors:
 
-####################################################
-Working with |S3| CORS Permissions with the |sdk-go|
-####################################################
+##################################
+Working with |S3| CORS Permissions
+##################################
 
 .. meta::
-   :description: Use this code example to learn how to work with cross origin resource sharing (CORS) an Amazon S3 bucket.
-   :keywords: AWS SDK for Go examples, S3, cross origin resource sharing, CORS
+   :description: Learn to work with cross-origin resource sharing (CORS) for an Amazon S3 bucket using
+   this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, S3, cross origin resource sharing, CORS
 
 
 This |sdk-go| example shows you how to list |S3| buckets and configure
@@ -25,8 +26,8 @@ CORS and bucket logging. You can download complete versions of these example fil
 
 .. _s3-cors-scenario:
 
-The Scenario
-================
+Scenario
+========
 
 In this example, a series of Go routines are used to list your |S3| buckets and to configure
 CORS and bucket logging. The routines use the |sdk-go| to configure a selected

@@ -12,7 +12,13 @@
 |LAMlong| Examples Using the |sdk-go|
 #####################################
 
-You can use the following examples to access |LAMlong| (|LAM|) using the |sdk-go|. For
+.. meta::
+    :description:
+        AWS SDK for Go code examples for AWS Lambda.
+    :keywords:
+
+|LAMlong| (|LAM|) is a zero-administration compute platform for backend web developers that runs your
+code for you in the AWS Cloud, and provides you with a fine-grained pricing structure. You can use the following examples to access |LAMlong| (|LAM|) using the |sdk-go|. For
 more information about |LAM|, see the `Lambda documentation <http://aws.amazon.com/documentation/lambda/>`_.
 
 You can download complete versions of these example files from the
@@ -21,7 +27,7 @@ You can download complete versions of these example files from the
 .. toctree::
    :maxdepth: 2
 
-   Displaying Information about All Lambda Functions <lambda-go-example-show-functions>
-   Creating a Lambda Function <lambda-go-example-create-function>
-   Running a Lambda Function <lambda-go-example-run-function>
-   Configuring a Lambda Function to Receive Notifications <lambda-go-example-configure-function-for-notification>
+   lambda-go-example-show-functions
+   lambda-go-example-create-function
+   lambda-go-example-run-function
+   lambda-go-example-configure-function-for-notification

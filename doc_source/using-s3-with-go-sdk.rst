@@ -16,9 +16,9 @@
 
 .. meta::
    :description: Use S3 code examples to write your own Go applications.
-   :keywords: AWS SDK Go examples, Amazon S3
+   :keywords: AWS SDK Go code examples, Amazon S3
 
-The |sdk-go| examples can integrate |S3| into your applications. The examples assume you have already set up and configured the SDK (that is, you've imported all required packages and set your credentials and region). For more information, see :doc:`setting-up` and :doc:`configuring-sdk`.
+|S3long| (|S3|) is storage for the internet. The |sdk-go| examples can integrate |S3| into your applications. The examples assume you have already set up and configured the SDK (that is, you've imported all required packages and set your credentials and region). For more information, see :doc:`setting-up` and :doc:`configuring-sdk`.
 
 You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
 
@@ -26,9 +26,9 @@ You can download complete versions of these example files from the :doc-examples
    :titlesonly:
    :maxdepth: 1
 
-   Basic Amazon S3 Bucket Operations <s3-example-basic-bucket-operations>
-   Creating Presigned URLs for Amazon S3 Buckets <s3-example-presigned-urls>
-   Using an Amazon S3 Bucket as a Static Web Host <s3-example-static-web-host>
-   Working with Amazon S3 CORS Permissions <s3-example-cors>
-   Working with Amazon S3 Bucket Policies <s3-example-bucket-policy>
-   Working with Amazon S3 Bucket ACLs <s3-example-bucket-acls>
+   s3-example-basic-bucket-operations
+   s3-example-presigned-urls
+   s3-example-static-web-host
+   s3-example-cors
+   s3-example-bucket-policy
+   s3-example-bucket-acls

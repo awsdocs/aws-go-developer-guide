@@ -10,13 +10,13 @@
 
 .. _examples-iam-users:
 
-######################################
-Managing |IAM| Users with the |sdk-go|
-######################################
+####################
+Managing |IAM| Users
+####################
 
 .. meta::
-   :description: Use this code example to learn how to manage IAM users in Go.
-   :keywords: AWS SDK for Go examples, IAM users
+   :description: Learn to manage IAM users with this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, IAM users
 
 
 This Go example shows you how to create, update, view, and
@@ -25,8 +25,8 @@ example files from the :doc-examples-go:`aws-doc-sdk-examples <s3>` repository o
 
 .. _iam-users-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 In this example, you use a series of Go routines to manage users in |IAM|.
 The routines use the |sdk-go| IAM client methods that follow:

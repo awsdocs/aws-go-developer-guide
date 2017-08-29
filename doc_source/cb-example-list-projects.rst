@@ -10,9 +10,14 @@
 
 .. _cb-example-list-projects:
 
-######################################
-Getting Information about All Projects
-######################################
+####################################################
+Getting Information about All AWS CodeBuild Projects
+####################################################
+
+.. meta::
+    :description:
+        Get information about AWS CodeBuild projects using this AWS SDK for Go code example.
+    :keywords: AWS SDK for Go code examples, CodeBuild
 
 The following example lists the names of up to 100 of your |ACBlong| projects.
 

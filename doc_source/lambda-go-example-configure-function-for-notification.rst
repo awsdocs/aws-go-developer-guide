@@ -10,9 +10,14 @@
 
 .. _lambda-go-example-configure-function-for-notification:
 
-#######################################################################
-Configuring a |LAM| Function to Receive Notifications with the |sdk-go|
-#######################################################################
+#####################################################
+Configuring a |LAM| Function to Receive Notifications
+#####################################################
+
+.. meta::
+    :description:
+        Configure AWS Lambda functions using this AWS SDK for Go code example.
+    :keywords: AWS SDK for Go code examples, Lambda
 
 The following example configures the |LAM| function :code:`functionName`
 to accept notifications from the resource with the ARN :code:`sourceArn`.

@@ -10,13 +10,13 @@
 
 .. _examples-sqs-long-polling:
 
-#######################################################
-Enabling Long Polling in |SQS| Queues with the |sdk-go|
-#######################################################
+#####################################
+Enabling Long Polling in |SQS| Queues
+#####################################
 
 .. meta::
-   :description: Use these code examples to learn enable long polling with Amazon SQS queues.
-   :keywords: AWS SDK for Go examples, SQS, create queue
+   :description: Enable long polling with Amazon SQS queues using this AWS SDK code example.
+   :keywords: AWS SDK for Go code examples, SQS, create queue
 
 
 These |sdk-go| examples show you how to:
@@ -30,8 +30,8 @@ You can download complete versions of these example files from the
 
 .. _sqs-long-polling-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 Long polling reduces the number of empty responses by allowing |SQS|
 to wait a specified time for a message to become available in the queue before sending a response.
