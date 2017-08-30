@@ -35,7 +35,7 @@ Create a session and |WD| client.
 
 .. literalinclude:: ./example_code/workdocs/wd_list_users.go
    :lines: 35-40
-   :dedent: 0
+   :dedent: 4
    :language: go
 
 Create the input arguments for the :code:`DescribeUsers` method and add your
@@ -43,7 +43,7 @@ organization ID.
 
 .. literalinclude:: ./example_code/workdocs/wd_list_users.go
    :lines: 42-46
-   :dedent: 0
+   :dedent: 4
    :language: go
 
 If we have a user name, add that to the input arguments so we only get information
@@ -51,15 +51,15 @@ about that user.
 
 .. literalinclude:: ./example_code/workdocs/wd_list_users.go
    :lines: 48-57
-   :dedent: 0
+   :dedent: 4
    :language: go
 
 Run the :code:`DescribeUsers` method and display the information for the user or
 all users.
 
 .. literalinclude:: ./example_code/workdocs/wd_list_users.go
-   :lines: 61-85
-   :dedent: 0
+   :lines: 61-84
+   :dedent: 4
    :language: go
 
 See the `complete example
