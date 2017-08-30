@@ -8,19 +8,17 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-##############
-|ACB| Examples
-##############
+#################
+|WDlong| Examples
+#################
 
-You can use the following examples to access |ACBlong| (|ACB|) using the |sdk-go|.
-For more information about |ACB|,
-see the `Amazon CodeBuild documentation <http://aws.amazon.com/documentation/codebuild/>`_.
+You can use the following examples to access |WDlong| (|WD|) using the |sdk-go|.
+For more information about |WD|,
+see the `Amazon WorkDocs documentation <http://aws.amazon.com/documentation/workdocs/>`_.
 
 **Examples**
 
 .. toctree::
    :maxdepth: 1
 
-   cb-example-list-projects
-   cb-example-build-project
-   cb-example-list-builds
+   wd-example-list-users

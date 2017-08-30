@@ -60,7 +60,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'AWS SDK for Go Developer Guide'
-copyright = u'2016, Amazon Web Services'
+copyright = u'2017, Amazon Web Services'
 author = u'Amazon Web Services'
 
 # The version info for the project you're documenting, acts as replacement for
