@@ -22,3 +22,4 @@ see the `Amazon WorkDocs documentation <http://aws.amazon.com/documentation/work
    :maxdepth: 1
 
    wd-example-list-users
+   wd-example-list-user-docs
