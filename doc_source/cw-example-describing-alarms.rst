@@ -10,13 +10,13 @@
 
 .. _examples-cw-describe-alarms:
 
-########################################
-Describing |CW| Alarms with the |sdk-go|
-########################################
+######################
+Describing |CW| Alarms
+######################
 
 .. meta::
-   :description: Use this code example to learn how to describe alarms in Amazon Cloudwatch.
-   :keywords: AWS SDK for Go examples, CloudWatch, alarms
+   :description: Learn to describe alarms in Amazon Cloudwatch using the AWS SDK for Go.
+   :keywords: AWS SDK for Go code examples, CloudWatch, alarms
 
 This example shows you how to retrieve basic information that describes your |CW| alarms.
 
@@ -25,8 +25,8 @@ You can download complete versions of these example files from the
 
 .. _cw-describe-alarms-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 An alarm watches a single metric over a time period you specify. The alarm performs one or more actions
 based on the value of the metric relative to a given threshold over a number of time periods.

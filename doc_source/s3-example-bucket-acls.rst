@@ -10,14 +10,13 @@
 
 .. _s3-examples-bucket-acls:
 
-#############################################
-Working with |S3| Bucket ACLs in the |sdk-go|
-#############################################
+#############################
+Working with |S3| Bucket ACLs
+#############################
 
 .. meta::
-   :description: Use S3 code examples to manage |S3| bucket ACLs in
-                 Go applications.
-   :keywords: AWS SDK for Go examples, |S3|, ACL, permissions
+   :description: Manage Amazon S3 bucket ACLs in using this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, S3, ACL, permissions
 
 The following examples use |sdk-go| functions to:
 
@@ -32,8 +31,8 @@ versions of these example files from the
 
 .. _s3-examples-bucket-acls-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 In these examples, a series of Go routines are used to manage ACLs
 on your |S3| buckets.

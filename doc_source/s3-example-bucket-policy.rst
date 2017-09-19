@@ -10,12 +10,12 @@
 
 .. _examples-s3-bucket-policies:
 
-###################################################
-Working with |S3| Bucket Policies with the |sdk-go|
-###################################################
+#################################
+Working with |S3| Bucket Policies
+#################################
 
 .. meta::
-   :description: Use this code example to learn how to work with Amazon S3 bucket policies.
+   :description: Work with Amazon S3 bucket policies using this AWS SDK for Go code example.
    :keywords: AWS SDK for Go examples, S3, policy, ACL, permissions
 
 
@@ -25,8 +25,8 @@ complete versions of these example files from the
 
 .. _s3-bucket-policies-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 In this example, you use a series of Go routines to retrieve or set a bucket policy on an
 |S3| bucket. The routines use the |sdk-go| to configure policy for a selected |S3| bucket using

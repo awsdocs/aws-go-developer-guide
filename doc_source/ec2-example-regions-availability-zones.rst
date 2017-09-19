@@ -10,17 +10,15 @@
 
 .. _examples-ec2-regions-and-azs:
 
-#############################################################
-Using Regions and Availability Zones with |EC2| with |sdk-go|
-#############################################################
+###############################################
+Using Regions and Availability Zones with |EC2|
+###############################################
 
 .. meta::
-   :description: Use this code example to work with regions and Availability Zones in AWS with Go.
-   :keywords: AWS SDK for Go examples, EC2 availability zones and regions
+   :description: Work with regions and Availability Zones using this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, EC2 availability zones and regions
 
-These Go examples show you how to:
-
-* Retrieve details about AWS Regions and Availability Zones.
+These Go examples show you how to retrieve details about AWS Regions and Availability Zones.
 
 An |EC2| security group acts as a virtual firewall that controls the traffic for one or
 more instances. You add rules to each security group to allow traffic to or from its
@@ -42,8 +40,8 @@ You can download complete versions of these example files from the
 
 .. _ec2-scenario-regions-and-azs:
 
-The Scenario
-============
+Scenario
+========
 
 |EC2| is hosted in multiple locations worldwide. These locations are composed of AWS Regions and Availability
 Zones. Each region is a separate geographic area with multiple, isolated locations known as Availability

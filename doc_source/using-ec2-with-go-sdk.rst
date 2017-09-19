@@ -18,7 +18,8 @@
    :description: Use Amazon EC2 code examples to write your own Go applications.
    :keywords: examples, EC2
 
-The |sdk-go| examples can integrate |EC2| into your Go applications.
+|EC2long| (|EC2|) is a web service that provides resizeable computing capacity |mdash| literally servers
+in Amazon's data centers |mdash| that you use to build and host your software systems. The |sdk-go| examples can integrate |EC2| into your Go applications.
 The examples assume you have already set up and configured the SDK (that
 is, you have imported all required packages and set your credentials and region). For more information, see :doc:`setting-up` and :doc:`configuring-sdk`.
 
@@ -30,12 +31,12 @@ You can download complete versions of these example files from the
    :maxdepth: 1
 
 
-   Creating Amazon EC2 Instances with Tags or without Block Devices <ec2-example-create-images>
-   Managing Amazon EC2 Instances <ec2-example-manage-instances>
-   Working with Amazon EC2 Key Pairs <ec2-example-working-with-key-pairs>
-   Using Regions and Availability Zones with Amazon EC2 <ec2-example-regions-availability-zones>
-   Working with Security Groups in Amazon EC2 <ec2-example-security-groups>
-   Using Elastic IP Addresses in Amazon EC2 <ec2-example-elastic-ip-addresses>
+   ec2-example-create-images
+   ec2-example-manage-instances
+   ec2-example-working-with-key-pairs
+   ec2-example-regions-availability-zones
+   ec2-example-security-groups
+   ec2-example-elastic-ip-addresses
 
 
 

@@ -10,13 +10,14 @@
 
 .. _examples-cw-alarms:
 
-########################################################
-Using Alarms and Alarm Actions in |CW| with the |sdk-go|
-########################################################
+######################################
+Using Alarms and Alarm Actions in |CW|
+######################################
 
 .. meta::
-   :description: Use this code example to learn how to create alarms and alarm actions to change the state of your EC2 instances in Amazon Cloudwatch.
-   :keywords: AWS SDK for Go examples, CloudWatch, alarm actions
+   :description: Create alarms and alarm actions to change the state of EC2 instances using
+   this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, CloudWatch, alarm actions
 
 These Go examples show you how to change the state of your |EC2| instances automatically based
 on a |CW| alarm, as follows:
@@ -29,8 +30,8 @@ You can download complete versions of these example files from the
 
 .. _cw-create-alarm-actions-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 You can use alarm actions to create alarms that automatically stop, terminate, reboot, or
 recover your |EC2| instances. You can use the stop or terminate actions when you no

@@ -10,9 +10,14 @@
 
 .. _kms-example-create-key:
 
-##############
-Creating a CMK
-##############
+###########################
+Creating a CMK in |KMSlong|
+###########################
+
+.. meta::
+    :description:
+        Create a CMK data in AWS KMS using this AWS SDK for Go code example.
+    :keywords: AWS SDK for Go code examples, KMS
 
 The following example uses the |sdk-go| `CreateKey <http://docs.aws.amazon.com/sdk-for-go/api/service/kms/#KMS.CreateKey>`_
 method,

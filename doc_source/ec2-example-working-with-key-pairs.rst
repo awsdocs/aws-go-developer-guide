@@ -10,13 +10,13 @@
 
 .. _examples-ec2-key-pairs:
 
-##############################################
-Working with |EC2| Key Pairs with the |sdk-go|
-##############################################
+############################
+Working with |EC2| Key Pairs
+############################
 
 .. meta::
-   :description: Use this code example to learn how to manage Amazon EC2 key pairs with Go.
-   :keywords: examples, EC2, key pairs
+   :description: Manage Amazon EC2 key pairs using this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, EC2, key pairs
 
 
 These Go examples show you how to:
@@ -30,8 +30,8 @@ You can download complete versions of these example files from the
 
 .. _ec2-key-pairs-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 |EC2| uses public–key cryptography to encrypt and decrypt login information. Public–key cryptography uses a
 public key to encrypt data, then the recipient uses the private key to decrypt the data. The public and private

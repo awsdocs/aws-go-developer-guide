@@ -18,7 +18,8 @@
    :description: Use DynamoDB code examples to write your own Go applications.
    :keywords: AWS SDK for Go examples, DynamoDB
 
-The |sdk-go| examples can integrate |DDBlong| into your Go applications.
+|DDBlong| is a fully managed NoSQL database service that provides fast and predictable performance with
+seamless scalability. The |sdk-go| examples can integrate |DDBlong| into your Go applications.
 The examples assume you have already set up and configured the SDK (that
 is, you have imported all required packages and set your credentials and region). For more information, see :doc:`setting-up` and :doc:`configuring-sdk`.
 

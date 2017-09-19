@@ -10,13 +10,13 @@
 
 .. _examples-sqs-using-queues:
 
-####################################
-Using |SQS| Queues with the |sdk-go|
-####################################
+##################
+Using |SQS| Queues
+##################
 
 .. meta::
-   :description: Use these code examples to learn how to work with Amazon SQS queues.
-   :keywords: AWS SDK for Go examples, SQS, create queue
+   :description: Learn to work with Amazon SQS queues using this AWS SDK for Go.
+   :keywords: AWS SDK for Go code examples, SQS, create queue
 
 
 These |sdk-go| examples show you how to:
@@ -31,8 +31,8 @@ You can download complete versions of these example files from the
 
 .. _sqs-create-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 These examples demonstrate how to work with |SQS| queues.
 

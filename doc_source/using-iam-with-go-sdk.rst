@@ -34,8 +34,8 @@ You can download complete versions of these example files from the
    :titlesonly:
    :maxdepth: 1
 
-   Managing IAM Users <iam-example-managing-users>
-   Managing IAM Access Keys <iam-example-managing-access-keys>
-   Managing IAM Account Aliases <iam-example-account-aliases>
-   Working with IAM Policies <iam-example-policies>
-   Working with IAM Server Certificates <iam-example-server-certificates>
+   iam-example-managing-users
+   iam-example-managing-access-keys
+   iam-example-account-aliases
+   iam-example-policies
+   iam-example-server-certificates

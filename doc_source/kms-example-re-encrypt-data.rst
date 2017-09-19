@@ -10,11 +10,16 @@
 
 .. _kms-example-re-encrypt-data:
 
-#########################
-Re-encrypting a Data Blob
-#########################
+######################################
+Re-encrypting a Data Blob in |KMSlong|
+######################################
 
-The following example uses the |sdk-go| 
+.. meta::
+    :description:
+        Re-encrypt data in AWS KMS using this AWS SDK for Go code example.
+    :keywords: AWS SDK for Go code examples, KMS
+
+The following example uses the |sdk-go|
 `ReEncrypt <http://docs.aws.amazon.com/sdk-for-go/api/service/kms/#KMS.ReEncrypt>`_ method,
 which implements the
 `ReEncrypt <http://docs.aws.amazon.com/kms/latest/APIReference/API_ReEncrypt.html>`_ operation,

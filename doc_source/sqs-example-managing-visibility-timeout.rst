@@ -10,13 +10,13 @@
 
 .. _examples-sqs-managing-visibility:
 
-#############################################################
-Managing Visibility Timeout in |SQS| Queues with the |sdk-go|
-#############################################################
+###########################################
+Managing Visibility Timeout in |SQS| Queues
+###########################################
 
 .. meta::
-   :description: Use these Go examples to learn how to manage visibility timeout with Amazon SQS queues.
-   :keywords: AWS SDK for Go examples, creating SQS queues
+   :description: Manage visibility timeout with Amazon SQS queues using this AWS SDK for Go code exammple.
+   :keywords: AWS SDK for Go code examples, creating SQS queues
 
 
 This |sdk-go| example shows you how to:
@@ -28,8 +28,8 @@ You can download complete versions of these example files from the
 
 .. _sqs-visibility-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 This example manages visibility timeout with |SQS| queues. It uses these methods of the
 |SQS| client class:

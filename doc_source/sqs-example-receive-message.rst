@@ -10,12 +10,12 @@
 
 .. _examples-sqs-receive-message:
 
-#########################################################
-Sending and Receiving Messages in |SQS| with the |sdk-go|
-#########################################################
+#######################################
+Sending and Receiving Messages in |SQS|
+#######################################
 
 .. meta::
-   :description: Use this code example to learn how to send or receive a message from an Amazon SQS queue.
+   :description: Send or receive a message from an Amazon SQS queue using this AWS SDK for Go code example.
    :keywords: AWS SDK for Go examples, SQS queues
 
 These |sdk-go| examples show you how to:

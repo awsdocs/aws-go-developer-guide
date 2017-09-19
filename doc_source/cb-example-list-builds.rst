@@ -10,9 +10,14 @@
 
 .. _cb-example-list-builds:
 
-###########################
-Listing your Project Builds
-###########################
+#########################################
+Listing Your AWS CodeBuild Project Builds
+#########################################
+
+.. meta::
+    :description:
+        List AWS CodeBuild projects using this AWS SDK for Go code example.
+    :keywords: AWS SDK for Go code examples, CodeBuild
 
 The following example displays information about your |ACBlong| project builds,
 including the name of the project, when the build started, and how long each

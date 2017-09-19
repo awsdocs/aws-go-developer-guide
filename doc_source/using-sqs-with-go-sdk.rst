@@ -16,9 +16,10 @@
 
 .. meta::
    :description: Use Amazon SQS code examples to write your own Go applications.
-   :keywords: AWS SDK for Go examples, SQS
+   :keywords: AWS SDK for Go code examples, SQS
 
-The |sdk-go| examples can integrate |SQS| into your applications.
+|SQSlong| (|SQS|) is a fully managed message queuing service that makes it easy to decouple and scale microservices,
+distributed systems, and serverless applications. The |sdk-go| examples can integrate |SQS| into your applications.
 The examples assume you have already set up and configured the SDK (that
 is, you've imported all required packages and set your credentials and region). For more information, see :doc:`setting-up` and :doc:`configuring-sdk`.
 
@@ -29,12 +30,12 @@ You can download complete versions of these example files from the
    :titlesonly:
    :maxdepth: 1
 
-   Using |SQS| queues <sqs-example-create-queue>
-   Sending and Receiving Messages in |SQS| <sqs-example-receive-message>
-   Managing Visibility Timeout in |SQS| Queues <sqs-example-managing-visibility-timeout>
-   Enabling Long Polling in |SQS| Queues <sqs-example-enable-long-polling>
-   Using Dead Letter Queues in |SQS| <sqs-example-dead-letter-queues>
-   Setting Attributes on an |SQS| <sqs-example-set-attributes>
+   sqs-example-create-queue
+   sqs-example-receive-message
+   sqs-example-managing-visibility-timeout
+   sqs-example-enable-long-polling
+   sqs-example-dead-letter-queues
+   sqs-example-set-attributes
 
 
 

@@ -14,8 +14,8 @@
 #########################
 
 .. meta::
-   :description: Learn how to work with requests in your Go applications.
-   :keywords: examples, requests
+   :description: Learn how to work with requests in Go applications using this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, requests
 
 
 
