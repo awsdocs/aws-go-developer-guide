@@ -8,14 +8,15 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
+.. _examples-ses:
+
 #################################
 |SES| Examples Using the |sdk-go|
 #################################
 
 .. meta::
-    :description:
-        AWS SDK for Go code examples for Amazon SES.
-    :keywords:
+   :description: Use Amazon SES code examples to write your Go applications.
+   :keywords: AWS SDK for Go code examples, SES
 
 |SESlong| (|SES|) is an email platform that provides an easy,
 cost-effective way for you to send and receive email

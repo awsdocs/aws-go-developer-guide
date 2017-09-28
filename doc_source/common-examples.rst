@@ -37,5 +37,6 @@ see :doc:`setting-up` and :doc:`configuring-sdk`.
    AWS KMS Examples <using-kms-with-go-sdk>
    AWS Lambda Examples <using-lambda-with-go-sdk>
    Amazon S3 Examples <using-s3-with-go-sdk>
+   Amazon SES Examples <using-ses-with-go-sdk>
    Amazon SQS Examples <using-sqs-with-go-sdk>
    Amazon WordDocs Examples <using-wd-with-go-sdk>
