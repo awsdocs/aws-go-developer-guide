@@ -50,7 +50,7 @@ last modified information for each document.
 
 .. literalinclude:: ./example_code/workdocs/wd_list_user_docs.go
    :lines: 72-87
-   :dedent: 4
+   :dedent: 8
    :language: go
 
 See the `complete example

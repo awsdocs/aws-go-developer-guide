@@ -16,6 +16,14 @@ You can use the following examples to access |WDlong| (|WD|) using the |sdk-go|.
 For more information about |WD|,
 see the `Amazon WorkDocs documentation <http://aws.amazon.com/documentation/workdocs/>`_.
 
+You need your organization ID to use these examples.
+Get you organization ID from the AWS console using the following steps:
+
+- Select the AWS Directory Service
+- Select :code:`Directories`
+
+The organization ID is the :code:`Directory ID` corresponding to your Amazon WorkDocs site.
+
 **Examples**
 
 .. toctree::
