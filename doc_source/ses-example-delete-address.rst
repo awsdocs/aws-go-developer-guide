@@ -10,13 +10,13 @@
 
 .. _aws-go-sdk-ses-example-delete-address:
 
-###################################
-Verifying an Email Address in |SES|
-###################################
+##################################
+Deleting an Email Address in |SES|
+##################################
 
 .. meta::
     :description:
-        Learn how to verify an email address in Amazon SES through this AWS SDK for Go code example.
+        Learn how to delete an email address in Amazon SES through this AWS SDK for Go code example.
     :keywords: AWS SDK for Go code examples, Amazon SES
 
 The following example demonstrates how to use the |sdk-go| to delete an |SES|
