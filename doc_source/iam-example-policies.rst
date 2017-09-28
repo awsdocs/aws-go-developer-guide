@@ -10,21 +10,21 @@
 
 .. _examples-iam-policies:
 
-#############################################
-Working with |IAM| Policies with the |sdk-go|
-#############################################
+###########################
+Working with |IAM| Policies
+###########################
 
 .. meta::
-   :description: Use this code example to learn how to manage IAM policies in Go.
-   :keywords: AWS SDK for Go examples, IAM policies
+   :description: Learn to manage IAM policies using this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, IAM policies
 
 
 This Go example shows you how to create, get, attach, and detach |IAM| policies. You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
 
 .. _iam-policies-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 You grant permissions to a user by creating a policy, which is a document that lists the actions that a user can perform and the resources those actions can affect. Any actions or resources that are not explicitly allowed are denied by default. Policies can be created and attached to users, groups of users, roles
 assumed by users, and resources.

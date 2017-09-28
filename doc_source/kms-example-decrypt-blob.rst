@@ -10,11 +10,16 @@
 
 .. _kms-example-decrypt-blob:
 
-######################
-Decrypting a Data Blob
-######################
+###################################
+Decrypting a Data Blob in |KMSlong|
+###################################
 
-The following example uses the |sdk-go| 
+.. meta::
+    :description:
+        Decrypt a data blob in AWS KMS using this AWS SDK for Go code example.
+    :keywords: AWS SDK for Go code examples, KMS
+
+The following example uses the |sdk-go|
 `Decrypt <http://docs.aws.amazon.com/sdk-for-go/api/service/kms/#KMS.Decrypt>`_ method,
 which implements the
 `Decrypt <http://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html>`_ operation,

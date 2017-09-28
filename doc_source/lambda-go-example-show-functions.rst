@@ -10,9 +10,14 @@
 
 .. _lambda-go-example-show-functions:
 
-##################################################################
-Displaying Information about All |LAM| Functions with the |sdk-go|
-##################################################################
+################################################
+Displaying Information about All |LAM| Functions
+################################################
+
+.. meta::
+    :description:
+        Display information about AWS Lambda functions using this AWS SDK for Go code example.
+    :keywords: AWS SDK for Go code examples, Lambda
 
 The following example displays the names and descriptions of the
 |LAM| functions in the :code:`us-west-2` region.

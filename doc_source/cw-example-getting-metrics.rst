@@ -10,13 +10,14 @@
 
 .. _examples-cw-getting-metrics:
 
-###########################################
-Getting Metrics from |CW| with the |sdk-go|
-###########################################
+#########################
+Getting Metrics from |CW|
+#########################
 
 .. meta::
-   :description: Use this code example to learn how to retrieve a list of published CloudWatch metrics and publish data points to CloudWatch metrics in Go.
-   :keywords: AWS SDK for Go examples, CloudWatch, alarm actions
+   :description: Retrieve a list of published CloudWatch metrics and publish data points to CloudWatch
+   metrics using this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, CloudWatch, alarm actions
 
 These Go examples show you how to retrieve a list of published |CW| metrics and publish
 data points to |CW| metrics with the |sdk-go|, as follows:
@@ -29,8 +30,8 @@ You can download complete versions of these example files from the
 
 .. _cw-get-metrics-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 Metrics are data about the performance of your systems. You can enable detailed monitoring of
 some resources, such as your |EC2| instances, or your own application metrics.

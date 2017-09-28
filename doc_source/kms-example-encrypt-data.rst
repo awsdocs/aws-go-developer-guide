@@ -10,11 +10,16 @@
 
 .. _kms-example-encrypt-data:
 
-###############
-Encrypting Data
-###############
+##############################
+Encrypting Data with |KMSlong|
+##############################
 
-The following example uses the |sdk-go| 
+.. meta::
+    :description:
+        Encrypt data in AWS KMS using this AWS SDK for Go code example.
+    :keywords: AWS SDK for Go code examples, KMS
+
+The following example uses the |sdk-go|
 `Encrypt <http://docs.aws.amazon.com/sdk-for-go/api/service/kms/#KMS.Encrypt>`_ method,
 which implements the
 `Encrypt <http://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html>`_ operation,

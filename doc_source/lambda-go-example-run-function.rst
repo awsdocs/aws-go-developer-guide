@@ -10,9 +10,14 @@
 
 .. _lambda-go-example-run-function:
 
-##########################################
-Running a |LAM| Function with the |sdk-go|
-##########################################
+########################
+Running a |LAM| Function
+########################
+
+.. meta::
+    :description:
+        Run AWS Lambda functions using this AWS SDK for Go code example.
+    :keywords: AWS SDK for Go code examples, Lambda
 
 The following example rus the |LAM| function :code:`MyGetitemsFunction` in the :code:`us-west-2` region.
 This Node.js function returns a list of items from a database. The input JSON looks like the following.

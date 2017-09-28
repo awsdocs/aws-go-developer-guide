@@ -10,9 +10,14 @@
 
 .. _cb-example-build-project:
 
-##################
-Building a Project
-##################
+#################################
+Building an AWS CodeBuild Project
+#################################
+
+.. meta::
+    :description:
+        Build AWS CodeBuild projects using this AWS SDK for Go code example.
+    :keywords: AWS SDK for Go code examples, CodeBuild
 
 The following example builds the |ACBlong| project specified on the command line.
 If no command-line argument is supplied, it emits an error and quits.

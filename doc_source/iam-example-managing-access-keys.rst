@@ -10,21 +10,21 @@
 
 .. _examples-iam-access-keys:
 
-############################################
-Managing |IAM| Access Keys with the |sdk-go|
-############################################
+##########################
+Managing |IAM| Access Keys
+##########################
 
 .. meta::
-   :description: Use this code example to learn how to manage IAM access keys in Go.
-   :keywords: AWS SDK for Go examples, IAM access keys
+   :description: Manage IAM access keys using this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, IAM access keys
 
 
 This Go example shows you how to create, modify, view, or rotate |IAM| access keys. You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
 
 .. _iam-access-keys-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 Users need their own access keys to make programmatic calls to the |sdk-go|. To fill this need, you can create, modify, view, or rotate access keys (access key IDs and secret access keys) for |IAM| users. By default, when you create an access key its status is Active, which means the user can use the access key for API calls.
 

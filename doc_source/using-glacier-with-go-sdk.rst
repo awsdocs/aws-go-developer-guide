@@ -16,9 +16,10 @@
 
 .. meta::
    :description: Use Amazon Glacier code examples to write your own Go applications.
-   :keywords: AWS SDK for go examples, Glacier
+   :keywords: AWS SDK for Go code examples, Amazon Glacier
 
-The |sdk-go| examples can integrate |GLlong| into your applications. The examples assume you have already set up and configured the SDK (that is, you've imported all required packages and set your credentials and region). For more information, see :doc:`setting-up` and :doc:`configuring-sdk`.
+|GLlong| is a secure, durable, and extremely low-cost cloud storage service for data archiving and long-term
+backup. The |sdk-go| examples can integrate |GLlong| into your applications. The examples assume you have already set up and configured the SDK (that is, you've imported all required packages and set your credentials and region). For more information, see :doc:`setting-up` and :doc:`configuring-sdk`.
 
 You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <glacier>` repository on GitHub.
 

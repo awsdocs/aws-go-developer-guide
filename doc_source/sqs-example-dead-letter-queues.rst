@@ -10,13 +10,13 @@
 
 .. _examples-sqs-using-dead-letter-queues:
 
-###################################################
-Using Dead Letter Queues in |SQS| with the |sdk-go|
-###################################################
+#################################
+Using Dead Letter Queues in |SQS|
+#################################
 
 .. meta::
-   :description: Use these code examples to use an Amazon SQS queue to receive and hold messages.
-   :keywords: AWS SDK for Go examples, SQS, create queue
+   :description: Use an Amazon SQS queue to receive and hold messages with this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, SQS, create queue
 
 
 This |sdk-go| example shows you how to configure source |SQS| queues that send messages to
@@ -27,8 +27,8 @@ You can download complete versions of these example files from the
 
 .. _sqs-dead-letter-queue-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 A dead letter queue is one that other (source) queues can target for messages that can't be
 processed successfully. You can set aside and isolate these messages in the dead letter queue

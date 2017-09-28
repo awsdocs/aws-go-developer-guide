@@ -8,12 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-###########
-|sdk-go-dg|
-###########
+##############################
+AWS SDK for Go Developer Guide
+##############################
 
 .. meta::
-   :description: Use the |sdk-go| to build Go applications that use AWS services.
+   :description: Use the AWS SDK for Go to build Go applications that use AWS services.
+   :keywords: AWS SDK for Go, code examples
 
 The |sdk-go| provides APIs and utilities that developers can use
 to build Go applications that use AWS services, such as |EC2long| (|EC2|) and

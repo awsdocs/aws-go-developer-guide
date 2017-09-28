@@ -10,13 +10,13 @@
 
 .. _examples-ec2-allocate-address:
 
-#####################################################
-Using Elastic IP Addresses in |EC2| with the |sdk-go|
-#####################################################
+###################################
+Using Elastic IP Addresses in |EC2|
+###################################
 
 .. meta::
-   :description: Use this code example to learn how to allocate Elastic IP addresses in Amazon EC2.
-   :keywords: AWS SDK for Go examples, Elastic IP addresses
+   :description: Allocate Elastic IP addresses in Amazon EC2 using this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, Elastic IP addresses
 
 
 These Go examples show you how to:
@@ -30,8 +30,8 @@ You can download complete versions of these example files from the
 
 .. _ec-allocate-address-scenario:
 
-The Scenario
-============
+Scenario
+========
 
 An Elastic IP address is a static IP address designed for dynamic cloud computing that is associated with
 your AWS account. It is a public IP address, reachable from
