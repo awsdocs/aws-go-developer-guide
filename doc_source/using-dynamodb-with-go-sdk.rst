@@ -8,8 +8,6 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-.. _examples-dynamodb:
-
 #####################################
 |DDBlong| Examples Using the |sdk-go|
 #####################################
@@ -23,16 +21,18 @@ seamless scalability. The |sdk-go| examples can integrate |DDBlong| into your Go
 The examples assume you have already set up and configured the SDK (that
 is, you have imported all required packages and set your credentials and region). For more information, see :doc:`setting-up` and :doc:`configuring-sdk`.
 
-.. _list-tables:
+The topic also provides a link to a downloadable version of |DDB|, which includes an interactive web
+interface so you can experiment with |DDB| offline.
 
-List Tables
-===========
+You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
 
-The following example uses the |DDB|
-:sdk-go-api-deep:`ListTables <service/dynamodb/#DynamoDB.ListTables>` operation
-to list all tables for the region you specified (``us-west-2``).
+.. toctree::
+   :maxdepth: 2
 
-
-.. literalinclude:: example_code/dynamodb/list_tables.go
-   :dedent: 4
-   :lines: 15-
+   dynamo-example-list-tables
+   dynamo-example-create-table
+   dynamo-example-create-table-item
+   dynamo-example-load-table-items-from-json
+   dynamo-example-read-table-item
+   dynamo-example-update-table-item
+   dynamo-example-delete-table-item
