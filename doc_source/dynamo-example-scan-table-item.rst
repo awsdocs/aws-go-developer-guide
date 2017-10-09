@@ -24,7 +24,7 @@ The following example uses the |DDB|
 to get items with a :code:`rating` greater than **8.0** in the :code:`year` **2011**
 in the :code:`Movies` table in the :code:`us-west-2` region.
 
-The example uses the 
+The example uses the
 `Expression Builder
 <https://aws.amazon.com/blogs/developer/introducing-amazon-dynamodb-expression-builder-in-the-aws-sdk-for-go/>`_
 package released in version 1.11.0 of the |sdk-go| in September 2017.
@@ -84,7 +84,7 @@ Loop through the movies from 2011 and display the
 title and rating for those where the rating is greater than 8.0
 
 .. literalinclude:: example_code/dynamodb/scan_items.go
-   :lines: 8-119
+   :lines: 98-119
    :dedent: 4
    :language: go
 
