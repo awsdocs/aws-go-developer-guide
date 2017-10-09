@@ -34,5 +34,6 @@ You can download complete versions of these example files from the :doc-examples
    dynamo-example-create-table-item
    dynamo-example-load-table-items-from-json
    dynamo-example-read-table-item
+   dynamo-example-scan-table-item
    dynamo-example-update-table-item
    dynamo-example-delete-table-item
