@@ -19,14 +19,38 @@ Updating an |DDBlong| Table Item
         Update an Amazon DynamoDB table item using this AWS SDK for Go code example.
     :keywords: AWS SDK for Go code examples, DynamoDB
 
-The following example updates the rating to **0.1** for the item with the :code:`year` **2015** and
+The following example uses the |DDB|
+:sdk-go-api-deep:`UpdateItem <service/dynamodb/#DynamoDB.UpdateItem>` operation
+to update the rating to **0.5** for the item with the :code:`year` **2015** and
 :code:`title`  **The Big New Movie**
 in the :code:`Movies` table in the :code:`us-west-2` region.
 
-.. literalinclude:: ./example_code/dynamodb/update_item.go
-   :lines: 13-
+Create the file *dynamodb_update_item.go*.
+Add the following statements to import the Go and |sdk-go| packages used in the example.
+
+.. literalinclude:: example_code/dynamodb/update_item.go
+   :lines: 17-23
    :dedent: 0
    :language: go
 
-See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/update_item.go>`_
+Initialize the session that the SDK uses to load configuration, credential,
+and region information from the shared config file *~/.aws/config*,
+and create a new |dynamodb| service client.
+
+.. literalinclude:: example_code/dynamodb/update_item.go
+   :lines: 28-33
+   :dedent: 4
+   :language: go
+
+Call **UpdateItem** to add the item to the table.
+If we encounter an error, print the error message.
+Otherwise, display a message that the item was updated.
+
+.. literalinclude:: example_code/dynamodb/update_item.go
+   :lines: 36-62
+   :dedent: 4
+   :language: go
+
+See the `complete example 
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/update_item.go>`_
 on GitHub.
