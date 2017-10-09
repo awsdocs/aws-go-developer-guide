@@ -41,22 +41,22 @@ Where:
 * :code:`Number` is the maximum number of items to retrieve (the default is 50).
   Our example uses :code:`10`, which means get the 10 most-recent items.
 
-The output JSON looks like the following.
+The output JSON looks like the following when the function succeeds and two
+items are returned.
 
 .. code-block:: json
 
    {
-      "statusCode": 200|...,
+      "statusCode": 200,
       "body": {
-         "result": "'success' or 'failure'",
-         "error": "Error message if 'failure', '' otherwise"
+         "result": "success",
+         "error": ""
          "data": [
             {
                "item": "item1"
             },
-            ...,
             {
-               "item": "itemN"
+               "item": "item2"
             }
          ]
       }
