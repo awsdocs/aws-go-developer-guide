@@ -21,8 +21,8 @@ Creating a |DDBlong| Table Item Using the |sdk-go|
 The following example uses the |DDB|
 :sdk-go-api-deep:`PutItem <service/dynamodb/#DynamoDB.PutItem>` operation
 to create the table item with the :code:`year` **2015** and
-:code-go:`title`  **The Big New Movie** in the :code-go:`Movies` table in the
-:code-go:`us-west-2` region.
+:code:`title`  **The Big New Movie** in the :code:`Movies` table in the
+:code:`us-west-2` region.
 
 Create the file *dynamodb_create_item.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.

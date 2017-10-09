@@ -20,7 +20,7 @@ Listing all |DDBlong| Tables Using the |sdk-go|
 
 The following example uses the |DDB|
 :sdk-go-api-deep:`ListTables <service/dynamodb/#DynamoDB.ListTables>` operation
-to list all tables for the :code-go:`us-west-2` region.
+to list all tables for the :code:`us-west-2` region.
 
 Create the file *dynamodb_list_tables.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.

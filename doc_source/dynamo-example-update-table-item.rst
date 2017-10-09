@@ -20,8 +20,8 @@ Updating an |DDBlong| Table Item
     :keywords: AWS SDK for Go code examples, DynamoDB
 
 The following example updates the rating to **0.1** for the item with the :code:`year` **2015** and
-:code-go:`title`  **The Big New Movie**
-in the :code-go:`Movies` table in the :code-go:`us-west-2` region.
+:code:`title`  **The Big New Movie**
+in the :code:`Movies` table in the :code:`us-west-2` region.
 
 .. literalinclude:: ./example_code/dynamodb/update_item.go
    :lines: 13-

@@ -10,33 +10,39 @@
 
 .. _aws-go-sdk-dynamo-example-create-table-item:
 
-##################################################
-Creating a |DDBlong| Table Item Using the |sdk-go|
-##################################################
+##################################################################
+Creating |DDBlong| Table Items from a JSON File Using the |sdk-go|
+##################################################################
 
 .. meta::
-   :description: Create a DynamoDB table item using this AWS SDK for Go code example.
+   :description: Create DynamoDB table items from a JSON file using this AWS SDK for Go code example.
    :keywords: AWS SDK for Go code examples, DynamoDB
 
 The following example uses the |DDB|
 :sdk-go-api-deep:`PutItem <service/dynamodb/#DynamoDB.PutItem>` operation
-to create the table item with the :code:`year` **2015** and
-:code-go:`title`  **The Big New Movie** in the :code-go:`Movies` table in the
-:code-go:`us-west-2` region.
+in a loop to create the items defined in *movie_data.json* file in the :code:`Movies` table in the
+:code:`us-west-2` region.
 
-Create the file *dynamodb_create_item.go*.
+Create the file *dynamodb_load_items.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: example_code/dynamodb/create_item.go
-   :lines: 17-24
+.. literalinclude:: example_code/dynamodb/load_items.go
+   :lines: 17-27
    :dedent: 0
    :language: go
 
 Create the data structures we use to containing the information about the
 table item.
 
-.. literalinclude:: example_code/dynamodb/create_item.go
-   :lines: 28-37
+.. literalinclude:: example_code/dynamodb/load_items.go
+   :lines: 30-39
+   :dedent: 0
+   :language: go
+
+Create a function to get the table items from the JSON file.
+
+.. literalinclude:: example_code/dynamodb/load_items.go
+   :lines: 42-53
    :dedent: 0
    :language: go
 
@@ -44,27 +50,22 @@ Initialize the session that the SDK uses to load configuration, credential,
 and region information from the shared config file *~/.aws/config*,
 and create a new |dynamodb| service client.
 
-.. literalinclude:: example_code/dynamodb/create_item.go
-   :lines: 42-47
+.. literalinclude:: example_code/dynamodb/load_items.go
+   :lines: 58-69
    :dedent: 4
    :language: go
 
-Initialize the structs with the movie data and marshall that data into a
-map of **AttributeValue** objects.
+Call **getItems** to get the items.
+Loop through each item,
+marshall that data into a
+map of **AttributeValue** objects,
+add the item to the :code:`Movies` table,
+and print out the title and year of the movie added to the table.
 
-.. literalinclude:: example_code/dynamodb/create_item.go
-   :lines: 49-60
+.. literalinclude:: example_code/dynamodb/load_items.go
+   :lines: 72-99
    :dedent: 4
    :language: go
 
-Create the input for **CreateTable** and call it.
-If an error occurs, print the error and exit.
-If no error occurs, print an message that the item was added to the table.
-
-.. literalinclude:: example_code/dynamodb/create_item.go
-   :lines: 69-82
-   :dedent: 4
-   :language: go
-
-See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/create_item.go>`_
+See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/load_items.go>`_
 on GitHub.

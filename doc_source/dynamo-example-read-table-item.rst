@@ -20,8 +20,8 @@ Adding an Item to an |DDBlong| Table
     :keywords: AWS SDK for Go code examples, DynamoDB
 
 The following example displays information about the item with the :code:`year` **2015** and
-:code-go:`title`  **The Big New Movie** in the :code-go:`movies` table in the
-:code-go:`us-west-2` region.
+:code:`title`  **The Big New Movie** in the :code:`movies` table in the
+:code:`us-west-2` region.
 
 .. literalinclude:: ./example_code/dynamodb/read_item.rb
    :lines: 13-

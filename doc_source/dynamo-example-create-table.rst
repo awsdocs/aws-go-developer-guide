@@ -20,7 +20,7 @@ Creating a |DDBlong| Table Using the |sdk-go|
 
 The following example uses the |DDB|
 :sdk-go-api-deep:`CreateTable <service/dynamodb/#DynamoDB.CreateTable>` operation
-to create the table **Music** in the :code-go:`us-west-2` region.
+to create the table **Music** in the :code:`us-west-2` region.
 
 Create the file *dynamodb_create_table.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
