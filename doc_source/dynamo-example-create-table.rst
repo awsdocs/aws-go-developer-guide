@@ -10,9 +10,9 @@
 
 .. _aws-go-sdk-dynamo-example-create-table:
 
-#############################################
-Creating a |DDBlong| Table Using the |sdk-go|
-#############################################
+##############################################
+Creating an |DDBlong| Table Using the |sdk-go|
+##############################################
 
 .. meta::
    :description: Create a DynamoDB table using this AWS SDK for Go code example.
