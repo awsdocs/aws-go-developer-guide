@@ -64,7 +64,7 @@ and create a new |dynamodb| service client.
 
 Create the expression defining the year for which we filter the table items
 to retrieve,
-and the projection so we get the title, year, and rating for each retrievd item.
+and the projection so we get the title, year, and rating for each retrieved item.
 Then build the expression.
 
 .. literalinclude:: example_code/dynamodb/scan_items.go
