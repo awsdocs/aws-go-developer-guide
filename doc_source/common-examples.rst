@@ -29,6 +29,7 @@ see :doc:`setting-up` and :doc:`configuring-sdk`.
 
    SDK Request Examples <using-requests-with-go-sdk>
    Amazon CloudWatch Examples <using-cloudwatch-with-go-sdk>
+   AWS CloudTrail Examples <using-cloudtrail-with-go-sdk>
    AWS CodeBuild Examples <using-cb-with-go-sdk>
    Amazon DynamoDB Examples <using-dynamodb-with-go-sdk>
    Amazon EC2 Examples <using-ec2-with-go-sdk>
