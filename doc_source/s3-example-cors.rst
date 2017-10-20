@@ -15,8 +15,7 @@ Working with |S3| CORS Permissions
 ##################################
 
 .. meta::
-   :description: Learn to work with cross-origin resource sharing (CORS) for an Amazon S3 bucket using
-   this AWS SDK for Go code example.
+   :description: Learn to work with cross-origin resource sharing (CORS) for an Amazon S3 bucket using this AWS SDK for Go code example.
    :keywords: AWS SDK for Go code examples, S3, cross origin resource sharing, CORS
 
 

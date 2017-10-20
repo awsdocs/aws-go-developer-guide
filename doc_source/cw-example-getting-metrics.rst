@@ -15,8 +15,7 @@ Getting Metrics from |CW|
 #########################
 
 .. meta::
-   :description: Retrieve a list of published CloudWatch metrics and publish data points to CloudWatch
-   metrics using this AWS SDK for Go code example.
+   :description: Retrieve a list of published CloudWatch metrics and publish data points to CloudWatch metrics using this AWS SDK for Go code example.
    :keywords: AWS SDK for Go code examples, CloudWatch, alarm actions
 
 These Go examples show you how to retrieve a list of published |CW| metrics and publish

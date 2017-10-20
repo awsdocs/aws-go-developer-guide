@@ -15,8 +15,7 @@ Creating |EC2| Instances with Tags or without Block Devices
 ###########################################################
 
 .. meta::
-   :description: Create Amazon EC2 instances with tags or no block devices using this AWS SDK for Go code
-   example.
+   :description: Create Amazon EC2 instances with tags or no block devices using this AWS SDK for Go code example.
    :keywords: AWS SDK for Go code examples, EC2, tags, block device
 
 

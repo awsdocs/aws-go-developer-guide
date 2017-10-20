@@ -42,7 +42,7 @@ table item.
 
 Initialize the session that the SDK uses to load configuration, credential,
 and region information from the shared config file *~/.aws/config*,
-and create a new |dynamodb| service client.
+and create a new |DDB| service client.
 
 .. literalinclude:: example_code/dynamodb/create_item.go
    :lines: 42-47

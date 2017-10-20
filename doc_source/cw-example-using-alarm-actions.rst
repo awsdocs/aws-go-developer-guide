@@ -15,8 +15,7 @@ Using Alarms and Alarm Actions in |CW|
 ######################################
 
 .. meta::
-   :description: Create alarms and alarm actions to change the state of EC2 instances using
-   this AWS SDK for Go code example.
+   :description: Create alarms and alarm actions to change the state of EC2 instances using this AWS SDK for Go code example.
    :keywords: AWS SDK for Go code examples, CloudWatch, alarm actions
 
 These Go examples show you how to change the state of your |EC2| instances automatically based
