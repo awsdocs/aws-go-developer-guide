@@ -40,7 +40,7 @@ If the trail name is missing,
 display an error message and exit.
 
 .. literalinclude:: ./example_code/cloudtrail/lookup_events.go
-   :lines: 30-43
+   :lines: 29-42
    :dedent: 4
    :language: go
 
@@ -49,7 +49,7 @@ and region information from the shared config file
 *.aws/config* in your home folder, and create a new service client.
 
 .. literalinclude:: ./example_code/cloudtrail/lookup_events.go
-   :lines: 47-52
+   :lines: 44-51
    :dedent: 4
    :language: go
 
@@ -61,7 +61,7 @@ If the **-s** flag was specified,
 print the |CT| event.
 
 .. literalinclude:: ./example_code/cloudtrail/lookup_events.go
-   :lines: 54-87
+   :lines: 53-85
    :dedent: 4
    :language: go
 
