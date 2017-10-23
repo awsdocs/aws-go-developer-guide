@@ -53,14 +53,14 @@ and region information from the shared config file
 *.aws/config* in your home folder.
 
 .. literalinclude:: ./example_code/cloudtrail/create_trail.go
-   :lines: 51-53
+   :lines: 50-52
    :dedent: 4
    :language: go
 
 If the **-p** flag was specfied, add a policy to the bucket.
 
 .. literalinclude:: ./example_code/cloudtrail/create_trail.go
-   :lines: 55-121
+   :lines: 54-117
    :dedent: 4
    :language: go
 
@@ -70,7 +70,7 @@ If an error occurs, print the error and exit.
 If no error occurs, print a success message.
 
 .. literalinclude:: ./example_code/cloudtrail/create_trail.go
-   :lines: 124-139
+   :lines: 120-134
    :dedent: 4
    :language: go
 
