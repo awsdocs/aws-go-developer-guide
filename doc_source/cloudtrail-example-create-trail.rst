@@ -10,9 +10,9 @@
 
 .. _cloudtrail-example-create-trail:
 
-####################
-Creatng a |CT| Trail
-####################
+#####################
+Creating a |CT| Trail
+#####################
 
 .. meta::
     :description:
