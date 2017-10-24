@@ -46,7 +46,7 @@ Create a function to get the table items from the JSON file.
    :dedent: 0
    :language: go
 
-Initialize the session that the SDK uses to load credential
+Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
 and create a new |DDB| service client.
 

@@ -33,7 +33,7 @@ Add the following statements to import the Go and |sdk-go| packages used in the 
    :dedent: 0
    :language: go
 
-Initialize the session that the SDK uses to load credential
+Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
 and create a new |DDB| service client.
 
