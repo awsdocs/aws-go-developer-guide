@@ -34,7 +34,7 @@ Add the following statements to import the Go and |sdk-go| packages used in the 
    :dedent: 0
    :language: go
 
-Get the names of the trail,
+Get the name of the trail,
 and whether to display the event.
 If the trail name is missing,
 display an error message and exit.
@@ -44,9 +44,9 @@ display an error message and exit.
    :dedent: 4
    :language: go
 
-Initialize the session that the SDK uses to load configuration, credential,
-and region information from the shared config file
-*.aws/config* in your home folder, and create a new service client.
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file
+*.aws/credentials* in your home folder, and create a new service client.
 
 .. literalinclude:: ./example_code/cloudtrail/lookup_events.go
    :lines: 44-51

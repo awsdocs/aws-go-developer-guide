@@ -63,7 +63,7 @@ Create a new Go file named :file:`sqs_listqueues.go`. You must import the releva
 .. literalinclude:: example_code/sqs/sqs_listqueues.go
    :lines: 15-22
 
-Initialize a session that the SDK will use to load configuration, credentials, and region information from the shared config file, ~/.aws/config.
+Initialize a session that the SDK will use to load credentials from the shared credentials file, ~/.aws/credentials.
 
 .. literalinclude:: example_code/sqs/sqs_listqueues.go
    :lines: 26,29-34
@@ -83,7 +83,7 @@ Create a new Go file named :file:`sqs_createqueues.go`. You must import the rele
 .. literalinclude:: example_code/sqs/sqs_createqueues.go
    :lines: 15-23
 
-Initialize a session that the SDK will use to load configuration, credentials, and region information from the shared config file, ~/.aws/config.
+Initialize a session that the SDK will use to load credentials from the shared credentials file, ~/.aws/credentials.
 
 .. literalinclude:: example_code/sqs/sqs_createqueues.go
    :lines: 27,30-35
@@ -104,8 +104,8 @@ Create a new Go file named :file:`sqs_getqueueurl.go`. You must import the relev
 .. literalinclude:: example_code/sqs/sqs_getqueueurl.go
    :lines: 15-23
 
-Initialize a session that the SDK will use to load configuration, credentials, and region information
-from the shared config file, ~/.aws/config.
+Initialize a session that the SDK will use to load credentials
+from the shared credentials file, ~/.aws/credentials.
 
 .. literalinclude:: example_code/sqs/sqs_getqueueurl.go
    :lines: 27,30-35
@@ -125,8 +125,8 @@ Create a new Go file named :file:`sqs_deletequeue.go`. You must import the relev
 .. literalinclude:: example_code/sqs/sqs_deletequeue.go
    :lines: 15-23
 
-Initialize a session that the SDK will use to load configuration, credentials, and region
-information from the shared config file, ~/.aws/config.
+Initialize a session that the SDK will use to load credentials
+from the shared credentials file, ~/.aws/credentials.
 
 .. literalinclude:: example_code/sqs/sqs_deletequeue.go
    :lines: 27,30-35

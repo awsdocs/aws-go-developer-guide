@@ -76,8 +76,8 @@ Get the queue name passed in by the user.
 .. literalinclude:: example_code/sqs/sqs_longpolling_create_queue.go
    :lines: 33-43
 
-Initialize a session that the SDK will use to load configuration, credentials, and region
-information from the shared config file, ~/.aws/config.
+Initialize a session that the SDK will use to load credentials
+from the shared credentials file, ~/.aws/credentials.
 
 .. literalinclude:: example_code/sqs/sqs_longpolling_create_queue.go
    :lines: 47-52
@@ -109,8 +109,8 @@ timeout value.
 .. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
    :lines: 33-43
 
-Initialize a session that the SDK will use to load configuration, credentials, and region
-information from the shared config file, ~/.aws/config.
+Initialize a session that the SDK will use to load credentials
+from the shared credentials file, ~/.aws/credentials.
 
 .. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
    :lines: 47-52
@@ -144,8 +144,8 @@ timeout value.
 .. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
    :lines: 32-42
 
-Initialize a session that the SDK will use to load configuration, credentials, and region
-information from the shared config file, ~/.aws/config.
+Initialize a session that the SDK will use to load credentials
+from the shared credentials file, ~/.aws/credentials.
 
 .. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
    :lines: 46-51

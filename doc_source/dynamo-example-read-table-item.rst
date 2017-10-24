@@ -41,8 +41,8 @@ table item.
    :dedent: 0
    :language: go
 
-Initialize the session that the SDK uses to load configuration, credential,
-and region information from the shared config file *~/.aws/config*,
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file *~/.aws/credentials,
 and create a new |DDB| service client.
 
 .. literalinclude:: example_code/dynamodb/read_item.go

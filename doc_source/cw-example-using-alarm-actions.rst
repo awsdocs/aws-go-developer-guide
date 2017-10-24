@@ -67,8 +67,8 @@ You must import the relevant Go and |sdk-go| packages by adding the following li
 .. literalinclude:: example_code/cloudwatch/create_enable_alarms.go
    :lines: 15-24
 
-Initialize a session that the SDK will use to load configuration, credentials, and
-region information from the shared config file, ~/.aws/config, and create a new |EC2| service client.
+Initialize a session that the SDK will use to load credentials
+from the shared credentials file, ~/.aws/credentials, and create a new |EC2| service client.
 
 .. literalinclude:: example_code/cloudwatch/create_enable_alarms.go
    :lines: 28-35
@@ -100,8 +100,8 @@ You must import the relevant Go and |sdk-go| packages by adding the following li
 .. literalinclude:: example_code/cloudwatch/disable_alarm.go
    :lines: 15-23
 
-Initialize a session that the SDK will use to load configuration, credentials, and
-region information from the shared config file, ~/.aws/config, and create a new |EC2| service client.
+Initialize a session that the SDK will use to load credentials
+from the shared credentials file, ~/.aws/credentials, and create a new |EC2| service client.
 
 .. literalinclude:: example_code/cloudwatch/disable_alarm.go
    :lines: 27-34

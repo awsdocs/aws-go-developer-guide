@@ -32,13 +32,21 @@ Specifying the AWS Region
 =========================
 
 When you specify the region, you specify where to send requests, such as
-``us-west-2`` or ``us-east-2.`` The SDK does not select a default
-region. For a list of regions for each service, see |regions-and-endpoints|_
+``us-west-2`` or ``us-east-2.`` For a list of regions for each service, see |regions-and-endpoints|_
 in the |AWS-gr|.
 
-To specify the region, set the ``AWS_REGION`` environment variable or
-specify it in a session. If you do both, the SDK will always use the
-region you specified in the session.
+The SDK does not have a default region.
+To specify a region:
+
+- Set the ``AWS_REGION`` environment variable to the default region
+- Set the ``AWS_SDK_LOAD_CONFIG`` environment variable to **true**
+  to get the region value from the *config* file in the *.aws/* folder in your home directory
+- Set the **NewSessionWithOptions** method argument **SharedConfigState** to **SharedConfigEnable** when you create a session
+  to get the region value from the *config* file in the *.aws/* folder in your home directory
+- Set the region explicitly when you create a session
+
+If you set a region using all of these techniques, the SDK uses the
+region you explicitly specified in the session.
 
 The following examples show you how to configure the environment
 variable.

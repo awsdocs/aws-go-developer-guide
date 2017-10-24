@@ -81,8 +81,8 @@ If the name is not supplied, we call the error function and exit.
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
    :lines: 29-34
 
-Initialize the session that the SDK uses to load configuration, credential,
-and region information from the shared config file *~/.aws/config*,
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
@@ -134,8 +134,8 @@ If not, print an error message and quit.
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
    :lines: 30-48
 
-Initialize the session that the SDK uses to load configuration, credential,
-and region information from the shared config file *~/.aws/config*,
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
@@ -195,8 +195,8 @@ If either name is not supplied, call the error function and exit.
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
    :lines: 29-35
 
-Initialize the session that the SDK uses to load configuration, credential,
-and region information from the shared config file *~/.aws/config*,
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
@@ -248,8 +248,8 @@ If not, print an error message and quit.
 .. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
    :lines: 30-49
 
-Initialize the session that the SDK uses to load configuration, credential,
-and region information from the shared config file *~/.aws/config*,
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go

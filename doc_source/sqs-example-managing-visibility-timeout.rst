@@ -62,8 +62,8 @@ You must import the relevant Go and |sdk-go| packages by adding the following li
 .. literalinclude:: example_code/sqs/sqs_changingvisibility.go
    :lines: 15-23
 
-Initialize a session that the SDK will use to load configuration, credentials, and region
-information from the shared config file, ~/.aws/config.
+Initialize a session that the SDK will use to load credentials
+from the shared credentials file, ~/.aws/credentials.
 
 .. literalinclude:: example_code/sqs/sqs_changingvisibility.go
    :lines: 27, 30-35

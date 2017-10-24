@@ -44,9 +44,9 @@ display an error message and exit.
    :dedent: 4
    :language: go
 
-Initialize the session that the SDK uses to load configuration, credential,
-and region information from the shared config file
-*.aws/config* in your home folder.
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file
+*.aws/credentials* in your home folder.
 
 .. literalinclude:: ./example_code/cloudtrail/delete_trail.go
    :lines: 42-47

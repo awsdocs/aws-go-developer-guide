@@ -73,8 +73,8 @@ Get the Address Descriptions
 ----------------------------
 
 This routine prints out the Elastic IP Addresses for the account's VPC. Initialize a session that the
-SDK will use to load configuration, credentials, and region information from the shared config file,
-~/.aws/config, and create a new EC2 service client.
+SDK will use to load credentials from the shared credentials file,
+~/.aws/credentials, and create a new EC2 service client.
 
 .. literalinclude:: example_code/ec2/ec2_describe_addresses.go
    :lines: 30, 33-38
@@ -108,8 +108,8 @@ requires and will be associated with the instance ID that is passed in.
 .. literalinclude:: example_code/ec2/ec2_allocate_address.go
    :lines: 32-37
 
-You will need to initialize a session that the SDK will use to load configuration, credentials,
-and region information from the shared config file, ~/.aws/config, and create a new |S3| service client.
+You will need to initialize a session that the SDK will use to load credentials
+from the shared credentials file, ~/.aws/credentials, and create a new |S3| service client.
 
 .. literalinclude:: example_code/ec2/ec2_allocate_address.go
    :lines: 41-46
@@ -150,8 +150,8 @@ The routine requires that the user pass in the allocation ID of the Elastic IP a
 .. literalinclude:: example_code/ec2/ec2_release_address.go
    :lines: 33-38
 
-Initialize a session that the SDK will use to load configuration, credentials, and region information
-from the shared config file, ~/.aws/config, and create a new EC2 service client.
+Initialize a session that the SDK will use to load credentials
+from the shared credentials file, ~/.aws/credentials, and create a new EC2 service client.
 
 .. literalinclude:: example_code/ec2/ec2_release_address.go
    :lines: 42-47

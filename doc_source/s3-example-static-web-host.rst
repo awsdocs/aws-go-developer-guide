@@ -64,8 +64,8 @@ you want to get website configuration.
 .. literalinclude:: example_code/s3/s3_get_bucket_website.go
    :lines: 31-35
 
-Initialize a session that the SDK will use to load configuration, credentials,
-and region info from the shared config file, ~/.aws/config, and create a new S3 service client.
+Initialize a session that the SDK will use to load credentials from the shared credentials file,
+~/.aws/credentials, and create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_website.go
    :lines: 39-44
@@ -103,7 +103,7 @@ This routine requires you to pass in an argument containing the name of the buck
    :lines: 35-42
 
 Initialize a session that the SDK will use to load configuration, credentials,
-and region information from the shared config file, ~/.aws/config, and create a new S3 service client.
+and region information from the shared credentials file, ~/.aws/credentials, and create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_website.go
    :lines: 46-51
@@ -144,7 +144,7 @@ website configuration.
    :lines: 36-41
 
 Initialize a session that the SDK will use to load
-configuration, credentials, and region information from the shared config file, ~/.aws/config, and
+configuration, credentials, and region information from the shared credentials file, ~/.aws/credentials, and
 create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_delete_bucket_website.go

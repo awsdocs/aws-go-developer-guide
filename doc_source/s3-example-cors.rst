@@ -71,8 +71,8 @@ Notice the helper method, ``filterMethods``, which ensures the methods passed in
 .. literalinclude:: example_code/s3/s3_set_cors.go
    :lines: 89-97
 
-Initialize a session that the SDK will use to load configuration, credentials,
-and region information from the shared config file, ~/.aws/config, and create a new S3 service client.
+Initialize a session that the SDK will use to load credentials,
+from the shared credentials file, ~/.aws/credentials, and create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_set_cors.go
    :lines: 48-53

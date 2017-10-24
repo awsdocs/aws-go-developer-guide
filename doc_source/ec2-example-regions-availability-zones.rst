@@ -76,7 +76,10 @@ You must import the relevant Go and |sdk-go| packages by adding the following li
 .. literalinclude:: example_code/ec2/regions_and_availability.go
    :lines: 15-22
 
-In the ``main`` function, create a session from the shared config file and a new EC2 client.
+In the ``main`` function, create a session
+with credentials from the shared credentials file,
+~/.aws/credentials,
+and create a new EC2 client.
 
 .. literalinclude:: example_code/ec2/regions_and_availability.go
    :lines: 26-33

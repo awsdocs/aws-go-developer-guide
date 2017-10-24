@@ -93,8 +93,8 @@ Create a function we use to display errors and exit.
 .. literalinclude:: example_code/s3/s3_list_buckets.go
    :lines: 50-53
 
-Initialize the session that the SDK uses to load configuration, credential,
-and region information from the shared config file *~/.aws/config*,
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_list_buckets.go
@@ -141,8 +141,8 @@ The program requires one argument, the name of the bucket to create.
 .. literalinclude:: example_code/s3/s3_create_bucket.go
    :lines: 31-36
 
-Initialize the session that the SDK uses to load configuration, credentials,
-and region information from the shared config file *~/.aws/config*,
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file *~/.aws/credentials,
 and create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_create_bucket.go
@@ -196,8 +196,8 @@ The program requires one command line argument, the name of the bucket.
 .. literalinclude:: example_code/s3/s3_list_objects.go
    :lines: 31-37
 
-Initialize the session that the SDK uses to load configuration, credential,
-and region information from the shared config file *~/.aws/config*,
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_list_objects.go
@@ -239,8 +239,8 @@ Create a function we use to display errors and exit.
 .. literalinclude:: example_code/s3/s3_upload_object.go
    :lines: 85-88
 
-Initialize the session that the SDK uses to load configuration, credential,
-and region information from the shared config file *~/.aws/config*,
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file *~/.aws/credentials,
 and create a ``NewUploader`` object.
 
 .. literalinclude:: example_code/s3/s3_upload_object.go
@@ -287,8 +287,8 @@ Create a function we use to display errors and exit.
 .. literalinclude:: example_code/s3/s3_download_object.go
    :lines: 70-73
 
-Initialize the session that the SDK uses to load configuration, credential,
-and region information from the shared config file *~/.aws/config*,
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file *~/.aws/credentials,
 and create a ``NewDownloader`` object.
 
 .. literalinclude:: example_code/s3/s3_download_object.go
@@ -347,8 +347,8 @@ If there aren't four command line arguments, call ``exitErrorf``.
 .. literalinclude:: example_code/s3/s3_copy_object.go
    :lines: 30-37
 
-Initialize the session that the SDK uses to load configuration, credential,
-and region information from the shared config file *~/.aws/config*,
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_copy_object.go
@@ -401,8 +401,8 @@ Get the name of the bucket and object to delete.
 .. literalinclude:: example_code/s3/s3_delete_object.go
    :lines: 31-38
 
-Initialize the session that the SDK uses to load configuration, credential,
-and region information from the shared config file *~/.aws/config*,
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_delete_object.go
@@ -454,8 +454,8 @@ Get the name of the bucket.
 .. literalinclude:: example_code/s3/s3_delete_objects.go
    :lines: 31-37
 
-Initialize the session that the SDK uses to load configuration, credential,
-and region information from the shared config file *~/.aws/config*,
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_delete_objects.go
@@ -508,8 +508,8 @@ restore.
 .. literalinclude:: example_code/s3/s3_restore_object.go
    :lines: 31-38
 
-Initialize the session that the SDK uses to load configuration, credential,
-and region information from the shared config file *~/.aws/config*,
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_restore_object.go
@@ -558,8 +558,8 @@ If the argument is not supplied, call ``exitErrorf``.
 .. literalinclude:: example_code/s3/s3_delete_bucket.go
    :lines: 32-36
 
-Initialize the session that the SDK uses to load configuration, credentials,
-and region information from the shared config file *~/.aws/config*,
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file *~/.aws/credentials,
 and create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_delete_bucket.go

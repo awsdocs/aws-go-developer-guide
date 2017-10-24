@@ -35,9 +35,9 @@ Add the following statements to import the Go and AWS SDK for Go packages used i
    :dedent: 0
    :language: go
 
-Initialize the session that the SDK uses to load configuration, credential,
-and region information from the shared config file
-*.aws/config* in your home folder, and create a new service client.
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file
+*.aws/credentials* in your home folder, and create a new service client.
 
 .. literalinclude:: ./example_code/cloudtrail/describe_trails.go
    :lines: 29-34

@@ -64,8 +64,8 @@ an error, an error message is printed instead. It requires the bucket name as in
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
    :lines: 35-40
 
-Initialize a session that the SDK will use to load configuration, credentials,
-and region information from the shared config file, ~/.aws/config, and create a new S3 service client.
+Initialize a session that the SDK will use to load credentials
+from the shared credentials file, ~/.aws/credentials, and create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
    :lines: 44-49
@@ -103,7 +103,7 @@ Add the main function and parse the arguments to get the bucket name.
    :lines: 34-39
 
 Initialize a session that the SDK will use to load configuration, credentials,
-and region information from the shared config file, ~/.aws/config, and create a new S3 service client.
+and region information from the shared credentials file, ~/.aws/credentials, and create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
    :lines: 43-48

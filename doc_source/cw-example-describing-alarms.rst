@@ -50,8 +50,8 @@ Prerequisites
 Describe Alarms
 ===============
 
-Initialize a session that the SDK will use to load configuration, credentials, and region information
-from the shared config file, ~/.aws/config, and create a new |EC2| service client.
+Initialize a session that the SDK will use to load credentials
+from the shared credentials file, ~/.aws/credentials, and create a new |EC2| service client.
 
 .. literalinclude:: example_code/cloudwatch/describe_alarms.go
    :lines: 15-19

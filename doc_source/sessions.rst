@@ -73,8 +73,8 @@ This allows you to provide additional or case-based configuration as needed.
 By default ``NewSession`` only loads credentials from the shared
 credentials file (:file:`~/.aws/credentials`). If the ``AWS_SDK_LOAD_CONFIG``
 environment variable is set to a truthy value, the session is
-created from the configuration values from the shared configuration
-(:file:`~/.aws/config`) and shared credentials (:file:`~/.aws/credentials`) files.
+created from the configuration values from the shared credentials
+(:file:`~/.aws/credentials`) and shared credentials (:file:`~/.aws/credentials`) files.
 See :ref:`sessions-with-shared-config` for more information.
 
 Create a session with the default configuration and request handlers. The following example creates
@@ -120,7 +120,7 @@ how the session will be created through code, instead of being driven by
 environment variables only.
 
 Use :sdk-go-api-deep:`NewSessionWithOptions <aws/session/#NewSessionWithOptions>`
-when you want to provide the config profile, or override the shared configuration state
+when you want to provide the config profile, or override the shared credentials state
 (AWS\_SDK\_LOAD\_CONFIG).
 
 .. code:: go
@@ -169,19 +169,19 @@ provided by the environment variables, SDK defaults, and user-provided
 
 If the ``AWS_SDK_LOAD_CONFIG`` environment variable is set, or
 the SharedConfigLoadEnable option is used to create the session, the full
-shared config values are loaded. This includes credentials, region,
+shared credentials values are loaded. This includes credentials, region,
 and support for assumed role. In addition, the session will load its
-configuration from both the shared configuration file (:file:`~/.aws/config`) and
+configuration from both the shared credentials file (:file:`~/.aws/credentials`) and
 shared credentials file (:file:`~/.aws/credentials`). Both files have the same
 format.
 
 If both configuration files are present, the configuration from both files is
 read. The session is created from configuration values from the
 shared credentials file (:file:`~/.aws/credentials`) instead of those in the shared
-credentials file (:file:`~/.aws/config`).
+credentials file (:file:`~/.aws/credentials`).
 
 See the :sdk-go-api-deep:`session package's documentation <aws/session/>`
-for more information on shared configuratiobn setup.
+for more information on shared credentials setup.
 
 .. _environment-variables:
 
