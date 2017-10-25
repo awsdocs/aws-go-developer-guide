@@ -76,7 +76,7 @@ including a configuration option to constructing the service client.
 The following examples uses the |DDB| **ListTables** operation
 to illustrate how to add a custom header to a service call.
 
-.. literalinclude:: example_code/extending_sdk/addHeaders.go
+.. literalinclude:: example_code/extending_sdk/addHeader.go
    :lines: 15-
    :dedent: 0
    :language: go
