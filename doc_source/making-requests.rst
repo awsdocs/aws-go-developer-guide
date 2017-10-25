@@ -64,6 +64,29 @@ with a custom value (``us-west-2``):
 
     svc := s3.New(mySession, aws.NewConfig().WithRegion("us-west-2"))
 
+.. _get-http-request-response:
+
+Getting the HTTP Request/Reponse with Each Service Call
+=======================================================
+
+You can direct the |sdk-go| to display the HTTP request
+and response it sends and receives for each call by
+including a configuration option to constructing the service client.
+
+The following examples uses the |DDB| **ListTables** operation
+to illustrate how to add a custom header to a service call.
+
+.. literalinclude:: example_code/extending_sdk/addHeaders.go
+   :lines: 15-
+   :dedent: 0
+   :language: go
+
+If you run this program, the output should be similar to the following,
+where **ACCESS-KEY** is the access key of the user and
+**TABLE-1**, through **TABLE-N** are the names of the tables.
+
+.. literalinclude:: example_code/extending_sdk/tableList.txt
+   :lines: 1-
 
 .. _service-operation-calls:
 
