@@ -39,7 +39,8 @@ highlights this process with a timeout on an |SQS| ``ReceiveMessage`` API call.
 
 .. literalinclude:: example_code/extending_sdk/request_context.go
    :lines: 15-
-   :dedent: 1
+   :dedent: 4
+   :language: go
 
 .. _using-api-field-setters:
 
@@ -52,10 +53,12 @@ to set the fields of the API struct.
 
 .. literalinclude:: example_code/s3/put_object_with_setters.go
    :lines: 15-
+   :language: go
 
 You can also use this pattern with nested fields in API operation requests.
 
 .. literalinclude:: example_code/extending_sdk/ecs/update_deployment_with_setters.go
    :lines: 15-
+   :language: go
 
 
