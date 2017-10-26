@@ -66,8 +66,8 @@ with a custom value (``us-west-2``):
 
 .. _get-http-request-response:
 
-Getting the HTTP Request/Reponse with Each Service Call
-=======================================================
+Getting the HTTP Request/Response with Each Service Call
+========================================================
 
 You can direct the |sdk-go| to display the HTTP request
 and response it sends and receives for each call by
