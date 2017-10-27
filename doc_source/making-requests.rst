@@ -64,14 +64,36 @@ with a custom value (``us-west-2``):
 
     svc := s3.New(mySession, aws.NewConfig().WithRegion("us-west-2"))
 
+.. _tag-service-resources:
+
+Tagging Service Resources
+=========================
+
+You can tag service resources,
+such as |S3| buckets,
+so that you can determine the costs of your service resources
+at whatever level of granularity you require.
+
+The following examples shows how to tag the |S3| bucket
+:code:`MyBucket` with :code:`Cost Center` tag with the value :code:`123456`
+and :code:`Stack` tag with the value :code:`MyTestStack`.
+
+.. literalinclude:: example_code/extending_sdk/addTags.go
+   :lines: 15-
+   :dedent: 0
+   :language: go
+
+Note that if a tag of the same name already exists,
+its value is overwriten by the new value.
+
 .. _get-http-request-response:
 
-Getting the HTTP Request/Response with Each Service Call
-========================================================
+Getting the HTTP Request and Response with Each Service Call
+============================================================
 
 You can direct the |sdk-go| to display the HTTP request
 and response it sends and receives for each call by
-including a configuration option to constructing the service client.
+including a configuration option when constructing the service client.
 
 The following examples uses the |DDB| **ListTables** operation
 to illustrate how to add a custom header to a service call.
