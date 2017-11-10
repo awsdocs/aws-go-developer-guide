@@ -69,17 +69,20 @@ Add the following statements to import the Go and |sdk-go| packages used in the 
 
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
    :lines: 17-23
+   :language: go
 
 Create a function to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
    :lines: 64-67
+   :language: go
 
 This example requires one input parameter, the name of the bucket.
 If the name is not supplied, we call the error function and exit.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
    :lines: 30-34
+   :language: go
    :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
@@ -88,6 +91,7 @@ and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
    :lines: 38-43
+   :language: go
    :dedent: 4
 
 Call :sdk-go-api-deep:`GetBucketAcl <service/s3/#S3.GetBucketAcl>`,
@@ -98,6 +102,7 @@ and print out the name, type, and permssion for the grantees.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
    :lines: 46-61
+   :language: go
    :dedent: 4
 
 See the `complete example
@@ -123,11 +128,13 @@ Add the following statements to import the Go and |sdk-go| packages used in the 
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
    :lines: 17-23
+   :language: go
 
 Create a function to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
    :lines: 100-103
+   :language: go
 
 Get the two required input parameters.
 If the optional permission parameter is supplied,
@@ -136,6 +143,7 @@ If not, print an error message and quit.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
    :lines: 31-48
+   :language: go
    :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
@@ -144,6 +152,7 @@ and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
    :lines: 54-59
+   :language: go
    :dedent: 4
 
 Get the existing ACLs and append the new user to the list.
@@ -152,6 +161,7 @@ print an error message and quit.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
    :lines: 62-78
+   :language: go
    :dedent: 4
 
 Build the parameter list for the call based on the existing
@@ -159,6 +169,7 @@ ACLs and the new user information.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
    :lines: 80-89
+   :language: go
    :dedent: 4
 
 Call :sdk-go-api-deep:`PutBucketAcl <service/s3/#S3.PutBucketAcl>`,
@@ -168,6 +179,7 @@ Otherwise, display a message indicating success.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
    :lines: 92-97
+   :language: go
    :dedent: 4
 
 See the `complete example
@@ -191,17 +203,20 @@ Add the following statements to import the Go and |sdk-go| packages used in the 
 
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
    :lines: 17-23
+   :language: go
 
 Create a function to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
    :lines: 65-68
+   :language: go
 
 This example requires two input parameters, the names of the bucket and object.
 If either name is not supplied, call the error function and exit.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
    :lines: 30-35
+   :language: go
    :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
@@ -210,6 +225,7 @@ and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
    :lines: 39-44
+   :language: go
    :dedent: 4
 
 Call :sdk-go-api-deep:`GetObjectAcl <service/s3/#S3.GetObjectAcl>`,
@@ -220,6 +236,7 @@ and print out the name, type, and permssion for the grantees.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
    :lines: 47-62
+   :language: go
    :dedent: 4
 
 See the `complete example
@@ -245,11 +262,13 @@ Add the following statements to import the Go and |sdk-go| packages used in the 
 
 .. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
    :lines: 17-23
+   :language: go
 
 Create a function to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
    :lines: 101-104
+   :language: go
 
 Get the three required input parameters.
 If the optional permission parameter is supplied,
@@ -258,6 +277,7 @@ If not, print an error message and quit.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
    :lines: 31-49
+   :language: go
    :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
@@ -266,6 +286,7 @@ and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
    :lines: 53-58
+   :language: go
    :dedent: 4
 
 Build the parameter list for the call based on the existing
@@ -273,6 +294,7 @@ ACLs and the new user information.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
    :lines: 61-90
+   :language: go
    :dedent: 4
 
 Call :sdk-go-api-deep:`PutObjectAcl <service/s3/#S3.PutObjectAcl>`,
@@ -282,6 +304,7 @@ Otherwise, display a message indicating success.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
    :lines: 93-98
+   :language: go
    :dedent: 4
 
 See the `complete example

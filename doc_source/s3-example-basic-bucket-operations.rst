@@ -87,11 +87,13 @@ Add the following statements to import the Go and |sdk-go| packages used in the 
 
 .. literalinclude:: example_code/s3/s3_list_buckets.go
    :lines: 17-23
+   :language: go
 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_list_buckets.go
    :lines: 48-51
+   :language: go
 
 Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
@@ -99,6 +101,7 @@ and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_list_buckets.go
    :lines: 28-33
+   :language: go
    :dedent: 4
 
 Call :sdk-go-api-deep:`ListBuckets <service/s3/#S3.ListBuckets>`.
@@ -108,6 +111,7 @@ If no error occurs, loop through the buckets, printing the name and creation dat
 
 .. literalinclude:: example_code/s3/s3_list_buckets.go
    :lines: 35-45
+   :language: go
    :dedent: 4
 
 See the `complete example
@@ -132,16 +136,19 @@ Import the following Go and |sdk-go| packages.
 
 .. literalinclude:: example_code/s3/s3_create_bucket.go
    :lines: 17-23
+   :language: go
 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_create_bucket.go
    :lines: 67-70
+   :language: go
 
 The program requires one argument, the name of the bucket to create.
 
 .. literalinclude:: example_code/s3/s3_create_bucket.go
    :lines: 31-35
+   :language: go
    :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
@@ -150,6 +157,7 @@ and create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_create_bucket.go
    :lines: 39-44
+   :language: go
    :dedent: 4
 
 Call :sdk-go-api-deep:`CreateBucket <service/s3/#S3.CreateBucket>`,
@@ -160,6 +168,7 @@ wait for a notification that the bucket was created.
 
 .. literalinclude:: example_code/s3/s3_create_bucket.go
    :lines: 47-59
+   :language: go
    :dedent: 4
 
 If the ``WaitUntilBucketExists`` call returns an error,
@@ -168,6 +177,7 @@ If there are no errors, notify the user of success.
 
 .. literalinclude:: example_code/s3/s3_create_bucket.go
    :lines: 60-64
+   :language: go
    :dedent: 4
 
 See the `complete example
@@ -191,16 +201,19 @@ Add the following statements to import the Go and |sdk-go| packages used in the 
 
 .. literalinclude:: example_code/s3/s3_list_objects.go
    :lines: 17-23
+   :language: go
 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_list_objects.go
    :lines: 64-67
+   :language: go
 
 The program requires one command line argument, the name of the bucket.
 
 .. literalinclude:: example_code/s3/s3_list_objects.go
    :lines: 30-35
+   :language: go
    :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
@@ -209,6 +222,7 @@ and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_list_objects.go
    :lines: 39-44
+   :language: go
    :dedent: 4
 
 Call :sdk-go-api-deep:`ListObjects <service/s3/#S3.ListObjects>`,
@@ -219,6 +233,7 @@ last modified date, size, and storage class of each item.
 
 .. literalinclude:: example_code/s3/s3_list_objects.go
    :lines: 47-58
+   :language: go
    :dedent: 4
 
 See the `complete example
@@ -242,11 +257,13 @@ Add the following statements to import the Go and |sdk-go| packages used in the 
 
 .. literalinclude:: example_code/s3/s3_upload_object.go
    :lines: 17-23
+   :language: go
 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_upload_object.go
    :lines: 82-85
+   :language: go
 
 Get the bucket and file name from the command line arguments,
 open the file, and defer the file closing until we are done with it.
@@ -254,6 +271,7 @@ If an error occurs, call ``exitErrorF``.
 
 .. literalinclude:: example_code/s3/s3_upload_object.go
    :lines: 31-44
+   :language: go
    :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
@@ -262,6 +280,7 @@ and create a ``NewUploader`` object.
 
 .. literalinclude:: example_code/s3/s3_upload_object.go
    :lines: 48-56
+   :language: go
    :dedent: 4
 
 Upload the file to the bucket.

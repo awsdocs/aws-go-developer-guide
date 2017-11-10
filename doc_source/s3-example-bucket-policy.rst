@@ -57,17 +57,20 @@ Go and |sdk-go| packages by adding the following lines.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
    :lines: 17-27
+   :language: go
 
 Creat the ``exitError`` function to deal with errors.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
    :lines: 79-82
+   :language: go
 	   
 This routine prints the policy for a bucket. If the bucket doesn't exist, or there was
 an error, an error message is printed instead. It requires the bucket name as input.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
    :lines: 35-40
+   :language: go
    :dedent: 4
 
 Initialize a session that the SDK will use to load credentials
@@ -75,6 +78,7 @@ from the shared credentials file, ~/.aws/credentials, and create a new S3 servic
 
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
    :lines: 44-49
+   :language: go
    :dedent: 4
 
 Call :sdk-go-api-deep:`GetBucketPolicy <service/s3/#S3.GetBucketPolicy>` to fetch the
@@ -82,12 +86,14 @@ policy, then display any errors.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
    :lines: 52-67
+   :language: go
    :dedent: 4
 
 Use Go's JSON package to print the Policy JSON returned by the call.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
    :lines: 69-76
+   :language: go
    :dedent: 4
 
 .. _s3-example-set-policy:
@@ -100,36 +106,43 @@ an error, an error message will be printed instead. It requires the bucket name 
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
    :lines: 17-27
+   :language: go
 
 Add the main function and parse the arguments to get the bucket name.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
    :lines: 34-39
+   :language: go
 
 Initialize a session that the SDK will use to load configuration, credentials,
 and region information from the shared credentials file, ~/.aws/credentials, and create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
    :lines: 43-48
+   :language: go
 
 Create a policy using the map interface, filling in the bucket as the resource.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
    :lines: 52-67
+   :language: go
 
 Use Go's JSON package to marshal the policy into a JSON value so that it can be
 sent to S3.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
    :lines: 70-73
+   :language: go
 
 Call the S3 client's :sdk-go-api-deep:`PutBucketPolicy <service/s3/#S3.PutBucketPolicy>`
 to PUT the policy for the bucket and print the results.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
    :lines: 76-90
+   :language: go
 
 The ``exitError`` function is used to deal with printing any errors.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
    :lines: 92-95
+   :language: go

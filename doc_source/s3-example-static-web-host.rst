@@ -57,12 +57,14 @@ relevant Go and |sdk-go| packages by adding the following lines.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_website.go
    :lines: 17-24
+   :language: go
 
 This routine requires you to pass in an argument containing the name of the bucket for which
 you want to get website configuration.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_website.go
    :lines: 31-35
+   :language: go
    :dedent: 4
 
 Initialize a session that the SDK will use to load credentials from the shared credentials file,
@@ -70,6 +72,7 @@ Initialize a session that the SDK will use to load credentials from the shared c
 
 .. literalinclude:: example_code/s3/s3_get_bucket_website.go
    :lines: 39-44
+   :language: go
    :dedent: 4
 
 Call :sdk-go-api-deep:`GetBucketWebsite <service/s3/#S3.GetBucketWebsite>` to get the bucket configuration.
@@ -78,12 +81,14 @@ have a website configured.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_website.go
    :lines: 47-57
+   :language: go
    :dedent: 4
 
 Print the bucket's website configuration.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_website.go
    :lines: 60-61
+   :language: go
    :dedent: 4
 
 .. _s3-example-set-bucket-website:
@@ -100,11 +105,13 @@ Create a new Go file named :file:`s3_create_bucket.go`. You must import the rele
 
 .. literalinclude:: example_code/s3/s3_set_bucket_website.go
    :lines: 17-24
+   :language: go
 
 This routine requires you to pass in an argument containing the name of the bucket and the index suffix page.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_website.go
    :lines: 35-42
+   :language: go
    :dedent: 4
 
 Initialize a session that the SDK will use to load configuration, credentials,
@@ -112,6 +119,7 @@ and region information from the shared credentials file, ~/.aws/credentials, and
 
 .. literalinclude:: example_code/s3/s3_set_bucket_website.go
    :lines: 46-51
+   :language: go
    :dedent: 4
 
 Create the parameters to be passed in to :sdk-go-api-deep:`PutBucketWebsite <service/s3/#S3.PutBucketWebsite>`,
@@ -120,6 +128,7 @@ when calling the routine, also add that to the parameters.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_website.go
    :lines: 54-68
+   :language: go
    :dedent: 4
 
 Call ``PutBucketWebsite``, passing in the parameters you just defined. If an error occurs,
@@ -127,6 +136,7 @@ print the errordetails and exit the routine.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_website.go
    :lines: 72-78
+   :language: go
    :dedent: 4
 
 .. _s3-example-delete-website:
@@ -139,12 +149,14 @@ Import the relevant Go and |sdk-go| packages.
 
 .. literalinclude:: example_code/s3/s3_delete_bucket_website.go
    :lines: 17-24
+   :language: go
 
 This routine requires you to pass in the name of the bucket for which you want to delete the
 website configuration.
 
 .. literalinclude:: example_code/s3/s3_delete_bucket_website.go
    :lines: 36-41
+   :language: go
    :dedent: 4
 
 Initialize a session that the SDK will use to load
@@ -153,10 +165,12 @@ create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_delete_bucket_website.go
    :lines: 45-50
+   :language: go
    :dedent: 4
 
 Call ``DeleteBucketWebsite`` and pass in the name of the bucket to complete the action.
 
 .. literalinclude:: example_code/s3/s3_delete_bucket_website.go
    :lines: 55-63
+   :language: go
    :dedent: 4

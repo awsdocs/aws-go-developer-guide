@@ -58,6 +58,7 @@ without making it public. Anyone with access to the URL can view the file.
 
 .. literalinclude:: example_code/s3/generate_presigned_url.go
    :lines: 14-
+   :language: go
 
 If the SDK has not retrieved your credentials before calling ``Presign``, it will get them to
 generate the pre-signed URL.
@@ -78,6 +79,7 @@ a specific payload to be uploaded by users.
 
 .. literalinclude:: example_code/s3/generate_presigned_url_specific_payload.go
    :lines: 14-
+   :language: go
 
 If you omit the ``Body`` field, users can write any contents to the given
 object.
@@ -86,3 +88,4 @@ The following example shows the enforcing of Content-MD5.
 
 .. literalinclude:: example_code/s3/enforce_content_md5.go
     :lines: 14-
+   :language: go
