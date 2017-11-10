@@ -86,19 +86,20 @@ Create the file *s3_list_buckets.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
 .. literalinclude:: example_code/s3/s3_list_buckets.go
-   :lines: 15-24
+   :lines: 17-23
 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_list_buckets.go
-   :lines: 50-53
+   :lines: 48-51
 
 Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_list_buckets.go
-   :lines: 26-34
+   :lines: 28-33
+   :dedent: 4
 
 Call :sdk-go-api-deep:`ListBuckets <service/s3/#S3.ListBuckets>`.
 Passing ``nil`` means no filters are applied to the returned list.
@@ -106,7 +107,8 @@ If an error occurs, call ``exitErrorf``.
 If no error occurs, loop through the buckets, printing the name and creation date of each bucket.
 
 .. literalinclude:: example_code/s3/s3_list_buckets.go
-   :lines: 36-47
+   :lines: 35-45
+   :dedent: 4
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_list_buckets.go>`_
@@ -129,24 +131,26 @@ Create the file *s3_create_bucket.go*.
 Import the following Go and |sdk-go| packages.
 
 .. literalinclude:: example_code/s3/s3_create_bucket.go
-   :lines: 15-24
+   :lines: 17-23
 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_create_bucket.go
-   :lines: 70-73
+   :lines: 67-70
 
 The program requires one argument, the name of the bucket to create.
 
 .. literalinclude:: example_code/s3/s3_create_bucket.go
-   :lines: 31-36
+   :lines: 31-35
+   :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
 and create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_create_bucket.go
-   :lines: 40-45
+   :lines: 39-44
+   :dedent: 4
 
 Call :sdk-go-api-deep:`CreateBucket <service/s3/#S3.CreateBucket>`,
 passing in the bucket name defined previously.
@@ -155,14 +159,16 @@ If there are no errors,
 wait for a notification that the bucket was created.
 
 .. literalinclude:: example_code/s3/s3_create_bucket.go
-   :lines: 48-61
+   :lines: 47-59
+   :dedent: 4
 
 If the ``WaitUntilBucketExists`` call returns an error,
 call ``exitErrorf``.
 If there are no errors, notify the user of success.
 
 .. literalinclude:: example_code/s3/s3_create_bucket.go
-   :lines: 63-67
+   :lines: 60-64
+   :dedent: 4
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_create_bucket.go>`_
@@ -184,24 +190,26 @@ Create the file *s3_list_objects.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
 .. literalinclude:: example_code/s3/s3_list_objects.go
-   :lines: 15-24
+   :lines: 17-23
 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_list_objects.go
-   :lines: 67-70
+   :lines: 64-67
 
 The program requires one command line argument, the name of the bucket.
 
 .. literalinclude:: example_code/s3/s3_list_objects.go
-   :lines: 31-37
+   :lines: 30-35
+   :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_list_objects.go
-   :lines: 41-46
+   :lines: 39-44
+   :dedent: 4
 
 Call :sdk-go-api-deep:`ListObjects <service/s3/#S3.ListObjects>`,
 passing in the name of the bucket.
@@ -210,7 +218,8 @@ If no error occurs, loop through the items, printing the name,
 last modified date, size, and storage class of each item.
 
 .. literalinclude:: example_code/s3/s3_list_objects.go
-   :lines: 49-61
+   :lines: 47-58
+   :dedent: 4
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_list_objects.go>`_
@@ -232,33 +241,36 @@ Create the file *s3_upload_object.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
 .. literalinclude:: example_code/s3/s3_upload_object.go
-   :lines: 15-24
+   :lines: 17-23
 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_upload_object.go
-   :lines: 85-88
-
-Initialize the session that the SDK uses to load credentials
-from the shared credentials file *~/.aws/credentials,
-and create a ``NewUploader`` object.
-
-.. literalinclude:: example_code/s3/s3_upload_object.go
-   :lines: 42-44, 58
+   :lines: 82-85
 
 Get the bucket and file name from the command line arguments,
 open the file, and defer the file closing until we are done with it.
 If an error occurs, call ``exitErrorF``.
 
 .. literalinclude:: example_code/s3/s3_upload_object.go
-   :lines: 31-38, 46-52
+   :lines: 31-44
+   :dedent: 4
+
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file *~/.aws/credentials,
+and create a ``NewUploader`` object.
+
+.. literalinclude:: example_code/s3/s3_upload_object.go
+   :lines: 48-56
+   :dedent: 4
 
 Upload the file to the bucket.
 If an error occurs, call ``exitErrorF``.
 Otherwise, notify the user that the upload succeeded.
 
 .. literalinclude:: example_code/s3/s3_upload_object.go
-   :lines: 62-63, 68, 74-82
+   :lines: 60-61, 66, 72-79
+   :dedent: 4
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_upload_object.go>`_
@@ -280,28 +292,29 @@ Create the file *s3_download_object.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
 .. literalinclude:: example_code/s3/s3_download_object.go
-   :lines: 15-25
+   :lines: 17-24
 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_download_object.go
-   :lines: 70-73
+   :lines: 66-69
+
+Get the bucket and file name from the command line arguments.
+If there aren't two arguments, call ``exitErrorf``.
+Otherwise, create the file and defer file closing until we are done downloading.
+If an error occurs, call ``exitErrorf``.
+
+.. literalinclude:: example_code/s3/s3_download_object.go
+   :lines: 31-44
+   :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
 and create a ``NewDownloader`` object.
 
 .. literalinclude:: example_code/s3/s3_download_object.go
-   :lines: 43-45, 55
-
-Get the bucket and file name from the command line arguments.
-If there aren't two arguments, call ``exitErrorf``.
-
-.. literalinclude:: example_code/s3/s3_download_object.go
-   :lines: 32-39
-
-Create the file and defer file closing until we are done downloading.
-If an error occurs, call ``exitErrorf``.
+   :lines: 48-52
+   :dedent: 4
 
 .. literalinclude:: example_code/s3/s3_download_object.go
    :lines: 47-53
@@ -311,7 +324,7 @@ If an error occurs, call ``exitErrorf``.
 Otherwise, notify the user that the download succeeded.
 
 .. literalinclude:: example_code/s3/s3_download_object.go
-   :lines: 57-67
+   :lines: 54-63
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_download_object.go>`_
@@ -333,26 +346,28 @@ Create the file *s3_copy_object.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
 .. literalinclude:: example_code/s3/s3_copy_object.go
-   :lines: 15-24
+   :lines: 17-23
 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_copy_object.go
-   :lines: 67-70
+   :lines: 64-67
 
 Get the names of the bucket containing the item, the item to copy,
 and the name of the bucket to which the item is copied.
 If there aren't four command line arguments, call ``exitErrorf``.
 
 .. literalinclude:: example_code/s3/s3_copy_object.go
-   :lines: 30-37
+   :lines: 30-38
+   :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_copy_object.go
-   :lines: 43-48
+   :lines: 42-47
+   :dedent: 4
 
 Call :sdk-go-api-deep:`CopyObject <service/s3/#S3.CopyObject>`,
 with the names of the bucket containing the item, the item to copy,
@@ -361,13 +376,15 @@ If an error occurs, call ``exitErrorf``.
 If no error occurs, wait for the item to be copied.
 
 .. literalinclude:: example_code/s3/s3_copy_object.go
-   :lines: 39, 51-58
+   :lines: 50-56
+   :dedent: 4
 
 If the ``WaitUntilObjectExists`` call returns an error,
 call ``exitErrorf``. Otherwise, notify the user that the copy succeeded.
 
 .. literalinclude:: example_code/s3/s3_copy_object.go
-   :lines: 60-64
+   :lines: 57-61
+   :dedent: 4
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_copy_object.go>`_
@@ -389,24 +406,26 @@ Create the file *s3_delete_object.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
 .. literalinclude:: example_code/s3/s3_delete_object.go
-   :lines: 15-24
+   :lines: 17-23
 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_delete_object.go
-   :lines: 66-69
+   :lines: 65-68
 
 Get the name of the bucket and object to delete.
 
 .. literalinclude:: example_code/s3/s3_delete_object.go
-   :lines: 31-38
+   :lines: 31-37
+   :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_delete_object.go
-   :lines: 42-47
+   :lines: 41-46
+   :dedent: 4
 
 Call :sdk-go-api-deep:`DeleteObject <service/s3/#S3.DeleteObject>`,
 passing in the names of the bucket and object to delete.
@@ -414,13 +433,15 @@ If an error occurs, call ``exitErrorf``.
 If no error occurs, wait until the object is deleted.
 
 .. literalinclude:: example_code/s3/s3_delete_object.go
-   :lines: 50-59
+   :lines: 49-57
+   :dedent: 4
 
 If ``WaitUntilObjectNotExists`` returns an error, call ``exitErrorf``.
 Otherwise, inform the user that the object was successfully deleted.
 
 .. literalinclude:: example_code/s3/s3_delete_object.go
-   :lines: 61-63
+   :lines: 61-62
+   :dedent: 4
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_delete_object.go>`_
@@ -442,38 +463,61 @@ Create the file *s3_delete_objects.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
 .. literalinclude:: example_code/s3/s3_delete_objects.go
-   :lines: 15-24
+   :lines: 17-23
 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_delete_objects.go
-   :lines: 79-82
+   :lines: 87-90
 
 Get the name of the bucket.
 
 .. literalinclude:: example_code/s3/s3_delete_objects.go
-   :lines: 31-37
+   :lines: 31-36
+   :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_delete_objects.go
-   :lines: 41-46
+   :lines: 40-45
+   :dedent: 4
 
-Create the list of objects to delete from the list of items in the bucket.
+Since buckets can have more than 1000 items and
+:code:`ListObjects` returns up to 1000 items,
+set a flag to indicate when more items are available
+and keep track of how many items we get.
+
+.. literalinclude:: example_code/s3/s3_delete_objects.go
+   :lines: 50-52
+   :dedent: 4
+
+Loop through the bucket items up to 1000 at a time,
+creating the list of objects to delete from the list of items in the bucket.
 If an error occurs, call ``exitErrorf``.
 
 .. literalinclude:: example_code/s3/s3_delete_objects.go
-   :lines: 49-67
+   :lines: 54-73
+   :dedent: 4
 
 Call :sdk-go-api-deep:`DeleteObjects <service/s3/#S3.DeleteObjects>`,
 passing in the name of the bucket and the list of objects to delete.
 If an error occurs, call ``exitErrorf``.
+Otherwise, determine whether there are more items in the bucket.
+
 If no error occurs, inform the user of the number of objects deleted.
 
 .. literalinclude:: example_code/s3/s3_delete_objects.go
-   :lines: 70-76
+   :lines: 76-81
+   :dedent: 8
+
+Once all of the items in the bucket have been deleted,
+inform the user of the number of objects deleted.
+
+.. literalinclude:: example_code/s3/s3_delete_objects.go
+   :lines: 84
+   :dedent: 4
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_delete_objects.go>`_
@@ -495,25 +539,27 @@ Create the file *s3_restore_object.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
 .. literalinclude:: example_code/s3/s3_restore_object.go
-   :lines: 15-24
+   :lines: 17-23
 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_restore_object.go
-   :lines: 59-62
+   :lines: 57-60
 
 The program requires two arguments, the names of the bucket and object to
 restore.
 
 .. literalinclude:: example_code/s3/s3_restore_object.go
-   :lines: 31-38
+   :lines: 31-37
+   :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_restore_object.go
-   :lines: 42-47
+   :lines: 41-46
+   :dedent: 4
 
 Call :sdk-go-api-deep:`RestoreObject <service/s3/#S3.RestoreObject>`,
 passing in the bucket and object names and the number of days to
@@ -523,7 +569,8 @@ Otherwise, inform the user that the bucket
 should be restored in the next four hours or so.
 
 .. literalinclude:: example_code/s3/s3_restore_object.go
-   :lines: 50-56
+   :lines: 49-54
+   :dedent: 4
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_restore_object.go>`_
@@ -545,25 +592,27 @@ Create the file *s3_delete_bucket.go*.
 Import the following Go and |sdk-go| packages.
 
 .. literalinclude:: example_code/s3/s3_delete_bucket.go
-   :lines: 15-24
+   :lines: 17-23
 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_delete_bucket.go
-   :lines: 71-74
+   :lines: 68-71
 
 The program requires one argument, the name of the bucket to delete.
 If the argument is not supplied, call ``exitErrorf``.
 
 .. literalinclude:: example_code/s3/s3_delete_bucket.go
-   :lines: 32-36
+   :lines: 31-35
+   :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
 and create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_delete_bucket.go
-   :lines: 40-45
+   :lines: 39-44
+   :dedent: 4
 
 Call :sdk-go-api-deep:`DeleteBucket <service/s3/#S3.DeleteBucket>`,
 passing in the bucket name.
@@ -572,13 +621,15 @@ If there are no errors,
 wait for a notification that the bucket was deleted.
 
 .. literalinclude:: example_code/s3/s3_delete_bucket.go
-   :lines: 49-62
+   :lines: 48-60
+   :dedent: 4
 
 If ``WaitUntilBucketNotExists`` returns an error, call ``exitErrorf``.
 Otherwise, inform the user that the bucket was successfully deleted.
 
 .. literalinclude:: example_code/s3/s3_delete_bucket.go
-   :lines: 64-68
+   :lines: 61-65
+   :dedent: 4
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_delete_bucket.go>`_

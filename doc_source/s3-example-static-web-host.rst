@@ -56,31 +56,35 @@ Create a new Go file named :file:`s3_get_bucket_website.go`. You must import the
 relevant Go and |sdk-go| packages by adding the following lines.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_website.go
-   :lines: 15-25
+   :lines: 17-24
 
 This routine requires you to pass in an argument containing the name of the bucket for which
 you want to get website configuration.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_website.go
    :lines: 31-35
+   :dedent: 4
 
 Initialize a session that the SDK will use to load credentials from the shared credentials file,
 ~/.aws/credentials, and create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_website.go
    :lines: 39-44
+   :dedent: 4
 
 Call :sdk-go-api-deep:`GetBucketWebsite <service/s3/#S3.GetBucketWebsite>` to get the bucket configuration.
 You should check for the ``NoSuchWebsiteConfiguration`` error code, which tells you that the bucket doesn't
 have a website configured.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_website.go
-   :lines: 47-50, 53-57
+   :lines: 47-57
+   :dedent: 4
 
 Print the bucket's website configuration.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_website.go
-   :lines: 60-
+   :lines: 60-61
+   :dedent: 4
 
 .. _s3-example-set-bucket-website:
 
@@ -95,53 +99,53 @@ Create a new Go file named :file:`s3_create_bucket.go`. You must import the rele
 |sdk-go| packages by adding the following lines.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_website.go
-   :lines: 15-25
+   :lines: 17-24
 
 This routine requires you to pass in an argument containing the name of the bucket and the index suffix page.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_website.go
    :lines: 35-42
+   :dedent: 4
 
 Initialize a session that the SDK will use to load configuration, credentials,
 and region information from the shared credentials file, ~/.aws/credentials, and create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_website.go
    :lines: 46-51
+   :dedent: 4
 
 Create the parameters to be passed in to :sdk-go-api-deep:`PutBucketWebsite <service/s3/#S3.PutBucketWebsite>`,
 including the bucket name and index document details. If the user passed in an error page
 when calling the routine, also add that to the parameters.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_website.go
-   :lines: 54-62, 64-68
+   :lines: 54-68
+   :dedent: 4
 
 Call ``PutBucketWebsite``, passing in the parameters you just defined. If an error occurs,
 print the errordetails and exit the routine.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_website.go
-   :lines: 72-79
-
+   :lines: 72-78
+   :dedent: 4
 
 .. _s3-example-delete-website:
 
 Delete Website Configuration on a Bucket
 ========================================
 
-Create a Go file named :file:`s3_delete_bucket_website.go`. The following code
-shows you how to delete the bucket's
-website configuration.
-
-Create a new Go file named :file:`s3_upload.go`. You must import the relevant Go and
-|sdk-go| packages by adding the following lines.
+Create a Go file named :file:`s3_delete_bucket_website.go`.
+Import the relevant Go and |sdk-go| packages.
 
 .. literalinclude:: example_code/s3/s3_delete_bucket_website.go
-   :lines: 15-25
+   :lines: 17-24
 
 This routine requires you to pass in the name of the bucket for which you want to delete the
 website configuration.
 
 .. literalinclude:: example_code/s3/s3_delete_bucket_website.go
    :lines: 36-41
+   :dedent: 4
 
 Initialize a session that the SDK will use to load
 configuration, credentials, and region information from the shared credentials file, ~/.aws/credentials, and
@@ -149,9 +153,10 @@ create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_delete_bucket_website.go
    :lines: 45-50
+   :dedent: 4
 
 Call ``DeleteBucketWebsite`` and pass in the name of the bucket to complete the action.
 
 .. literalinclude:: example_code/s3/s3_delete_bucket_website.go
-   :lines: 55-
-
+   :lines: 55-63
+   :dedent: 4

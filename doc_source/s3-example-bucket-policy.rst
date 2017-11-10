@@ -56,35 +56,39 @@ Create a new Go file named :file:`s3_get_bucket_policy.go`. You must import the 
 Go and |sdk-go| packages by adding the following lines.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
-   :lines: 15-28
+   :lines: 17-27
 
+Creat the ``exitError`` function to deal with errors.
+
+.. literalinclude:: example_code/s3/s3_get_bucket_policy.go
+   :lines: 79-82
+	   
 This routine prints the policy for a bucket. If the bucket doesn't exist, or there was
 an error, an error message is printed instead. It requires the bucket name as input.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
    :lines: 35-40
+   :dedent: 4
 
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file, ~/.aws/credentials, and create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
    :lines: 44-49
+   :dedent: 4
 
 Call :sdk-go-api-deep:`GetBucketPolicy <service/s3/#S3.GetBucketPolicy>` to fetch the
 policy, then display any errors.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
    :lines: 52-67
+   :dedent: 4
 
 Use Go's JSON package to print the Policy JSON returned by the call.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
-   :lines: 69-77
-
-The ``exitError`` function is used to deal with printing any errors.
-
-.. literalinclude:: example_code/s3/s3_get_bucket_policy.go
-   :lines: 79-82
+   :lines: 69-76
+   :dedent: 4
 
 .. _s3-example-set-policy:
 

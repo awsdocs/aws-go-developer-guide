@@ -68,7 +68,7 @@ Create the file *s3_get_bucket_acl.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
-   :lines: 15-23
+   :lines: 17-23
 
 Create a function to display errors and exit.
 
@@ -79,7 +79,8 @@ This example requires one input parameter, the name of the bucket.
 If the name is not supplied, we call the error function and exit.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
-   :lines: 29-34
+   :lines: 30-34
+   :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
@@ -87,6 +88,7 @@ and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
    :lines: 38-43
+   :dedent: 4
 
 Call :sdk-go-api-deep:`GetBucketAcl <service/s3/#S3.GetBucketAcl>`,
 passing in the name of the bucket.
@@ -96,6 +98,7 @@ and print out the name, type, and permssion for the grantees.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
    :lines: 46-61
+   :dedent: 4
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_get_bucket_acl.go>`_
@@ -119,12 +122,12 @@ Create the file *s3_put_bucket_acl.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
-   :lines: 15-23
+   :lines: 17-23
 
 Create a function to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
-   :lines: 102-105
+   :lines: 100-103
 
 Get the two required input parameters.
 If the optional permission parameter is supplied,
@@ -132,7 +135,8 @@ make sure it is one of the allowed values.
 If not, print an error message and quit.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
-   :lines: 30-48
+   :lines: 31-48
+   :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
@@ -140,19 +144,22 @@ and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
    :lines: 54-59
+   :dedent: 4
 
 Get the existing ACLs and append the new user to the list.
 If we encounter an error while retrieving the list,
 print an error message and quit.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
-   :lines: 62-79
+   :lines: 62-78
+   :dedent: 4
 
 Build the parameter list for the call based on the existing
 ACLs and the new user information.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
-   :lines: 81-90
+   :lines: 80-89
+   :dedent: 4
 
 Call :sdk-go-api-deep:`PutBucketAcl <service/s3/#S3.PutBucketAcl>`,
 passing in the parameter list.
@@ -160,7 +167,8 @@ If an error occurs, display a message and quit.
 Otherwise, display a message indicating success.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
-   :lines: 93-99
+   :lines: 92-97
+   :dedent: 4
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_put_bucket_acl.go>`_
@@ -182,7 +190,7 @@ Create the file *s3_get_bucket_object_acl.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
-   :lines: 15-23
+   :lines: 17-23
 
 Create a function to display errors and exit.
 
@@ -193,7 +201,8 @@ This example requires two input parameters, the names of the bucket and object.
 If either name is not supplied, call the error function and exit.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
-   :lines: 29-35
+   :lines: 30-35
+   :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
@@ -201,6 +210,7 @@ and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
    :lines: 39-44
+   :dedent: 4
 
 Call :sdk-go-api-deep:`GetObjectAcl <service/s3/#S3.GetObjectAcl>`,
 passing in the names of the bucket and object.
@@ -210,6 +220,7 @@ and print out the name, type, and permssion for the grantees.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
    :lines: 47-62
+   :dedent: 4
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_get_bucket_object_acl.go>`_
@@ -233,12 +244,12 @@ Create the file *s3_put_bucket_object_acl.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
-   :lines: 15-23
+   :lines: 17-23
 
 Create a function to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
-   :lines: 104-107
+   :lines: 101-104
 
 Get the three required input parameters.
 If the optional permission parameter is supplied,
@@ -246,20 +257,23 @@ make sure it is one of the allowed values.
 If not, print an error message and quit.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
-   :lines: 30-49
+   :lines: 31-49
+   :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
-   :lines: 55-60
+   :lines: 53-58
+   :dedent: 4
 
 Build the parameter list for the call based on the existing
 ACLs and the new user information.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
-   :lines: 51, 63-92
+   :lines: 61-90
+   :dedent: 4
 
 Call :sdk-go-api-deep:`PutObjectAcl <service/s3/#S3.PutObjectAcl>`,
 passing in the parameter list.
@@ -267,7 +281,8 @@ If an error occurs, display a message and quit.
 Otherwise, display a message indicating success.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
-   :lines: 95-101
+   :lines: 93-98
+   :dedent: 4
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_put_bucket_object_acl.go>`_

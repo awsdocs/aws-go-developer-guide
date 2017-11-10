@@ -56,10 +56,8 @@ set one by default.
 The following example generates a pre-signed URL that enables you to temporarily share a file
 without making it public. Anyone with access to the URL can view the file.
 
-
 .. literalinclude:: example_code/s3/generate_presigned_url.go
-   :dedent: 4
-   :lines: 15-
+   :lines: 14-
 
 If the SDK has not retrieved your credentials before calling ``Presign``, it will get them to
 generate the pre-signed URL.
@@ -79,15 +77,12 @@ The following example adds a ``Body`` field to generate a pre-signed PUT operati
 a specific payload to be uploaded by users.
 
 .. literalinclude:: example_code/s3/generate_presigned_url_specific_payload.go
-   :dedent: 4
-   :lines: 15-
-
+   :lines: 14-
 
 If you omit the ``Body`` field, users can write any contents to the given
 object.
 
-This example shows the enforcing of Content-MD5.
+The following example shows the enforcing of Content-MD5.
 
 .. literalinclude:: example_code/s3/enforce_content_md5.go
-    :dedent: 1
-    :lines: 31-60
+    :lines: 14-
