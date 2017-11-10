@@ -87,5 +87,5 @@ object.
 The following example shows the enforcing of Content-MD5.
 
 .. literalinclude:: example_code/s3/enforce_content_md5.go
-    :lines: 14-
+   :lines: 14-
    :language: go
