@@ -45,20 +45,10 @@ SDK's runtime dependancies are vendored in the ``vendor/`` folder.
 
 .. _get-aws-credentials:
 
-Get AWS Credentials
-===================
+Get your AWS access keys
+========================
 
-The |sdk-go| requires AWS access keys to sign requests you send to
-AWS. This is how AWS authenticates your requests. AWS access keys
-consist of an access key ID and a secret access key.
-
-Depending on the scenario, you can create IAM users to generate
-long-term access keys or IAM roles to generate temporary access keys.
-For more information about how and when to generate access keys, and
-which type to use for your scenario, see :aws-gr:`Best Practices for Managing
-AWS Access Keys <aws-access-keys-best-practices>`.
-
-To set up your credentials for use with the |sdk-go|, see :doc:`configuring-sdk`.
+.. include:: common/procedure-get-access-keys.txt
 
 .. _packages:
 
@@ -71,5 +61,3 @@ applications to use the SDK, as shown in the following example:
 .. code:: go
 
     import "github.com/aws/aws-sdk-go/service/s3"
-
-

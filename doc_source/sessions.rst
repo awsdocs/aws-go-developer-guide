@@ -8,7 +8,6 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-
 ###########################################################
 Using Sessions to Configure Service Clients in the |sdk-go|
 ###########################################################
@@ -35,7 +34,6 @@ loads all configuration values from the environment and configuration
 files each time the session is created. Sharing the session value across
 all of your service clients ensures the configuration is loaded the
 fewest number of times.
-
 
 .. _concurrency:
 
@@ -84,7 +82,7 @@ or the shared credentials file. It requires that the ``AWS_PROFILE`` is set, or
 
 .. code:: go
 
-    sess, err := session.NewSession()
+   sess, err := session.NewSession()
 
 The SDK provides a :sdk-go-api-deep:`default configuration <aws/defaults/>`
 that all sessions use, unless you override a field. For example,
@@ -95,19 +93,19 @@ in the |sdk-go-api|.
 
 .. code:: go
 
-    sess, err := session.NewSession(&aws.Config{
-        Region: aws.String("us-east-2")},
-    )
+   sess, err := session.NewSession(&aws.Config{
+       Region: aws.String("us-east-2")},
+   )
 
 Create an |S3| client instance from a session:
 
 .. code:: go
 
-    sess, err := session.NewSession()
-    if err != nil {
-        // Handle Session creation error
-    }
-    svc := s3.New(sess)
+   sess, err := session.NewSession()
+   if err != nil {
+       // Handle Session creation error
+   }
+   svc := s3.New(sess)
 
 .. _create-session-with-option-overrides:
 
@@ -125,31 +123,30 @@ when you want to provide the config profile, or override the shared credentials 
 
 .. code:: go
 
-    // Equivalent to session.New
-    sess, err := session.NewSessionWithOptions(session.Options{})
+   // Equivalent to session.New
+   sess, err := session.NewSessionWithOptions(session.Options{})
 
-    // Specify profile to load for the session's config
-    sess, err := session.NewSessionWithOptions(session.Options{
-         Profile: "profile_name",
-    })
+   // Specify profile to load for the session's config
+   sess, err := session.NewSessionWithOptions(session.Options{
+       Profile: "profile_name",
+   })
 
-    // Specify profile for config and region for requests
-    sess, err := session.NewSessionWithOptions(session.Options{
-         Config: aws.Config{Region: aws.String("us-east-2")},
-         Profile: "profile_name",
-    })
+   // Specify profile for config and region for requests
+   sess, err := session.NewSessionWithOptions(session.Options{
+       Config: aws.Config{Region: aws.String("us-east-2")},
+       Profile: "profile_name",
+   })
 
-    // Force enable Shared Config support
-    sess, err := session.NewSessionWithOptions(session.Options{
-        SharedConfigState: SharedConfigEnable,
-    })
+   // Force enable Shared Config support
+   sess, err := session.NewSessionWithOptions(session.Options{
+       SharedConfigState: SharedConfigEnable,
+   })
 
-    // Assume an IAM role with MFA prompting for token code on stdin
-    sess := session.Must(session.NewSessionWithOptions(session.Options{
-        AssumeRoleTokenProvider: stscreds.StdinTokenProvider,
-        SharedConfigState: SharedConfigEnable,
-    }))
-
+   // Assume an IAM role with MFA prompting for token code on stdin
+   sess := session.Must(session.NewSessionWithOptions(session.Options{
+       AssumeRoleTokenProvider: stscreds.StdinTokenProvider,
+       SharedConfigState: SharedConfigEnable,
+   }))
 
 Deprecated ``New``
 ------------------
@@ -162,23 +159,25 @@ can be retrieved when creating a session fails.
 Shared Configuration Fields
 ---------------------------
 
-By default, the SDK only loads the shared credentials file's
-(:file:`~/.aws/credentials`) credentials values. All other configuration values are
-provided by the environment variables, SDK defaults, and user-provided
-:file:`aws.config` values.
+By default, the SDK loads credentials from the shared credentials file
+:file:`~/.aws/credentials`.
+Any other configuration values are provided by the environment variables,
+SDK defaults, and user-provided :file:`aws.config` values.
 
 If the ``AWS_SDK_LOAD_CONFIG`` environment variable is set, or
-the SharedConfigLoadEnable option is used to create the session, the full
-shared credentials values are loaded. This includes credentials, region,
-and support for assumed role. In addition, the session will load its
-configuration from both the shared credentials file (:file:`~/.aws/credentials`) and
-shared credentials file (:file:`~/.aws/credentials`). Both files have the same
-format.
+the **SharedConfigLoadEnable** option is used to create the session
+(as shown in the following example), additional configuration information is
+also loaded from the shared configuration file (:file:`~/.aws/config`),
+if it exists.
+If any configuration setting value differs between the two files,
+the value from the shared credentials file (:file:`~/.aws/credentials`)
+takes precedence.
 
-If both configuration files are present, the configuration from both files is
-read. The session is created from configuration values from the
-shared credentials file (:file:`~/.aws/credentials`) instead of those in the shared
-credentials file (:file:`~/.aws/credentials`).
+.. code:: go
+
+   sess := session.Must(session.NewSessionWithOptions(session.Options{
+       SharedConfigState: session.SharedConfigEnable,
+   }))
 
 See the :sdk-go-api-deep:`session package's documentation <aws/session/>`
 for more information on shared credentials setup.
@@ -209,14 +208,14 @@ service client.
 
 .. code:: go
 
-    // Create a session, and add additional handlers for all service
-    // clients created with the Session to inherit. Adds logging handler.
-    sess, err := session.NewSession()
-    sess.Handlers.Send.PushFront(func(r *request.Request) {
-        // Log every request made and its payload
-        logger.Println("Request: %s/%s, Payload: %s",
-            r.ClientInfo.ServiceName, r.Operation, r.Params)
-    })
+   // Create a session, and add additional handlers for all service
+   // clients created with the Session to inherit. Adds logging handler.
+   sess, err := session.NewSession()
+   sess.Handlers.Send.PushFront(func(r *request.Request) {
+       // Log every request made and its payload
+       logger.Println("Request: %s/%s, Payload: %s",
+           r.ClientInfo.ServiceName, r.Operation, r.Params)
+   })
 
 .. _copying-a-session:
 
@@ -232,4 +231,4 @@ copies the ``sess`` session while overriding the ``Region`` field to
 
 .. code:: go
 
-    usEast2Sess := sess.Copy(&aws.Config{Region: aws.String("us-east-2")})
+   usEast2Sess := sess.Copy(&aws.Config{Region: aws.String("us-east-2")})
