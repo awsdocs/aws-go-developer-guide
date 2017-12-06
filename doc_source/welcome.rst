@@ -32,6 +32,17 @@ Use the |sdk-go-dg| to help you install, configure, and use the SDK.
 The guide provides configuration information, sample code, and an
 introduction to the SDK utilities.
 
+Using the AWS SDK for Go with AWS Cloud9
+========================================
+
+AWS Cloud9 is a web-based integrated development environment (IDE) that
+contains a collection of tools that you use to code, build, run, test, debug,
+and release software in the cloud.
+
+The AWS Cloud9 documentation contains a topic on
+:AC9-ug:`running Go code <sample-go>`
+in the AWS Cloud9 environment, including how to install and configure the |sdk-go|.
+
 More Info
 =========
 

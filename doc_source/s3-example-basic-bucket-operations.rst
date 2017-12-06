@@ -525,8 +525,6 @@ passing in the name of the bucket and the list of objects to delete.
 If an error occurs, call ``exitErrorf``.
 Otherwise, determine whether there are more items in the bucket.
 
-If no error occurs, inform the user of the number of objects deleted.
-
 .. literalinclude:: example_code/s3/s3_delete_objects.go
    :lines: 76-81
    :dedent: 8
