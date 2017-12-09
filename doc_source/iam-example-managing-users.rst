@@ -36,6 +36,7 @@ The routines use the |sdk-go| IAM client methods that follow:
 * :sdk-go-api-deep:`UpdateUser <service/iam/#IAM.UpdateUser>`
 * :sdk-go-api-deep:`GetUser <service/iam/#IAM.GetUser>`
 * :sdk-go-api-deep:`DeleteUser <service/iam/#IAM.DeleteUser>`
+* :sdk-go-api-deep:`GetAccountAuthorizationDetails`
 
 .. _iam-users-prerequisites:
 
@@ -199,7 +200,7 @@ Create a method that determines whether a user has administrator privileges.
    :dedent: 0
    :language: go
 
-Create a main method with an IAM client in :code`us-west-2`.
+Create a main method with an IAM client in :code:`us-west-2`.
 Create variables to keep track of how many users we have
 and how many of those have adminstrator privileges.
 
@@ -208,7 +209,7 @@ and how many of those have adminstrator privileges.
    :dedent: 0
    :language: go
 
-Create the input for and call :code`GetAccountAuthorizationDetails`.
+Create the input for and call :code:`GetAccountAuthorizationDetails`.
 If there is an error, print an error message and quit.
 
 .. literalinclude:: example_code/iam/IamListAdmins.go
@@ -227,7 +228,7 @@ who have adminstrator privileges.
    :language: go
 
 If we did not get all of the users in the first call to
-:code`GetAccountAuthorizationDetails`,
+:code:`GetAccountAuthorizationDetails`,
 loop through the next set of users and determine which
 of those have adminstrator privileges.
 
