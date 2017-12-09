@@ -244,3 +244,6 @@ administrator access.
    :dedent: 4
    :language: go
 
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/iam/IamListAdmins.go>`_
+on GitHub.
