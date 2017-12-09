@@ -135,3 +135,112 @@ Call ``UpdateUser``, passing in the user name, and print the results. If the use
 .. literalinclude:: example_code/iam/iam_updateuser.go
    :lines: 43-52
 
+.. _iam_example_get_admins:
+
+List the IAM Users who have Administrator Privileges
+====================================================
+
+In this example, you list the |IAM| users who have administrator privileges
+(a policy or attached policy of the user or a group to which the user belongs
+has the name **AdministratorAccess**.
+
+Create a new Go file named :file:`IamGetAdmins.go`.
+Import the following packages.
+
+.. literalinclude:: example_code/iam/IamListAdmins.go
+   :lines: 17-24
+   :dedent: 0
+   :language: go
+
+Create a method to determine whether a user has a policy that
+has administrator privileges.
+
+.. literalinclude:: example_code/iam/IamListAdmins.go
+   :lines: 26-34
+   :dedent: 0
+   :language: go
+
+Create a method to determine whether a user has an attached policy that
+has administrator privileges.
+
+.. literalinclude:: example_code/iam/IamListAdmins.go
+   :lines: 36-44
+   :dedent: 0
+   :language: go
+
+Create a method that determines whether a group has a policy that
+has adminstrator privileges.
+
+.. literalinclude:: example_code/iam/IamListAdmins.go
+   :lines: 46-65
+   :dedent: 0
+   :language: go
+
+Create a method that determines whether a group has an attached policy that
+has administrator privileges.
+
+.. literalinclude:: example_code/iam/IamListAdmins.go
+   :lines: 67-83
+   :dedent: 0
+   :language: go
+
+Create a method that determines whether any group to which the user belongs
+has administrator privileges.
+
+.. literalinclude:: example_code/iam/IamListAdmins.go
+   :lines: 85-109
+   :dedent: 0
+   :language: go
+
+Create a method that determines whether a user has administrator privileges.
+
+.. literalinclude:: example_code/iam/IamListAdmins.go
+   :lines: 111-129
+   :dedent: 0
+   :language: go
+
+Create a main method with an IAM client in :code`us-west-2`.
+Create variables to keep track of how many users we have
+and how many of those have adminstrator privileges.
+
+.. literalinclude:: example_code/iam/IamListAdmins.go
+   :lines: 131-142
+   :dedent: 0
+   :language: go
+
+Create the input for and call :code`GetAccountAuthorizationDetails`.
+If there is an error, print an error message and quit.
+
+.. literalinclude:: example_code/iam/IamListAdmins.go
+   :lines: 145-152
+   :dedent: 4
+   :language: go
+
+Loop through the users.
+If a user has adminstrator privileges,
+print their name and increment the number of users
+who have adminstrator privileges.
+
+.. literalinclude:: example_code/iam/IamListAdmins.go
+   :lines: 155-167
+   :dedent: 4
+   :language: go
+
+If we did not get all of the users in the first call to
+:code`GetAccountAuthorizationDetails`,
+loop through the next set of users and determine which
+of those have adminstrator privileges.
+
+.. literalinclude:: example_code/iam/IamListAdmins.go
+   :lines: 179-190
+   :dedent: 4
+   :language: go
+
+Finally, display the number of users who have
+administrator access.
+
+.. literalinclude:: example_code/iam/IamListAdmins.go
+   :lines: 192-193
+   :dedent: 4
+   :language: go
+
