@@ -36,7 +36,7 @@ The routines use the |sdk-go| IAM client methods that follow:
 * :sdk-go-api-deep:`UpdateUser <service/iam/#IAM.UpdateUser>`
 * :sdk-go-api-deep:`GetUser <service/iam/#IAM.GetUser>`
 * :sdk-go-api-deep:`DeleteUser <service/iam/#IAM.DeleteUser>`
-* :sdk-go-api-deep:`GetAccountAuthorizationDetails`
+* :sdk-go-api-deep:`GetAccountAuthorizationDetails <service/iam/#IAM.GetAccountAuthorizationDetails>`
 
 .. _iam-users-prerequisites:
 
