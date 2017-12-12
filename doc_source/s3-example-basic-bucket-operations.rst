@@ -35,6 +35,7 @@ buckets and bucket items:
 * Delete all the items in a bucket
 * Restore a bucket item
 * Delete a bucket
+* List the users with administrator privileges
 
 You can download complete
 versions of these example files from the
@@ -311,39 +312,37 @@ Create the file *s3_download_object.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
 .. literalinclude:: example_code/s3/s3_download_object.go
-   :lines: 17-24
+   :lines: 17-25
 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_download_object.go
-   :lines: 66-69
+   :lines: 68-71
 
 Get the bucket and file name from the command line arguments.
 If there aren't two arguments, call ``exitErrorf``.
 Otherwise, create the file and defer file closing until we are done downloading.
-If an error occurs, call ``exitErrorf``.
+If an error occurs while creating the file, call ``exitErrorf``.
 
 .. literalinclude:: example_code/s3/s3_download_object.go
-   :lines: 31-44
+   :lines: 33-39
    :dedent: 4
 
-Initialize the session that the SDK uses to load credentials
+Initialize the session in us-west-2 that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
 and create a ``NewDownloader`` object.
 
 .. literalinclude:: example_code/s3/s3_download_object.go
-   :lines: 48-52
+   :lines: 50-54
    :dedent: 4
-
-.. literalinclude:: example_code/s3/s3_download_object.go
-   :lines: 47-53
 
 Download the item from the bucket.
 If an error occurs, call ``exitErrorf``.
 Otherwise, notify the user that the download succeeded.
 
 .. literalinclude:: example_code/s3/s3_download_object.go
-   :lines: 54-63
+   :lines: 56-65
+   :dedent: 4
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_download_object.go>`_
