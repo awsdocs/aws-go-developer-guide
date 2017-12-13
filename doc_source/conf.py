@@ -399,3 +399,5 @@ extlinks['cf-dg-deep'] = (
 extlinks['ec2-ug-deep'] = (
     aws_docs_url + 'AWSEC2/latest/UserGuide/%s', ''
 )
+
+feedback_folder_id = '1d0fd870-a53b-4f3b-acd2-f768367abcec'
