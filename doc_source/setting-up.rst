@@ -36,7 +36,7 @@ To install the SDK and its dependencies, run the following Go command.
 
 If you set the `Go vendor experiment <https://github.com/aws/aws-sdk-go/blob/master/README.md#installing>`_
 environment variable to ``1``, you can use the following command to get the SDK. The
-SDK's runtime dependancies are vendored in the ``vendor/`` folder.
+SDK's runtime dependencies are vendored in the ``vendor/`` folder.
 
 .. code:: sh
 
