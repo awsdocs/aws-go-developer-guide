@@ -32,3 +32,4 @@ You can download complete versions of these example files from the :doc-examples
    s3-example-cors
    s3-example-bucket-policy
    s3-example-bucket-acls
+   s3-examples-encryption
