@@ -310,4 +310,16 @@ to create an HTTP client to use a proxy, see the
 `Transport <https://golang.org/pkg/net/http/#Transport>`_ struct in
 the Go ``http`` package.
 
+.. _logging:
 
+Logging Service Calls
+=====================
+
+You can enable logging in a client by setting the :code:`LogLevel` in a configuration instance,
+as shown in the following snippet, which sets the log level to :code:`LogDebugWithHTTPBody` for a new |DDB| client.
+
+.. code-block:: go
+
+    svc := dynamodb.New(sess, aws.NewConfig().WithLogLevel(aws.LogDebugWithHTTPBody))
+
+See :sdk-go-api-deep:`LogLevelType <aws/#LogLevelType>` for the different log level values.
