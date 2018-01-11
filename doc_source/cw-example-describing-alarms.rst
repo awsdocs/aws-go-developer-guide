@@ -66,7 +66,7 @@ load your configuration from the shared configuration file ~/.aws/config,
 and create an |CW| client.
 
 .. literalinclude:: example_code/cloudwatch/describe_alarms.go
-   :lines: 29-33f
+   :lines: 29-33
    :dedent: 4
    :language: go
 
