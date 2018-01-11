@@ -113,71 +113,111 @@ Use the following trust relationship when creating the |IAM| role.
 Create a Scheduled Rule
 =======================
 
+Choose **Copy** to save the code locally.
+
 Create a new Go file named :file:`events_schedule_rule.go`.
 
-You must import the relevant Go and |sdk-go| packages by adding the following lines.
+Create the file :file:`events_schedule_rule.go`.
+Import the packages used in the example.
 
 .. literalinclude:: example_code/cloudwatch/events_schedule_rule.go
    :lines: 15-23
+   :dedent: 0
+   :language: go
 
 Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials, and create a new |EC2| service client.
+from the shared credentials file ~/.aws/credentials,
+load your configuration from the shared configuration file ~/.aws/config,
+and create a CloudWatch Events client.
 
-.. literalinclude:: example_code/cloudwatch/events_put_events.go
-   :lines: 27-34
+.. literalinclude:: example_code/cloudwatch/events_schedule_rule.go
+   :lines: 29-34
+   :dedent: 4
+   :language: go
 
-Call ``PutRule``, supplying a name, ARN of the |IAM| role you created, and an expression defining the schedule.
-Print any errors, or a success message.
+Call ``PutRule``, supplying a name, :code:`DEMO_EVENT`,
+ARN of the |IAM| role you created, :code:`IAM_ROLE_ARN`,
+and an expression defining the schedule.
+Finally, display the ARN of the rule.
 
-.. literalinclude:: example_code/cloudwatch/events_put_events.go
-   :lines: 36-48
+.. literalinclude:: example_code/cloudwatch/events_schedule_rule.go
+   :lines: 36-40, 46
+   :dedent: 4
+   :language: go
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/events_schedule_rule.go>`_
+on GitHub.
 
 Add a Lambda Function Target
 ============================
 
-Create a new Go file named :file:`events_put_targets.go`.
-
-Call the ``PutRule`` method to create the rule. The method returns the ARN of the new or updated rule.
-
-You must import the relevant Go and |sdk-go| packages by adding the following lines.
+Create the file :file:`events_put_targets.go`.
+Import the packages used in the example.
 
 .. literalinclude:: example_code/cloudwatch/events_put_targets.go
-   :lines: 15-23
+   :lines: 17-23
+   :dedent: 0
+   :language: go
 
 Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials, and create a new |EC2| service client.
+from the shared credentials file ~/.aws/credentials,
+load your configuration from the shared configuration file ~/.aws/config,
+and create a new CloudWatch Events client.
+	      
+.. literalinclude:: example_code/cloudwatch/events_put_targets.go
+   :lines: 29-34
+   :dedent: 4
+   :language: go
+
+Call ``PutTargets``, supplying a name for the rule, :code:`DEMO_EVENT`.
+For the target, specify the ARN of the Lambda function you created,
+:code:`LAMBDA_FUNCTION_ARN`,
+and the ID of the rule, :code:`myCloudWatchEventsTarget`.
+Print any errors, or a success message with any targets that failed.
 
 .. literalinclude:: example_code/cloudwatch/events_put_targets.go
-   :lines: 27-34
+   :lines: 36-44, 50
+   :dedent: 4
+   :language: go
 
-
-Call ``PutTargets``, supplying a name for the rule. For the target, specify the ARN of the Lambda function
-you created, and the ID of the rule. Print any errors, or a success message.
-
-.. literalinclude:: example_code/cloudwatch/events_put_targets.go
-   :lines: 36-52
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/events_put_targets.go>`_
+on GitHub.
 
 Send Events
 ===========
 
-Create a new Go file named :file:`events_put_events.go`.
-
-You must import the relevant Go and |sdk-go| packages by adding the following lines.
+Create the file :file:`events_put_events.go`.
+Import the packages used in the example.
 
 .. literalinclude:: example_code/cloudwatch/events_put_events.go
-   :lines: 15-23
+   :lines: 17-23
+   :dedent: 0
+   :language: go
 
 Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials, and create a new |EC2| service client.
+from the shared credentials file ~/.aws/credentials,
+load your configuration from the shared configuration file ~/.aws/config,
+and create a CloudWatch Events client.
 
 .. literalinclude:: example_code/cloudwatch/events_put_events.go
-   :lines: 27-34
+   :lines: 29-34
+   :dedent: 4
+   :language: go
 
-
-Call ``PutEvents``, supplying key-name value pairs in the Details field, and specifying the ARN of the
-Lambda function you created. See :sdk-go-api-deep:`PutEventsRequestEntry <service/cloudwatchevents/#PutEventsRequestEntry>`
-for a description of the fields. Print out any errors, or a success message.
+Call :code:`PutEvents`, supplying key-name value pairs in the :code:`Details` field,
+and specifying the ARN of the Lambda function you created, :code:`RESOURCE_ARN`.
+See :sdk-go-api-deep:`PutEventsRequestEntry <service/cloudwatchevents/#PutEventsRequestEntry>`
+for a description of the fields.
+Finally, display the ingested events.
 
 .. literalinclude:: example_code/cloudwatch/events_put_events.go
-   :lines: 36-55
+   :lines: 36-47, 53
+   :dedent: 4
+   :language: go
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/events_put_events.go>`_
+on GitHub.
 

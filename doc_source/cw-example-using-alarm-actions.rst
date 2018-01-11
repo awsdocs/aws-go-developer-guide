@@ -62,51 +62,86 @@ Create and Enable Actions on an Alarm
 
 Create a new Go file named :file:`create_enable_alarms.go`.
 
-You must import the relevant Go and |sdk-go| packages by adding the following lines.
+Import packages used in the example.
 
 .. literalinclude:: example_code/cloudwatch/create_enable_alarms.go
-   :lines: 15-24
+   :lines: 16-24
+   :dedent: 0
+   :language: go
+
+Get an instance name, value, and alarm name.
+
+   :lines: 27-34
+   :dedent: 4
+   :language: go
 
 Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials, and create a new |EC2| service client.
+from the shared credentials file ~/.aws/credentials,
+load your configuration from the shared configuration file ~/.aws/config,
+and create an |CW| client.
 
 .. literalinclude:: example_code/cloudwatch/create_enable_alarms.go
-   :lines: 28-35
+   :lines: 39-44
+   :dedent: 4
+   :language: go
 
-Create a metric alarm that will reboot an instance if its CPU utilization is greater
+Create a metric alarm that reboots an instance if its CPU utilization is greater
 than 70 percent.
 
 .. literalinclude:: example_code/cloudwatch/create_enable_alarms.go
-   :lines: 39-50
+   :lines: 48-72
+   :dedent: 4
+   :language: go
 
-You can use one of the default workflow actions to reboot the instance if the
-alarm is triggered.
-
-.. literalinclude:: example_code/cloudwatch/create_enable_alarms.go
-   :lines: 54-68
-
-Call ``EnableAlarmActions`` with the new alarm for the instance.
+Call :code:`EnableAlarmActions` with the new alarm for the instance,
+and display a message.
 
 .. literalinclude:: example_code/cloudwatch/create_enable_alarms.go
-   :lines: 71-
+   :lines: 79-83, 89
+   :dedent: 4
+   :language: go
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/create_enable_alarms.go>`_
+on GitHub.
 
 Disable Actions on an Alarm
 ===========================
 
-Create a new Go file named :file:`disable_alarm.go`.
+Create the file :file:`disable_alarm.go`.
 
-You must import the relevant Go and |sdk-go| packages by adding the following lines.
+Import the packages used in the example.
 
 .. literalinclude:: example_code/cloudwatch/disable_alarm.go
-   :lines: 15-23
+   :lines: 17-23
+   :dedent: 0
+   :language: go
+
+Get the name of the alarm from the command line.
+
+.. literalinclude:: example_code/cloudwatch/disable_alarm.go
+   :lines: 26-31
+   :dedent: 4
+   :language: go
 
 Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials, and create a new |EC2| service client.
+from the shared credentials file ~/.aws/credentials,
+load your configuration from the shared configuration file ~/.aws/config,
+and create an |CW| client.
 
 .. literalinclude:: example_code/cloudwatch/disable_alarm.go
-   :lines: 27-34
+   :lines: 36-41
+   :dedent: 4
+   :language: go
 
-Call the ``DisableAlarmActions`` method to disable the actions for this alarm.
+Call :code:`DisableAlarmActions` to disable the actions for this alarm
+and display a message.
 
 .. literalinclude:: example_code/cloudwatch/disable_alarm.go
-   :lines: 37-49
+   :lines: 44-48, 54
+   :dedent: 4
+   :language: go
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/disable_alarm.go>`_
+on GitHub.

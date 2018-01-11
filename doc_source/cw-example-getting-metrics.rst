@@ -15,7 +15,8 @@ Getting Metrics from |CW|
 #########################
 
 .. meta::
-   :description: Retrieve a list of published CloudWatch metrics and publish data points to CloudWatch metrics using this AWS SDK for Go code example.
+   :description: Retrieve a list of published CloudWatch metrics and publish data points
+                 to CloudWatch metrics using this AWS SDK for Go code example.
    :keywords: AWS SDK for Go code examples, CloudWatch, alarm actions
 
 These Go examples show you how to retrieve a list of published |CW| metrics and publish
@@ -55,46 +56,85 @@ Prerequisites
 List Metrics
 ============
 
-Create a new Go file named :file:`listing_metrics.go`.
+Choose **Copy** to save the code locally.
 
-You must import the relevant Go and |sdk-go| packages by adding the following lines.
+Create the file :file:`listing_metrics.go`.
+
+Import the packages used in the example.
 
 .. literalinclude:: example_code/cloudwatch/listing_metrics.go
-   :lines: 15-23
+   :lines: 17-24
+   :dedent: 0
+   :language: go
 
-Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials, and create a new |EC2| service client.
+Get the metric name, namespace, and dimensions from the command line.
 
 .. literalinclude:: example_code/cloudwatch/listing_metrics.go
    :lines: 27-34
+   :dedent: 4
+   :language: go
 
-Call ``ListMetrics``, supplying the metric name, namespace, and dimensions. Print the metrics returned in the result.
+Initialize a session that the SDK will use to load credentials
+from the shared credentials file ~/.aws/credentials,
+load your configuration from the shared configuration file ~/.aws/config,
+and create an |CW| client.
 
 .. literalinclude:: example_code/cloudwatch/listing_metrics.go
-   :lines: 37-53
+   :lines: 39-44
+   :dedent: 4
+   :language: go
 
+Call :code:`ListMetrics`, supplying the metric name, namespace, and dimensions. Print the metrics returned in the result.
+
+.. literalinclude:: example_code/cloudwatch/listing_metrics.go
+   :lines: 47-55, 61
+   :dedent: 4
+   :language: go
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/listing_metrics.go>`_
+on GitHub.
 
 .. _cw-example-custom-metrics:
 
 Submit Custom Metrics
 =====================
 
-Create a new Go file named :file:`custom_metrics.go`.
+Create the file :file:`custom_metrics.go`.
 
-You must import the relevant Go and |sdk-go| packages by adding the following lines.
+Import the packages used in the example.
 
 .. literalinclude:: example_code/cloudwatch/custom_metrics.go
-   :lines: 15-23
+   :lines: 17-23
+   :dedent: 0
+   :language: go
 
-Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials, and create a new |EC2| service client.
+Get the metric name, namespace, and dimensions from the command line.
 
 .. literalinclude:: example_code/cloudwatch/custom_metrics.go
    :lines: 27-34
+   :dedent: 4
+   :language: go
 
-Call ``PutMetricData``, suppylying the metric name, unit, value, and dimensions. Print
+Initialize a session that the SDK will use to load credentials
+from the shared credentials file ~/.aws/credentials,
+load your configuration from the shared configuration file ~/.aws/config,
+and create an |CW| client.
+
+.. literalinclude:: example_code/cloudwatch/custom_metrics.go
+   :lines: 29-34
+   :dedent: 4
+   :language: go
+
+Call :code:`PutMetricData`, suppylying the metric name, unit, value, and dimensions. Print
 any errors, or a success message.
 
 .. literalinclude:: example_code/cloudwatch/custom_metrics.go
    :lines: 37-60
+   :dedent: 4
+   :language: go
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/custom_metrics.go>`_
+on GitHub.
 

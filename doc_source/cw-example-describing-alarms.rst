@@ -50,21 +50,32 @@ Prerequisites
 Describe Alarms
 ===============
 
-Import the packages we use in the example.
+Choose **Copy** to save the code locally.
+
+Create the file :file:`describe_alarms.go`.
+Import the packages used in the example.
 
 .. literalinclude:: example_code/cloudwatch/describe_alarms.go
    :lines: 16-23
+   :dedent: 0
+   :language: go
 
 Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials, and create a new |EC2| service client.
+from the shared credentials file ~/.aws/credentials,
+load your configuration from the shared configuration file ~/.aws/config,
+and create an |CW| client.
 
 .. literalinclude:: example_code/cloudwatch/describe_alarms.go
-   :lines: 26-32
+   :lines: 29-33f
+   :dedent: 4
+   :language: go
 
-Call the ``DescribeAlarms`` method, and print the results.
+Call :code:`DescribeAlarms`, and print the results.
 
 .. literalinclude:: example_code/cloudwatch/describe_alarms.go
-   :lines: 34-40
+   :lines: 35, 42-44
+   :dedent: 4
+   :language: go
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/describe_alarms.go>`_
