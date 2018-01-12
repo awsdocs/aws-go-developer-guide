@@ -114,7 +114,7 @@ Import the packages used in the example.
 Get the metric name, namespace, and dimensions from the command line.
 
 .. literalinclude:: example_code/cloudwatch/custom_metrics.go
-   :lines: 27-34
+   :lines: 26-33
    :dedent: 4
    :language: go
 
@@ -128,11 +128,21 @@ and create a |CW| client.
    :dedent: 4
    :language: go
 
+Initialize a session that the SDK will use to load credentials
+from the shared credentials file ~/.aws/credentials,
+load your configuration from the shared configuration file ~/.aws/config,
+and create a |CW| client.
+
+.. literalinclude:: example_code/cloudwatch/custom_metrics.go
+   :lines: 38-43
+   :dedent: 4
+   :language: go
+
 Call :code:`PutMetricData`, suppylying the metric name, unit, value, and dimensions. Print
 any errors, or a success message.
 
 .. literalinclude:: example_code/cloudwatch/custom_metrics.go
-   :lines: 37-60
+   :lines: 46-61, 67
    :dedent: 4
    :language: go
 

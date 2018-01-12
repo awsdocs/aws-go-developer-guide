@@ -64,7 +64,7 @@ Creat the ``exitError`` function to deal with errors.
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
    :lines: 79-82
    :language: go
-	   
+       
 This routine prints the policy for a bucket. If the bucket doesn't exist, or there was
 an error, an error message is printed instead. It requires the bucket name as input.
 
