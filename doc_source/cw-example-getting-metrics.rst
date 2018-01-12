@@ -124,16 +124,6 @@ load your configuration from the shared configuration file ~/.aws/config,
 and create a |CW| client.
 
 .. literalinclude:: example_code/cloudwatch/custom_metrics.go
-   :lines: 29-34
-   :dedent: 4
-   :language: go
-
-Initialize a session that the SDK will use to load credentials
-from the shared credentials file ~/.aws/credentials,
-load your configuration from the shared configuration file ~/.aws/config,
-and create a |CW| client.
-
-.. literalinclude:: example_code/cloudwatch/custom_metrics.go
    :lines: 38-43
    :dedent: 4
    :language: go
