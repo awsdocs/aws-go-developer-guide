@@ -77,7 +77,7 @@ Get the metric name, namespace, and dimensions from the command line.
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file ~/.aws/credentials,
 load your configuration from the shared configuration file ~/.aws/config,
-and create an |CW| client.
+and create a |CW| client.
 
 .. literalinclude:: example_code/cloudwatch/listing_metrics.go
    :lines: 39-44
@@ -119,7 +119,7 @@ Get the metric name, namespace, and dimensions from the command line.
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file ~/.aws/credentials,
 load your configuration from the shared configuration file ~/.aws/config,
-and create an |CW| client.
+and create a |CW| client.
 
 .. literalinclude:: example_code/cloudwatch/custom_metrics.go
    :lines: 29-34

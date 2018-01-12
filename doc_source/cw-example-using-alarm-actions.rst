@@ -78,7 +78,7 @@ Get an instance name, value, and alarm name.
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file ~/.aws/credentials,
 load your configuration from the shared configuration file ~/.aws/config,
-and create an |CW| client.
+and create a |CW| client.
 
 .. literalinclude:: example_code/cloudwatch/create_enable_alarms.go
    :lines: 39-44
@@ -127,7 +127,7 @@ Get the name of the alarm from the command line.
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file ~/.aws/credentials,
 load your configuration from the shared configuration file ~/.aws/config,
-and create an |CW| client.
+and create a |CW| client.
 
 .. literalinclude:: example_code/cloudwatch/disable_alarm.go
    :lines: 36-41
