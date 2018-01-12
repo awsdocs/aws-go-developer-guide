@@ -60,7 +60,9 @@ Prerequisites
 Create and Enable Actions on an Alarm
 =====================================
 
-Create a new Go file named :file:`create_enable_alarms.go`.
+Choose **Copy** to save the code locally.
+
+Create the file :file:`create_enable_alarms.go`.
 
 Import packages used in the example.
 
@@ -71,6 +73,7 @@ Import packages used in the example.
 
 Get an instance name, value, and alarm name.
 
+.. literalinclude:: example_code/cloudwatch/create_enable_alarms.go
    :lines: 27-34
    :dedent: 4
    :language: go
@@ -107,6 +110,8 @@ on GitHub.
 
 Disable Actions on an Alarm
 ===========================
+
+Choose **Copy** to save the code locally.
 
 Create the file :file:`disable_alarm.go`.
 

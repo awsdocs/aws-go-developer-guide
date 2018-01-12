@@ -115,8 +115,6 @@ Create a Scheduled Rule
 
 Choose **Copy** to save the code locally.
 
-Create a new Go file named :file:`events_schedule_rule.go`.
-
 Create the file :file:`events_schedule_rule.go`.
 Import the packages used in the example.
 
@@ -151,6 +149,8 @@ on GitHub.
 
 Add a Lambda Function Target
 ============================
+
+Choose **Copy** to save the code locally.
 
 Create the file :file:`events_put_targets.go`.
 Import the packages used in the example.
@@ -187,6 +187,8 @@ on GitHub.
 
 Send Events
 ===========
+
+Choose **Copy** to save the code locally.
 
 Create the file :file:`events_put_events.go`.
 Import the packages used in the example.

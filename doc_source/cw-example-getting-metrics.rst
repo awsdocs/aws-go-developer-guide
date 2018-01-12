@@ -100,6 +100,8 @@ on GitHub.
 Submit Custom Metrics
 =====================
 
+Choose **Copy** to save the code locally.
+
 Create the file :file:`custom_metrics.go`.
 
 Import the packages used in the example.
