@@ -46,10 +46,11 @@ display an error message and exit.
 
 Initialize the session that the SDK uses to load credentials
 from the shared credentials file
-*.aws/credentials* in your home folder.
+*.aws/credentials* in your home folder
+and create the client.
 
 .. literalinclude:: ./example_code/cloudtrail/delete_trail.go
-   :lines: 42-47
+   :lines: 41-46
    :dedent: 4
    :language: go
 
@@ -58,7 +59,7 @@ If an error occurs, print the error and exit.
 If no error occurs, print a success message.
 
 .. literalinclude:: ./example_code/cloudtrail/delete_trail.go
-   :lines: 49-57
+   :lines: 48-55
    :dedent: 4
    :language: go
 

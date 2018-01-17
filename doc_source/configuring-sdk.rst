@@ -323,3 +323,19 @@ as shown in the following snippet, which sets the log level to :code:`LogDebugWi
     svc := dynamodb.New(sess, aws.NewConfig().WithLogLevel(aws.LogDebugWithHTTPBody))
 
 See :sdk-go-api-deep:`LogLevelType <aws/#LogLevelType>` for the different log level values.
+
+.. _custom_endpoint:
+
+Creating a Custom Endpoint
+==========================
+
+In most cases you use the endpoint that is pre-configured for a service.
+However, you can specify a custom endpoint, such as for pre-release versions of the service,
+as shown in the following snippet,
+which sets the :code:`Endpoint` to :code:`https://test.us-west-2.amazonaws.com` for a new |DDB| client.
+
+.. code-block:: go
+
+   svc := dynamodb.New(sess, &aws.Config{Endpoint: aws.String("https://test.us-west-2.amazonaws.com")})
+
+See :sdk-go-api-deep:`aws.Config <aws/#Config>` for details.
