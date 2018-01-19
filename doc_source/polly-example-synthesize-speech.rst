@@ -70,7 +70,9 @@ Save the resulting synthesized speech as an MP3 file.
    :lines: 69-73, 80
    :dedent: 4
    :language: go
-	      
+
+.. note:: The resulting MP3 file is in the MPEG-2 format.
+
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/polly/pollySynthesizeSpeech.go>`_
 on GitHub.
