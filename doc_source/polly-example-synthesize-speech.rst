@@ -17,7 +17,7 @@ Synthesizing Speech
 .. meta::
     :description:
         Synthesizing speech using this AWS SDK for Go code example.
-    :keywords: AWS SDK for Go code examples, Polly
+    :keywords: AWS SDK for Go code examples, Amazon Polly
 
 This example uses the
 :sdk-go-api-deep:`SynthesizeSpeech <service/polly/#Polly.SynthesizeSpeech>` operation
@@ -50,7 +50,7 @@ Open the text file and read the contents as a string.
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file :file:`~/.aws/credentials`,
 load your configuration from the shared configuration file :file:`~/.aws/config`,
-and create a |Polly| client.
+and create an Amazon Polly client.
 
 .. literalinclude:: ./example_code/polly/pollySynthesizeSpeech.go
    :lines: 51-54, 56

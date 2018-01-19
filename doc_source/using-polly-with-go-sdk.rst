@@ -10,16 +10,16 @@
 
 .. _examples-polly:
 
-###################################
-|Polly| Examples Using the |sdk-go|
-###################################
+########################################
+Amazon Polly Examples Using the |sdk-go|
+########################################
 
 .. meta::
-   :description: Use Polly code examples to write your own Go applications.
+   :description: Use Amazon Polly code examples to write your own Go applications.
    :keywords: AWS SDK Go code examples, Amazon Polly
 
-|Polly| is ???.
-The |sdk-go| examples can integrate |Polly| into your applications.
+Amazon Polly is a cloud service that converts text into lifelike speech.
+The |sdk-go| examples can integrate Amazon Polly into your applications.
 The examples assume you have already set up and configured the SDK
 (that is, you've imported all required packages and set your credentials and region).
 For more information, see :doc:`setting-up` and :doc:`configuring-sdk`.

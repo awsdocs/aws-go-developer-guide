@@ -17,7 +17,7 @@ Getting a List of Lexicons
 .. meta::
     :description:
         Get the list of pronunciation lexicons stored in an AWS Region using this AWS SDK for Go code example.
-    :keywords: AWS SDK for Go code examples, Polly
+    :keywords: AWS SDK for Go code examples, Amazon Polly
 
 This example uses the
 :sdk-go-api-deep:`ListLexicons <service/polly/#Polly.ListLexicons>` operation
@@ -36,7 +36,7 @@ Import the packages used in the example.
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file :file:`~/.aws/credentials`,
 load your configuration from the shared configuration file :file:`~/.aws/config`,
-and create a |Polly| client.
+and create an Amazon Polly client.
 
 .. literalinclude:: ./example_code/polly/pollyListLexicons.go
    :lines: 28-31, 33

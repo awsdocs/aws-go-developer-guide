@@ -17,7 +17,7 @@ Getting a List of Voices
 .. meta::
     :description:
         Get the list of voices that are available for use when requesting speech synthesis using this AWS SDK for Go code example.
-    :keywords: AWS SDK for Go code examples, Polly
+    :keywords: AWS SDK for Go code examples, Amazon Polly
 
 This example uses the
 :sdk-go-api-deep:`DescribeVoices <service/polly/#Polly.DescribeVoices>` operation
@@ -37,7 +37,7 @@ Import the packages used in the example.
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file :file:`~/.aws/credentials`,
 load your configuration from the shared configuration file :file:`~/.aws/config`,
-and create a |Polly| client.
+and create an Amazon Polly client.
 
 .. literalinclude:: ./example_code/polly/pollyDescribeVoices.go
    :lines: 29-32, 34
