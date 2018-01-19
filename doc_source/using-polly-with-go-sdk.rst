@@ -25,7 +25,7 @@ The examples assume you have already set up and configured the SDK
 For more information, see :doc:`setting-up` and :doc:`configuring-sdk`.
 
 You can download complete versions of these example files from the
-:doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
+:doc-examples-go:`aws-doc-sdk-examples <polly>` repository on GitHub.
 
 .. toctree::
    :titlesonly:
