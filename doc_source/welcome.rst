@@ -39,9 +39,7 @@ AWS Cloud9 is a web-based integrated development environment (IDE) that
 contains a collection of tools that you use to code, build, run, test, debug,
 and release software in the cloud.
 
-The AWS Cloud9 documentation contains a topic on
-:AC9-ug:`running Go code <sample-go>`
-in the AWS Cloud9 environment, including how to install and configure the |sdk-go|.
+See :doc:`cloud9-go` for information on using |AC9long| with the |sdk-go|.
 
 More Info
 =========

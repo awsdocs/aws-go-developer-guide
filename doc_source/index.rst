@@ -22,6 +22,7 @@ This documentation is for the |sdk-go|.
    AWS SDK for Go <welcome>
    Getting Started <setting-up>
    Configuring the SDK <configuring-sdk>
+   Using Cloud9 with the SDK <cloud9-go>
    Using Sessions <sessions>
    Using AWS Services <making-requests>
    Handling Errors <handling-errors>
