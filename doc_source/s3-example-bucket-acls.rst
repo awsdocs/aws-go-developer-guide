@@ -101,7 +101,7 @@ If no error occurs, loop through the results
 and print out the name, type, and permssion for the grantees.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
-   :lines: 46-61
+   :lines: 46-66
    :language: go
    :dedent: 4
 
@@ -184,6 +184,63 @@ Otherwise, display a message indicating success.
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_put_bucket_acl.go>`_
+on GitHub.
+
+.. _s3-examples-bucket-acls-make-bucket-public-acl:
+
+Making a Bucket Public using a Canned ACL
+=========================================
+
+As in the previous example, the
+:sdk-go-api-deep:`PutBucketAcl <service/s3/#S3.PutBucketAcl>`
+function sets the ACLs on a bucket.
+
+The following example gives everyone read-only access to the items in the bucket
+with the bucket name specified as a command line argument.
+
+Create the file *s3_make_bucket_public.go*.
+Add the following statements to import the Go and |sdk-go| packages used in the example.
+
+.. literalinclude:: example_code/s3/s3_make_bucket_public.go
+   :lines: 17-23
+   :dedent: 0
+   :language: go
+
+Create a function to display errors and exit.
+
+.. literalinclude:: example_code/s3/s3_make_bucket_public.go
+   :lines: 25-28
+   :dedent: 0
+   :language: go
+
+Get the required input parameter and create the **acl**.
+
+.. literalinclude:: example_code/s3/s3_make_bucket_public.go
+   :lines: 35-39, 43
+   :dedent: 4
+   :language: go
+
+Initialize the session that the SDK uses to load credentials
+from the shared credentials file *~/.aws/credentials*
+and the region from the shared configuration file *~/.aws/config*
+and create a new |S3| service client.
+
+.. literalinclude:: example_code/s3/s3_make_bucket_public.go
+   :lines: 46-50, 53
+   :language: go
+   :dedent: 4
+
+Create the input for and call :sdk-go-api-deep:`PutBucketAcl <service/s3/#S3.PutBucketAcl>`.
+If an error occurs, display a message and quit.
+Otherwise, display a message indicating success.
+
+.. literalinclude:: example_code/s3/s3_make_bucket_public.go
+   :lines: 55-66
+   :language: go
+   :dedent: 4
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_make_bucket_public.go>`_
 on GitHub.
 
 .. _s3-examples-bucket-acls-get-bucket-object-acl:
