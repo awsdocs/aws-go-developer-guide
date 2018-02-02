@@ -274,7 +274,7 @@ This example requires two input parameters, the names of the bucket and object.
 If either name is not supplied, call the error function and exit.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
-   :lines: 29-34
+   :lines: 30-35
    :language: go
    :dedent: 4
 
@@ -295,7 +295,7 @@ If no error occurs, loop through the results
 and print out the name, type, and permssion for the grantees.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
-   :lines: 47-62
+   :lines: 47-61
    :language: go
    :dedent: 4
 
