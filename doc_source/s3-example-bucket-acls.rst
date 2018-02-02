@@ -74,19 +74,20 @@ Add the following statements to import the Go and |sdk-go| packages used in the 
 Create a function to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
-   :lines: 64-67
+   :lines: 69-72
    :language: go
 
 This example requires one input parameter, the name of the bucket.
-If the name is not supplied, we call the error function and exit.
+If the name is not supplied, call the error function and exit.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
-   :lines: 30-34
+   :lines: 29-33
    :language: go
    :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
-from the shared credentials file *~/.aws/credentials,
+from the shared credentials file *~/.aws/credentials*,
+the region from the shared configuration file *~/.aws/config*,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
@@ -147,7 +148,8 @@ If not, print an error message and quit.
    :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
-from the shared credentials file *~/.aws/credentials,
+from the shared credentials file *~/.aws/credentials*,
+the region from the shared configuration file *~/.aws/config*,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
@@ -156,7 +158,7 @@ and create a new |S3| service client.
    :dedent: 4
 
 Get the existing ACLs and append the new user to the list.
-If we encounter an error while retrieving the list,
+If there is an error while retrieving the list,
 print an error message and quit.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
@@ -272,12 +274,13 @@ This example requires two input parameters, the names of the bucket and object.
 If either name is not supplied, call the error function and exit.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
-   :lines: 30-35
+   :lines: 29-34
    :language: go
    :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
-from the shared credentials file *~/.aws/credentials,
+from the shared credentials file *~/.aws/credentials*,
+the region from the shared configuration file *~/.aws/config*,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
