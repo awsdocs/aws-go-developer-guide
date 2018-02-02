@@ -81,7 +81,7 @@ This example requires one input parameter, the name of the bucket.
 If the name is not supplied, call the error function and exit.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
-   :lines: 29-33
+   :lines: 30-34
    :language: go
    :dedent: 4
 
@@ -224,7 +224,7 @@ Get the required input parameter and create the **acl**.
 
 Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials*
-and the region from the shared configuration file *~/.aws/config*
+the region from the shared configuration file *~/.aws/config*,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_make_bucket_public.go
