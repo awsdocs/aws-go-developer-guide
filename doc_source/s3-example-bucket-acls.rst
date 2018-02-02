@@ -134,7 +134,7 @@ Add the following statements to import the Go and |sdk-go| packages used in the 
 Create a function to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
-   :lines: 100-103
+   :lines: 101-104
    :language: go
 
 Get the two required input parameters.
@@ -143,7 +143,7 @@ make sure it is one of the allowed values.
 If not, print an error message and quit.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
-   :lines: 31-48
+   :lines: 31-49
    :language: go
    :dedent: 4
 
@@ -153,7 +153,7 @@ the region from the shared configuration file *~/.aws/config*,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
-   :lines: 54-59
+   :lines: 55-60
    :language: go
    :dedent: 4
 
@@ -162,7 +162,7 @@ If there is an error while retrieving the list,
 print an error message and quit.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
-   :lines: 62-78
+   :lines: 63-79
    :language: go
    :dedent: 4
 
@@ -170,7 +170,7 @@ Build the parameter list for the call based on the existing
 ACLs and the new user information.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
-   :lines: 80-89
+   :lines: 81-90
    :language: go
    :dedent: 4
 
@@ -180,7 +180,7 @@ If an error occurs, display a message and quit.
 Otherwise, display a message indicating success.
 
 .. literalinclude:: example_code/s3/s3_put_bucket_acl.go
-   :lines: 92-97
+   :lines: 93-98
    :language: go
    :dedent: 4
 
