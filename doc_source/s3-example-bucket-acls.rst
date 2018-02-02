@@ -228,7 +228,7 @@ the region from the shared configuration file *~/.aws/config*,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_make_bucket_public.go
-   :lines: 46-50, 53
+   :lines: 48-50, 53
    :language: go
    :dedent: 4
 
@@ -267,7 +267,7 @@ Add the following statements to import the Go and |sdk-go| packages used in the 
 Create a function to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
-   :lines: 65-68
+   :lines: 64-67
    :language: go
 
 This example requires two input parameters, the names of the bucket and object.
