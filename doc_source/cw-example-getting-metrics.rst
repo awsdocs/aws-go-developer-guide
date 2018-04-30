@@ -111,32 +111,37 @@ Import the packages used in the example.
    :dedent: 0
    :language: go
 
-Get the metric name, namespace, and dimensions from the command line.
-
-.. literalinclude:: example_code/cloudwatch/custom_metrics.go
-   :lines: 26-33
-   :dedent: 4
-   :language: go
-
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file ~/.aws/credentials,
 load your configuration from the shared configuration file ~/.aws/config,
 and create a |CW| client.
 
 .. literalinclude:: example_code/cloudwatch/custom_metrics.go
-   :lines: 38-43
+   :lines: 29-34
    :dedent: 4
    :language: go
 
-Call :code:`PutMetricData`, suppylying the metric name, unit, value, and dimensions. Print
-any errors, or a success message.
+Call :code:`PutMetricData` with the
+the custom namespace "Site/Traffic".
+The namespace has two custom dimensions: "SiteName" and "PageURL".
+"SiteName" has the value "example.com",
+the "UniqueVisitors" value 5885 and the "UniqueVisits" value 8628.
+"PageURL" has the value "my-page.html",
+and a "PageViews" value 18057.
 
 .. literalinclude:: example_code/cloudwatch/custom_metrics.go
-   :lines: 46-61, 67
+   :lines: 36-73
+   :dedent: 4
+   :language: go
+
+If there are any errors, print them out,
+otherwise list some information about the custom metrics.
+
+.. literalinclude:: example_code/cloudwatch/custom_metrics.go
+   :lines: 74-95
    :dedent: 4
    :language: go
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/custom_metrics.go>`_
 on GitHub.
-

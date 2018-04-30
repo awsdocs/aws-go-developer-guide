@@ -71,8 +71,8 @@ This allows you to provide additional or case-based configuration as needed.
 By default ``NewSession`` only loads credentials from the shared
 credentials file (:file:`~/.aws/credentials`). If the ``AWS_SDK_LOAD_CONFIG``
 environment variable is set to a truthy value, the session is
-created from the configuration values from the shared credentials
-(:file:`~/.aws/credentials`) and shared credentials (:file:`~/.aws/credentials`) files.
+created from the configuration values from the shared configuration
+(:file:`~/.aws/config`) and shared credentials (:file:`~/.aws/credentials`) files.
 See :ref:`sessions-with-shared-config` for more information.
 
 Create a session with the default configuration and request handlers. The following example creates
