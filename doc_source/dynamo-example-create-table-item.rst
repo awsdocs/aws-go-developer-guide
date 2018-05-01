@@ -57,7 +57,7 @@ map of **AttributeValue** objects.
    :dedent: 4
    :language: go
 
-Create the input for **CreateTable** and call it.
+Create the input for **PutItem** and call it.
 If an error occurs, print the error and exit.
 If no error occurs, print an message that the item was added to the table.
 
