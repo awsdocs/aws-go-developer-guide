@@ -19,7 +19,7 @@ Running a |LAM| Function
         Run AWS Lambda functions using this AWS SDK for Go code example.
     :keywords: AWS SDK for Go code examples, Lambda
 
-The following example rus the |LAM| function :code:`MyGetitemsFunction` in the :code:`us-west-2` region.
+The following example runs the |LAM| function :code:`MyGetitemsFunction` in the :code:`us-west-2` region.
 This Node.js function returns a list of items from a database. The input JSON looks like the following.
 
 .. code-block:: json
