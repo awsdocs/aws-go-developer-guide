@@ -29,9 +29,10 @@ To encrypt objects on the server, you have more options.
   them to a bucket. Once you configure a bucket with this option,
   every object that you upload--from that point on--is encrypted.
 
-* You can have Amazon S3 encrypt an object when you upload it to a bucket.
+* You can encrypt objects yourself before you upload them to a bucket.
   The disadvantage with this approach is that you can still upload objects that
   are not encrypted.
+  We don't show this approach in the documentation.
 
 * You can have Amazon S3 reject objects that you attempt
   to upload to a bucket without requesting Amazon S3 encrypt the items.
@@ -47,5 +48,3 @@ Learn about encryption in |S3| at
    s3-example-default-server-side-encryption
    s3-example-enforce-server-side-encryption
    s3-example-server-side-encryption-with-kms
-   s3-example-server-side-encryption-with-user-kms-key
-   s3-example-server-side-decryption-with-user-kms-key
