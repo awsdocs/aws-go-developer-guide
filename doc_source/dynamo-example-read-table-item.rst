@@ -50,7 +50,7 @@ and create a new |DDB| service client.
    :dedent: 4
    :language: go
 
-Call **GetItem** to add the item to the table.
+Call **GetItem** to get the item from the table.
 If we encounter an error, print the error message.
 Otherwise, display information about the item.
 
@@ -59,6 +59,6 @@ Otherwise, display information about the item.
    :dedent: 4
    :language: go
 
-See the `complete example 
+See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/read_item.go>`_
 on GitHub.
