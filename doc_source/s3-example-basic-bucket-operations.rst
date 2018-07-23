@@ -481,17 +481,17 @@ Create the file *s3_delete_objects.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
 .. literalinclude:: example_code/s3/s3_delete_objects.go
-   :lines: 17-23
+   :lines: 17-25
 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_delete_objects.go
-   :lines: 87-90
+   :lines: 61-64
 
 Get the name of the bucket.
 
 .. literalinclude:: example_code/s3/s3_delete_objects.go
-   :lines: 31-36
+   :lines: 33-37
    :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
@@ -499,40 +499,22 @@ from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_delete_objects.go
-   :lines: 40-45
+   :lines: 41-43, 46
    :dedent: 4
 
-Since buckets can have more than 1000 items and
-:code:`ListObjects` returns up to 1000 items,
-set a flag to indicate when more items are available
-and keep track of how many items we get.
-
-.. literalinclude:: example_code/s3/s3_delete_objects.go
-   :lines: 50-52
-   :dedent: 4
-
-Loop through the bucket items up to 1000 at a time,
-creating the list of objects to delete from the list of items in the bucket.
+Create a list iterator to iterate through the list of bucket objects,
+deleting each object.
 If an error occurs, call ``exitErrorf``.
 
 .. literalinclude:: example_code/s3/s3_delete_objects.go
-   :lines: 54-73
+   :lines: 49-52, 54-56
    :dedent: 4
-
-Call :sdk-go-api-deep:`DeleteObjects <service/s3/#S3.DeleteObjects>`,
-passing in the name of the bucket and the list of objects to delete.
-If an error occurs, call ``exitErrorf``.
-Otherwise, determine whether there are more items in the bucket.
-
-.. literalinclude:: example_code/s3/s3_delete_objects.go
-   :lines: 76-81
-   :dedent: 8
 
 Once all of the items in the bucket have been deleted,
-inform the user of the number of objects deleted.
+inform the user that the objects were deleted.
 
 .. literalinclude:: example_code/s3/s3_delete_objects.go
-   :lines: 84
+   :lines: 58
    :dedent: 4
 
 See the `complete example
