@@ -75,7 +75,7 @@ message if no message was received.
 .. literalinclude:: example_code/sqs/sqs_changingvisibility.go
    :lines: 38-60
 
-If a message was returned, use its receipt handle to set the timeout to 10 hours.
+If a message was returned, use its receipt handle to set the timeout to 20 seconds.
 
 .. literalinclude:: example_code/sqs/sqs_changingvisibility.go
    :lines: 63-76
