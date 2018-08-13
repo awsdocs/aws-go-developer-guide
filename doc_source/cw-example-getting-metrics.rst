@@ -67,7 +67,7 @@ Import the packages used in the example.
    :dedent: 0
    :language: go
 
-Get the metric name, namespace, and dimensions from the command line.
+Get the metric name, namespace, and dimension name from the command line.
 
 .. literalinclude:: example_code/cloudwatch/listing_metrics.go
    :lines: 27-34
