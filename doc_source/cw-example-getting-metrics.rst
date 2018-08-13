@@ -84,7 +84,7 @@ and create a |CW| client.
    :dedent: 4
    :language: go
 
-Call :code:`ListMetrics`, supplying the metric name, namespace, and dimensions. Print the metrics returned in the result.
+Call :code:`ListMetrics`, supplying the metric name, namespace, and dimension name. Print the metrics returned in the result.
 
 .. literalinclude:: example_code/cloudwatch/listing_metrics.go
    :lines: 47-55, 61
