@@ -121,20 +121,20 @@ Delete an IAM User
 
 In this example, you delete an |IAM| user.
 
-Create a new Go file named :file:`iam_updateuser.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
+Create a new Go file named :file:`iam_deleteuser.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_updateuser.go
-   :lines: 15-24
+.. literalinclude:: example_code/iam/iam_deleteuser.go
+   :lines: 17-25
 
 Set up a new |IAM| client.
 
-.. literalinclude:: example_code/iam/iam_updateuser.go
-   :lines: 28,31-40
+.. literalinclude:: example_code/iam/iam_deleteuser.go
+   :lines: 32-34, 37
 
-Call ``UpdateUser``, passing in the user name, and print the results. If the user doesn't exist, log an error.
+Call ``DeleteUser``, passing in the user name, and print the results. If the user doesn't exist, display an error.
 
-.. literalinclude:: example_code/iam/iam_updateuser.go
-   :lines: 43-52
+.. literalinclude:: example_code/iam/iam_deleteuser.go
+   :lines: 39-52
 
 .. _iam_example_get_admins:
 
