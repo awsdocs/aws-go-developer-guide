@@ -74,7 +74,7 @@ such as |S3| buckets,
 so that you can determine the costs of your service resources
 at whatever level of granularity you require.
 
-The following examples shows how to tag the |S3| bucket
+The following example shows how to tag the |S3| bucket
 :code:`MyBucket` with :code:`Cost Center` tag with the value :code:`123456`
 and :code:`Stack` tag with the value :code:`MyTestStack`.
 
@@ -95,7 +95,7 @@ You can direct the |sdk-go| to display the HTTP request
 and response it sends and receives for each call by
 including a configuration option when constructing the service client.
 
-The following examples uses the |DDB| **ListTables** operation
+The following example uses the |DDB| **ListTables** operation
 to illustrate how to add a custom header to a service call.
 
 .. literalinclude:: example_code/extending_sdk/addHeader.go
@@ -296,7 +296,7 @@ markers, you can use pagination methods provided by the SDK.
 
 Pagination methods iterate over a list operation until the method
 retrieves the last page of results or until the callback function
-returns ``false``. The names of these method use the following pattern:
+returns ``false``. The names of these methods use the following pattern:
 *OperationName*\ ``Pages``. For example, the pagination method for the
 |S3| list objects operation (``ListObjects``) is ``ListObjectPages``.
 
