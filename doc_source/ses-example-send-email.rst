@@ -8,7 +8,7 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-.. _aws-ruby-sdk-ses-example-send-email:
+.. _aws-go-sdk-ses-example-send-email:
 
 ##############################################
 Sending a Message to an Email Address in |SES|
