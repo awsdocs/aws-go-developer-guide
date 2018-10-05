@@ -1,55 +1,172 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+AWS::AmazonMQ::Configuration
 
-   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
-   International License (the "License"). You may not use this file except in compliance with the
-   License. A copy of the License is located at http://creativecommons.org/licenses/by-nc-sa/4.0/.
+A configuration contains all of the settings for your ActiveMQ broker, in XML format.
 
-   This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
-   either express or implied. See the License for the specific language governing permissions and
-   limitations under the License.
+The AWS::AmazonMQ::Configuration resource lets you create Amazon MQ configurations, add configuration changes or modify users, and return information about the specified configuration. For more information, see Configuration and Amazon MQ Broker Configuration Parameters in the Amazon MQ Developer Guide.
 
-##############################
-AWS SDK for Go Developer Guide
-##############################
+Topics
 
-.. meta::
-   :description: Use the AWS SDK for Go to build Go applications that use AWS services.
-   :keywords: AWS SDK for Go, code examples
+    Syntax
+    Properties
+    Return Values
+    Examples
 
-The |sdk-go| provides APIs and utilities that developers can use
-to build Go applications that use AWS services, such as |EC2long| (|EC2|) and
-|S3long| (|S3|).
+Syntax
 
-The SDK removes the complexity of coding directly against a web service
-interface. It hides a lot of the lower-level plumbing, such as
-authentication, request retries, and error handling.
+To declare this entity in your AWS CloudFormation template, use the following syntax:
+JSON
 
-The SDK also includes helpful utilities. For example, the |S3|
-download and upload manager can automatically break up large objects
-into multiple parts and transfer them in parallel.
+{
+  "Type" : "AWS::AmazonMQ::Configuration",
+  "Properties" : {
+    "Data" : String,
+    "Description" : String,
+    "EngineType" : String,
+    "EngineVersion" : String,
+    "Name" : String
+  }
+}
 
-Use the |sdk-go-dg| to help you install, configure, and use the SDK.
-The guide provides configuration information, sample code, and an
-introduction to the SDK utilities.
+YAML
 
-Using the AWS SDK for Go with AWS Cloud9
-========================================
+Type: "AWS::AmazonMQ::Configuration"
+Properties:
+  Data: String
+  Description: String
+  EngineType: String
+  EngineVersion: String
+  Name: String
 
-AWS Cloud9 is a web-based integrated development environment (IDE) that
-contains a collection of tools that you use to code, build, run, test, debug,
-and release software in the cloud.
+Properties
 
-See :doc:`cloud9-go` for information on using |AC9long| with the |sdk-go|.
+Data
 
-More Info
-=========
+    The base64-encoded XML configuration.
 
--  To learn about everything you need before you can start using the
-   |sdk-go|, see :doc:`setting-up`.
--  For code examples, see :doc:`common-examples`.
--  To learn about the SDK utilities, see :doc:`sdk-utilities`.
--  For learn about the types and functionality that the library provides,
-   see the |sdk-go-api|_.
--  To view a video introduction of the SDK and a sample application demonstration, see
-   `AWS SDK For Go: Gophers Get Going with AWS <https://www.youtube.com/watch?v=iOGIKG3EptI&feature=youtu.be>`_ from AWS
-   re:Invent 2015.
+    Required: Yes
+
+    Type: String
+
+    Update requires: No interruption
+Description
+
+    The description of the configuration.
+
+    Required: No
+
+    Type: String
+
+    Update requires: No interruption
+EngineType
+
+    The type of broker engine.
+
+    Note
+
+    Currently, Amazon MQ supports only ACTIVEMQ.
+
+    Required: Yes
+
+    Type: String
+
+    Update requires: Replacement
+EngineVersion
+
+    The version of the broker engine.
+
+    Note
+
+    Currently, Amazon MQ supports only 5.15.0.
+
+    Required: Yes
+
+    Type: String
+
+    Update requires: Replacement
+Name
+
+    The name of the configuration. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes (- . _ ~). This value must be 1-150 characters long.
+
+    Required: Yes
+
+    Type: String
+
+    Update requires: Replacement
+
+Return Values
+Ref
+
+When you pass the logical ID of an AWS::AmazonMQ::Configuration resource to the intrinsic Ref function, the function returns the Amazon MQ configuration ID. For example:
+
+c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9
+
+For more information about using the Ref function, see Ref.
+Fn::GetAtt
+
+Fn::GetAtt returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+
+Arn
+
+    The Amazon Resource Name (ARN) of the Amazon MQ configuration.
+
+    arn:aws:mq:us-east-2:123456789012:configuration:MyConfigurationDevelopment:c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9
+
+Revision
+
+    The revision number of the configuration.
+
+    1
+
+For more information about using Fn::GetAtt, see Fn::GetAtt.
+Examples
+Amazon MQ Configuration
+
+The following example creates an Amazon MQ configuration in XML format.
+JSON
+
+{
+  "Description": "Create an Amazon MQ configuration",
+    "Configuration1": {
+      "Type": "AWS::AmazonMQ::Configuration",
+      "Properties": {
+        "Data": {
+          "Fn::Base64": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<broker xmlns=\"http://activemq.apache.org/schema/core\" start=\"false\">\n  <destinationPolicy>\n    <policyMap>\n      <policyEntries>\n        <policyEntry topic=\">\">\n          <pendingMessageLimitStrategy>\n            <constantPendingMessageLimitStrategy limit=\"3000\"/>\n          </pendingMessageLimitStrategy>\n        </policyEntry>\n      </policyEntries>\n    </policyMap>\n  </destinationPolicy>\n  <plugins>\n  </plugins>\n</broker>\n"
+        },
+        "EngineType": "ACTIVEMQ",
+        "EngineVersion": "5.15.0",
+        "Name": "my-configuration-1"
+      }
+   }
+}
+
+YAML
+
+--- 
+Description: "Create an Amazon MQ configuration"
+Resources: 
+  Configuration: 
+    Type: "AWS::AmazonMQ::Configuration"
+    Properties: 
+      Data: 
+        ? "Fn::Base64"
+        : |
+            <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+            <broker xmlns="http://activemq.apache.org/schema/core" start="false">
+              <destinationPolicy>
+                <policyMap>
+                  <policyEntries>
+                    <policyEntry topic=">">
+                      <pendingMessageLimitStrategy>
+                        <constantPendingMessageLimitStrategy limit="3000"/>
+                      </pendingMessageLimitStrategy>
+                    </policyEntry>
+                  </policyEntries>
+                </policyMap>
+              </destinationPolicy>
+              <plugins>
+              </plugins>
+            </broker>
+      EngineType: ACTIVEMQ
+      EngineVersion: "5.15.0"
+      Name: my-configuration-1
+
