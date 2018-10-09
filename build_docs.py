@@ -20,6 +20,7 @@
 import sys, os
 import subprocess
 import shutil
+print(sys.path)
 
 SPHINX_MISSING = """
 You must have Sphinx installed to use this script!
