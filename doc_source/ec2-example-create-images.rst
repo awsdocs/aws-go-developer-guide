@@ -84,7 +84,6 @@ field in ``BlockDeviceMapping``. The request
 will fail if other parameters are present.
 
 .. literalinclude:: example_code/ec2/create_image_no_block_device.go
-   :dedent: 4
    :lines: 15-
 
 

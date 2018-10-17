@@ -16,7 +16,7 @@ Listing |CT| Trail Events
 
 .. meta::
     :description:
-        List the |CTlong| trails using this AWS SDK for Go code example.
+        List the |CTlong| trail events using this AWS SDK for Go code example.
     :keywords: AWS SDK for Go code examples, CloudTrail
 
 This example uses the
