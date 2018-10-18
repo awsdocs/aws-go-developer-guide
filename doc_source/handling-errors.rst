@@ -61,10 +61,11 @@ example handles the `NoSuchBucket` and `NoSuchKey` error codes, printing custom 
 other error is received, a generic message is printed.
 
 .. literalinclude:: example_code/extending_sdk/handleServiceErrorCodes.go
-   :lines: 37-59
+   :lines: 49-71
    :dedent: 4
 
-You can see the complete example code on :go-sdk-examples:`GitHub <aws/request/handleServiceErrorCodes/handleServiceErrorCodes.go>`.
+See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/extending_sdk/handleServiceErrorCodes.go>`_
+on GitHub.
 
 .. _additional-error-information:
 

@@ -78,25 +78,25 @@ The first step is to import the packages we use.
    :dedent: 0
    :language: go
 
-Then we create the |LAM| client we use to invoke the |LAM| function.
+Next create session and |LAM| client we use to invoke the |LAM| function.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-run-function.go
-   :lines: 64
+   :lines: 60-64
    :dedent: 4
    :language: go
 
-Next, we create the request argument and call :code:`MyGetItemsFunction`.
-If there is an error, we display a message and quit.
+Next, create the request and payload, and call :code:`MyGetItemsFunction`.
+If there is an error, display a message and quit.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-run-function.go
-   :lines: 66-81
+   :lines: 67-79
    :dedent: 4
    :language: go
 
-Finally, we parse the response, and if successful, we print out the items.
+Finally, parse the response, and if successful, print out the items.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-run-function.go
-   :lines: 83-111
+   :lines: 81-108
    :dedent: 4
    :language: go
 

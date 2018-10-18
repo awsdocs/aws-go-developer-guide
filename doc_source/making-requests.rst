@@ -8,16 +8,13 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-
 ####################################
 Using the |sdk-go| with AWS Services
 ####################################
 
-
 .. meta::
    :description: Construct service clients and make operation calls to send requests to AWS services.
    :keywords: clients, service clients
-
 
 To make calls to an AWS service, you must first construct a service
 client instance with a session. A service client provides low-level
@@ -31,7 +28,6 @@ action, the action returns an output struct with the bucket's location.
 
 For the list of service clients, including their methods and parameters,
 see the |sdk-go-api|_.
-
 
 .. _constructing-a-service:
 
@@ -221,7 +217,6 @@ these operations, always be sure to call :code:`Close` on the field.
         return
     }
 
-
 .. _concurrently-using-service-clients:
 
 Concurrently Using Service Clients
@@ -323,7 +318,6 @@ the ``MaxKeys`` field.
         }
         return pageNum < 3
     })
-
 
 .. _using-waiters:
 

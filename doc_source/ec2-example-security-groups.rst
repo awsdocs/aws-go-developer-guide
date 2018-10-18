@@ -70,8 +70,8 @@ To get started, create a new Go file named :file:`ec2_describe_security_groups.g
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/cloudwatch/create_enable_alarms.go
-   :lines: 15-24
+.. literalinclude:: example_code/ec2/ec2_describe_security_groups.go
+   :lines: 15-26
 
 In the ``main`` function, get the security group ID that is passed in.
 
@@ -81,15 +81,17 @@ In the ``main`` function, get the security group ID that is passed in.
 Initialize a session and create an EC2 service client.
 
 .. literalinclude:: example_code/ec2/ec2_describe_security_groups.go
+   :dedent: 4
    :lines: 42-47
 
 Obtain and print out the security group descriptions. You will explicity check for
 errors caused by an invalid group ID.
 
 .. literalinclude:: example_code/ec2/ec2_describe_security_groups.go
-   :lines: 50-69
+   :dedent: 4
+   :lines: 50-68
 
-The following utility function is used by this example.
+The following utility function is used by this example to display errors.
 
 .. literalinclude:: example_code/ec2/ec2_describe_security_groups.go
    :lines: 71-74
@@ -120,16 +122,19 @@ routine.
 Create a session.
 
 .. literalinclude:: example_code/ec2/ec2_create_security_group.go
+   :dedent: 4
    :lines: 48-53
 
 If the VPC ID was not provided, you have to retrieve the first one in the account.
 
 .. literalinclude:: example_code/ec2/ec2_create_security_group.go
+   :dedent: 4
    :lines: 56-66
 
 Then create the security group with the VPC ID, name, and description.
 
 .. literalinclude:: example_code/ec2/ec2_create_security_group.go
+   :dedent: 4
    :lines: 69-86
 
 Add permissions to the security group.
@@ -165,7 +170,8 @@ Get the group ID that is passed in to the routine.
 Create a session.
 
 .. literalinclude:: example_code/ec2/ec2_delete_security_group.go
-   :lines: 46
+   :dedent: 4
+   :lines: 41-43
 
 Then delete the security group with the group ID that is passed in.
 

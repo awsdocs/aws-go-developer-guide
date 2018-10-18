@@ -25,22 +25,22 @@ to accept notifications from the resource with the ARN :code:`sourceArn`.
 The first step is to create the session and |LAM| client.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-configure-function-for-notification.go
-   :lines: 14-20
-   :dedent: 0
+   :lines: 29-32, 34
+   :dedent: 4
    :language: go
 
 Next, we create the structure for the input argument to the :code:`AddPermission` function.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-configure-function-for-notification.go
-   :lines: 22-28
-   :dedent: 0
+   :lines: 36-42
+   :dedent: 4
    :language: go
 
 Finally, we call :code:`AddPermission` and display a message with the result of the call.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-configure-function-for-notification.go
-   :lines: 30-37
-   :dedent: 0
+   :lines: 44-51
+   :dedent: 4
    :language: go
 
 See the `complete example

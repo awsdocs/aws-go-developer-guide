@@ -37,24 +37,31 @@ in the :code:`us-west-2` region using the following values:
 
 * Key: :code:`zipFileName`
 
-The first step is to create the session and |LAM| client.
+The first step is to import the packages we use in the example.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
-   :lines: 16-28
+   :lines: 17-26
    :dedent: 0
+   :language: go
+
+Next, create the session and |LAM| client.
+
+.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
+   :lines: 30-33, 35
+   :dedent: 4
    :language: go
 
 Next, create the structures for the input argument to the :code:`CreateFunction` function.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
-   :lines: 30-43
-   :dedent: 0
+   :lines: 44-57
+   :dedent: 4
    :language: go
 
 Finally, call :code:`CreateFunction` and display a message with the result of the call.
 
 .. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
-   :lines: 45-51
+   :lines: 59-64
    :dedent: 0
    :language: go
 
