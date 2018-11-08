@@ -65,9 +65,12 @@ value of the ``Name`` tag in its list of instances.
 .. literalinclude:: example_code/ec2/create_instance.go
    :lines: 15-
 
-
 You can add up to 10 tags to an instance in a
 single ``CreateTags`` operation.
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/create_instance.go>`_
+on GitHub.
 
 .. _create-image-without-block-device:
 
@@ -86,5 +89,6 @@ will fail if other parameters are present.
 .. literalinclude:: example_code/ec2/create_image_no_block_device.go
    :lines: 15-
 
-
-
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/create_image_no_block_device.go>`_
+on GitHub.

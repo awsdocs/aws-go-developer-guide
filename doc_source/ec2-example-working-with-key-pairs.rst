@@ -80,6 +80,10 @@ The routine uses the following utility function.
 .. literalinclude:: example_code/ec2/ec2_describe_keypairs.go
    :lines: 51-54
 
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_describe_keypairs.go>`_
+on GitHub.
+
 .. _example-create-key-pair:
 
 Create a Key Pair
@@ -106,6 +110,10 @@ The routine uses the following utility function.
 
 .. literalinclude:: example_code/ec2/ec2_create_keypair.go
    :lines: 64-67
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_create_keypair.go>`_
+on GitHub.
 
 .. _example-delete-key-pair:
 
@@ -134,4 +142,6 @@ The routine uses the following utility function.
 .. literalinclude:: example_code/ec2/ec2_delete_keypair.go
    :lines: 63-66
 
-
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_delete_keypair.go>`_
+on GitHub.

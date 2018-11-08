@@ -80,6 +80,10 @@ Call ``DescribeInstances`` to get detailed information for each instance.
 .. literalinclude:: example_code/ec2/describing_instances.go
    :lines: 35-41
 
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/describing_instances.go>`_
+on GitHub.
+
 .. _ec2-manage-instance-monitoring:
 
 Manage Instance Monitoring
@@ -105,6 +109,10 @@ to change instance monitoring.
 
 .. literalinclude:: example_code/ec2/monitoring_instances.go
    :lines: 40, 43-51, 54, 56-63, 65-89
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/monitoring_instances.go>`_
+on GitHub.
 
 .. _scenario-starting-stopping:
 
@@ -132,6 +140,11 @@ test whether you have permission to start or stop them.
 .. literalinclude:: example_code/ec2/start_stop_instances.go
    :lines: 40, 43-51, 54-87
 
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/start_stop_instances.go>`_
+on GitHub.
+
+.. _ec2-reboot-instances:
 
 Reboot Instances
 ================
@@ -164,4 +177,6 @@ reboot the instance.
 .. literalinclude:: example_code/ec2/reboot_instances.go
    :lines: 51,53-63
 
-
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/reboot_instances.go>`_
+on GitHub.

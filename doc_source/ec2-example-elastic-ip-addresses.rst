@@ -89,6 +89,10 @@ The ``fmtAddress`` and ``exitErrorf`` functions are utility functions used in th
 .. literalinclude:: example_code/ec2/ec2_describe_addresses.go
    :lines: 65-
 
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_describe_addresses.go>`_
+on GitHub.
+
 .. _ec2-example-allocate:
 
 Allocate Addresses to Instances
@@ -131,6 +135,11 @@ This example also uses the ``exitErrorf`` utility function.
 .. literalinclude:: example_code/ec2/ec2_allocate_address.go
    :lines: 70-73
 
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_allocate_address.go>`_
+on GitHub.           
+
+.. _ec2-example-release-instance-addresses:           
 
 Release Instance IP Addresses
 =============================
@@ -166,4 +175,6 @@ This example uses the ``fmtAddress`` and ``exitErrorf`` utility functions.
 .. literalinclude:: example_code/ec2/ec2_describe_addresses.go
    :lines: 65-
 
-
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_describe_addresses.go>`_
+on GitHub.

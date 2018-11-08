@@ -96,6 +96,10 @@ The following utility function is used by this example to display errors.
 .. literalinclude:: example_code/ec2/ec2_describe_security_groups.go
    :lines: 71-74
 
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_describe_security_groups.go>`_
+on GitHub.
+
 .. _create-security-group:
 
 Creating a Security Group
@@ -147,6 +151,10 @@ The following utility function is used by this example.
 .. literalinclude:: example_code/ec2/ec2_create_security_group.go
    :lines: 119-122
 
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_create_security_group.go>`_
+on GitHub.
+
 .. _delete-security-group:
 
 Deleting a Security Group
@@ -183,4 +191,6 @@ This example uses the following utility function.
 .. literalinclude:: example_code/ec2/ec2_delete_security_group.go
    :lines: 67-70
 
-
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_delete_security_group.go>`_
+on GitHub.
