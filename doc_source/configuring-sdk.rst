@@ -8,11 +8,11 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-
+.. _configuring-the-sdk:
+                       
 ########################
 Configuring the |sdk-go|
 ########################
-
 
 .. meta::
    :description: Configure the |sdk-go| to specify which credentials to use and to which region to send requests.
@@ -134,6 +134,8 @@ to get temporary security credentials to make calls to AWS.
 If you have configured your instance to use |IAM| roles, the SDK uses
 these credentials for your application automatically. You don't need to
 manually specify these credentials.
+
+.. _shared_credentials_file:
 
 Shared Credentials File
 -----------------------
@@ -339,3 +341,297 @@ which sets the :code:`Endpoint` to :code:`https://test.us-west-2.amazonaws.com` 
    svc := dynamodb.New(sess, &aws.Config{Endpoint: aws.String("https://test.us-west-2.amazonaws.com")})
 
 See :sdk-go-api-deep:`aws.Config <aws/#Config>` for details.
+
+.. Just for this CSM section
+
+.. |language| replace:: Go   
+.. |sdk| replace:: |sdk-go|
+.. |CSM| replace:: SDK Metrics
+.. |CSMlong| replace:: AWS SDK Metrics for Enterprise Support
+.. |CSMmerge| replace:: AWS SDK Metrics for Enterprise Support (SDK Metrics)
+.. |CreatePolicy| replace:: :sdk-go-api-deep:`CreatePolicy <service/iam/#IAM.CreatePolicy>`
+.. |CreateRole| replace:: :sdk-go-api-deep:`CreateRole <service/iam/#IAM.CreateRole>`
+.. |AttachRolePolicy| replace:: :sdk-go-api-deep:`AttachRolePolicy <service/iam/#IAM.AttachRolePolicy>`
+
+.. _csm_metrics:
+
+Using |CSM| in the |sdk|
+========================
+
+.. meta::
+   :description: Configure an agent for AWS SDK Metrics for Enterprise Support with the |sdk|.
+   :keywords: |sdk|, AWS SDK Metrics for Enterprise Support with |language|, use |language| to monitor AWS Services
+
+|CSMmerge| enables Enterprise customers to monitor their AWS service use.
+|CSM| can help to identify the health of their AWS services
+and diagnose latency caused by reaching their account usage limits or a service outage.
+
+|CSM| for AWS SDKs delivers telemetry from within the AWS SDKs that makes it possible for AWS to know
+when applications experience connection issues to AWS endpoints, and gain insight into why the issues occur.
+Telemetry helps AWS reduce the time to resolve problems that impact your application's access to AWS services.
+
+|CSM| monitors actions by using a |CWlong| agent running in the same environment as a client application
+that is using the |sdk|.
+The following steps to set up |CSM| focus on an |EC2| Linux instance.
+|CSM| is also available for your production environments if you enable it while configuring the |sdk|. 
+
+To utilize |CSM|, run the most current version of the |CW| agent.
+Learn how to :CW-dg:`Configure the CloudWatch Agent for SDK Metrics<Configure-CloudWatch-Agent-SDK-Metrics.>` in the |CW-dg|.
+
+To set up |CSM| with the |sdk|, follow these instructions:
+
+1. Create an application with an |sdk| client to use an AWS service.
+2. Host your project on an |EC2| instance or in your local environment.
+3. Install and use the most current version of the |sdk|.
+4. Install and configure an |CW| agent on an EC2 instance or in your local environment.
+5. :ref:`csm-set-permissions`
+6. :ref:`csm-enable-agent`
+7. :ref:`csm-view-metrics`
+
+For more information, see the following:
+
+* :ref:`csm-update-agent`
+* :ref:`csm-disable-agent`
+
+.. _csm-set-permissions:
+
+Configure |CSM| to Collect and Send Metrics
+-------------------------------------------
+
+You can configure |CSM| so that it collects and sends metrics by using the
+|sdk| or the |IAM| console,
+as explained in the following sections.
+
+.. _csm_setup_sdk:
+
+Set Up Access Permissions Using the |sdk|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Create an IAM role for the instance that has permission for |SSMlong| and |CSM|.
+
+First create a policy using |CreatePolicy|.
+Then create a role using |CreateRole|.
+Finally, attach the policy you created to your new role with |AttachRolePolicy|.
+
+.. literalinclude:: example_code/iam/iam_createcsmrole.go
+   :language: go
+   :start-after: snippet-start:[iam.go.create_csm_role]
+   :end-before: snippet-end:[iam.go.create_csm_role]
+
+.. _csm_setup_console:
+                
+Set Up Access Permissions Using the |IAM| Console
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can also use the IAM console to create a role.
+
+.. topic:: To create a role using the IAM console
+
+1. Go to the `IAM console <https://console.aws.amazon.com/iam>`_, and create a role to use |EC2|.
+2. In the navigation pane, choose **Roles**.
+3. Choose **Create Role**.
+4. Choose **AWS Service**, and then choose **EC2**.
+5. Choose **Next: Permissions**.
+6. Under **Attach permissions policies**, choose **create policy**.
+7. For :guilabel:`Service`, choose **SSM**. For :guilabel:`Actions`, choose :code:`GetParameter`.
+   For resources, specify the |CW| agent created in the previous section.
+8. Add an additional permission.
+9. Select **Choose a service**, and then **Enter service manually**.
+   For :guilabel:`Service`, enter :code:`sdkmetrics`.
+   Select all :code:`sdkmetrics` actions and all resources, and then choose **Review Policy**.
+10. Name the :guilabel:`Role` :code:`AmazonCSM`, and add a description.
+11. Choose **Create Role**.
+
+.. _csm-enable-agent:
+
+Enabling |CSM| for the |sdk|
+----------------------------
+
+|CSM| has the following default parameters.
+
+.. code-block:: ini
+
+    //default values
+     [
+         'enabled' => false,
+         'port' => 31000,
+         'client_id' => ''
+     ]
+
+You can enable |CSM| by setting an environment variable or by setting a value in the AWS Shared config file,
+as explained in the following sections.
+
+.. _enable_csm_env_var:
+
+Enable |CSM| Using an Environment Variable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To enable |CSM|, set the `AWS_CSM_ENABLED` environmental variable.
+
+.. code-block:: ini
+
+    AWS_CSM_ENABLED=true
+
+Other configuration settings are available.
+For more information about using shared files, see
+:doc:`Shared Credentials File <shared_credentials_file>`.
+
+Note: Enabling |CSM| does not configure your credentials to use an AWS service. 
+To do that, see
+:doc:`Specifying Credentials<specifying-credentials>`.
+
+.. _enable_csm_config_file:
+
+AWS Shared Config File
+~~~~~~~~~~~~~~~~~~~~~~
+
+If no CSM configuration is found in the environment variables, the SDK looks for your customized AWS profile field.
+Then it checks the :code:`aws_csm` profile.
+To enable |CSM|,
+add :code:`csm_enabled` to the shared config file `~/.aws/config`.
+
+.. code-block:: ini
+
+    [custom_profile_from_aws_profile]
+    csm_enabled = true
+
+    [aws_csm]
+    csm_enabled = true
+
+Other configuration settings are available.
+For more information about using AWS Shared files, see
+:doc:`Specifying Credentials <specifying_credentials>`.
+
+Note: Enabling |CSM| does not configure your credentials to use an AWS service.
+
+.. _csm-view-metrics:
+
+Viewing Metrics in |CW|
+-----------------------
+
+For Enterprise users, the agent automatically captures data about each client operation and passes the information to |CW|.
+
+.. topic:: To access your metrics
+
+1. Go to the `CloudWatch console <http://console.aws.amazon.com/cloudwatch>`_.
+2. In the navigation pane, choose :guilabel:`Metrics`.
+3. Choose :guilabel:`SDKMetrics`.
+4. View the metrics.
+
+You can use the |sdk| to get the monitored API call and call attempt events for an operation,
+as shown in the following example,
+which gets the events for *MyObject* in the |S3| bucket *MyBucket*.
+
+.. code-block:: php
+
+     try {
+            $result = $s3_client->getObject([
+                'Bucket' => 'MyBucket',
+                'Key'    => 'MyObject'
+            ]);
+            $result->getMonitoringEvents();
+        } catch (\Exception $e) {
+            if ($e instanceof MonitoringEventsInterface) {
+                $e->getMonitoringEvents();
+            }
+        }
+
+.. _csm-update-agent:
+
+Updating a |CW| Agent
+---------------------
+
+To change the port or client ID,
+set the values and then restart any AWS jobs that are currently active.
+You can set the values by using environment variables or in the shared configuration file,
+as explained in the following sections.
+
+.. _csm-update-agent-env-var:
+
+Setting |CSM| Values Using Environment Variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+|CSM| assigns a client ID to your application environment that is a
+searchable index point in the |CW| dashboard.
+To add a customized client ID string, add
+`AWS_CSM_CLIENT_ID=[some_string]` to the host's environment variables.
+
+Most services use the default port.
+But if your service requires a unique port ID,
+add `AWS_CSM_PORT=[port_number]`, to the host's environment variables.
+
+.. code-block:: ini
+
+    AWS_CSM_ENABLED=true
+    AWS_CSM_CLIENT_ID=myAppName
+    AWS_CSM_PORT=1234
+
+.. _csm-update-agent-env-var:
+
+Setting |CSM| Values Using the AWS Shared Config File
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+|CSM| assigns a client ID to your application environment that is a
+searchable index point in the |CW| dashboard.  To add a customized client ID string, add
+`csm_client_id = [some_string]` to `~/.aws/config`.
+
+Most services use the default port.
+If your service requires a unique port ID,
+add `csm_port = [port_number]` to `~/.aws/config`.
+
+.. code-block:: ini
+
+    [custom_profile_from_aws_profile]
+    csm_enabled = false
+    csm_client_id = myAppName
+    csm_port = 1234
+
+    [aws_csm]
+    csm_enabled = false
+    csm_client_id = myAppName
+    csm_port = 1234
+
+.. _restart_csm:
+    
+Restarting |CSM|
+----------------
+
+To restart |CSM|, stop and start the agent:
+
+.. code-block:: ini
+
+    amazon-cloudwatch-agent-ctl -a stop
+    amazon-cloudwatch-agent-ctl -a start
+
+.. _csm-disable-agent:
+
+Disabling |CSM|
+---------------
+
+To disable |CSM|, set the `AWS_CSM_ENABLED` environment variable to `false`,
+or set the `csm_enabled` value to `false` your AWS Shared config file `~/.aws/config`.
+Then restart your |CW| agent so that the changes can take effect.
+
+**Environment Variable**
+
+.. code-block:: ini
+
+    AWS_CSM_ENABLED=false
+
+**AWS Shared Config File**
+
+.. note:: Environment variables override the AWS Shared config file. If |CSM| is enabled in the environment variables, the |CSM| remains enabled.
+
+.. code-block:: ini
+
+    [custom_profile_from_aws_profile]
+    csm_enabled = false
+
+    [aws_csm]
+    csm_enabled = false
+
+To stop |CSM|, use the following command.
+
+.. code-block:: ini
+
+    amazon-cloudwatch-agent-ctl -a stop
