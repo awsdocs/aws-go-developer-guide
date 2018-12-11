@@ -518,23 +518,13 @@ For Enterprise users, the agent automatically captures data about each client op
 3. Choose :guilabel:`SDKMetrics`.
 4. View the metrics.
 
-You can use the |sdk| to get the monitored API call and call attempt events for an operation,
-as shown in the following example,
-which gets the events for *MyObject* in the |S3| bucket *MyBucket*.
+.. You can use the |sdk| to get the monitored API call and call attempt events for an operation,
+   as shown in the following example,
+   which gets the events for *MyObject* in the |S3| bucket *MyBucket*.
 
-.. code-block:: php
+   code-block:: go
 
-     try {
-            $result = $s3_client->getObject([
-                'Bucket' => 'MyBucket',
-                'Key'    => 'MyObject'
-            ]);
-            $result->getMonitoringEvents();
-        } catch (\Exception $e) {
-            if ($e instanceof MonitoringEventsInterface) {
-                $e->getMonitoringEvents();
-            }
-        }
+   ???
 
 .. _csm-update-agent:
 
