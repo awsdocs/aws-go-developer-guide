@@ -27,25 +27,21 @@ but if you discover data that is confusing or unexpected,
 but doesn't seem to be negatively impacting your application's performance,
 it is best to review that data during scheduled business reviews.
 
-.. list-table:: metrics
-   :widths: auto
+.. list-table:: Metrics
    :header-rows: 1
 
   * - Metric
     - Definition
     - How to use it
-
   * - CallCount
     - Total number of successful or failed API calls from your code to AWS services
     - Use it as a baseline to correlate with other metrics like errors or throttling.
-
   * - ClientErrorCount
     - Number of API calls that fail with client errors (4xx HTTP response codes).
       Examples: Throttling, Access denied, S3 bucket does not exist, and Invalid parameter value.
     - Except in certain cases related to throttling
       (ex. when throttling occurs due to a limit that needs to be increased)
       this metric can indicate something in your application that needs to be fixed.
-
   * - ConnectionErrorCount
     - Number of API calls that fail because of errors connecting to the service.
       These can be caused by network issues between the customer application
@@ -54,20 +50,17 @@ it is best to review that data during scheduled business reviews.
     - Use this metric to determine whether issues are specific to your application
       or are caused by your infrastructure and/or network.
       High ConnectionErrorCount could also indicate short timeout values for API calls.
-
   * - ThrottleCount
     - Number of API calls that fail due to throttling by AWS services.
     - Use this metric to assess if your application has reached throttle limits,
       as well as to determine the cause of retries and application latency.
       Consider distributing calls over a window instead of batching your calls.
-
   * - ServerErrorCount
     - Number of API calls that fail due to server errors (5xx HTTP response codes) from AWS Services.
       These are typically caused by AWS services.
     - Determine cause of SDK retries or latency.
       This metric will not always indicate that AWS services are at fault,
       as some AWS teams classify latency as an HTTP 503 response.
-
   * - EndToEndLatency
     - Total time for your application to make a call using the AWS SDK,
       inclusive of retries.
