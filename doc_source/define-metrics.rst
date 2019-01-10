@@ -28,32 +28,15 @@ but doesn't seem to be negatively impacting your application's performance,
 it is best to review that data during scheduled business reviews.
 
 .. list-table::
-  :widths: 1 2 2
-  :header-rows: 1
-
-  * - Column 1 heading
-    - Column 2 heading
-    - Column 3 heading
-
-  * - Row 1, column 1 content
-    - Row 1, column 2 content
-    - Row 1, column 3 content
-
-  * - Row 2, column 1 content
-    - Row 2, column 2 content
-    - Row 2, column 3 content
-
-.. list-table::
   :widths: auto auto
   :header-rows: 1
 
   * - Metric
-    - CallCount
+    - Definition
+    - How to use it
 
-  * - Definition
+  * - CallCount
     - Total number of successful or failed API calls from your code to AWS services
-
-  * - How to use it
     - Use it as a baseline to correlate with other metrics like errors or throttling.
 
 .. list-table::
@@ -61,13 +44,12 @@ it is best to review that data during scheduled business reviews.
   :header-rows: 1
 
   * - Metric
-    - ClientErrorCount
-
-  * - Definition
+    - Definition
+    - How to use it
+      
+  * - ClientErrorCount
     - Number of API calls that fail with client errors (4xx HTTP response codes).
       Examples: Throttling, Access denied, S3 bucket does not exist, and Invalid parameter value.
-
-  * - How to use it
     - Except in certain cases related to throttling
       (ex. when throttling occurs due to a limit that needs to be increased)
       this metric can indicate something in your application that needs to be fixed.
@@ -77,15 +59,14 @@ it is best to review that data during scheduled business reviews.
   :header-rows: 1
 
   * - Metric
-    - ConnectionErrorCount
+    - Definition
+    - How to use it
 
-  * - Definition
+  * - ConnectionErrorCount
     - Number of API calls that fail because of errors connecting to the service.
       These can be caused by network issues between the customer application
       and AWS services including load balancers, DNS failures, transit providers.
       In some cases, AWS issues may result in this error.
-
-  * - How to use it
     - Use this metric to determine whether issues are specific to your application
       or are caused by your infrastructure and/or network.
       High ConnectionErrorCount could also indicate short timeout values for API calls.
@@ -95,12 +76,11 @@ it is best to review that data during scheduled business reviews.
   :header-rows: 1
 
   * - Metric
-    - ThrottleCount
+    - Definition
+    - How to use it
 
-  * - Definition
+  * - ThrottleCount
     - Number of API calls that fail due to throttling by AWS services.
-
-  * - How to use it
     - Use this metric to assess if your application has reached throttle limits,
       as well as to determine the cause of retries and application latency.
       Consider distributing calls over a window instead of batching your calls.
@@ -110,13 +90,12 @@ it is best to review that data during scheduled business reviews.
   :header-rows: 1
 
   * - Metric
-    - ServerErrorCount
+    - Definition
+    - How to use it
 
-  * - Definition
+  * - ServerErrorCount
     - Number of API calls that fail due to server errors (5xx HTTP response codes) from AWS Services.
       These are typically caused by AWS services.
-
-  * - How to use it
     - Determine cause of SDK retries or latency.
       This metric will not always indicate that AWS services are at fault,
       as some AWS teams classify latency as an HTTP 503 response.
@@ -126,15 +105,14 @@ it is best to review that data during scheduled business reviews.
   :header-rows: 1
 
   * - Metric
-    - EndToEndLatency
+    - Definition
+    - How to use it
 
-  * - Definition
+  * - EndToEndLatency
     - Total time for your application to make a call using the AWS SDK,
       inclusive of retries.
       In other words, regardless of whether it is successful after several attempts,
       or as soon as a call fails due to an unretriable error.
-
-  * - How to use it
     - Determine how AWS API calls contribute to your application's overall latency.
       Higher than expected latency may be caused by issues with network, firewall,
       or other configuration settings, or by latency that occurs as a result of SDK retries. 
