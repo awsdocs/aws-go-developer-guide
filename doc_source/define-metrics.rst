@@ -27,8 +27,8 @@ but if you discover data that is confusing or unexpected,
 but doesn't seem to be negatively impacting your application's performance,
 it is best to review that data during scheduled business reviews.
 
-.. list-table::
-   :widths: auto auto auto
+.. list-table:: metrics
+   :widths: auto
    :header-rows: 1
 
   * - Metric
@@ -39,28 +39,12 @@ it is best to review that data during scheduled business reviews.
     - Total number of successful or failed API calls from your code to AWS services
     - Use it as a baseline to correlate with other metrics like errors or throttling.
 
-.. list-table::
-   :widths: auto auto auto
-   :header-rows: 1
-
-  * - Metric
-    - Definition
-    - How to use it
-      
   * - ClientErrorCount
     - Number of API calls that fail with client errors (4xx HTTP response codes).
       Examples: Throttling, Access denied, S3 bucket does not exist, and Invalid parameter value.
     - Except in certain cases related to throttling
       (ex. when throttling occurs due to a limit that needs to be increased)
       this metric can indicate something in your application that needs to be fixed.
-
-.. list-table::
-   :widths: auto auto auto
-   :header-rows: 1
-
-  * - Metric
-    - Definition
-    - How to use it
 
   * - ConnectionErrorCount
     - Number of API calls that fail because of errors connecting to the service.
@@ -71,27 +55,11 @@ it is best to review that data during scheduled business reviews.
       or are caused by your infrastructure and/or network.
       High ConnectionErrorCount could also indicate short timeout values for API calls.
 
-.. list-table::
-   :widths: auto auto auto
-   :header-rows: 1
-
-  * - Metric
-    - Definition
-    - How to use it
-
   * - ThrottleCount
     - Number of API calls that fail due to throttling by AWS services.
     - Use this metric to assess if your application has reached throttle limits,
       as well as to determine the cause of retries and application latency.
       Consider distributing calls over a window instead of batching your calls.
-
-.. list-table::
-   :widths: auto auto auto
-   :header-rows: 1
-
-  * - Metric
-    - Definition
-    - How to use it
 
   * - ServerErrorCount
     - Number of API calls that fail due to server errors (5xx HTTP response codes) from AWS Services.
@@ -99,14 +67,6 @@ it is best to review that data during scheduled business reviews.
     - Determine cause of SDK retries or latency.
       This metric will not always indicate that AWS services are at fault,
       as some AWS teams classify latency as an HTTP 503 response.
-
-.. list-table::
-   :widths: auto auto auto
-   :header-rows: 1
-
-  * - Metric
-    - Definition
-    - How to use it
 
   * - EndToEndLatency
     - Total time for your application to make a call using the AWS SDK,
