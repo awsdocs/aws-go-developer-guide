@@ -342,3 +342,4 @@ which sets the :code:`Endpoint` to :code:`https://test.us-west-2.amazonaws.com` 
 
 See :sdk-go-api-deep:`aws.Config <aws/#Config>` for details.
 
+.. include:: sdk-metrics.txt
