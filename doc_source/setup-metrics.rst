@@ -11,7 +11,7 @@
 .. _setup_metrics:
 
 #########################
-set up |CSM| in the |sdk|
+Set up |CSM| in the |sdk|
 #########################
 
 .. meta::
@@ -23,9 +23,10 @@ These steps pertain to an |EC2| instance running Amazon Linux for a client appli
 |CSM| is also available for your production environments if you enable it while configuring the |sdk|.
 
 To use |CSM|, run the latest version of the |CW| agent.
+
 .. Learn how to |CW_IAM_CSM| in the Amazon |CW| User Guide.
 
-For more details about |IAM| Permissions for |CSM|, check out the |IAM| Permissions for |CSM| for |sdk| article.
+For details about |IAM| Permissions for |CSM|, see :doc:`authorize-metrics`.
 
 To set up |CSM| with the |sdk|:
 
@@ -79,9 +80,10 @@ To turn on |CSM|, add the following to your environmental variables.
 
 ``export AWS_CSM_ENABLED=true``
 
-:ref:`update_cw_agent <Other configuration settings are available>`.
+Other configuration settings are available, 
+see :doc:`update_cw_agent` for details.
 For more information about using shared files, see the environment variables
-information in :doc:`configuring-sdk`_.
+information in :doc:`configuring-sdk`.
 
 .. Note::
 
@@ -105,9 +107,10 @@ To enable |CSM|, add ``csm_enabled`` to the shared config file *~/.aws/config*.
    [profile aws_csm]
    csm_enabled = true
 
-:ref:`update_cw_agent <Other configuration settings are available>`.
+Other configuration settings are available, 
+see :doc:`update_cw_agent` for details.
 For more information about using shared files, see the environment variables
-information in :doc:`configuring-sdk`_.
+information in :doc:`configuring-sdk`.
 
 .. Note::
 
@@ -128,7 +131,7 @@ Option 1: Set Environment Variables
 -----------------------------------
 
 Most AWS services use the default port. But if the service you want |CSM| to monitor uses a unique port,
-add ``AWS_CSM_PORT=[``*port_number*``]``, to the host's environment variables.
+add ``AWS_CSM_PORT=[*port_number*]``, to the host's environment variables.
 
 .. code-block::
 
@@ -141,7 +144,7 @@ Option 2: AWS Shared Config File
 --------------------------------
 
 Most services use the default port.
-If your service requires a unique port ID, add ``csm_port = [``*port_number*``]`` to *~/.aws/config*.
+If your service requires a unique port ID, add ``csm_port = [*port_number*]`` to *~/.aws/config*.
 
 .. code-block:
 
@@ -165,11 +168,12 @@ To restart a job, run the following commands.
    amazon-cloudwatch-agent-ctl -a stop;
    amazon-cloudwatch-agent-ctl -a start;
 
-.. _disable_csm::
+.. _disable_sdk_metrics:
 
-   Disable |CSM|
+Disable |CSM|
+=============
 
-To turn off |CSM|, set ``csm_enabled` to **false** in your environment variables
+To turn off |CSM|, set ``csm_enabled`` to **false** in your environment variables
 or in your AWS Shared config file *~/.aws/config*.
 Then restart your |CW| agent so that the changes can take effect.
 
