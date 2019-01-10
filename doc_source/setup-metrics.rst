@@ -10,8 +10,9 @@
 
 .. _setup_metrics:
 
+#########################
 set up |CSM| in the |sdk|
-=========================
+#########################
 
 .. meta::
    :description: Configure an agent for |CSM| for Enterprise Support with the |sdk|.
