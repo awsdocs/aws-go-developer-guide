@@ -23,7 +23,7 @@ These steps pertain to an |EC2| instance running Amazon Linux for a client appli
 |CSM| is also available for your production environments if you enable it while configuring the |sdk|.
 
 To use |CSM|, run the latest version of the |CW| agent.
-Learn how to |CW_IAM_CSM| in the Amazon |CW| User Guide.
+.. Learn how to |CW_IAM_CSM| in the Amazon |CW| User Guide.
 
 For more details about |IAM| Permissions for |CSM|, check out the |IAM| Permissions for |CSM| for |sdk| article.
 

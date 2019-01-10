@@ -22,8 +22,8 @@ Use the following |language| code sample or the AWS Console to create an
 |IAM| Policy and Role for an |CW| agent to access |CSM| in your environment.
 
 Learn more about using |CSM| with |sdk| in :ref:`setup-metrics`.
-For more information about |CSM|,
-see |CW_IAM_CSM| in the *|CWlong| User Guide*.
+.. For more information about |CSM|,
+   see |CW_IAM_CSM| in the *|CWlong| User Guide*.
 
 .. _setup_access_permissions_sdk:
 
