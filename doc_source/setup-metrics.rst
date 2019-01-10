@@ -100,12 +100,13 @@ the |sdk| looks for your customized AWS profile field.
 Then it checks the ``aws_csm`` profile.
 To enable |CSM|, add ``csm_enabled`` to the shared config file *~/.aws/config*.
 
-.. code-block::
-   [default]
-   csm_enabled = true
+.. code-block:: sh
+   
+    [default]
+    csm_enabled = true
 
-   [profile aws_csm]
-   csm_enabled = true
+    [profile aws_csm]
+    csm_enabled = true
 
 Other configuration settings are available, 
 see :doc:`update_cw_agent` for details.
@@ -131,12 +132,12 @@ Option 1: Set Environment Variables
 -----------------------------------
 
 Most AWS services use the default port. But if the service you want |CSM| to monitor uses a unique port,
-add ``AWS_CSM_PORT=[*port_number*]``, to the host's environment variables.
+add ``AWS_CSM_PORT=[PORT-NUMBER]``, where PORT-NUMBER is the port number, to the host's environment variables.
 
-.. code-block::
+.. code-block:: sh
 
-   export AWS_CSM_ENABLED=true
-   export AWS_CSM_PORT=1234
+    export AWS_CSM_ENABLED=true
+    export AWS_CSM_PORT=1234
 
 .. _update_cw_agent_option2:
 
@@ -144,17 +145,18 @@ Option 2: AWS Shared Config File
 --------------------------------
 
 Most services use the default port.
-If your service requires a unique port ID, add ``csm_port = [*port_number*]`` to *~/.aws/config*.
+If your service requires a unique port ID,
+add ``AWS_CSM_PORT=[PORT-NUMBER]``, where PORT-NUMBER is the port number, to *~/.aws/config*.
 
-.. code-block:
+.. code-block:: sh
 
-   [default]
-   csm_enabled = false
-   csm_port = 1234
+    [default]
+    csm_enabled = false
+    csm_port = 1234
 
-   [profile aws_csm]
-   csm_enabled = false
-   csm_port = 1234
+    [profile aws_csm]
+    csm_enabled = false
+    csm_port = 1234
 
 .. _restart_csm:
 
@@ -163,10 +165,10 @@ Restart |CSM|
 
 To restart a job, run the following commands.
 
-.. code-block::
+.. code-block:: sh
 
-   amazon-cloudwatch-agent-ctl -a stop;
-   amazon-cloudwatch-agent-ctl -a start;
+    amazon-cloudwatch-agent-ctl -a stop;
+    amazon-cloudwatch-agent-ctl -a start;
 
 .. _disable_sdk_metrics:
 
@@ -199,13 +201,13 @@ Option 2: AWS Shared Config File
    Environment variables override the AWS Shared config file.
    If |CSM| is enabled in the environment variables, the |CSM| remains enabled.
 
-.. code-block::
+.. code-block:: sh
 
-   [default]
-   csm_enabled = false
+    [default]
+    csm_enabled = false
 
-   [profile aws_csm]
-   csm_enabled = false
+    [profile aws_csm]
+    csm_enabled = false
 
 .. _stop_csm_restart_cw_agent:
 

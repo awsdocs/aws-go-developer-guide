@@ -28,6 +28,22 @@ but doesn't seem to be negatively impacting your application's performance,
 it is best to review that data during scheduled business reviews.
 
 .. list-table::
+  :widths: 1 2 2
+  :header-rows: 1
+
+  * - Column 1 heading
+    - Column 2 heading
+    - Column 3 heading
+
+  * - Row 1, column 1 content
+    - Row 1, column 2 content
+    - Row 1, column 3 content
+
+  * - Row 2, column 1 content
+    - Row 2, column 2 content
+    - Row 2, column 3 content
+
+.. list-table::
   :widths: auto auto
   :header-rows: 1
 
