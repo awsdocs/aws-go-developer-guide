@@ -12,8 +12,8 @@
 .. |CSM| replace:: SDK Metrics
 .. |CSMlong| replace:: AWS SDK Metrics for Enterprise Support
 .. |CSMmerge| replace:: AWS SDK Metrics for Enterprise Support (SDK Metrics)
-.. |CSM_CW| replace:: |CW| User Guide `<https://alpha-docs-aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-SDK-Metrics.html>`_
-.. |CW_IAM_CSM| replace:: |IAM| Permissions for |CSM| `<https://alpha-docs-aws.amazon.com/AmazonCloudWatch/latest/monitoring/Set-IAM-Permissions-For-SDK-Metrics.html.html>`_
+.. |CSM_CW| replace:: |CW| User Guide `<https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-SDK-Metrics.html>`_
+.. |CW_IAM_CSM| replace:: |IAM| Permissions for |CSM| `<https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Set-IAM-Permissions-For-SDK-Metrics.html.html>`_
 .. |CreatePolicy| replace:: :sdk-go-api-deep:`CreatePolicy <service/iam/#IAM.CreatePolicy>`
 .. |CreateRole| replace:: :sdk-go-api-deep:`CreateRole <service/iam/#IAM.CreateRole>`
 .. |AttachRolePolicy| replace:: :sdk-go-api-deep:`AttachRolePolicy <service/iam/#IAM.AttachRolePolicy>`
