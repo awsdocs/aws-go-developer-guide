@@ -28,8 +28,8 @@ but doesn't seem to be negatively impacting your application's performance,
 it is best to review that data during scheduled business reviews.
 
 .. list-table::
-  :widths: auto auto auto
-  :header-rows: 1
+   :widths: auto auto auto
+   :header-rows: 1
 
   * - Metric
     - Definition
@@ -40,8 +40,8 @@ it is best to review that data during scheduled business reviews.
     - Use it as a baseline to correlate with other metrics like errors or throttling.
 
 .. list-table::
-  :widths: auto auto auto
-  :header-rows: 1
+   :widths: auto auto auto
+   :header-rows: 1
 
   * - Metric
     - Definition
@@ -55,8 +55,8 @@ it is best to review that data during scheduled business reviews.
       this metric can indicate something in your application that needs to be fixed.
 
 .. list-table::
-  :widths: auto auto auto
-  :header-rows: 1
+   :widths: auto auto auto
+   :header-rows: 1
 
   * - Metric
     - Definition
@@ -72,8 +72,8 @@ it is best to review that data during scheduled business reviews.
       High ConnectionErrorCount could also indicate short timeout values for API calls.
 
 .. list-table::
-  :widths: auto auto auto
-  :header-rows: 1
+   :widths: auto auto auto
+   :header-rows: 1
 
   * - Metric
     - Definition
@@ -86,8 +86,8 @@ it is best to review that data during scheduled business reviews.
       Consider distributing calls over a window instead of batching your calls.
 
 .. list-table::
-  :widths: auto auto auto
-  :header-rows: 1
+   :widths: auto auto auto
+   :header-rows: 1
 
   * - Metric
     - Definition
@@ -101,8 +101,8 @@ it is best to review that data during scheduled business reviews.
       as some AWS teams classify latency as an HTTP 503 response.
 
 .. list-table::
-  :widths: auto auto auto
-  :header-rows: 1
+   :widths: auto auto auto
+   :header-rows: 1
 
   * - Metric
     - Definition
