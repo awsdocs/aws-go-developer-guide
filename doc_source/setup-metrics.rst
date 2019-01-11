@@ -56,7 +56,7 @@ Enable |CSM| for the |sdk|
 By default, |CSM| is turned off, and the port is set to 31000.
 The following are the default parameters.
 
-.. code-block::
+.. code-block:: sh
 
    //default values
    [
