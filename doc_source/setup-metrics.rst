@@ -30,17 +30,17 @@ For details about |IAM| Permissions for |CSM|, see :doc:`authorize-metrics`.
 
 To set up |CSM| with the |sdk|:
 
-1. Create an application with an |sdk| client to use an AWS service.
+#. Create an application with an |sdk| client to use an AWS service.
 
-1. Host your project on an |EC2| instance or in your local environment.
+#. Host your project on an |EC2| instance or in your local environment.
 
-1. Install and use the latest version of the |sdk|.
+#. Install and use the latest version of the |sdk|.
 
-1. Install and configure a |CW| agent on an |EC2| instance or in your local environment.
+#. Install and configure a |CW| agent on an |EC2| instance or in your local environment.
 
-1. Authorize |CSM| to collect and send metrics.
+#. Authorize |CSM| to collect and send metrics.
 
-1. :ref:`enable_sdk_metrics`.
+#. :ref:`enable_sdk_metrics`.
 
 For more information, see:
 
