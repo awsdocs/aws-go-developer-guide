@@ -170,28 +170,28 @@ Set Up Access Permissions by Using the |IAM| Console
 
 Alternatively, you can use the |IAM| console to create a role.
 
-- Go to the |IAM| console, and create a role to use |EC2|.
+1. Go to the |IAM| console, and create a role to use |EC2|.
 
-- In the navigation pane, choose **Roles**.
+1. In the navigation pane, choose **Roles**.
 
-- Choose **Create Role**.
+1. Choose **Create Role**.
 
-- Choose **AWS Service**, and then **EC2**.
+1. Choose **AWS Service**, and then **EC2**.
 
-- Choose **Next: Permissions**.
+1. Choose **Next: Permissions**.
 
-- Under **Attach permissions policies**, choose **create policy**.
+1. Under **Attach permissions policies**, choose **create policy**.
 
-- For **Service**, choose **Systems Manager**.
-  For **Actions**, expand **Read**, and choose ``GetParameters``.
-  For resources, specify your |CW| agent.
+1. For **Service**, choose **Systems Manager**.
+   For **Actions**, expand **Read**, and choose ``GetParameters``.
+   For resources, specify your |CW| agent.
 
-- Add additional permission.
+1. Add additional permission.
 
-- Select **Choose a service**, and then **Enter service manually**.
-  For **Service**, enter ``sdkmetrics``.
-  Select all ``sdkmetrics`` actions and all resources, and then choose **Review Policy**.
+1. Select **Choose a service**, and then **Enter service manually**.
+   For **Service**, enter ``sdkmetrics``.
+   Select all ``sdkmetrics`` actions and all resources, and then choose **Review Policy**.
 
-- Name the **Role** ``AmazonSDKMetrics``, and add a description.
+1. Name the **Role** ``AmazonSDKMetrics``, and add a description.
 
-- Choose **Create Role**.
+1. Choose **Create Role**.
