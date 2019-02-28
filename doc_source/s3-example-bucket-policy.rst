@@ -96,6 +96,10 @@ Use Go's JSON package to print the Policy JSON returned by the call.
    :language: go
    :dedent: 4
 
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_get_bucket_policy.go>`_
+on GitHub.
+            
 .. _s3-example-set-policy:
 
 Set Bucket Policy
@@ -146,3 +150,7 @@ The ``exitError`` function is used to deal with printing any errors.
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
    :lines: 91-94
    :language: go
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_set_bucket_policy.go>`_
+on GitHub.
