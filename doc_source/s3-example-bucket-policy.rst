@@ -77,7 +77,7 @@ Initialize a session that the SDK will use to load credentials
 from the shared credentials file, ~/.aws/credentials, and create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
-   :lines: 44-49
+   :lines: 44-47, 49
    :language: go
    :dedent: 4
 
@@ -105,44 +105,44 @@ This routine sets the policy for a bucket. If the bucket doesn't exist, or there
 an error, an error message will be printed instead. It requires the bucket name as input. It also requires the same Go and |sdk-go| packages as the previous example, except for the ``bytes`` Go package.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
-   :lines: 17-27
+   :lines: 17-26
    :language: go
 
 Add the main function and parse the arguments to get the bucket name.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
-   :lines: 34-39
+   :lines: 33-38
    :language: go
 
 Initialize a session that the SDK will use to load configuration, credentials,
 and region information from the shared credentials file, ~/.aws/credentials, and create a new S3 service client.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
-   :lines: 43-48
+   :lines: 42-45, 47
    :language: go
 
 Create a policy using the map interface, filling in the bucket as the resource.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
-   :lines: 52-67
+   :lines: 51-66
    :language: go
 
 Use Go's JSON package to marshal the policy into a JSON value so that it can be
 sent to S3.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
-   :lines: 70-73
+   :lines: 69
    :language: go
 
 Call the S3 client's :sdk-go-api-deep:`PutBucketPolicy <service/s3/#S3.PutBucketPolicy>`
 to PUT the policy for the bucket and print the results.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
-   :lines: 76-90
+   :lines: 75-78, 87-88
    :language: go
 
 The ``exitError`` function is used to deal with printing any errors.
 
 .. literalinclude:: example_code/s3/s3_set_bucket_policy.go
-   :lines: 92-95
+   :lines: 91-94
    :language: go
