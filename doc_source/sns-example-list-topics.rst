@@ -21,5 +21,10 @@ Listing Your |SNS| Topics
 
 The following example lists the ARNs of your |SNS| topics in your default region.
 
-.. literalinclude:: sns.go.list_topics.txt
+.. 
+   literalinclude:: sns.go.list_topics.txt
+   language: go
+
+.. literalinclude:: example_code/sns/SnsListTopics.go
+   :lines: 15-43
    :language: go

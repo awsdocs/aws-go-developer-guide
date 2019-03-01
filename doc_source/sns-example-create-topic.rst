@@ -22,5 +22,10 @@ Creating an |SNS| Topic
 The following example creates a topic with the name from the command line,
 in your default region, and displays the resulting topic ARN.
 
-.. literalinclude:: sns.go.create_topic.txt
+..
+   literalinclude:: sns.go.create_topic.txt
+   language: go
+
+.. literalinclude:: example_code/sns/SnsCreateTopic.go
+   :lines: 15-50
    :language: go

@@ -22,5 +22,10 @@ List Your |SNS| Subscriptions
 The following example lists the ARNs for your Amazon SNS topic subscriptions and the associated topic
 in your default region.
 
-.. literalinclude:: sns.go.subscribe.txt
+..
+   literalinclude:: sns.go.subscribe.txt
+   language: go
+
+.. literalinclude:: example_code/sns/SnsListSubscriptions.go
+   :lines: 15-45
    :language: go
