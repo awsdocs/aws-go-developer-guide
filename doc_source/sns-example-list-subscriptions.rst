@@ -25,5 +25,5 @@ in your default region.
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/sns/SnsSubscribe.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/sns/SnsListSubscriptions.go>`_
 on GitHub.
