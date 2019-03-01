@@ -23,10 +23,10 @@ The following example creates a subscription to the topic with the supplied ARN
 for the user with the supplied email address in your default region,
 and displays the resulting ARN.
 
-..
-   literalinclude:: sns.go.subscribe.txt
-   language: go
-
-.. literalinclude:: example_code/sns/SnsSubscribe.go
-   :lines: 15-60
+.. literalinclude:: sns.go.subscribe.txt
    :language: go
+
+..
+   literalinclude:: example_code/sns/SnsSubscribe.go
+   lines: 15-60
+   language: go
