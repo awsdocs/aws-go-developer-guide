@@ -15,8 +15,7 @@ Creating an |SNS| Topic
 #######################
 
 .. meta::
-    :description:
-        Create an Amazon SNS topic using this |sdk-go| code example.
+    :description: Create an Amazon SNS topic using this |sdk-go| code example.
     :keywords: |sdk-go| code examples, SNS, create topic
 
 The following example creates a topic with the name from the command line,
@@ -25,7 +24,6 @@ in your default region, and displays the resulting topic ARN.
 .. literalinclude:: sns.go.create_topic.txt
    :language: go
 
-..
-   literalinclude:: example_code/sns/SnsCreateTopic.go
-   lines: 15-50
-   language: go
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/sns/SnsCreateTopic.go>`_
+on GitHub.

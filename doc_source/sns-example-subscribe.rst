@@ -15,8 +15,7 @@ Subscribe to an |SNS| Topic
 ###########################
 
 .. meta::
-    :description:
-        Create a subscription in an Amazon SNS topic using the |sdk-go|.
+    :description: Create a subscription in an Amazon SNS topic using the |sdk-go|.
     :keywords: |sdk-go| code examples, SNS, subscribe
 
 The following example creates a subscription to the topic with the supplied ARN
@@ -26,7 +25,6 @@ and displays the resulting ARN.
 .. literalinclude:: sns.go.subscribe.txt
    :language: go
 
-..
-   literalinclude:: example_code/sns/SnsSubscribe.go
-   lines: 15-60
-   language: go
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/sns/SnsSubscribe.go>`_
+on GitHub.

@@ -15,8 +15,7 @@ List Your |SNS| Subscriptions
 #############################
 
 .. meta::
-    :description:
-        List the ARNs for your Amazon SNS topic subscriptions and the topic using this |sdk-go| code example.
+    :description: List the ARNs for your Amazon SNS topic subscriptions and the topic using this |sdk-go| code example.
     :keywords: |sdk-go| code examples, SNS, list subscriptions
 
 The following example lists the ARNs for your Amazon SNS topic subscriptions and the associated topic
@@ -25,7 +24,6 @@ in your default region.
 .. literalinclude:: sns.go.subscribe.txt
    :language: go
 
-..
-   literalinclude:: example_code/sns/SnsListSubscriptions.go
-   lines: 15-45
-   language: go
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/sns/SnsSubscribe.go>`_
+on GitHub.

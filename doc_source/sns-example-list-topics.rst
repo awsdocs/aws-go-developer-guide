@@ -15,8 +15,7 @@ Listing Your |SNS| Topics
 #########################
 
 .. meta::
-    :description:
-        List the ARNs of your Amazon SNS topics using this |sdk-go| code example.
+    :description: List the ARNs of your Amazon SNS topics using this |sdk-go| code example.
     :keywords: |sdk-go| code examples, SNS, list topics
 
 The following example lists the ARNs of your |SNS| topics in your default region.
@@ -24,7 +23,6 @@ The following example lists the ARNs of your |SNS| topics in your default region
 .. literalinclude:: sns.go.list_topics.txt
    :language: go
 
-..
-   literalinclude:: example_code/sns/SnsListTopics.go
-   lines: 15-43
-   language: go
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/sns/SnsListTopics.go>`_
+on GitHub.

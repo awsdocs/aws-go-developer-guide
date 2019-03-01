@@ -15,8 +15,7 @@ Sending a Message to All |SNS| Topic Subscribers
 ################################################
 
 .. meta::
-    :description:
-        Send messages to all |SNS| topic subscribers using this |sdk-go| code example.
+    :description: Send messages to all |SNS| topic subscribers using this |sdk-go| code example.
     :keywords: |sdk-go| code examples, SNS
 
 The following example sends the message supplied on the command line to all subscribers to the |SNS| topic with the ARN
@@ -25,7 +24,6 @@ specified on the command line.
 .. literalinclude:: sns.go.publish.txt
    :language: go
 
-..
-   literalinclude:: example_code/sns/SnsPublish.go
-   lines: 15-58
-   language: go
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/sns/SnsPublish.go>`_
+on GitHub.
