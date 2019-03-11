@@ -40,7 +40,4 @@ You can download complete versions of these example files from the
    cw-example-using-alarm-actions
    cw-example-getting-metrics
    cw-example-sending-events
-
-
-
-
+   cw-example-getting-log-events
