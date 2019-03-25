@@ -33,13 +33,13 @@ Add the following statements to import the Go and |sdk-go| packages used in the 
 Create the data structure we use to contain the information about the
 table item.
 
-.. literalinclude:: dynamodb.go.load_items.struct
+.. literalinclude:: dynamodb.go.load_items.struct.txt
    :dedent: 0
    :language: go
 
 Create a function to get the table items from the JSON file.
 
-.. literalinclude:: dynamodb.go.load_items.func
+.. literalinclude:: dynamodb.go.load_items.func.txt
    :dedent: 0
    :language: go
 

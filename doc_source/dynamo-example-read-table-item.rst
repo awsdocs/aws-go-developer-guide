@@ -44,7 +44,7 @@ credentials from the shared credentials file *~/.aws/credentials*
 and region from the shared configuration file *~/.aws/config*
 and create a new |DDB| service client.
 
-.. literalinclude:: dynamodb.go.read_item.session
+.. literalinclude:: dynamodb.go.read_item.session.txt
    :dedent: 4
    :language: go
 

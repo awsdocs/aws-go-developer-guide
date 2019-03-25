@@ -37,7 +37,7 @@ credentials from the shared credentials file *~/.aws/credentials*
 and region from the shared configuration file *~/.aws/config*
 and create a new |DDB| service client.
 
-.. literalinclude:: dynamodb.go.delete_item.session
+.. literalinclude:: dynamodb.go.delete_item.session.txt
    :dedent: 4
    :language: go
 
@@ -45,7 +45,7 @@ Call **DeleteItem** to delete the item from the table.
 If we encounter an error, print the error message.
 Otherwise, display a message that the item was deleted.
 
-.. literalinclude:: dynamodb.go.delete_item.call
+.. literalinclude:: dynamodb.go.delete_item.call.txt
    :dedent: 4
    :language: go
 

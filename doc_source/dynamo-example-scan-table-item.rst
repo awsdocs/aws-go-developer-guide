@@ -39,7 +39,7 @@ Add the following statements to import the Go and |sdk-go| packages used in the 
 Create the data structure we use to contain the information about the
 table item.
 
-.. literalinclude:: dynamodb.go.scan_items.struct
+.. literalinclude:: dynamodb.go.scan_items.struct.txt
    :dedent: 0
    :language: go
 
