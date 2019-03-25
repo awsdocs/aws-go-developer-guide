@@ -18,7 +18,7 @@ Creating |DDBlong| Table Items from a JSON File
    :description: Create DynamoDB table items from a JSON file using this AWS SDK for Go code example.
    :keywords: AWS SDK for Go code examples, DynamoDB
 
-The following example uses the |DDB|
+The following example uses the |DDB| 
 :sdk-go-api-deep:`PutItem <service/dynamodb/#DynamoDB.PutItem>` operation
 in a loop to create the items defined in *movie_data.json* file in the :code:`Movies` table in 
 your default region.

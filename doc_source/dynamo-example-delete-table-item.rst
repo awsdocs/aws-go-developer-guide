@@ -19,8 +19,8 @@ Deleting an |DDBlong| Table Item
         Delete an Amazon DynamoDB table item using this AWS SDK for Go code example.
     :keywords: AWS SDK for Go code examples, DynamoDB
 
-The following example uses the |DDB|
-:sdk-go-api-deep:`UpdateItem <service/dynamodb/#DynamoDB.UpdateItem>` operation
+The following example uses the |DDB| 
+:sdk-go-api-deep:`DeleteItem <service/dynamodb/#DynamoDB.DeleteItem>` operation
 to delete the item with the :code:`year` **2015** and
 :code:`title`  **The Big New Movie**
 from the :code:`Movies` table in your default region.

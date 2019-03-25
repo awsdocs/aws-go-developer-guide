@@ -19,7 +19,7 @@ Updating an |DDBlong| Table Item
         Update an Amazon DynamoDB table item using this AWS SDK for Go code example.
     :keywords: AWS SDK for Go code examples, DynamoDB
 
-The following example uses the |DDB|
+The following example uses the |DDB| 
 :sdk-go-api-deep:`UpdateItem <service/dynamodb/#DynamoDB.UpdateItem>` operation
 to update the rating to **0.5** for the item with the :code:`year` **2015** and
 :code:`title`  **The Big New Movie**

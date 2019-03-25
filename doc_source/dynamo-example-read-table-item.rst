@@ -19,7 +19,7 @@ Reading an |DDBlong| Table Item
         Display information about an item in an Amazon DynamoDB tables using this AWS SDK for Go code example.
     :keywords: AWS SDK for Go code examples, DynamoDB
 
-The following example uses the |DDB|
+The following example uses the |DDB| 
 :sdk-go-api-deep:`GetItem <service/dynamodb/#DynamoDB.GetItem>` operation
 to retrieve information about the item with the :code:`year` **2015** and
 :code:`title`  **The Big New Movie** in the :code:`movies` table in 

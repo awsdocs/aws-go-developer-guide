@@ -19,7 +19,7 @@ Getting |DDBlong| Table Items Using Expression Builder
         Get Amazon DynamoDB table items using the new Expresion Builder with this AWS SDK for Go code example.
     :keywords: AWS SDK for Go code examples, DynamoDB
 
-The following example uses the |DDB|
+The following example uses the |DDB| 
 :sdk-go-api-deep:`Scan <service/dynamodb/#DynamoDB.Scan>` operation
 to get items with a :code:`rating` greater than **4.0** in the :code:`year` **2013**
 in the :code:`Movies` table in your default region.

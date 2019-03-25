@@ -18,7 +18,7 @@ Creating an |DDBlong| Table Item
    :description: Create a DynamoDB table item using this AWS SDK for Go code example.
    :keywords: AWS SDK for Go code examples, DynamoDB
 
-The following example uses the |DDB|
+The following example uses the |DDB| 
 :sdk-go-api-deep:`PutItem <service/dynamodb/#DynamoDB.PutItem>` operation
 to create the table item with the :code:`year` **2015** and
 :code:`title`  **The Big New Movie** in the :code:`Movies` table in 
