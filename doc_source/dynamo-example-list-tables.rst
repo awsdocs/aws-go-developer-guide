@@ -18,7 +18,7 @@ Listing all |DDBlong| Tables
    :description: List your DynamoDB tables using this AWS SDK for Go code example.
    :keywords: AWS SDK for Go code examples, DynamoDB
 
-The following example uses the |DDB| 
+The following example uses the |DDB| |nbsp| 
 :sdk-go-api-deep:`ListTables <service/dynamodb/#DynamoDB.ListTables>` operation
 to list all of the tables in your default region.
 

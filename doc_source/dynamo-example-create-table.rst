@@ -18,7 +18,7 @@ Creating an |DDBlong| Table
    :description: Create a DynamoDB table using this AWS SDK for Go code example.
    :keywords: AWS SDK for Go code examples, DynamoDB
 
-The following example uses the |DDB| 
+The following example uses the |DDB| |nbsp| 
 :sdk-go-api-deep:`CreateTable <service/dynamodb/#DynamoDB.CreateTable>` operation
 to create the table **Music** your default region.
 
