@@ -50,5 +50,5 @@ Otherwise, display a message that the item was updated.
    :language: go
 
 See the `complete example 
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamodDBUpdateItem.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBUpdateItem.go>`_
 on GitHub.
