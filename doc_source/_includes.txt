@@ -6,6 +6,11 @@
 
 .. |sdk| replace:: |sdk-go|
 
+.. Non-breaking space:
+
+.. |nbsp| unicode:: 0xA0 
+   :trim:
+
 .. CSM/SDK Metrics:
 
 .. |language| replace:: Go   
