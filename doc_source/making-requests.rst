@@ -74,8 +74,7 @@ The following example shows how to tag the |S3| bucket
 :code:`MyBucket` with :code:`Cost Center` tag with the value :code:`123456`
 and :code:`Stack` tag with the value :code:`MyTestStack`.
 
-.. literalinclude:: example_code/extending_sdk/addTags.go
-   :lines: 15-
+.. literalinclude:: extending.go.add_tags.txt
    :dedent: 0
    :language: go
 

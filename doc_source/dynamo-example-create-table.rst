@@ -10,32 +10,31 @@
 
 .. _aws-go-sdk-dynamo-example-create-table:
 
-##############################################
-Creating an |DDBlong| Table Using the |sdk-go|
-##############################################
+###########################
+Creating an |DDBlong| Table
+###########################
 
 .. meta::
    :description: Create a DynamoDB table using this AWS SDK for Go code example.
    :keywords: AWS SDK for Go code examples, DynamoDB
 
-The following example uses the |DDB|
+The following example uses the |DDB| 
 :sdk-go-api-deep:`CreateTable <service/dynamodb/#DynamoDB.CreateTable>` operation
-to create the table **Music** in the :code:`us-west-2` region.
+to create the table **Music** your default region.
 
-Create the file *dynamodb_create_table.go*.
+Create the file *DynamoDBCreateTable.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: example_code/dynamodb/create_table.go
-   :lines: 17-24
+.. literalinclude:: dynamodb.go.create_table.imports.txt
    :dedent: 0
    :language: go
 
-Initialize the session that the SDK uses to load credentials
-from the shared credentials file *~/.aws/credentials,
-and create a new |DDB| service client.
+Initialize a session that the SDK will use to load
+credentials from the shared credentials file *~/.aws/credentials*
+and region from the shared configuration file *~/.aws/config*,
+and create the |DDB| client.
 
-.. literalinclude:: example_code/dynamodb/create_table.go
-   :lines: 29-34
+.. literalinclude:: dynamodb.go.create_table.session.txt
    :dedent: 4
    :language: go
 
@@ -43,10 +42,9 @@ Call **CreateTable**.
 If an error occurs, print the error and exit.
 If no error occurs, print an message that the table was created.
 
-.. literalinclude:: example_code/dynamodb/create_table.go
-   :lines: 37-73
+.. literalinclude:: dynamodb.go.create_table.call.txt
    :dedent: 4
    :language: go
 
-See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/create_table.go>`_
+See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBCreateTable.go>`_
 on GitHub.

@@ -10,9 +10,9 @@
 
 .. _aws-go-sdk-dynamo-example-create-table-item:
 
-##################################################################
-Creating |DDBlong| Table Items from a JSON File Using the |sdk-go|
-##################################################################
+###############################################
+Creating |DDBlong| Table Items from a JSON File
+###############################################
 
 .. meta::
    :description: Create DynamoDB table items from a JSON file using this AWS SDK for Go code example.
@@ -20,38 +20,35 @@ Creating |DDBlong| Table Items from a JSON File Using the |sdk-go|
 
 The following example uses the |DDB|
 :sdk-go-api-deep:`PutItem <service/dynamodb/#DynamoDB.PutItem>` operation
-in a loop to create the items defined in *movie_data.json* file in the :code:`Movies` table in the
-:code:`us-west-2` region.
+in a loop to create the items defined in *movie_data.json* file in the :code:`Movies` table in 
+your default region.
 
-Create the file *dynamodb_load_items.go*.
+Create the file *DynamoDBLoadItems.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: example_code/dynamodb/load_items.go
-   :lines: 17-27
+.. literalinclude:: dynamodb.go.load_items.imports.txt
    :dedent: 0
    :language: go
 
-Create the data structures we use to containing the information about the
+Create the data structure we use to contain the information about the
 table item.
 
-.. literalinclude:: example_code/dynamodb/load_items.go
-   :lines: 30-39
+.. literalinclude:: dynamodb.go.load_items.struct
    :dedent: 0
    :language: go
 
 Create a function to get the table items from the JSON file.
 
-.. literalinclude:: example_code/dynamodb/load_items.go
-   :lines: 42-53
+.. literalinclude:: dynamodb.go.load_items.func
    :dedent: 0
    :language: go
 
-Initialize the session that the SDK uses to load credentials
-from the shared credentials file *~/.aws/credentials,
+Initialize a session that the SDK will use to load
+credentials from the shared credentials file *~/.aws/credentials*
+and region from the shared configuration file *~/.aws/config*
 and create a new |DDB| service client.
 
-.. literalinclude:: example_code/dynamodb/load_items.go
-   :lines: 58-69
+.. literalinclude:: dynamodb.go.load_items.session.txt
    :dedent: 4
    :language: go
 
@@ -62,13 +59,12 @@ map of **AttributeValue** objects,
 add the item to the :code:`Movies` table,
 and print out the title and year of the movie added to the table.
 
-.. literalinclude:: example_code/dynamodb/load_items.go
-   :lines: 72-99
+.. literalinclude:: dynamodb.go.load_items.call.txt
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/load_items.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBLoadItems.go>`_
 and a `sample JSON file 
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/movie_data.json>`_
 on GitHub.

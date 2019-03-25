@@ -33,12 +33,11 @@ Using context.Context with SDK Requests
 In Go 1.7, the ``context.Context`` type was added to ``http.Request``. This type provides an easy
 way to implement deadlines and cancellations on requests.
 
-To use this pattern with the SDK, you call ``WithContext`` on the ``HTTPRequest`` field
+To use this pattern with the SDK, call ``WithContext`` on the ``HTTPRequest`` field
 of the SDK's ``request.Request`` type, and provide your ``Context value``. The following example
-highlights this process with a timeout on an |SQS| ``ReceiveMessage`` API call.
+highlights this process with a timeout on |SQS| ``ReceiveMessage``.
 
-.. literalinclude:: example_code/extending_sdk/request_context.go
-   :lines: 15-
+.. literalinclude:: extending.go.receive_message_request.txt
    :dedent: 4
    :language: go
 
@@ -51,14 +50,12 @@ In addition to setting API parameters by using struct fields, you can also use c
 setters on the API operation parameter fields. This enables you to use a chain of setters
 to set the fields of the API struct.
 
-.. literalinclude:: example_code/s3/put_object_with_setters.go
-   :lines: 15-
+.. literalinclude:: s3.go.put_object.call.txt
+   :dedent: 4
    :language: go
 
 You can also use this pattern with nested fields in API operation requests.
 
-.. literalinclude:: example_code/extending_sdk/ecs/update_deployment_with_setters.go
-   :lines: 15-
+.. literalinclude:: s3.go.update_deployment.call.txt
+   :dedent: 4
    :language: go
-
-

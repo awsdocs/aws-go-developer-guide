@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -23,22 +23,21 @@ The following example uses the |DDB|
 :sdk-go-api-deep:`UpdateItem <service/dynamodb/#DynamoDB.UpdateItem>` operation
 to delete the item with the :code:`year` **2015** and
 :code:`title`  **The Big New Movie**
-from the :code:`Movies` table in the :code:`us-west-2` region.
+from the :code:`Movies` table in your default region.
 
-Create the file *dynamodb_update_item.go*.
+Create the file *DynamoDBUpdateItem.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: example_code/dynamodb/delete_item.go
-   :lines: 17-23
+.. literalinclude:: dynamodb.go.delete_item.imports.txt
    :dedent: 0
    :language: go
 
-Initialize the session that the SDK uses to credentials
-from the shared credentials file *~/.aws/credentials,
+Initialize a session that the SDK will use to load
+credentials from the shared credentials file *~/.aws/credentials*
+and region from the shared configuration file *~/.aws/config*
 and create a new |DDB| service client.
 
-.. literalinclude:: example_code/dynamodb/delete_item.go
-   :lines: 28-33
+.. literalinclude:: dynamodb.go.delete_item.session
    :dedent: 4
    :language: go
 
@@ -46,11 +45,10 @@ Call **DeleteItem** to delete the item from the table.
 If we encounter an error, print the error message.
 Otherwise, display a message that the item was deleted.
 
-.. literalinclude:: example_code/dynamodb/delete_item.go
-   :lines: 35-55
+.. literalinclude:: dynamodb.go.delete_item.call
    :dedent: 4
    :language: go
 
 See the `complete example 
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/delete_item.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBDeleteItem.go>`_
 on GitHub.

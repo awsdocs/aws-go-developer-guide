@@ -10,9 +10,9 @@
 
 .. _aws-go-sdk-dynamo-example-create-table-item:
 
-###################################################
-Creating an |DDBlong| Table Item Using the |sdk-go|
-###################################################
+################################
+Creating an |DDBlong| Table Item
+################################
 
 .. meta::
    :description: Create a DynamoDB table item using this AWS SDK for Go code example.
@@ -21,39 +21,36 @@ Creating an |DDBlong| Table Item Using the |sdk-go|
 The following example uses the |DDB|
 :sdk-go-api-deep:`PutItem <service/dynamodb/#DynamoDB.PutItem>` operation
 to create the table item with the :code:`year` **2015** and
-:code:`title`  **The Big New Movie** in the :code:`Movies` table in the
-:code:`us-west-2` region.
+:code:`title`  **The Big New Movie** in the :code:`Movies` table in 
+your default region.
 
-Create the file *dynamodb_create_item.go*.
+Create the file *DynamoDBCreateItem.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: example_code/dynamodb/create_item.go
-   :lines: 17-24
+.. literalinclude:: dynamodb.go.create_item.imports.txt
    :dedent: 0
    :language: go
 
-Create the data structures we use to containing the information about the
+Create the data structure we use to containing the information about the
 table item.
 
-.. literalinclude:: example_code/dynamodb/create_item.go
-   :lines: 28-37
+.. literalinclude:: dynamodb.go.create_item.struct.txt
    :dedent: 0
    :language: go
 
-Initialize the session that the SDK uses to load credentials
-from the shared credentials file *~/.aws/credentials,
-and create a new |DDB| service client.
+Initialize a session that the SDK will use to load
+credentials from the shared credentials file *~/.aws/credentials*
+and region from the shared configuration file *~/.aws/config*,
+and create the |DDB| client.
 
-.. literalinclude:: example_code/dynamodb/create_item.go
-   :lines: 42-47
+.. literalinclude:: dynamodb.go.create_item.session.txt
    :dedent: 4
    :language: go
 
-Initialize the structs with the movie data and marshall that data into a
+Create a struct with the movie data and marshall that data into a
 map of **AttributeValue** objects.
 
-.. literalinclude:: example_code/dynamodb/create_item.go
-   :lines: 49-60
+.. literalinclude:: dynamodb.go.create_item.assign_struct.txt
    :dedent: 4
    :language: go
 
@@ -61,10 +58,9 @@ Create the input for **PutItem** and call it.
 If an error occurs, print the error and exit.
 If no error occurs, print an message that the item was added to the table.
 
-.. literalinclude:: example_code/dynamodb/create_item.go
-   :lines: 69-82
+.. literalinclude:: dynamodb.go.create_item.call.txt
    :dedent: 4
    :language: go
 
-See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/create_item.go>`_
+See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBCreateItem.go>`_
 on GitHub.

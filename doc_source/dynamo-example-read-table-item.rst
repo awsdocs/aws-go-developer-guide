@@ -22,31 +22,29 @@ Reading an |DDBlong| Table Item
 The following example uses the |DDB|
 :sdk-go-api-deep:`GetItem <service/dynamodb/#DynamoDB.GetItem>` operation
 to retrieve information about the item with the :code:`year` **2015** and
-:code:`title`  **The Big New Movie** in the :code:`movies` table in the
-:code:`us-west-2` region.
+:code:`title`  **The Big New Movie** in the :code:`movies` table in 
+your default region.
 
-Create the file *dynamodb_read_item.go*.
+Create the file *DynamoDBReadItem.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: example_code/dynamodb/read_item.go
-   :lines: 17-23
+.. literalinclude:: dynamodb.go.read_item.imports.txt
    :dedent: 0
    :language: go
 
-Create the data structures we use to contain the information about the
+Create the data structure we use to contain the information about the
 table item.
 
-.. literalinclude:: example_code/dynamodb/read_item.go
-   :lines: 27-36
+.. literalinclude:: dynamodb.go.read_item.struct.txt
    :dedent: 0
    :language: go
 
-Initialize the session that the SDK uses to load credentials
-from the shared credentials file *~/.aws/credentials,
+Initialize a session that the SDK will use to load
+credentials from the shared credentials file *~/.aws/credentials*
+and region from the shared configuration file *~/.aws/config*
 and create a new |DDB| service client.
 
-.. literalinclude:: example_code/dynamodb/read_item.go
-   :lines: 41-46
+.. literalinclude:: dynamodb.go.read_item.session
    :dedent: 4
    :language: go
 
@@ -54,11 +52,18 @@ Call **GetItem** to get the item from the table.
 If we encounter an error, print the error message.
 Otherwise, display information about the item.
 
-.. literalinclude:: example_code/dynamodb/read_item.go
-   :lines: 48-82
+.. literalinclude:: dynamodb.go.read_item.call.txt
+   :dedent: 4
+   :language: go
+
+Unmarshall the return value and if the title is not empty,
+indicating we got the item,
+display the year, title, plot, and rating.
+
+.. literalinclude:: dynamodb.go.read_item.unmarshall.txt
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/read_item.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBReadItem.go>`_
 on GitHub.

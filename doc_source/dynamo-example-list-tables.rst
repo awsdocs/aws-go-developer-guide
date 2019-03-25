@@ -10,32 +10,31 @@
 
 .. _aws-go-sdk-dynamo-example-list-tables:
 
-###############################################
-Listing all |DDBlong| Tables Using the |sdk-go|
-###############################################
+############################
+Listing all |DDBlong| Tables
+############################
 
 .. meta::
    :description: List your DynamoDB tables using this AWS SDK for Go code example.
    :keywords: AWS SDK for Go code examples, DynamoDB
 
-The following example uses the |DDB|
+The following example uses the |DDB| 
 :sdk-go-api-deep:`ListTables <service/dynamodb/#DynamoDB.ListTables>` operation
-to list all tables for the :code:`us-west-2` region.
+to list all of the tables in your default region.
 
-Create the file *dynamodb_list_tables.go*.
+Create the file *DynamoDBListTables.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: example_code/dynamodb/list_tables.go
-   :lines: 17-24
+.. literalinclude:: dynamodb.go.list_tables.imports.txt
    :dedent: 0
    :language: go
 
-Initialize the session that the SDK uses to load credentials
-from the shared credentials file *~/.aws/credentials,
+Initialize a session that the SDK will use to load
+credentials from the shared credentials file *~/.aws/credentials*
+and region from the shared configuration file *~/.aws/config*
 and create a new |DDB| service client.
 
-.. literalinclude:: example_code/dynamodb/list_tables.go
-   :lines: 29-34
+.. literalinclude:: dynamodb.go.list_tables.session.txt
    :dedent: 4
    :language: go
 
@@ -43,10 +42,9 @@ Call **ListTables**.
 If an error occurs, print the error and exit.
 If no error occurs, loop through the tabless, printing the name of each table.
 
-.. literalinclude:: example_code/dynamodb/list_tables.go
-   :lines: 37-49
+.. literalinclude:: dynamodb.go.list_tables.call.txt
    :dedent: 4
    :language: go
 
-See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/list_tables.go>`_
+See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBListTables.go>`_
 on GitHub.
