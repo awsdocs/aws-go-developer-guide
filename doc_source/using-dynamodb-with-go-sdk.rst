@@ -24,7 +24,7 @@ is, you have imported all required packages and set your credentials and region)
 The topic also provides a link to a downloadable version of |DDB|, which includes an interactive web
 interface so you can experiment with |DDB| offline.
 
-You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
+You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <dynamodb>` repository on GitHub.
 
 .. toctree::
    :maxdepth: 2
