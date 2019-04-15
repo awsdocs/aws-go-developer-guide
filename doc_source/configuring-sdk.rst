@@ -26,6 +26,50 @@ correct AWS Region and sign requests with the correct credentials. You
 can specify these values as part of a session or as environment
 variables.
 
+.. _creating-sesstion:
+
+Creating a Session
+==================
+
+Before you can create a service client you must create a session,
+which is part of the **github.com/aws/aws-sdk-go/aws/session** package.
+
+There are a number of ways of configuring a session but the following are the most common.
+
+Create a session using the default region and credentials:
+
+.. code:: go
+
+   import (
+       "github.com/aws/aws-sdk-go/aws"
+       "github.com/aws/aws-sdk-go/aws/session"
+   )
+
+   // ...
+   
+   sess := session.Must(session.NewSessionWithOptions(session.Options{
+       SharedConfigState: session.SharedConfigEnable,
+   }))
+
+Create a session in **us-west-2**:
+
+.. code:: go
+          
+   import (
+       "github.com/aws/aws-sdk-go/aws"
+       "github.com/aws/aws-sdk-go/aws/session"
+   )
+
+   // ...
+   
+   sess, err := session.NewSession(&aws.Config{
+       Region: aws.String("us-west-2")},
+   )
+
+See `session
+<https://docs.aws.amazon.com/sdk-for-go/api/aws/session>`_   
+for additional information.
+
 .. _specifying-the-region:
 
 Specifying the AWS Region

@@ -56,8 +56,16 @@ Import Packages
 ===============
 
 After you have installed the SDK, you import AWS packages into your Go
-applications to use the SDK, as shown in the following example:
+applications to use the SDK, as shown in the following example,
+which imports the AWS, Session, and |S3| libraries:
 
 .. code:: go
 
-    import "github.com/aws/aws-sdk-go/service/s3"
+    import (
+    "github.com/aws/aws-sdk-go/aws"
+    "github.com/aws/aws-sdk-go/aws/session"
+    "github.com/aws/aws-sdk-go/service/s3"
+)
+
+
+    
