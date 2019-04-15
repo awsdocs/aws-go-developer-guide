@@ -61,11 +61,8 @@ which imports the AWS, Session, and |S3| libraries:
 
 .. code:: go
 
-    import (
-    "github.com/aws/aws-sdk-go/aws"
-    "github.com/aws/aws-sdk-go/aws/session"
-    "github.com/aws/aws-sdk-go/service/s3"
-)
-
-
-    
+   import (
+       "github.com/aws/aws-sdk-go/aws"
+       "github.com/aws/aws-sdk-go/aws/session"
+       "github.com/aws/aws-sdk-go/service/s3"
+   )
