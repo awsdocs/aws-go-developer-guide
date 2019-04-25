@@ -156,6 +156,30 @@ See https://golang.org/pkg/net/http/#Transport.TLSHandshakeTimeout
 
 We'll call this ``TLSHandshake`` as **time.Duration**.
 
+.. _set_imports:
+
+Create Import Statement
+=======================
+
+The complete example imports the following Go packages.
+
+.. code-block:: go
+
+    import (
+        "github.com/aws/aws-sdk-go/aws"
+        "github.com/aws/aws-sdk-go/aws/session"
+        "github.com/aws/aws-sdk-go/service/s3"
+
+        "bytes"
+        "flag"
+        "fmt"
+        "io"
+        "net"
+        "net/http"
+        "os"
+        "time"
+    )
+
 .. _timeout-struct:
 
 Creating a Timeout Struct
@@ -166,7 +190,6 @@ on our HTTP client.
 
 .. code-block:: go
 
-    // import "time"
     type HttpClientSettings struct {
         Connect          time.Duration
         ExpectContinue   time.Duration
@@ -188,10 +211,6 @@ and creates a custom HTTP client based on those timeout values.
 
 .. code-block:: go
 
-    // import (
-    //     "net/http"
-    //     "time"
-    // )
     func NewHTTPClientWithTimeouts(httpSettings HttpClientSettings) *http.Client {
         return &http.Client{
             Transport: &http.Transport{
@@ -221,7 +240,6 @@ client with a custom HTTP client and access an item from an |S3| bucket.
 
 .. code-block:: go
 
-    // import "time"
     func ExampleS3WithCustomHTTPClient(bucket, key, region *string) io.ReadCloser {
         // Creating a SDK session using the SDK's default HTTP client,
         // http.DefaultClient.
