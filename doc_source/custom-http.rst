@@ -32,12 +32,12 @@ this section describes how to create a structure to encapsulate the custom setti
 create a function to create a custom HTTP client based on those settings,
 and use that custom HTTP client to call an |sdk-go| service client.
 
-We want to be able to customize the following settings.
+Let's define what we want to customize.
 
 .. _timeout-struct-connect:
 
 Dialer.Timeout
---------------
+==============
 
 This setting represents the maximum amount of time a dial to wait for a connection to complete.
 
@@ -50,7 +50,7 @@ We'll call this ``Connect`` as **time.Duration**.
 .. _timeout-struct-expect-continue:
 
 Transport.ExpectContinueTimeout
--------------------------------
+===============================
 
 This setting represents the maximum amount of time to wait for a server's first response headers
 after fully writing the request headers,
@@ -69,7 +69,7 @@ We'll call this ``ExpectContinue`` as **time.Duration**.
 .. _timeout-struct-idle-conn-timeout:
 
 Transport.IdleConnTimeout
--------------------------
+=========================
 
 This setting represents the maximum amount of time to keep an idle connection alive.
 
@@ -82,7 +82,7 @@ We'll call this ``IdleConn`` as **time.Duration**.
 .. _timeout-struct-keep-alive:
 
 Dialer.KeepAlive
-----------------
+================
 
 This setting represents the keep-alive period for an active network connection.
 
@@ -100,7 +100,7 @@ We'll call this ``KeepAlive`` as **time.Duration**.
 .. _timeout-struct-max-idle-conns:
 
 Transport.MaxIdleConns
-----------------------
+======================
 
 This setting represents the maximum number of idle (keep-alive) connections across all hosts.
 
@@ -113,7 +113,7 @@ We'll call this ``MaxAllIdleConns`` as **int**.
 .. _timeout-struct-max-idle-conn-per-host:
 
 Transport.MaxIdleConnsPerHost
------------------------------
+=============================
 
 This setting represents the maximum number of idle (keep-alive) connections to keep per-host.
 
@@ -128,7 +128,7 @@ We'll call this ``MaxHostIdleConns`` as **int**.
 .. _timeout-struct-response-header-timeout:
 
 Transport.ResponseHeaderTimeout
--------------------------------
+===============================
 
 This setting represents the maximum amount of time to wait for a client to read the response header.
 
@@ -144,7 +144,7 @@ We'll call this ``ResponseHeader`` as **time.Duration**.
 .. _timeout-struct-tls-handshake-timeout:
 
 Transport.TLSHandshakeTimeout
------------------------------
+=============================
 
 This setting represents the maximum amount of time waiting for a TLS handshake to be completed.
 
@@ -178,6 +178,11 @@ on our HTTP client.
         TLSHandshake     time.Duration
     }
 
+.. _timeout-func:
+
+Creating a Function to Create a Custom HTTP Client
+==================================================
+
 Next let's create a function that takes a **ClientTimeout** struct
 and creates a custom HTTP client based on those timeout values.
 
@@ -205,6 +210,11 @@ and creates a custom HTTP client based on those timeout values.
             },
         }
     }
+
+.. _s3-client:
+
+Creating a Function to Create a Custom HTTP Client
+==================================================
 
 Let's create a function that use this function to create an |S3|
 client with a custom HTTP client and access an item from an |S3| bucket.
@@ -245,7 +255,12 @@ client with a custom HTTP client and access an item from an |S3| bucket.
         return obj.Body
     }
 
-Finally, let's create another function that creates a session with a custome HTTP client
+.. _session:
+
+Creating a Function to Create a Session with a Custom HTTP Client
+=================================================================
+
+Finally, let's create another function that creates a session with a custom HTTP client
 and an |S3| client using that session to again access an item from an |S3| bucket.
 
 .. code-block:: go
