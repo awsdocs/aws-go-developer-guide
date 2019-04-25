@@ -206,8 +206,8 @@ and creates a custom HTTP client based on those timeout values.
         }
     }
 
-Let's create a function that use this function to create an &S3;
-client with a custom HTTP client and access an item from an &S3; bucket.
+Let's create a function that use this function to create an |S3|
+client with a custom HTTP client and access an item from an |S3| bucket.
 
 .. code-block:: go
 
@@ -246,7 +246,7 @@ client with a custom HTTP client and access an item from an &S3; bucket.
     }
 
 Finally, let's create another function that creates a session with a custome HTTP client
-and an &S3; client using that session to again access an item from an &S3; bucket.
+and an |S3| client using that session to again access an item from an |S3| bucket.
 
 .. code-block:: go
 
