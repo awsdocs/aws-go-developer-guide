@@ -391,3 +391,4 @@ See :sdk-go-api-deep:`aws.Config <aws/#Config>` for details.
    :maxdepth: 1
 
    SDK Metrics <sdk-metrics>
+   Custom HTTP Client <custom-http>
