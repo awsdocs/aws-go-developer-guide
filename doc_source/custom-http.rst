@@ -18,9 +18,7 @@ Creating a Custom HTTP Client
    :description: Create a custom HTTP client with the |sdk-go| to specify custom timeout values.
    :keywords: HTTP, timeout
 
-The |sdk-go| uses a default HTTP client with default configuration values,
-such as
-:sdk-go-api-deep:`MaxRetries <aws/#Config.WithMaxRetries>`.
+The |sdk-go| uses a default HTTP client with default configuration values.
 Although you can change some of these configuration values,
 the default HTTP client and transport are not sufficiently configurable for customers
 using the |sdk-go| in an environment with high throughput and low latency requirements.
@@ -34,14 +32,30 @@ and use that custom HTTP client to call an |sdk-go| service client.
 
 Let's define what we want to customize.
 
+Dialer.KeepAlive
+================
+
+This setting represents the keep-alive period for an active network connection.
+
+Set to a negative value to disable keep-alives.
+
+Set to **0** to enable keep-alives if supported by the protocol and operating system.
+
+Network protocols or operating systems that do not support keep-alives ignore this field.
+By default, TCP enables keep alive.
+
+See https://golang.org/pkg/net/#Dialer.KeepAlive
+
+We'll call this ``ConnKeepAlive`` as **time.Duration**.
+
 .. _timeout-struct-connect:
 
 Dialer.Timeout
 ==============
 
-This setting represents the maximum amount of time a dial to wait for a connection to complete.
+This setting represents the maximum amount of time a dial to wait for a connection to be created.
 
-Default is no timeout.
+Default is 30 seconds.
 
 See https://golang.org/pkg/net/#Dialer.Timeout
 
@@ -61,6 +75,8 @@ The HTTP client sends its payload after this timeout is exhausted.
 Default 1 second.
 
 Set to **0** for no timeout and send request payload without waiting.
+One use case is when you run into issues with proxies or third party services that take a session
+similar to the use of |S3| in the function shown later.
 
 See https://golang.org/pkg/net/http/#Transport.ExpectContinueTimeout
 
@@ -71,7 +87,7 @@ We'll call this ``ExpectContinue`` as **time.Duration**.
 Transport.IdleConnTimeout
 =========================
 
-This setting represents the maximum amount of time to keep an idle connection alive.
+This setting represents the maximum amount of time to keep an idle network connection alive between HTTP requests.
 
 Set to **0** for no limit.
 
@@ -81,28 +97,13 @@ We'll call this ``IdleConn`` as **time.Duration**.
 
 .. _timeout-struct-keep-alive:
 
-Dialer.KeepAlive
-================
-
-This setting represents the keep-alive period for an active network connection.
-
-Set to a negative value to disable keep-alives.
-
-Set to **0** to enable keep-alives if supported by the protocol and operating system.
-
-Network protocols or operating systems that do not support keep-alives ignore this field.
-
-See https://golang.org/pkg/net/#Dialer.KeepAlive
-
-We'll call this ``KeepAlive`` as **time.Duration**.
-  
-
 .. _timeout-struct-max-idle-conns:
 
 Transport.MaxIdleConns
 ======================
 
 This setting represents the maximum number of idle (keep-alive) connections across all hosts.
+One use case for increasing this value is when you are seeing many connections in a short period from the same clients
 
 **0** means no limit.
 
@@ -116,10 +117,11 @@ Transport.MaxIdleConnsPerHost
 =============================
 
 This setting represents the maximum number of idle (keep-alive) connections to keep per-host.
+One use case for increasing this value is when you are seeing many connections in a short period from the same clients
 
 Default is two idle connections per host.
 
-Set to **0** to use DefaultMaxIdleConnsPerHost.
+Set to **0** to use DefaultMaxIdleConnsPerHost (2).
 
 See https://golang.org/pkg/net/http/#Transport.MaxIdleConnsPerHost
 
@@ -166,18 +168,19 @@ The complete example imports the following Go packages.
 .. code-block:: go
 
     import (
-        "github.com/aws/aws-sdk-go/aws"
-        "github.com/aws/aws-sdk-go/aws/session"
-        "github.com/aws/aws-sdk-go/service/s3"
-
         "bytes"
         "flag"
         "fmt"
-        "io"
         "net"
         "net/http"
         "os"
         "time"
+
+        "github.com/aws/aws-sdk-go/aws"
+        "github.com/aws/aws-sdk-go/aws/session"
+        "github.com/aws/aws-sdk-go/service/s3"
+
+        "golang.org/x/net/http2"
     )
 
 .. _timeout-struct:
@@ -192,9 +195,9 @@ on our HTTP client.
 
     type HttpClientSettings struct {
         Connect          time.Duration
+        ConnKeepAlive    time.Duration
         ExpectContinue   time.Duration
         IdleConn         time.Duration
-        KeepAlive        time.Duration
         MaxAllIdleConns  int
         MaxHostIdleConns int
         ResponseHeader   time.Duration
@@ -212,111 +215,54 @@ and creates a custom HTTP client based on those timeout values.
 .. code-block:: go
 
     func NewHTTPClientWithTimeouts(httpSettings HttpClientSettings) *http.Client {
+        tr := &http.Transport{
+            ResponseHeaderTimeout: httpSettings.ResponseHeader,
+            Proxy:                 http.ProxyFromEnvironment,
+            DialContext:           (&net.Dialer{
+                KeepAlive: httpSettings.ConnKeepAlive,
+                DualStack: true,
+                Timeout:   httpSettings.Connect,
+            }).DialContext,
+            MaxIdleConns:          httpSettings.MaxAllIdleConns,
+            IdleConnTimeout:       httpSettings.IdleConn,
+            TLSHandshakeTimeout:   httpSettings.TLSHandshake,
+            MaxIdleConnsPerHost:   httpSettings.MaxHostIdleConns,
+            ExpectContinueTimeout: httpSettings.ExpectContinue,
+        }
+
+        // So client makes HTTP/2 requests
+        http2.ConfigureTransport(tr)
+
         return &http.Client{
-            Transport: &http.Transport{
-                ResponseHeaderTimeout: httpSettings.ResponseHeader,
-                Proxy:                 http.ProxyFromEnvironment,
-                DialContext:           (&net.Dialer{
-                    KeepAlive: httpSettings.KeepAlive
-                    DualStack: true,
-                    Timeout:   httpSettings.Connect,
-                }).DialContext,
-                MaxIdleConns:          httpSettings.MaxAllIdleConns,
-                IdleConnTimeout:       httpSettings.IdleConn,
-                TLSHandshakeTimeout:   httpSettings.TLSHandshake,
-                MaxIdleConnsPerHost:   httpSettings.MaxHostIdleConns,
-                ExpectContinueTimeout: httpSettings.ExpectContinue,
-            },
+            Transport: tr,
         }
     }
 
 .. _s3-client:
 
-Creating a Function to Create a Custom HTTP Client
-==================================================
+Using a Custom HTTP Client
+==========================
 
-Let's create a function that use this function to create an |S3|
-client with a custom HTTP client and access an item from an |S3| bucket.
-
-.. code-block:: go
-
-    func ExampleS3WithCustomHTTPClient(bucket, key, region *string) io.ReadCloser {
-        // Creating a SDK session using the SDK's default HTTP client,
-        // http.DefaultClient.
-        sess := session.Must(session.NewSession())
-
-        // Create SDK S3 client with a HTTP client configured for custom timeouts.
-        client := s3.New(sess, &aws.Config{
-            Region:     region,
-            HTTPClient: NewHTTPClientWithTimeouts(HttpClientSettings{
-                Connect:            5 * time.Second,
-                ExpectContinue:     1 * time.Second,
-                IdleConn:          90 * time.Second,
-                KeepAlive:         30 * time.Second,
-                MaxAllIdleConns:  100,
-                MaxHostIdleConns:  10,
-                ResponseHeader:     5 * time.Second,
-                TLSHandshake:       5 * time.Second,
-            }),
-        })
-
-        obj, err := client.GetObject(&s3.GetObjectInput{
-            Bucket: bucket,
-            Key:    key,
-        })
-        if err != nil {
-            fmt.Println("Got error calling GetObject in ExampleS3WithCustomHTTPClient:")
-            fmt.Println(err.Error())
-            os.Exit(1)
-        }
-
-        return obj.Body
-    }
-
-.. _session:
-
-Creating a Function to Create a Session with a Custom HTTP Client
-=================================================================
-
-Finally, let's create another function that creates a session with a custom HTTP client
-and an |S3| client using that session to again access an item from an |S3| bucket.
+Let's create a custom HTTP client and use it to 
+a create an |S3| client.
 
 .. code-block:: go
 
-    func exampleSharedClient(bucket, key, region *string) io.ReadCloser {
-        // Create a shared SDK session to be used by all SDK clients.
-        // All SDK clients share the HTTP client's timeout configuration.
-        sess := session.Must(session.NewSession(&aws.Config{
-            Region: region,
-            HTTPClient: NewHTTPClientWithTimeouts(HttpClientSettings{
-                Connect:          5 * time.Second,
-                ExpectContinue:   1 * time.Second,
-                IdleConn:         90 * time.Second,
-                KeepAlive:        30 * time.Second,
-                MaxAllIdleConns:  100,
-                MaxHostIdleConns: 10,
-                ResponseHeader:   5 * time.Second,
-                TLSHandshake:     5 * time.Second,
-            }),
-        }))
+    sess := session.Must(session.NewSession(&aws.Config{
+        Region: regionPtr,
+        HTTPClient: NewHTTPClientWithSettings(HTTPClientSettings{
+            Connect:          5 * time.Second,
+            ExpectContinue:   1 * time.Second,
+            IdleConn:         90 * time.Second,
+            ConnKeepAlive:    30 * time.Second,
+            MaxAllIdleConns:  100,
+            MaxHostIdleConns: 10,
+            ResponseHeader:   5 * time.Second,
+            TLSHandshake:     5 * time.Second,
+        }),
+    }))
 
-        // Create an S3 SDK client with the shared SDK session,
-        // which includes the same HTTP custom timeouts.
-        client := s3.New(sess)
-
-        // Make API operation calls with SDK clients, all sharing the same HTTP client timeout configuration.
-        obj, err := client.GetObject(&s3.GetObjectInput{
-            Bucket: bucket,
-            Key:    key,
-        })
-        if err != nil {
-            fmt.Println("Got error calling GetObject in exampleSharedClient:")
-            fmt.Println(err.Error())
-            os.Exit(1)
-        }
-
-        return obj.Body
-    }
+    client := s3.New(sess)
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/customHttpClient.go>`_
