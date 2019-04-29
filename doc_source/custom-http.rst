@@ -137,6 +137,10 @@ This setting represents the maximum amount of time to wait for a client to read 
 If the client isn't able to read the response's header within this duration,
 the request fails with a timeout error.
 
+Be careful setting this value when using long-running Lambda functions,
+as the operation does not return any response headers until the Lambda function has finished or timed out.
+However, you can still use this option with the **InvokeAsync** API operation.
+
 Default is no timeout; wait forever.
 
 See https://golang.org/pkg/net/http/#Transport.ResponseHeaderTimeout
@@ -193,7 +197,7 @@ on our HTTP client.
 
 .. code-block:: go
 
-    type HttpClientSettings struct {
+    type HTTPClientSettings struct {
         Connect          time.Duration
         ConnKeepAlive    time.Duration
         ExpectContinue   time.Duration
@@ -214,7 +218,7 @@ and creates a custom HTTP client based on those timeout values.
 
 .. code-block:: go
 
-    func NewHTTPClientWithTimeouts(httpSettings HttpClientSettings) *http.Client {
+    func NewHTTPClientWithTimeouts(httpSettings HTTPClientSettings) *http.Client {
         tr := &http.Transport{
             ResponseHeaderTimeout: httpSettings.ResponseHeader,
             Proxy:                 http.ProxyFromEnvironment,
@@ -246,6 +250,12 @@ Using a Custom HTTP Client
 Let's create a custom HTTP client and use it to 
 a create an |S3| client.
 
+The following example creates an **http.Client** that is configured to have:
+
+- a five second TCP connection timeout
+- a five second TLS handshake timeout
+- a five second wait for the HTTP response headers
+
 .. code-block:: go
 
     sess := session.Must(session.NewSession(&aws.Config{
@@ -264,6 +274,36 @@ a create an |S3| client.
 
     client := s3.New(sess)
 
+All of these settings give the client approximately 15 seconds create a connection,
+do a TLS handshake, and receive the response headers from the service.
+The time that the client takes to read the response body is not covered by these timeouts.
+To specify a total timeout for the request to include reading the response body,
+use the |sdk-go| client's **WithContext* API operation methods,
+such as the |S3| operation **PutObjectWithContext** with a **context.Withtimeout**.
+
+The following example uses a timeout context to limit the total time an API request can be active to a maximum of 20 seconds.
+The SDK must be able to read the full HTTP response body (Object body) within the timeout or the SDK returns a timeout error.
+For API operations that return an **io.ReadCloser** in their response type,
+the Context's timeout includes reading the content from the **io.ReadCloser**.
+
+.. code-block:: go
+
+    ctx, cancelFn := context.WithTimeout(context.TODO(), 20 *time.Second)
+
+    resp, err := client.GetObjectWithContext(ctx, &s3.GetObjectInput{
+        Bucket: &config.Bucket,
+        Key:    &config.Key,
+    })
+    if err != nil {
+        return err
+    }
+    
+    defer resp.Body.Close()
+
+    //  Read object from resp.Body
+
+    
+    
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/customHttpClient.go>`_
 on GitHub.
