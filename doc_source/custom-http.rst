@@ -279,7 +279,10 @@ do a TLS handshake, and receive the response headers from the service.
 The time that the client takes to read the response body is not covered by these timeouts.
 To specify a total timeout for the request to include reading the response body,
 use the |sdk-go| client's **WithContext** API operation methods,
-such as the |S3| operation **PutObjectWithContext** with a **context.Withtimeout**.
+such as the |S3| operation
+`PutObjectWithContext
+<https://docs.aws.amazon.com/sdk-for-go/api/service/s3/#S3.PutObjectWithContext>`_
+with a **context.Withtimeout**.
 
 The following example uses a timeout context to limit the total time an API request can be active to a maximum of 20 seconds.
 The SDK must be able to read the full HTTP response body (Object body) within the timeout or the SDK returns a timeout error.
