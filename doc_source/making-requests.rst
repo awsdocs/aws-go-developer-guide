@@ -295,8 +295,8 @@ returns ``false``. The names of these methods use the following pattern:
 |S3| list objects operation (``ListObjects``) is ``ListObjectPages``.
 
 The following example uses the ``ListObjectPages`` pagination method to
-list, at most, three pages of object keys from the ``ListObject``
-operation. Each page consists of at least 10 keys, which is defined by
+list up to three pages of object keys from the ``ListObject``
+operation. Each page consists of up to 10 keys, which is defined by
 the ``MaxKeys`` field.
 
 .. code:: go
