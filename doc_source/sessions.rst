@@ -56,7 +56,7 @@ set. Alternatively you can explicitly create a session with a shared
 configuration enabled. To do this, you can use ``NewSessionWithOptions`` to
 configure how the session is created. Using the
 ``NewSessionWithOptions`` with ``SharedConfigState`` set to
-``SharedConfigEnabled`` will create the session as if the
+``SharedConfigEnable`` will create the session as if the
 ``AWS_SDK_LOAD_CONFIG`` environment variable was set.
 
 .. _creating-sessions:
