@@ -165,7 +165,7 @@ Any other configuration values are provided by the environment variables,
 SDK defaults, and user-provided :file:`aws.config` values.
 
 If the ``AWS_SDK_LOAD_CONFIG`` environment variable is set, or
-the **SharedConfigLoadEnable** option is used to create the session
+the **SharedConfigEnable** option is used to create the session
 (as shown in the following example), additional configuration information is
 also loaded from the shared configuration file (:file:`~/.aws/config`),
 if it exists.
