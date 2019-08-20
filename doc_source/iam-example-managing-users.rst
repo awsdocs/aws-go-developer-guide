@@ -202,7 +202,7 @@ Create a method that determines whether a user has administrator privileges.
 
 Create a main method with an IAM client in :code:`us-west-2`.
 Create variables to keep track of how many users we have
-and how many of those have adminstrator privileges.
+and how many of those have administrator privileges.
 
 .. literalinclude:: example_code/iam/IamListAdmins.go
    :lines: 131-142

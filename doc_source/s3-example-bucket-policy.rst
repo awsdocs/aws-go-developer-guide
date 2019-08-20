@@ -59,7 +59,7 @@ Go and |sdk-go| packages by adding the following lines.
    :lines: 17-27
    :language: go
 
-Creat the ``exitError`` function to deal with errors.
+Create the ``exitError`` function to deal with errors.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_policy.go
    :lines: 79-82

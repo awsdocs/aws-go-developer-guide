@@ -79,7 +79,7 @@ and :code:`Stack` tag with the value :code:`MyTestStack`.
    :language: go
 
 Note that if a tag of the same name already exists,
-its value is overwriten by the new value.
+its value is overwritten by the new value.
 
 .. _get-http-request-response:
 

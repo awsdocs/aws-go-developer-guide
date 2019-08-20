@@ -99,7 +99,7 @@ Call :sdk-go-api-deep:`GetBucketAcl <service/s3/#S3.GetBucketAcl>`,
 passing in the name of the bucket.
 If an error occurs, call ``exitErrorf``.
 If no error occurs, loop through the results
-and print out the name, type, and permssion for the grantees.
+and print out the name, type, and permission for the grantees.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_acl.go
    :lines: 46-66
@@ -121,7 +121,7 @@ function sets the ACLs on a bucket.
 
 The following example gives a user access by email address to a bucket
 with the bucket name and email address specified as command line arguments.
-The user can also supply a permission argumement. However,
+The user can also supply a permission argument. However,
 if it isn'o't supplied, the user is given READ access to the bucket.
 
 Create the file *s3_put_bucket_acl.go*.
@@ -292,7 +292,7 @@ Call :sdk-go-api-deep:`GetObjectAcl <service/s3/#S3.GetObjectAcl>`,
 passing in the names of the bucket and object.
 If an error occurs, call ``exitErrorf``.
 If no error occurs, loop through the results
-and print out the name, type, and permssion for the grantees.
+and print out the name, type, and permission for the grantees.
 
 .. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
    :lines: 47-61
@@ -314,7 +314,7 @@ function sets the ACLs on a bucket item.
 
 The following example gives a user access by email address to a bucket item,
 with the bucket and item names and email address specified as command line arguments.
-The user can also supply a permission argumement.
+The user can also supply a permission argument.
 However, if it isn't supplied, the user is given READ access to the bucket.
 
 Create the file *s3_put_bucket_object_acl.go*.

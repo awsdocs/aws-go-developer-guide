@@ -84,7 +84,7 @@ Initialize a session and create an EC2 service client.
    :dedent: 4
    :lines: 42-47
 
-Obtain and print out the security group descriptions. You will explicity check for
+Obtain and print out the security group descriptions. You will explicitly check for
 errors caused by an invalid group ID.
 
 .. literalinclude:: example_code/ec2/ec2_describe_security_groups.go

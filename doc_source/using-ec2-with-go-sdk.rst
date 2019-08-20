@@ -18,7 +18,7 @@
    :description: Use Amazon EC2 code examples to write your own Go applications.
    :keywords: examples, EC2
 
-|EC2long| (|EC2|) is a web service that provides resizeable computing capacity |mdash| literally servers
+|EC2long| (|EC2|) is a web service that provides resizable computing capacity |mdash| literally servers
 in Amazon's data centers |mdash| that you use to build and host your software systems. The |sdk-go| examples can integrate |EC2| into your Go applications.
 The examples assume you have already set up and configured the SDK (that
 is, you have imported all required packages and set your credentials and region). For more information, see :doc:`setting-up` and :doc:`configuring-sdk`.
