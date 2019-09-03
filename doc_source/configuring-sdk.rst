@@ -15,14 +15,14 @@ Configuring the |sdk-go|
 ########################
 
 .. meta::
-   :description: Configure the |sdk-go| to specify which credentials to use and to which region to send requests.
+   :description: Configure the |sdk-go| to specify which credentials to use and to which AWS Region to send requests.
    :keywords: configuration, specify region, region, credentials, proxy
 
 In the |sdk-go|, you can configure settings for service clients,
 such as the log level and maximum number of retries. Most settings are
-optional. However, for each service client, you must specify a region
+optional. However, for each service client, you must specify an AWS Region
 and your credentials. The SDK uses these values to send requests to the
-correct AWS Region and sign requests with the correct credentials. You
+correct Region and sign requests with the correct credentials. You
 can specify these values as part of a session or as environment
 variables.
 
@@ -36,7 +36,7 @@ which is part of the **github.com/aws/aws-sdk-go/aws/session** package.
 
 There are a number of ways of configuring a session but the following are the most common.
 
-Create a session using the default region and credentials:
+Create a session using the default Region and credentials:
 
 .. code:: go
 
@@ -75,22 +75,22 @@ for additional information.
 Specifying the AWS Region
 =========================
 
-When you specify the region, you specify where to send requests, such as
-``us-west-2`` or ``us-east-2.`` For a list of regions for each service, see |regions-and-endpoints|_
+When you specify the Region, you specify where to send requests, such as
+``us-west-2`` or ``us-east-2.`` For a list of Regions for each service, see |regions-and-endpoints|_
 in the |AWS-gr|.
 
-The SDK does not have a default region.
-To specify a region:
+The SDK does not have a default Region.
+To specify a Region:
 
-- Set the ``AWS_REGION`` environment variable to the default region
+- Set the ``AWS_REGION`` environment variable to the default Region
 - Set the ``AWS_SDK_LOAD_CONFIG`` environment variable to **true**
-  to get the region value from the *config* file in the *.aws/* folder in your home directory
+  to get the Region value from the *config* file in the *.aws/* folder in your home directory
 - Set the **NewSessionWithOptions** method argument **SharedConfigState** to **SharedConfigEnable** when you create a session
-  to get the region value from the *config* file in the *.aws/* folder in your home directory
-- Set the region explicitly when you create a session
+  to get the Region value from the *config* file in the *.aws/* folder in your home directory
+- Set the Region explicitly when you create a session
 
-If you set a region using all of these techniques, the SDK uses the
-region you explicitly specified in the session.
+If you set a Region using all of these techniques, the SDK uses the
+Region you explicitly specified in the session.
 
 The following examples show you how to configure the environment
 variable.
@@ -107,7 +107,7 @@ variable.
 
     > set AWS_REGION=us-west-2
 
-The following snippet specifies the region in a session:
+The following snippet specifies the Region in a session:
 
 .. code-block:: go
 
