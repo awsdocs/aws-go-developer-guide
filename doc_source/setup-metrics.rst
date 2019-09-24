@@ -81,7 +81,7 @@ To turn on |CSM|, add the following to your environmental variables.
 ``export AWS_CSM_ENABLED=true``
 
 Other configuration settings are available, 
-see :doc:`update_cw_agent` for details.
+see :ref:`update_cw_agent` for details.
 For more information about using shared files, see the environment variables
 information in :doc:`configuring-sdk`.
 
@@ -109,7 +109,7 @@ To enable |CSM|, add ``csm_enabled`` to the shared config file *~/.aws/config*.
     csm_enabled = true
 
 Other configuration settings are available, 
-see :doc:`update_cw_agent` for details.
+see :ref:`update_cw_agent` for details.
 For more information about using shared files, see the environment variables
 information in :doc:`configuring-sdk`.
 
@@ -123,7 +123,7 @@ information in :doc:`configuring-sdk`.
 Update a |CW| Agent
 ===================
 
-To make changes to the port ID,
+To make changes to the port number or the Client ID,
 set the values and then restart any AWS jobs that are currently active.
 
 .. _update_cw_agent_option1:
@@ -138,6 +138,7 @@ add ``AWS_CSM_PORT=[PORT-NUMBER]``, where PORT-NUMBER is the port number, to the
 
     export AWS_CSM_ENABLED=true
     export AWS_CSM_PORT=1234
+    export AWS_CSM_CLIENT_ID="My Application"
 
 .. _update_cw_agent_option2:
 
@@ -153,10 +154,12 @@ add ``AWS_CSM_PORT=[PORT-NUMBER]``, where PORT-NUMBER is the port number, to *~/
     [default]
     csm_enabled = false
     csm_port = 1234
+    csm_client_id = "My Application"
 
     [profile aws_csm]
     csm_enabled = false
     csm_port = 1234
+    csm_client_id = "My Application"
 
 .. _restart_csm:
 
