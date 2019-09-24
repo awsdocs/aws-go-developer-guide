@@ -68,17 +68,19 @@ The |EC2| service has an operation for describing instances,
 Import the required |sdk-go| packages.
 
 .. literalinclude:: example_code/ec2/describing_instances.go
-   :lines: 15-23
+   :lines: 15-22
 
 Use the following code to create a session and |EC2| client.
 
 .. literalinclude:: example_code/ec2/describing_instances.go
-   :lines: 25-32
+   :lines: 25-31
+   :dedent: 4
 
 Call ``DescribeInstances`` to get detailed information for each instance.
 
 .. literalinclude:: example_code/ec2/describing_instances.go
-   :lines: 35-41
+   :lines: 33-39
+   :dedent: 4
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/describing_instances.go>`_
