@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -22,6 +22,16 @@ version of Go by running the ``go version`` command. For information
 about installing or upgrading your version of Go, see
 https://golang.org/doc/install.
 
+.. _get_amazon_account:
+
+Get an Amazon Account
+=====================
+
+Before you can use the |sdk-go|,
+you must have an Amazon account.
+See
+`How do I create and activate a new Amazon Web Services account? <https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account>`_
+for details.
 
 .. _install_go_sdk:
 
