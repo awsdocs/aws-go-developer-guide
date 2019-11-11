@@ -66,7 +66,7 @@ Create a new Go file named :file:`sqs_listqueues.go`. You must import the releva
 Initialize a session that the SDK will use to load credentials from the shared credentials file, ~/.aws/credentials.
 
 .. literalinclude:: example_code/sqs/sqs_listqueues.go
-   :lines: 26,29-34
+   :lines: 27,30-35
 
 Call ``ListQueues`` passing in ``nil`` to return all queues. Print any errors or a success
 message and loop through the queue URLs to print them.
