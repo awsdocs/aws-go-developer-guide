@@ -248,7 +248,7 @@ Using a Custom HTTP Client
 ==========================
 
 Let's create a custom HTTP client and use it to 
-a create an |S3| client.
+create an |S3| client.
 
 The following example creates an **http.Client** that is configured to have:
 
