@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -133,6 +133,8 @@ looks for credentials in the following order:
 1. Environment variables.
 2. Shared credentials file.
 3. If your application is running on an |EC2| instance, |IAM| role for |EC2|.
+4. If your application uses an ECS task definition or RunTask API operation,
+   |IAM| role for tasks.
 
 The SDK detects and uses the built-in providers automatically, without
 requiring manual configurations. For example, if you use |IAM| roles for
@@ -143,35 +145,37 @@ in your application.
 As a best practice, AWS recommends that you specify credentials in the
 following order:
 
-1. Use |IAM| roles for |EC2| (if your application is running on an
+1. Use |IAM| roles for tasks if your application uses an ECS task definition or RunTask API operation.
+
+2. Use |IAM| roles for |EC2| (if your application is running on an
    |EC2| instance).
 
    |IAM| roles provide applications on the instance temporary security
    credentials to make AWS calls. |IAM| roles provide an easy way to
    distribute and manage credentials on multiple |EC2| instances.
 
-2. Use a shared credentials file.
+3. Use a shared credentials file.
 
    This credentials file is the same one used by other SDKs and the |CLI|.
    If you're already using a shared credentials file, you can also use
    it for this purpose.
 
-3. Use environment variables.
+4. Use environment variables.
 
    Setting environment variables is useful if you're doing development
    work on a machine other than an |EC2| instance.
 
-4. Hard-code credentials (not recommended).
+|IAM| Roles for Tasks
+---------------------
 
-   Hard-coding credentials in your application can make it difficult to
-   manage and rotate those credentials. Use this method only for small
-   personal scripts or testing purposes. Do not submit code with
-   credentials to source control.
+If your application uses an |ECS| task definition or :code:`RunTask` operation,
+use :ecs-dg:`IAM Roles for Tasks <task-iam-roles>`
+to specify an IAM role that can be used by the containers in a task.
 
 |IAM| Roles for |EC2| Instances
 -------------------------------
 
-If you are running your application on an |EC2| instance, you can
+If you are running your application on an |EC2| instance, 
 use the instance's :ec2-ug:`IAM role <iam-roles-for-amazon-ec2>`
 to get temporary security credentials to make calls to AWS.
 
