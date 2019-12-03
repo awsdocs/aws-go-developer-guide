@@ -28,6 +28,7 @@ This documentation is for the |sdk-go|.
    Handling Errors <handling-errors>
    Code Examples <common-examples>
    SDK Utilities <sdk-utilities>
+   Security <security>
    document-history
 
 .. meta::
