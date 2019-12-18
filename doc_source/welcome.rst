@@ -16,6 +16,7 @@ AWS SDK for Go Developer Guide
    :description: Use the AWS SDK for Go to build Go applications that use AWS services.
    :keywords: AWS SDK for Go, code examples
 
+Welcome to the |sdk-go|.
 The |sdk-go| provides APIs and utilities that developers can use
 to build Go applications that use AWS services, such as |EC2long| (|EC2|) and
 |S3long| (|S3|).
