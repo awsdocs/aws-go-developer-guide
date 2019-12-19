@@ -58,3 +58,715 @@ August 31, 2016
    Initial release of the |sdk-go-dg|.
 
 
+Add resolves to |Add|
+
+credentials resolves to |credentials|
+
+Command resolves to |Command|
+
+line resolves to |line|
+
+Credentials resolves to |Credentials|
+
+New resolves to |New|
+
+SDK resolves to |SDK|
+
+version resolves to |version|
+
+New resolves to |New|
+
+SDK resolves to |SDK|
+
+version resolves to |version|
+
+New resolves to |New|
+
+web resolves to |web|
+
+layout resolves to |layout|
+
+S3 resolves to |S3|
+
+Examples resolves to |Examples|
+
+Service resolves to |Service|
+
+features resolves to |features|
+
+(Using resolves to |(Using|
+
+session resolves to |session|
+
+locking) resolves to |locking)|
+
+*14* resolves to |*14*|
+
+*armeabi-v7a* resolves to |*armeabi-v7a*|
+
+*libc++_static* resolves to |*libc++_static*|
+
+*LINUX* resolves to |*LINUX*|
+
+*OFF* resolves to |*OFF*|
+
+:blog:`Blog resolves to |:blog:`Blog|
+
+<developer/category/php/>` resolves to |<developer/category/php/>`|
+
+:guilabel:`Properties` resolves to |:guilabel:`Properties`|
+
+`Forum resolves to |`Forum|
+
+<https://forums.aws.amazon.com/forum.jspa?forumID=80>`_ resolves to |<https://forums.aws.amazon.com/forum.jspa?forumID=80>`_|
+
+`GitHub resolves to |`GitHub|
+
+<https://github.com/aws/aws-sdk-php>`_ resolves to |<https://github.com/aws/aws-sdk-php>`_|
+
+`Gitter resolves to |`Gitter|
+
+<https://gitter.im/aws/aws-sdk-php>`_ resolves to |<https://gitter.im/aws/aws-sdk-php>`_|
+
+`Packagist resolves to |`Packagist|
+
+<https://packagist.org/packages/aws/aws-sdk-php>`_ resolves to |<https://packagist.org/packages/aws/aws-sdk-php>`_|
+
+Change resolves to |Change|
+
+Change resolves to |Change|
+
+Delete resolves to |Delete|
+
+via resolves to |via|
+
+``session_destroy()`` resolves to |``session_destroy()``|
+
+Endpoint resolves to |Endpoint|
+
+discovery resolves to |discovery|
+
+false" resolves to |false"|
+
+false" resolves to |false"|
+
+/> resolves to |/>|
+
+Garbage resolves to |Garbage|
+
+Collection resolves to |Collection|
+
+JSON" resolves to |JSON"|
+
+LoggingOptions.SystemDiagnostics; resolves to |LoggingOptions.SystemDiagnostics;|
+
+OnError resolves to |OnError|
+
+Other`. resolves to |Other`.|
+
+Click resolves to |Click|
+
+:guilabel:`AWS resolves to |:guilabel:`AWS|
+
+Management` resolves to |Management`|
+
+from resolves to |from|
+
+the resolves to |the|
+
+list resolves to |list|
+
+of resolves to |of|
+
+php resolves to |php|
+
+Read resolves to |Read|
+
+via resolves to |via|
+
+``session_start()`` resolves to |``session_start()``|
+
+Release resolves to |Release|
+
+Release] resolves to |Release]|
+
+Release] resolves to |Release]|
+
+-D resolves to |-D|
+
+BUILD_ONLY="s3" resolves to |BUILD_ONLY="s3"|
+
+V2"> resolves to |V2">|
+
+Write resolves to |Write|
+
+via resolves to |via|
+
+``session_write_close()`` resolves to |``session_write_close()``|
+
+__ resolves to |__|
+
+___ resolves to |___|
+
+___-dg resolves to |___-dg|
+
+``, resolves to |``,|
+
+control resolves to |control|
+
+characters resolves to |characters|
+
+or resolves to |or|
+
+the resolves to |the|
+
+literal resolves to |literal|
+
+string resolves to |string|
+
+'arn') resolves to |'arn')|
+
+and resolves to |and|
+
+a resolves to |a|
+
+*retention resolves to |*retention|
+
+``\Iterator``) resolves to |``\Iterator``)|
+
+ABP resolves to |ABP|
+
+ABP-dg resolves to |ABP-dg|
+
+AC9 resolves to |AC9|
+
+AC9long resolves to |AC9long|
+
+AC9-ug resolves to |AC9-ug|
+
+ACB resolves to |ACB|
+
+ACBlong resolves to |ACBlong|
+
+ACC resolves to |ACC|
+
+ACClong resolves to |ACClong|
+
+acm resolves to |acm|
+
+acmlong resolves to |acmlong|
+
+acm-ug resolves to |acm-ug|
+
+ACSlong resolves to |ACSlong|
+
+ACS-ug resolves to |ACS-ug|
+
+AEB resolves to |AEB|
+
+AEB-dg resolves to |AEB-dg|
+
+AEBlong resolves to |AEBlong|
+
+AK resolves to |AK|
+
+AK-api resolves to |AK-api|
+
+AKF resolves to |AKF|
+
+AKFlong resolves to |AKFlong|
+
+AKlong resolves to |AKlong|
+
+AKS resolves to |AKS|
+
+AKS-dg resolves to |AKS-dg|
+
+AKSlong resolves to |AKSlong|
+
+arnlong resolves to |arnlong|
+
+ARNlong resolves to |ARNlong|
+
+array`` resolves to |array``|
+
+ASM resolves to |ASM|
+
+ASMlong resolves to |ASMlong|
+
+ASM-ug resolves to |ASM-ug|
+
+AttachRolePolicy resolves to |AttachRolePolicy|
+
+attempts, resolves to |attempts,|
+
+response resolves to |response|
+
+AWS resolves to |AWS|
+
+Aws\CacheInterface resolves to |Aws\CacheInterface|
+
+aws-credentials resolves to |aws-credentials|
+
+aws-credfile-var resolves to |aws-credfile-var|
+
+AWSDP resolves to |AWSDP|
+
+AWS-gr resolves to |AWS-gr|
+
+AWSlong resolves to |AWSlong|
+
+b resolves to |b|
+
+c resolves to |c|
+
+CDlong resolves to |CDlong|
+
+CF resolves to |CF|
+
+cf-dg resolves to |cf-dg|
+
+CF-dg resolves to |CF-dg|
+
+CFlong resolves to |CFlong|
+
+CFN resolves to |CFN|
+
+CFN-gsg resolves to |CFN-gsg|
+
+CFNlong resolves to |CFNlong|
+
+CFNLong resolves to |CFNLong|
+
+CFN-ug resolves to |CFN-ug|
+
+CLI resolves to |CLI|
+
+cli-ug resolves to |cli-ug|
+
+cmake resolves to |cmake|
+
+COG resolves to |COG|
+
+COG-dg resolves to |COG-dg|
+
+COGID resolves to |COGID|
+
+console resolves to |console|
+
+CreatePolicy resolves to |CreatePolicy|
+
+CreateRole resolves to |CreateRole|
+
+cs resolves to |cs|
+
+CS resolves to |CS|
+
+CSlong resolves to |CSlong|
+
+CSM resolves to |CSM|
+
+CSMlong resolves to |CSMlong|
+
+CSMmerge resolves to |CSMmerge|
+
+CT resolves to |CT|
+
+CTlong resolves to |CTlong|
+
+CTLong resolves to |CTLong|
+
+cw resolves to |cw|
+
+CW resolves to |CW|
+
+CW_IAM_CSM resolves to |CW_IAM_CSM|
+
+cw-api resolves to |cw-api|
+
+cwclient resolves to |cwclient|
+
+CW-dg resolves to |CW-dg|
+
+CWE resolves to |CWE|
+
+cwe-api resolves to |cwe-api|
+
+cweclient resolves to |cweclient|
+
+CWElong resolves to |CWElong|
+
+cwe-ug resolves to |cwe-ug|
+
+CWE-ug resolves to |CWE-ug|
+
+CWL resolves to |CWL|
+
+CWLlong resolves to |CWLlong|
+
+CWlong resolves to |CWlong|
+
+CWL-ug resolves to |CWL-ug|
+
+cw-ug resolves to |cw-ug|
+
+CW-ug resolves to |CW-ug|
+
+ddb resolves to |ddb|
+
+DDB resolves to |DDB|
+
+ddbasyncclient resolves to |ddbasyncclient|
+
+ddbclient resolves to |ddbclient|
+
+ddb-dg resolves to |ddb-dg|
+
+DDB-dg resolves to |DDB-dg|
+
+DDBlong resolves to |DDBlong|
+
+descending", resolves to |descending",|
+
+EB resolves to |EB|
+
+EB-dg resolves to |EB-dg|
+
+EBlong resolves to |EBlong|
+
+EBS resolves to |EBS|
+
+EBSlong resolves to |EBSlong|
+
+ec2 resolves to |ec2|
+
+EC2 resolves to |EC2|
+
+ec2-api resolves to |ec2-api|
+
+ec2client resolves to |ec2client|
+
+EC2long resolves to |EC2long|
+
+ec2-pricing resolves to |ec2-pricing|
+
+ec2-ug resolves to |ec2-ug|
+
+EC2-ug resolves to |EC2-ug|
+
+EC2-ug-win resolves to |EC2-ug-win|
+
+eclipse-update-url resolves to |eclipse-update-url|
+
+ECS resolves to |ECS|
+
+ECSlong resolves to |ECSlong|
+
+ELClong resolves to |ELClong|
+
+EMC resolves to |EMC|
+
+EMClong resolves to |EMClong|
+
+EMC-ug resolves to |EMC-ug|
+
+ES resolves to |ES|
+
+ESlong resolves to |ESlong|
+
+explorer resolves to |explorer|
+
+GL resolves to |GL|
+
+GL-dg resolves to |GL-dg|
+
+GLlong resolves to |GLlong|
+
+iam resolves to |iam|
+
+IAM resolves to |IAM|
+
+iam-api resolves to |iam-api|
+
+iamclient resolves to |iamclient|
+
+IAMlong resolves to |IAMlong|
+
+iam-ug resolves to |iam-ug|
+
+IAM-ug resolves to |IAM-ug|
+
+int) resolves to |int)|
+
+IoTlong resolves to |IoTlong|
+
+JDKlong11 resolves to |JDKlong11|
+
+JDKlong8 resolves to |JDKlong8|
+
+jflow resolves to |jflow|
+
+jflow-dg resolves to |jflow-dg|
+
+KMS resolves to |KMS|
+
+KMS-dg resolves to |KMS-dg|
+
+KMSlong resolves to |KMSlong|
+
+lam resolves to |lam|
+
+LAM resolves to |LAM|
+
+LAM-dg resolves to |LAM-dg|
+
+LAMlong resolves to |LAMlong|
+
+language resolves to |language|
+
+long resolves to |long|
+
+m resolves to |m|
+
+MCElong resolves to |MCElong|
+
+mdash resolves to |mdash|
+
+mvn resolves to |mvn|
+
+mvnlong resolves to |mvnlong|
+
+n, resolves to |n,|
+
+resp resolves to |resp|
+
+name resolves to |name|
+
+ndash resolves to |ndash|
+
+net-core resolves to |net-core|
+
+nmake resolves to |nmake|
+
+obj resolves to |obj|
+
+OPS resolves to |OPS|
+
+OPSlong resolves to |OPSlong|
+
+pin-api resolves to |pin-api|
+
+PIN-api resolves to |PIN-api|
+
+pin-dg resolves to |pin-dg|
+
+PINlong resolves to |PINlong|
+
+PINLong resolves to |PINLong|
+
+pinpointclient resolves to |pinpointclient|
+
+pin-ug resolves to |pin-ug|
+
+POLlong resolves to |POLlong|
+
+R53 resolves to |R53|
+
+R53long resolves to |R53long|
+
+RDS resolves to |RDS|
+
+rds-dg resolves to |rds-dg|
+
+RDSlong resolves to |RDSlong|
+
+RDS-ug resolves to |RDS-ug|
+
+region_api_default resolves to |region_api_default|
+
+region-api-default resolves to |region-api-default|
+
+region-eu-west-1 resolves to |region-eu-west-1|
+
+regions-and-endpoints resolves to |regions-and-endpoints|
+
+region-sdk-default resolves to |region-sdk-default|
+
+region-us-east-1 resolves to |region-us-east-1|
+
+resource`` resolves to |resource``|
+
+response resolves to |response|
+
+RSlong resolves to |RSlong|
+
+rule resolves to |rule|
+
+s3 resolves to |s3|
+
+S3 resolves to |S3|
+
+s3-api resolves to |s3-api|
+
+S3-api resolves to |S3-api|
+
+s3client resolves to |s3client|
+
+s3-dg resolves to |s3-dg|
+
+S3-dg resolves to |S3-dg|
+
+S3-gsg resolves to |S3-gsg|
+
+S3long resolves to |S3long|
+
+SDB resolves to |SDB|
+
+SDBlong resolves to |SDBlong|
+
+sdk resolves to |sdk|
+
+sdk-android resolves to |sdk-android|
+
+sdk-cpp resolves to |sdk-cpp|
+
+sdk-cpp-dg resolves to |sdk-cpp-dg|
+
+sdk-cpp-ref resolves to |sdk-cpp-ref|
+
+sdk-go resolves to |sdk-go|
+
+sdk-go-api resolves to |sdk-go-api|
+
+sdk-go-dg resolves to |sdk-go-dg|
+
+sdk-java resolves to |sdk-java|
+
+sdk-java-dg resolves to |sdk-java-dg|
+
+sdk-java-dl resolves to |sdk-java-dl|
+
+sdk-java-github resolves to |sdk-java-github|
+
+sdk-java-github-v1 resolves to |sdk-java-github-v1|
+
+sdk-java-ref resolves to |sdk-java-ref|
+
+sdk-java-v2 resolves to |sdk-java-v2|
+
+SDKM resolves to |SDKM|
+
+SDKMlong resolves to |SDKMlong|
+
+sdk-net resolves to |sdk-net|
+
+sdk-net-api resolves to |sdk-net-api|
+
+sdk-net-ref resolves to |sdk-net-ref|
+
+sdk-php resolves to |sdk-php|
+
+sdk-php-dg resolves to |sdk-php-dg|
+
+sdk-ruby resolves to |sdk-ruby|
+
+sdk-ruby-dg resolves to |sdk-ruby-dg|
+
+sdk-store resolves to |sdk-store|
+
+SERVICENAME resolves to |SERVICENAME|
+
+SERVICENAMESENTENCECASE resolves to |SERVICENAMESENTENCECASE|
+
+SERVICENAMETITLE resolves to |SERVICENAMETITLE|
+
+SES resolves to |SES|
+
+SES-dg resolves to |SES-dg|
+
+SESlong resolves to |SESlong|
+
+sns resolves to |sns|
+
+SNS resolves to |SNS|
+
+SNSlong resolves to |SNSlong|
+
+sqs resolves to |sqs|
+
+SQS resolves to |SQS|
+
+sqs-api resolves to |sqs-api|
+
+SQS-api resolves to |SQS-api|
+
+sqsclient resolves to |sqsclient|
+
+sqs-dg resolves to |sqs-dg|
+
+SQS-dg resolves to |SQS-dg|
+
+SQSlong resolves to |SQSlong|
+
+SSMlong resolves to |SSMlong|
+
+string resolves to |string|
+
+string[]`` resolves to |string[]``|
+
+string`` resolves to |string``|
+
+STS resolves to |STS|
+
+STSlong resolves to |STSlong|
+
+SWF resolves to |SWF|
+
+SWF-dg resolves to |SWF-dg|
+
+TFW resolves to |TFW|
+
+time", resolves to |time",|
+
+tke resolves to |tke|
+
+TKE resolves to |TKE|
+
+tke-ug resolves to |tke-ug|
+
+today resolves to |today|
+
+TSC resolves to |TSC|
+
+TSC-dg resolves to |TSC-dg|
+
+tscstreamasyncclient resolves to |tscstreamasyncclient|
+
+TTSlong resolves to |TTSlong|
+
+tvs resolves to |tvs|
+
+TVS resolves to |TVS|
+
+TVSlong resolves to |TVSlong|
+
+TVS-ug resolves to |TVS-ug|
+
+TWP resolves to |TWP|
+
+TWPlong resolves to |TWPlong|
+
+TWPLong resolves to |TWPLong|
+
+unixes resolves to |unixes|
+
+w resolves to |w|
+
+WD resolves to |WD|
+
+WDlong resolves to |WDlong|
+
+WP resolves to |WP|
+
+xfermgr resolves to |xfermgr|
+
