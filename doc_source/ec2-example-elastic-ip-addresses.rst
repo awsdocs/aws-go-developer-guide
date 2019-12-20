@@ -113,7 +113,7 @@ requires and will be associated with the instance ID that is passed in.
    :lines: 32-37
 
 You will need to initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials, and create a new |S3| service client.
+from the shared credentials file, ~/.aws/credentials, and create a new |EC2| service client.
 
 .. literalinclude:: example_code/ec2/ec2_allocate_address.go
    :lines: 41-46
