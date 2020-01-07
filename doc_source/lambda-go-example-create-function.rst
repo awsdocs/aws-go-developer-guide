@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -39,30 +39,37 @@ in the :code:`us-west-2` region using the following values:
 
 The first step is to import the packages we use in the example.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
-   :lines: 17-26
+.. literalinclude:: lambda.go.create_function.imports.txt
    :dedent: 0
    :language: go
 
-Next, create the session and |LAM| client.
+Get the zip file name, bucket name, function name, handler, ARN,
+and runtime values from the command line.
+If any are missing, print and error message and quit.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
-   :lines: 30-33, 35
+.. literalinclude:: lambda.go.create_function.vars.txt
+   :dedent: 4
+   :language: go
+
+Create the session and |LAM| client
+and get the contents of the zip file.
+If you cannot read the zip file contents,
+print an error message and quit.
+
+.. literalinclude:: lambda.go.create_function.session.txt
    :dedent: 4
    :language: go
 
 Next, create the structures for the input argument to the :code:`CreateFunction` function.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
-   :lines: 44-57
+.. literalinclude:: lambda.go.create_function.structs.txt
    :dedent: 4
    :language: go
 
 Finally, call :code:`CreateFunction` and display a message with the result of the call.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
-   :lines: 59-64
-   :dedent: 0
+.. literalinclude:: lambda.go.create_function.create.txt
+   :dedent: 4
    :language: go
 
 See the `complete example

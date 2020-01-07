@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -33,8 +33,7 @@ Choose :code:`Copy` to save the code locally.
 Create the file *create_trail.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: ./example_code/cloudtrail/create_trail.go
-   :lines: 17-28
+.. literalinclude:: cloudtrail.go.create_trail.imports.txt
    :dedent: 0
    :language: go
 
@@ -43,8 +42,7 @@ and whether to attach the policy to the bucket.
 If either the trail name or bucket name is missing,
 display an error message and exit.
 
-.. literalinclude:: ./example_code/cloudtrail/create_trail.go
-   :lines: 32-47
+.. literalinclude:: cloudtrail.go.create_trail.vars.txt
    :dedent: 4
    :language: go
 
@@ -52,15 +50,13 @@ Initialize the session that the SDK uses to load credentials
 from the shared credentials file
 *.aws/credentials* in your home folder.
 
-.. literalinclude:: ./example_code/cloudtrail/create_trail.go
-   :lines: 50-52
+.. literalinclude:: cloudtrail.go.create_trail.session.txt
    :dedent: 4
    :language: go
 
 If the **-p** flag was specfied, add a policy to the bucket.
 
-.. literalinclude:: ./example_code/cloudtrail/create_trail.go
-   :lines: 54-117
+.. literalinclude:: cloudtrail.go.create_trail.policy.txt
    :dedent: 4
    :language: go
 
@@ -69,8 +65,7 @@ and call **CreateTrail**.
 If an error occurs, print the error and exit.
 If no error occurs, print a success message.
 
-.. literalinclude:: ./example_code/cloudtrail/create_trail.go
-   :lines: 120-134
+.. literalinclude:: cloudtrail.go.create_trail.create.txt
    :dedent: 4
    :language: go
 

@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -29,18 +29,15 @@ Choose :code:`Copy` to save the code locally.
 Create the file *lookup_events.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: ./example_code/cloudtrail/lookup_events.go
-   :lines: 17-26
+.. literalinclude:: cloudtrail.go.lookup_events.imports.txt
    :dedent: 0
    :language: go
 
-Get the name of the trail,
-and whether to display the event.
+Get the name of the trail.
 If the trail name is missing,
 display an error message and exit.
 
-.. literalinclude:: ./example_code/cloudtrail/lookup_events.go
-   :lines: 29-42
+.. literalinclude:: cloudtrail.go.lookup_events.vars.txt
    :dedent: 4
    :language: go
 
@@ -48,20 +45,16 @@ Initialize the session that the SDK uses to load credentials
 from the shared credentials file
 *.aws/credentials* in your home folder, and create a new service client.
 
-.. literalinclude:: ./example_code/cloudtrail/lookup_events.go
-   :lines: 44-51
+.. literalinclude:: cloudtrail.go.lookup_events.session.txt
    :dedent: 4
    :language: go
 
-Create the input for and call **LookupEvents**.
+Create the |CT| client, and the input for and call **LookupEvents**.
 If an error occurs, print the error and exit.
 If no error occurs, loop through the events,
 printing information about each event.
-If the **-s** flag was specified,
-print the |CT| event.
 
-.. literalinclude:: ./example_code/cloudtrail/lookup_events.go
-   :lines: 53-85
+.. literalinclude:: cloudtrail.go.lookup_events.lookup.txt
    :dedent: 4
    :language: go
 

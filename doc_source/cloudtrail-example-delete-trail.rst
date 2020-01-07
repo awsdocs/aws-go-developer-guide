@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -30,8 +30,7 @@ Choose :code:`Copy` to save the code locally.
 Create the file *delete_trail.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: ./example_code/cloudtrail/delete_trail.go
-   :lines: 17-25
+.. literalinclude:: cloudtrail.go.delete_trail.imports.txt
    :dedent: 0
    :language: go
 
@@ -39,8 +38,7 @@ Get the name of the trail.
 If the trail name is missing,
 display an error message and exit.
 
-.. literalinclude:: ./example_code/cloudtrail/delete_trail.go
-   :lines: 29-38
+.. literalinclude:: cloudtrail.go.delete_trail.vars.txt
    :dedent: 4
    :language: go
 
@@ -49,17 +47,16 @@ from the shared credentials file
 *.aws/credentials* in your home folder
 and create the client.
 
-.. literalinclude:: ./example_code/cloudtrail/delete_trail.go
-   :lines: 41-46
+.. literalinclude:: cloudtrail.go.delete_trail.session.txt
    :dedent: 4
    :language: go
 
-Call **DeleteTrail** with the trail name.
+Create a |CT| client and
+call **DeleteTrail** with the trail name.
 If an error occurs, print the error and exit.
 If no error occurs, print a success message.
 
-.. literalinclude:: ./example_code/cloudtrail/delete_trail.go
-   :lines: 48-55
+.. literalinclude:: cloudtrail.go.delete_trail.delete.txt
    :dedent: 4
    :language: go
 
