@@ -96,6 +96,6 @@ that structure, and print a success or error message.
 
 The example uses the following error function.
 
-.. literalinclude:: s3.go.set_cors.exit
+.. literalinclude:: s3.go.set_cors.exit.txt
    :dedent: 0
    :language: go
