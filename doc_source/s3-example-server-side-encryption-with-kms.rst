@@ -33,7 +33,7 @@ Create the file *encrypt_object_on_server.go*.
 
 Add the required packages.
 
-.. literalinclude:: ./example_code/s3/s3_encrypt_on_server_with_kms.go
+.. literalinclude:: ./s3/s3_encrypt_on_server_with_kms.go
    :lines: 17-25
    :dedent: 0
    :language: go
@@ -42,14 +42,14 @@ Get the KMS key from the command line,
 where :code:`key` is a KMS key ID as created in the :doc:`kms-example-create-key` example,
 and set the bucket and object names.
 
-.. literalinclude:: ./example_code/s3/s3_encrypt_on_server_with_kms.go
+.. literalinclude:: ./s3/s3_encrypt_on_server_with_kms.go
    :lines: 28-35
    :dedent: 4
    :language: go
 
 Create a session and |S3| client.
 
-.. literalinclude:: ./example_code/s3/s3_encrypt_on_server_with_kms.go
+.. literalinclude:: ./s3/s3_encrypt_on_server_with_kms.go
    :lines: 40-44
    :dedent: 4
    :language: go
@@ -59,11 +59,11 @@ Notice that the :code:`server_side_encryption` property is set to :code:`aws:kms
 indicating that |S3| encrypts the object using AWS KMS,
 and display a success message to the user.
 
-.. literalinclude:: ./example_code/s3/s3_encrypt_on_server_with_kms.go
+.. literalinclude:: ./s3/s3_encrypt_on_server_with_kms.go
    :lines: 46-54, 61
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_encrypt_on_server_with_kms.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/s3/s3_encrypt_on_server_with_kms.go>`_
 on GitHub.

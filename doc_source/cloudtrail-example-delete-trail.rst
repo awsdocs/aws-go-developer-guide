@@ -30,7 +30,7 @@ Choose :code:`Copy` to save the code locally.
 Create the file *delete_trail.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: ./example_code/cloudtrail/delete_trail.go
+.. literalinclude:: ./cloudtrail/delete_trail.go
    :lines: 17-25
    :dedent: 0
    :language: go
@@ -39,7 +39,7 @@ Get the name of the trail.
 If the trail name is missing,
 display an error message and exit.
 
-.. literalinclude:: ./example_code/cloudtrail/delete_trail.go
+.. literalinclude:: ./cloudtrail/delete_trail.go
    :lines: 29-38
    :dedent: 4
    :language: go
@@ -49,7 +49,7 @@ from the shared credentials file
 *.aws/credentials* in your home folder
 and create the client.
 
-.. literalinclude:: ./example_code/cloudtrail/delete_trail.go
+.. literalinclude:: ./cloudtrail/delete_trail.go
    :lines: 41-46
    :dedent: 4
    :language: go
@@ -58,11 +58,11 @@ Call **DeleteTrail** with the trail name.
 If an error occurs, print the error and exit.
 If no error occurs, print a success message.
 
-.. literalinclude:: ./example_code/cloudtrail/delete_trail.go
+.. literalinclude:: ./cloudtrail/delete_trail.go
    :lines: 48-55
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudtrail/delete_trail.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/cloudtrail/delete_trail.go>`_
 on GitHub.

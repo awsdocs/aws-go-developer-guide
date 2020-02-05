@@ -62,14 +62,14 @@ Create the file :file:`listing_metrics.go`.
 
 Import the packages used in the example.
 
-.. literalinclude:: example_code/cloudwatch/listing_metrics.go
+.. literalinclude:: cloudwatch/listing_metrics.go
    :lines: 17-24
    :dedent: 0
    :language: go
 
 Get the metric name, namespace, and dimension name from the command line.
 
-.. literalinclude:: example_code/cloudwatch/listing_metrics.go
+.. literalinclude:: cloudwatch/listing_metrics.go
    :lines: 27-34
    :dedent: 4
    :language: go
@@ -79,20 +79,20 @@ from the shared credentials file ~/.aws/credentials,
 load your configuration from the shared configuration file ~/.aws/config,
 and create a |CW| client.
 
-.. literalinclude:: example_code/cloudwatch/listing_metrics.go
+.. literalinclude:: cloudwatch/listing_metrics.go
    :lines: 39-44
    :dedent: 4
    :language: go
 
 Call :code:`ListMetrics`, supplying the metric name, namespace, and dimension name. Print the metrics returned in the result.
 
-.. literalinclude:: example_code/cloudwatch/listing_metrics.go
+.. literalinclude:: cloudwatch/listing_metrics.go
    :lines: 47-55, 61
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/listing_metrics.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/cloudwatch/listing_metrics.go>`_
 on GitHub.
 
 .. _cw-example-custom-metrics:
@@ -106,7 +106,7 @@ Create the file :file:`custom_metrics.go`.
 
 Import the packages used in the example.
 
-.. literalinclude:: example_code/cloudwatch/custom_metrics.go
+.. literalinclude:: cloudwatch/custom_metrics.go
    :lines: 17-23
    :dedent: 0
    :language: go
@@ -116,7 +116,7 @@ from the shared credentials file ~/.aws/credentials,
 load your configuration from the shared configuration file ~/.aws/config,
 and create a |CW| client.
 
-.. literalinclude:: example_code/cloudwatch/custom_metrics.go
+.. literalinclude:: cloudwatch/custom_metrics.go
    :lines: 29-34
    :dedent: 4
    :language: go
@@ -129,7 +129,7 @@ the "UniqueVisitors" value 5885 and the "UniqueVisits" value 8628.
 "PageURL" has the value "my-page.html",
 and a "PageViews" value 18057.
 
-.. literalinclude:: example_code/cloudwatch/custom_metrics.go
+.. literalinclude:: cloudwatch/custom_metrics.go
    :lines: 36-73
    :dedent: 4
    :language: go
@@ -137,11 +137,11 @@ and a "PageViews" value 18057.
 If there are any errors, print them out,
 otherwise list some information about the custom metrics.
 
-.. literalinclude:: example_code/cloudwatch/custom_metrics.go
+.. literalinclude:: cloudwatch/custom_metrics.go
    :lines: 74-95
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/custom_metrics.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/cloudwatch/custom_metrics.go>`_
 on GitHub.

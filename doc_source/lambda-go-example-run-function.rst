@@ -73,14 +73,14 @@ Where:
 
 The first step is to import the packages we use.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-run-function.go
+.. literalinclude:: ./lambda/aws-go-sdk-lambda-example-run-function.go
    :lines: 17-26
    :dedent: 0
    :language: go
 
 Next create session and |LAM| client we use to invoke the |LAM| function.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-run-function.go
+.. literalinclude:: ./lambda/aws-go-sdk-lambda-example-run-function.go
    :lines: 60-64
    :dedent: 4
    :language: go
@@ -88,21 +88,21 @@ Next create session and |LAM| client we use to invoke the |LAM| function.
 Next, create the request and payload, and call :code:`MyGetItemsFunction`.
 If there is an error, display a message and quit.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-run-function.go
+.. literalinclude:: ./lambda/aws-go-sdk-lambda-example-run-function.go
    :lines: 67-79
    :dedent: 4
    :language: go
 
 Finally, parse the response, and if successful, print out the items.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-run-function.go
+.. literalinclude:: ./lambda/aws-go-sdk-lambda-example-run-function.go
    :lines: 81-108
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/lambda/aws-go-sdk-lambda-example-run-function.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/lambda/aws-go-sdk-lambda-example-run-function.go>`_
 on GitHub.
 
-.. note:: The `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/lambda/aws-go-sdk-lambda-example-run-function.go>`_
+.. note:: The `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/lambda/aws-go-sdk-lambda-example-run-function.go>`_
           includes the structures for marshaling the JSON request and unmarshaling the JSON response.

@@ -63,23 +63,23 @@ Create a new Go file with the name :file:`sqs_deadletterqueue.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_deadletterqueue.go
+.. literalinclude:: sqs/sqs_deadletterqueue.go
    :lines: 15-24
 
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file, ~/.aws/credentials.
 
-.. literalinclude:: example_code/sqs/sqs_deadletterqueue.go
+.. literalinclude:: sqs/sqs_deadletterqueue.go
    :lines: 28,31-36
 
 Define the redrive policy for the queue, then marshal the policy to use as input
 for the ``SetQueueAttributes`` call.
 
-.. literalinclude:: example_code/sqs/sqs_deadletterqueue.go
+.. literalinclude:: sqs/sqs_deadletterqueue.go
    :lines: 39-43,46-50
 
 Set the policy on the queue.
 
-.. literalinclude:: example_code/sqs/sqs_deadletterqueue.go
+.. literalinclude:: sqs/sqs_deadletterqueue.go
    :lines: 52-65
 

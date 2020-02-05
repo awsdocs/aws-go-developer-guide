@@ -21,7 +21,7 @@ example at the end of this topic.
 
 Import the following Go packages.
 
-.. literalinclude:: ./example_code/workdocs/wd_list_user_docs.go
+.. literalinclude:: ./workdocs/wd_list_user_docs.go
    :lines: 17-23
    :dedent: 0
    :language: go
@@ -33,14 +33,14 @@ Import the following Go packages.
 
 Create a session and |WD| client.
 
-.. literalinclude:: ./example_code/workdocs/wd_list_users.go
+.. literalinclude:: ./workdocs/wd_list_users.go
    :lines: 35-40
    :dedent: 4
    :language: go
 
 Check that we have a user name, and get the root folder for that user.
 
-.. literalinclude:: ./example_code/workdocs/wd_list_user_docs.go
+.. literalinclude:: ./workdocs/wd_list_user_docs.go
    :lines: 42-70
    :dedent: 4
    :language: go
@@ -48,11 +48,11 @@ Check that we have a user name, and get the root folder for that user.
 Run the :code:`DescribeFolderContents` method and display the name, size, and
 last modified information for each document.
 
-.. literalinclude:: ./example_code/workdocs/wd_list_user_docs.go
+.. literalinclude:: ./workdocs/wd_list_user_docs.go
    :lines: 72-87
    :dedent: 8
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/workdocs/wd_list_user_docs.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/workdocs/wd_list_user_docs.go>`_
 on GitHub.

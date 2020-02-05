@@ -66,14 +66,14 @@ Create the file :file:`create_enable_alarms.go`.
 
 Import packages used in the example.
 
-.. literalinclude:: example_code/cloudwatch/create_enable_alarms.go
+.. literalinclude:: cloudwatch/create_enable_alarms.go
    :lines: 16-24
    :dedent: 0
    :language: go
 
 Get an instance name, value, and alarm name.
 
-.. literalinclude:: example_code/cloudwatch/create_enable_alarms.go
+.. literalinclude:: cloudwatch/create_enable_alarms.go
    :lines: 27-34
    :dedent: 4
    :language: go
@@ -83,7 +83,7 @@ from the shared credentials file ~/.aws/credentials,
 load your configuration from the shared configuration file ~/.aws/config,
 and create a |CW| client.
 
-.. literalinclude:: example_code/cloudwatch/create_enable_alarms.go
+.. literalinclude:: cloudwatch/create_enable_alarms.go
    :lines: 39-44
    :dedent: 4
    :language: go
@@ -91,7 +91,7 @@ and create a |CW| client.
 Create a metric alarm that reboots an instance if its CPU utilization is greater
 than 70 percent.
 
-.. literalinclude:: example_code/cloudwatch/create_enable_alarms.go
+.. literalinclude:: cloudwatch/create_enable_alarms.go
    :lines: 48-72
    :dedent: 4
    :language: go
@@ -99,13 +99,13 @@ than 70 percent.
 Call :code:`EnableAlarmActions` with the new alarm for the instance,
 and display a message.
 
-.. literalinclude:: example_code/cloudwatch/create_enable_alarms.go
+.. literalinclude:: cloudwatch/create_enable_alarms.go
    :lines: 79-83, 89
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/create_enable_alarms.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/cloudwatch/create_enable_alarms.go>`_
 on GitHub.
 
 Disable Actions on an Alarm
@@ -117,14 +117,14 @@ Create the file :file:`disable_alarm.go`.
 
 Import the packages used in the example.
 
-.. literalinclude:: example_code/cloudwatch/disable_alarm.go
+.. literalinclude:: cloudwatch/disable_alarm.go
    :lines: 17-23
    :dedent: 0
    :language: go
 
 Get the name of the alarm from the command line.
 
-.. literalinclude:: example_code/cloudwatch/disable_alarm.go
+.. literalinclude:: cloudwatch/disable_alarm.go
    :lines: 26-31
    :dedent: 4
    :language: go
@@ -134,7 +134,7 @@ from the shared credentials file ~/.aws/credentials,
 load your configuration from the shared configuration file ~/.aws/config,
 and create a |CW| client.
 
-.. literalinclude:: example_code/cloudwatch/disable_alarm.go
+.. literalinclude:: cloudwatch/disable_alarm.go
    :lines: 36-41
    :dedent: 4
    :language: go
@@ -142,11 +142,11 @@ and create a |CW| client.
 Call :code:`DisableAlarmActions` to disable the actions for this alarm
 and display a message.
 
-.. literalinclude:: example_code/cloudwatch/disable_alarm.go
+.. literalinclude:: cloudwatch/disable_alarm.go
    :lines: 44-48, 54
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/disable_alarm.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/cloudwatch/disable_alarm.go>`_
 on GitHub.

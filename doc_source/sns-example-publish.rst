@@ -25,5 +25,5 @@ specified on the command line.
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/sns/SnsPublish.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sns/SnsPublish.go>`_
 on GitHub.

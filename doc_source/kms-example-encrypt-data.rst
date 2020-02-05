@@ -26,12 +26,12 @@ which implements the
 to encrypt the string "1234567890".
 The example displays a readable version of the resulting encrypted blob.
 
-.. literalinclude:: ./example_code/kms/kms_encrypt_data.go
+.. literalinclude:: ./kms/kms_encrypt_data.go
    :lines: 17-57
    :dedent: 0
    :language: go
 
 Choose :code:`Copy` to save the code locally.
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/kms/kms_encrypt_data.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/kms/kms_encrypt_data.go>`_
 on GitHub.

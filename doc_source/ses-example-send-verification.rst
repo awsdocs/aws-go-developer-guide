@@ -22,10 +22,10 @@ Verifying an Email Address in |SES|
 The following example demonstrates how to use the |sdk-go| to verify an |SES|
 email address.
 
-.. literalinclude:: ./example_code/ses/ses_send_verification.go
+.. literalinclude:: ./ses/ses_send_verification.go
    :lines: 15-73
    :dedent: 0
    :language: go
 
-See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ses/ses_send_verification.go>`_
+See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ses/ses_send_verification.go>`_
 on GitHub.

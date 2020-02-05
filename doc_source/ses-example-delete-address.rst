@@ -22,10 +22,10 @@ Deleting an Email Address in |SES|
 The following example demonstrates how to use the |sdk-go| to delete an |SES|
 email address.
 
-.. literalinclude:: ./example_code/ses/ses_delete_address.go
+.. literalinclude:: ./ses/ses_delete_address.go
    :lines: 15-63
    :dedent: 0
    :language: go
 
-See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ses/ses_delete_address.go>`_
+See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ses/ses_delete_address.go>`_
 on GitHub.

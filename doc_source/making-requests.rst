@@ -93,7 +93,7 @@ including a configuration option when constructing the service client.
 The following example uses the |DDB| **ListTables** operation
 to illustrate how to add a custom header to a service call.
 
-.. literalinclude:: example_code/extending_sdk/addHeader.go
+.. literalinclude:: extending_sdk/addHeader.go
    :lines: 15-
    :dedent: 0
    :language: go
@@ -102,7 +102,7 @@ If you run this program, the output should be similar to the following,
 where **ACCESS-KEY** is the access key of the user and
 **TABLE-1**, through **TABLE-N** are the names of the tables.
 
-.. literalinclude:: example_code/extending_sdk/tableList.txt
+.. literalinclude:: extending_sdk/tableList.txt
    :lines: 1-
 
 .. _service-operation-calls:

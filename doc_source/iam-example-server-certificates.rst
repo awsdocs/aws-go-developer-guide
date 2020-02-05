@@ -53,12 +53,12 @@ This code lists your certificates.
 
 Create a new Go file named :file:`iam_listservercerts.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_listservercerts.go
+.. literalinclude:: iam/iam_listservercerts.go
    :lines: 26,29-34
 
 Call ``ListServerCertificates`` and print the details.
 
-.. literalinclude:: example_code/iam/iam_listservercerts.go
+.. literalinclude:: iam/iam_listservercerts.go
    :lines: 36-49
 
 
@@ -71,17 +71,17 @@ In this example, you retrieve an existing server certificate.
 
 Create a new Go file named :file:`iam_getservercert.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_getservercert.go
+.. literalinclude:: iam/iam_getservercert.go
    :lines: 15-23
 
 Set up a new IAM client.
 
-.. literalinclude:: example_code/iam/iam_getservercert.go
+.. literalinclude:: iam/iam_getservercert.go
    :lines: 27,30-35
 
 Call ``GetServerCertificate``, passing the name of the certificate, and print the results.
 
-.. literalinclude:: example_code/iam/iam_getservercert.go
+.. literalinclude:: iam/iam_getservercert.go
    :lines: 37-46
 
 .. _iam-example-update-certificate:
@@ -95,17 +95,17 @@ Create a new Go file named :file:`iam_updateservercert.go`. You call the ``Updat
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_updateservercert.go
+.. literalinclude:: iam/iam_updateservercert.go
    :lines: 15-23
 
 Set up a new |IAM| client.
 
-.. literalinclude:: example_code/iam/iam_updateservercert.go
+.. literalinclude:: iam/iam_updateservercert.go
    :lines: 27,30-35
 
 Update the certificate name.
 
-.. literalinclude:: example_code/iam/iam_updateservercert.go
+.. literalinclude:: iam/iam_updateservercert.go
    :lines: 37-47
 
 .. _iam_example_delete_server_certificate:
@@ -119,17 +119,17 @@ Create a new Go file named :file:`iam_deleteservercert.go`. You call the ``Delet
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_deleteservercert.go
+.. literalinclude:: iam/iam_deleteservercert.go
    :lines: 15-23
 
 Set up a new |IAM| client.
 
-.. literalinclude:: example_code/iam/iam_deleteservercert.go
+.. literalinclude:: iam/iam_deleteservercert.go
    :lines: 27,30-35
 
 Call the method to delete the certificate, specifying the name of certificate.
 
-.. literalinclude:: example_code/iam/iam_deleteservercert.go
+.. literalinclude:: iam/iam_deleteservercert.go
    :lines: 37-46
 
 

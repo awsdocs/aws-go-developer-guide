@@ -53,17 +53,17 @@ This code creates a new |IAM| access key for the |IAM| user named IAM_USER_NAME.
 
 Create a new Go file named :file:`iam_createaccesskey.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_createaccesskey.go
+.. literalinclude:: iam/iam_createaccesskey.go
    :lines: 15-23
 
 Set up the session.
 
-.. literalinclude:: example_code/iam/iam_createaccesskey.go
+.. literalinclude:: iam/iam_createaccesskey.go
    :lines: 27,30-35
 
 Call ``CreateAccessKey`` and print the results.
 
-.. literalinclude:: example_code/iam/iam_createaccesskey.go
+.. literalinclude:: iam/iam_createaccesskey.go
    :lines: 37-47
 
 .. _iam-example-list-access-keys:
@@ -75,17 +75,17 @@ In this example, you get a list of the access keys for a user and print the list
 
 Create a new Go file named :file:`iam_listaccesskeys.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_listaccesskeys.go
+.. literalinclude:: iam/iam_listaccesskeys.go
    :lines: 15-23
 
 Set up a new |IAM| client.
 
-.. literalinclude:: example_code/iam/iam_listaccesskeys.go
+.. literalinclude:: iam/iam_listaccesskeys.go
    :lines: 27,30-35
 
 Call ``ListAccessKeys`` and print the results.
 
-.. literalinclude:: example_code/iam/iam_listaccesskeys.go
+.. literalinclude:: iam/iam_listaccesskeys.go
    :lines: 37-48
 
 .. _iam_example_last_use:
@@ -97,17 +97,17 @@ In this example, you find out when an access key was last used.
 
 Create a new Go file named :file:`iam_accesskeylastused.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_accesskeylastused.go
+.. literalinclude:: iam/iam_accesskeylastused.go
    :lines: 15-23
 
 Set up a new |IAM| client.
 
-.. literalinclude:: example_code/iam/iam_accesskeylastused.go
+.. literalinclude:: iam/iam_accesskeylastused.go
    :lines: 27,30-35
 
 Call ``GetAccessKeyLastUsed``, passing in the access key ID, and print the results.
 
-.. literalinclude:: example_code/iam/iam_accesskeylastused.go
+.. literalinclude:: iam/iam_accesskeylastused.go
    :lines: 37-48
 
 .. _iam_example_update-access-key:
@@ -121,17 +121,17 @@ In this example, you delete an |IAM| user.
 
 Create a new Go file with the name :file:`iam_updateaccesskey.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_updateaccesskey.go
+.. literalinclude:: iam/iam_updateaccesskey.go
    :lines: 15-23
 
 Set up a new |IAM| client.
 
-.. literalinclude:: example_code/iam/iam_updateaccesskey.go
+.. literalinclude:: iam/iam_updateaccesskey.go
    :lines: 27,30-35
 
 Call ``UpdateAccessKey``, passing in the access key ID, status (making it active in this case), and user name.
 
-.. literalinclude:: example_code/iam/iam_updateaccesskey.go
+.. literalinclude:: iam/iam_updateaccesskey.go
    :lines: 37-49
 
 .. _iam-example-delete-access-key:
@@ -143,15 +143,15 @@ In this example, you delete an access key.
 
 Create a new Go file named :file:`iam_deleteaccesskey.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_deleteaccesskey.go
+.. literalinclude:: iam/iam_deleteaccesskey.go
    :lines: 15-23
 
 Set up a new |IAM| client.
 
-.. literalinclude:: example_code/iam/iam_deleteaccesskey.go
+.. literalinclude:: iam/iam_deleteaccesskey.go
    :lines: 27,30-35
 
 Call ``DeleteAccessKey``, passing in the access key ID and user name.
 
-.. literalinclude:: example_code/iam/iam_deleteaccesskey.go
+.. literalinclude:: iam/iam_deleteaccesskey.go
    :lines: 37-48

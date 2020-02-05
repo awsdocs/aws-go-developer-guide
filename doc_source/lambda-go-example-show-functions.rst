@@ -21,21 +21,21 @@ Displaying Information about All |LAM| Functions
 
 First import the packages we use in this example.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-show-functions.go
+.. literalinclude:: ./lambda/aws-go-sdk-lambda-example-show-functions.go
    :lines: 17-24
    :dedent: 0
    :language: go
 
 Next, create the session and |LAM| client.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-show-functions.go
+.. literalinclude:: ./lambda/aws-go-sdk-lambda-example-show-functions.go
    :lines: 29-32, 34
    :dedent: 4
    :language: go
 
 Next, call :code:`ListFunctions` and exit if there is an error.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-show-functions.go
+.. literalinclude:: ./lambda/aws-go-sdk-lambda-example-show-functions.go
    :lines: 36-40
    :dedent: 4
    :language: go
@@ -43,10 +43,10 @@ Next, call :code:`ListFunctions` and exit if there is an error.
 Finally, display the names and descriptions of the
 |LAM| functions.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-show-functions.go
+.. literalinclude:: ./lambda/aws-go-sdk-lambda-example-show-functions.go
    :lines: 42-48
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/lambda/aws-go-sdk-lambda-example-show-functions.go>`_ on GitHub.
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/lambda/aws-go-sdk-lambda-example-show-functions.go>`_ on GitHub.

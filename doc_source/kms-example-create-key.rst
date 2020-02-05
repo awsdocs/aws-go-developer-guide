@@ -29,12 +29,12 @@ a CMK is fine for our purposes.
 For larger amounts of data,
 use the CMK to encrypt a data encryption key (DEK).
 
-.. literalinclude:: ./example_code/kms/kms_create_key.go
+.. literalinclude:: ./kms/kms_create_key.go
    :lines: 17-58
    :dedent: 0
    :language: go
 
 Choose :code:`Copy` to save the code locally.
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/kms/kms_create_key.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/kms/kms_create_key.go>`_
 on GitHub.

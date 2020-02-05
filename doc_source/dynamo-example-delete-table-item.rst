@@ -50,5 +50,5 @@ Otherwise, display a message that the item was deleted.
    :language: go
 
 See the `complete example 
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBDeleteItem.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/dynamodb/DynamoDBDeleteItem.go>`_
 on GitHub.

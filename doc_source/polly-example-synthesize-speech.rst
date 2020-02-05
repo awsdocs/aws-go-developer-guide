@@ -28,21 +28,21 @@ Choose :code:`Copy` to save the code locally.
 Create the file *pollySynthesizeSpeech.go*.
 Import the packages used in the example.
 
-.. literalinclude:: ./example_code/polly/pollySynthesizeSpeech.go
+.. literalinclude:: ./polly/pollySynthesizeSpeech.go
    :lines: 17-27
    :dedent: 0
    :language: go
 
 Get the name of the text file from the command line.
 
-.. literalinclude:: ./example_code/polly/pollySynthesizeSpeech.go
+.. literalinclude:: ./polly/pollySynthesizeSpeech.go
    :lines: 30-34, 36
    :dedent: 4
    :language: go
 
 Open the text file and read the contents as a string.
 
-.. literalinclude:: ./example_code/polly/pollySynthesizeSpeech.go
+.. literalinclude:: ./polly/pollySynthesizeSpeech.go
    :lines: 39, 47
    :dedent: 4
    :language: go
@@ -52,21 +52,21 @@ from the shared credentials file :file:`~/.aws/credentials`,
 load your configuration from the shared configuration file :file:`~/.aws/config`,
 and create an Amazon Polly client.
 
-.. literalinclude:: ./example_code/polly/pollySynthesizeSpeech.go
+.. literalinclude:: ./polly/pollySynthesizeSpeech.go
    :lines: 51-54, 56
    :dedent: 4
    :language: go
 
 Create the input for and call :code:`SynthesizeSpeech`.
 
-.. literalinclude:: ./example_code/polly/pollySynthesizeSpeech.go
+.. literalinclude:: ./polly/pollySynthesizeSpeech.go
    :lines: 59-61
    :dedent: 4
    :language: go
 
 Save the resulting synthesized speech as an MP3 file.
 
-.. literalinclude:: ./example_code/polly/pollySynthesizeSpeech.go
+.. literalinclude:: ./polly/pollySynthesizeSpeech.go
    :lines: 69-73, 80
    :dedent: 4
    :language: go
@@ -74,5 +74,5 @@ Save the resulting synthesized speech as an MP3 file.
 .. note:: The resulting MP3 file is in the MPEG-2 format.
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/polly/pollySynthesizeSpeech.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/polly/pollySynthesizeSpeech.go>`_
 on GitHub.

@@ -66,7 +66,7 @@ Create a new Go file named :file:`ec2_describe_addresses.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/ec2/ec2_describe_addresses.go
+.. literalinclude:: ec2/ec2_describe_addresses.go
    :lines: 15-24
 
 Get the Address Descriptions
@@ -76,21 +76,21 @@ This routine prints out the Elastic IP Addresses for the account's VPC. Initiali
 SDK will use to load credentials from the shared credentials file,
 ~/.aws/credentials, and create a new EC2 service client.
 
-.. literalinclude:: example_code/ec2/ec2_describe_addresses.go
+.. literalinclude:: ec2/ec2_describe_addresses.go
    :lines: 30, 33-38
 
 Make the API request to EC2 filtering for the addresses in the account's VPC.
 
-.. literalinclude:: example_code/ec2/ec2_describe_addresses.go
+.. literalinclude:: ec2/ec2_describe_addresses.go
    :lines: 42-63
 
 The ``fmtAddress`` and ``exitErrorf`` functions are utility functions used in the example.
 
-.. literalinclude:: example_code/ec2/ec2_describe_addresses.go
+.. literalinclude:: ec2/ec2_describe_addresses.go
    :lines: 65-
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_describe_addresses.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ec2/ec2_describe_addresses.go>`_
 on GitHub.
 
 .. _ec2-example-allocate:
@@ -102,41 +102,41 @@ Create a new Go file named :file:`ec2_allocate_address.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/ec2/ec2_allocate_address.go
+.. literalinclude:: ec2/ec2_allocate_address.go
    :lines: 15-25
 
 This routine attempts to allocate a VPC Elastic IP address for the current region. The IP address
 requires and will be associated with the instance ID that is passed in.
 
 
-.. literalinclude:: example_code/ec2/ec2_allocate_address.go
+.. literalinclude:: ec2/ec2_allocate_address.go
    :lines: 32-37
 
 You will need to initialize a session that the SDK will use to load credentials
 from the shared credentials file, ~/.aws/credentials, and create a new |EC2| service client.
 
-.. literalinclude:: example_code/ec2/ec2_allocate_address.go
+.. literalinclude:: ec2/ec2_allocate_address.go
    :lines: 41-46
 
 Call :sdk-go-api-deep:`AllocateAddress <service/ec2/#EC2.AllocateAddress>`, passing in
 "vpc" as the Domain value.
 
-.. literalinclude:: example_code/ec2/ec2_allocate_address.go
+.. literalinclude:: ec2/ec2_allocate_address.go
    :lines: 49-54
 
 Call :sdk-go-api-deep:`AssociateAddress <service/ec2/#EC2.AssociateAddress>` to associate the new Elastic IP
 address with an existing |EC2| instance, and print out the results.
 
-.. literalinclude:: example_code/ec2/ec2_allocate_address.go
+.. literalinclude:: ec2/ec2_allocate_address.go
    :lines: 57-68
 
 This example also uses the ``exitErrorf`` utility function.
 
-.. literalinclude:: example_code/ec2/ec2_allocate_address.go
+.. literalinclude:: ec2/ec2_allocate_address.go
    :lines: 70-73
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_allocate_address.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ec2/ec2_allocate_address.go>`_
 on GitHub.           
 
 .. _ec2-example-release-instance-addresses:           
@@ -151,30 +151,30 @@ Create a new Go file named :file:`ec2_release_address.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/ec2/ec2_release_address.go
+.. literalinclude:: ec2/ec2_release_address.go
    :lines: 15-26
 
 The routine requires that the user pass in the allocation ID of the Elastic IP address.
 
-.. literalinclude:: example_code/ec2/ec2_release_address.go
+.. literalinclude:: ec2/ec2_release_address.go
    :lines: 33-38
 
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file, ~/.aws/credentials, and create a new EC2 service client.
 
-.. literalinclude:: example_code/ec2/ec2_release_address.go
+.. literalinclude:: ec2/ec2_release_address.go
    :lines: 42-47
 
 Attempt to release the Elastic IP address by using the allocation ID.
 
-.. literalinclude:: example_code/ec2/ec2_release_address.go
+.. literalinclude:: ec2/ec2_release_address.go
    :lines: 50-62
 
 This example uses the ``fmtAddress`` and ``exitErrorf`` utility functions.
 
-.. literalinclude:: example_code/ec2/ec2_describe_addresses.go
+.. literalinclude:: ec2/ec2_describe_addresses.go
    :lines: 65-
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_describe_addresses.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ec2/ec2_describe_addresses.go>`_
 on GitHub.

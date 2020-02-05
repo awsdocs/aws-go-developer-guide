@@ -62,26 +62,26 @@ Create a new Go file named :file:`ec2_describe_keypairs.go`.
 
 Import the required |sdk-go| packages.
 
-.. literalinclude:: example_code/ec2/ec2_describe_keypairs.go
+.. literalinclude:: ec2/ec2_describe_keypairs.go
    :lines: 15-23
 
 Use the following code to create a session and |EC2| client.
 
-.. literalinclude:: example_code/ec2/ec2_describe_keypairs.go
+.. literalinclude:: ec2/ec2_describe_keypairs.go
    :lines: 29,32-37
 
 Call ``DescribeKeyPairs`` to get a list of key pairs and print them out.
 
-.. literalinclude:: example_code/ec2/ec2_describe_keypairs.go
+.. literalinclude:: ec2/ec2_describe_keypairs.go
    :lines: 40-49
 
 The routine uses the following utility function.
 
-.. literalinclude:: example_code/ec2/ec2_describe_keypairs.go
+.. literalinclude:: ec2/ec2_describe_keypairs.go
    :lines: 51-54
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_describe_keypairs.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ec2/ec2_describe_keypairs.go>`_
 on GitHub.
 
 .. _example-create-key-pair:
@@ -93,26 +93,26 @@ Create a new Go file named :file:`ec2_create_keypair.go`.
 
 Import the required |sdk-go| packages.
 
-.. literalinclude:: example_code/ec2/ec2_create_keypair.go
+.. literalinclude:: ec2/ec2_create_keypair.go
    :lines: 15-26
 
 Get the key pair name passed in to the code and, to access |EC2|, create an EC2 client.
 
-.. literalinclude:: example_code/ec2/ec2_create_keypair.go
+.. literalinclude:: ec2/ec2_create_keypair.go
    :lines: 32-37,41-46
 
 Create a new key pair with the provided name.
 
-.. literalinclude:: example_code/ec2/ec2_create_keypair.go
+.. literalinclude:: ec2/ec2_create_keypair.go
    :lines: 49-62
 
 The routine uses the following utility function.
 
-.. literalinclude:: example_code/ec2/ec2_create_keypair.go
+.. literalinclude:: ec2/ec2_create_keypair.go
    :lines: 64-67
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_create_keypair.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ec2/ec2_create_keypair.go>`_
 on GitHub.
 
 .. _example-delete-key-pair:
@@ -124,24 +124,24 @@ Create a new Go file named :file:`ec2_delete_keypair.go`.
 
 Import the required |sdk-go| packages.
 
-.. literalinclude:: example_code/ec2/ec2_delete_keypair.go
+.. literalinclude:: ec2/ec2_delete_keypair.go
    :lines: 15-26
 
 Get the key pair name passed in to the code and, to access |EC2|, create an EC2 client.
 
-.. literalinclude:: example_code/ec2/ec2_delete_keypair.go
+.. literalinclude:: ec2/ec2_delete_keypair.go
    :lines: 33-39,42-47
 
 Delete the key pair with the provided name.
 
-.. literalinclude:: example_code/ec2/ec2_delete_keypair.go
+.. literalinclude:: ec2/ec2_delete_keypair.go
    :lines: 50-61
 
 The routine uses the following utility function.
 
-.. literalinclude:: example_code/ec2/ec2_delete_keypair.go
+.. literalinclude:: ec2/ec2_delete_keypair.go
    :lines: 63-66
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_delete_keypair.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ec2/ec2_delete_keypair.go>`_
 on GitHub.

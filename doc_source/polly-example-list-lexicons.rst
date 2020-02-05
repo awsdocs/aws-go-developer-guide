@@ -28,7 +28,7 @@ Choose :code:`Copy` to save the code locally.
 Create the file *pollyListLexicons.go*.
 Import the packages used in the example.
 
-.. literalinclude:: ./example_code/polly/pollyListLexicons.go
+.. literalinclude:: ./polly/pollyListLexicons.go
    :lines: 17-23
    :dedent: 0
    :language: go
@@ -38,18 +38,18 @@ from the shared credentials file :file:`~/.aws/credentials`,
 load your configuration from the shared configuration file :file:`~/.aws/config`,
 and create an Amazon Polly client.
 
-.. literalinclude:: ./example_code/polly/pollyListLexicons.go
+.. literalinclude:: ./polly/pollyListLexicons.go
    :lines: 28-31, 33
    :dedent: 4
    :language: go
 
 Call :code:`ListLexicons` and display the name, alphabet, and language code of each lexicon.
 
-.. literalinclude:: ./example_code/polly/pollyListLexicons.go
+.. literalinclude:: ./polly/pollyListLexicons.go
    :lines: 35, 41-47
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/polly/pollyListLexicons.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/polly/pollyListLexicons.go>`_
 on GitHub.

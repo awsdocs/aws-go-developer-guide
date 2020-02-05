@@ -30,7 +30,7 @@ Choose :code:`Copy` to save the code locally.
 Create the file *describe_trails.go*.
 Add the following statements to import the Go and AWS SDK for Go packages used in the example.
 
-.. literalinclude:: ./example_code/cloudtrail/describe_trails.go
+.. literalinclude:: ./cloudtrail/describe_trails.go
    :lines: 17-24
    :dedent: 0
    :language: go
@@ -39,7 +39,7 @@ Initialize the session that the SDK uses to load credentials
 from the shared credentials file
 *.aws/credentials* in your home folder, and create a new service client.
 
-.. literalinclude:: ./example_code/cloudtrail/describe_trails.go
+.. literalinclude:: ./cloudtrail/describe_trails.go
    :lines: 29-34
    :dedent: 4
    :language: go
@@ -49,11 +49,11 @@ If an error occurs, print the error and exit.
 If no error occurs, loop through the trails,
 printing the name of each trail and the bucket.
 
-.. literalinclude:: ./example_code/cloudtrail/describe_trails.go
+.. literalinclude:: ./cloudtrail/describe_trails.go
    :lines: 36-51
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudtrail/describe_trails.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/cloudtrail/describe_trails.go>`_
 on GitHub.

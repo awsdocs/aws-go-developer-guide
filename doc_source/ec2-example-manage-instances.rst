@@ -67,23 +67,23 @@ The |EC2| service has an operation for describing instances,
 
 Import the required |sdk-go| packages.
 
-.. literalinclude:: example_code/ec2/describing_instances.go
+.. literalinclude:: ec2/describing_instances.go
    :lines: 15-22
 
 Use the following code to create a session and |EC2| client.
 
-.. literalinclude:: example_code/ec2/describing_instances.go
+.. literalinclude:: ec2/describing_instances.go
    :lines: 25-31
    :dedent: 4
 
 Call ``DescribeInstances`` to get detailed information for each instance.
 
-.. literalinclude:: example_code/ec2/describing_instances.go
+.. literalinclude:: ec2/describing_instances.go
    :lines: 33-39
    :dedent: 4
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/describing_instances.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ec2/describing_instances.go>`_
 on GitHub.
 
 .. _ec2-manage-instance-monitoring:
@@ -95,12 +95,12 @@ Create a new Go file named :file:`monitoring_instances.go`.
 
 Import the required |sdk-go| packages.
 
-.. literalinclude:: example_code/ec2/monitoring_instances.go
+.. literalinclude:: ec2/monitoring_instances.go
    :lines: 15-25
 
 To access |EC2|, create an EC2 client.
 
-.. literalinclude:: example_code/ec2/monitoring_instances.go
+.. literalinclude:: ec2/monitoring_instances.go
    :lines: 30-37
 
 Based on the value of a command-line argument (ON or OFF), call either the ``MonitorInstances``
@@ -109,11 +109,11 @@ method. Before you try to change the monitoring of these instances, use the ``Dr
 whether you have permission
 to change instance monitoring.
 
-.. literalinclude:: example_code/ec2/monitoring_instances.go
+.. literalinclude:: ec2/monitoring_instances.go
    :lines: 40, 43-51, 54, 56-63, 65-89
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/monitoring_instances.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ec2/monitoring_instances.go>`_
 on GitHub.
 
 .. _scenario-starting-stopping:
@@ -125,13 +125,13 @@ Create a new Go file named :file:`start_stop_instances.go`.
 
 Import the required |sdk-go| packages.
 
-.. literalinclude:: example_code/ec2/start_stop_instances.go
+.. literalinclude:: ec2/start_stop_instances.go
    :lines: 15-25
 
 To access |EC2|, create an EC2 client. The user will pass in a state value of START or STOP and
 the instance ID.
 
-.. literalinclude:: example_code/ec2/start_stop_instances.go
+.. literalinclude:: ec2/start_stop_instances.go
    :lines: 30-37
 
 Based on the value of a command-line argument (START or STOP), call either the ``StartInstances``
@@ -139,11 +139,11 @@ method of the |EC2| service object to start the specified instances, or the ``St
 to stop them. Before you try to start or stop the selected instances, use the ``DryRun`` parameter to
 test whether you have permission to start or stop them.
 
-.. literalinclude:: example_code/ec2/start_stop_instances.go
+.. literalinclude:: ec2/start_stop_instances.go
    :lines: 40, 43-51, 54-87
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/start_stop_instances.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ec2/start_stop_instances.go>`_
 on GitHub.
 
 .. _ec2-reboot-instances:
@@ -155,13 +155,13 @@ Create a new Go file named :file:`reboot_instances.go`.
 
 Import the required |sdk-go| packages.
 
-.. literalinclude:: example_code/ec2/reboot_instances.go
+.. literalinclude:: ec2/reboot_instances.go
    :lines: 15-25
 
 To access |EC2|, create an EC2 client. The user will pass in a state value of START or STOP and
 the instance ID.
 
-.. literalinclude:: example_code/ec2/reboot_instances.go
+.. literalinclude:: ec2/reboot_instances.go
    :lines: 31-36
 
 Based on the value of a command-line argument (START or STOP), call either the ``StartInstances``
@@ -170,15 +170,15 @@ to stop them. Before you try to reboot the selected instances, use the ``DryRun`
 to test whether the instance exists and that you have
 permission to reboot it.
 
-.. literalinclude:: example_code/ec2/reboot_instances.go
+.. literalinclude:: ec2/reboot_instances.go
    :lines: 40-48
 
 If the error code is ``DryRunOperation``, it means that you do have the permissions you need to
 reboot the instance.
 
-.. literalinclude:: example_code/ec2/reboot_instances.go
+.. literalinclude:: ec2/reboot_instances.go
    :lines: 51,53-63
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/reboot_instances.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ec2/reboot_instances.go>`_
 on GitHub.

@@ -25,12 +25,12 @@ which implements the
 `Decrypt <http://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html>`_ operation,
 to decrypt the provided string and emits the result.
 
-.. literalinclude:: ./example_code/kms/kms_decrypt_data.go
+.. literalinclude:: ./kms/kms_decrypt_data.go
    :lines: 17-49
    :dedent: 0
    :language: go
 
 Choose :code:`Copy` to save the code locally.
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/kms/kms_decrypt_data.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/kms/kms_decrypt_data.go>`_
 on GitHub.

@@ -23,10 +23,10 @@ The following example demonstrates how to use the |sdk-go| to get statistics
 about |SES|. Use this information to avoid damaging your reputation when emails
 are bounced or rejected.
 
-.. literalinclude:: ./example_code/ses/ses_get_statistics.go
+.. literalinclude:: ./ses/ses_get_statistics.go
    :lines: 15-75
    :dedent: 0
    :language: go
 
-See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ses/ses_get_statistics.go>`_
+See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ses/ses_get_statistics.go>`_
 on GitHub.

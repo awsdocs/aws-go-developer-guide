@@ -73,7 +73,7 @@ To get started, create a new Go file named :file:`regions_and_availability.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/ec2/regions_and_availability.go
+.. literalinclude:: ec2/regions_and_availability.go
    :lines: 15-22
 
 In the ``main`` function, create a session
@@ -81,19 +81,19 @@ with credentials from the shared credentials file,
 ~/.aws/credentials,
 and create a new EC2 client.
 
-.. literalinclude:: example_code/ec2/regions_and_availability.go
+.. literalinclude:: ec2/regions_and_availability.go
    :lines: 26-33
 
 Print out the list of regions that work with |EC2| that are returned by calling ``DescribeRegions``.
 
-.. literalinclude:: example_code/ec2/regions_and_availability.go
+.. literalinclude:: ec2/regions_and_availability.go
    :lines: 36-40
 
 Add a call that retrieves Availability Zones only for the region of the EC2 service object.
 
-.. literalinclude:: example_code/ec2/regions_and_availability.go
+.. literalinclude:: ec2/regions_and_availability.go
    :lines: 45-52
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/regions_and_availability.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ec2/regions_and_availability.go>`_
 on GitHub.

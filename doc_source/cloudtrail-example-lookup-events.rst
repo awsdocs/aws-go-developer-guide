@@ -29,7 +29,7 @@ Choose :code:`Copy` to save the code locally.
 Create the file *lookup_events.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: ./example_code/cloudtrail/lookup_events.go
+.. literalinclude:: ./cloudtrail/lookup_events.go
    :lines: 17-26
    :dedent: 0
    :language: go
@@ -39,7 +39,7 @@ and whether to display the event.
 If the trail name is missing,
 display an error message and exit.
 
-.. literalinclude:: ./example_code/cloudtrail/lookup_events.go
+.. literalinclude:: ./cloudtrail/lookup_events.go
    :lines: 29-42
    :dedent: 4
    :language: go
@@ -48,7 +48,7 @@ Initialize the session that the SDK uses to load credentials
 from the shared credentials file
 *.aws/credentials* in your home folder, and create a new service client.
 
-.. literalinclude:: ./example_code/cloudtrail/lookup_events.go
+.. literalinclude:: ./cloudtrail/lookup_events.go
    :lines: 44-51
    :dedent: 4
    :language: go
@@ -60,11 +60,11 @@ printing information about each event.
 If the **-s** flag was specified,
 print the |CT| event.
 
-.. literalinclude:: ./example_code/cloudtrail/lookup_events.go
+.. literalinclude:: ./cloudtrail/lookup_events.go
    :lines: 53-85
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudtrail/lookup_events.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/cloudtrail/lookup_events.go>`_
 on GitHub.

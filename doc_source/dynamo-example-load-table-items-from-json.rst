@@ -64,7 +64,7 @@ and print out the title and year of the movie added to the table.
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBLoadItems.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/dynamodb/DynamoDBLoadItems.go>`_
 and a `sample JSON file 
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/movie_data.json>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/dynamodb/movie_data.json>`_
 on GitHub.

@@ -48,7 +48,7 @@ Create a Vault
 The following example uses the |GLlong| :sdk-go-api-deep:`CreateVault <service/glacier/#Glacier.CreateVault>`
 operation to create a vault named ``YOUR_VAULT_NAME``.
 
-.. literalinclude:: example_code/glacier/create_vault.go
+.. literalinclude:: glacier/create_vault.go
    :dedent: 4
    :lines: 15-
 
@@ -61,6 +61,6 @@ The following example assumes you have a vault named ``YOUR_VAULT_NAME``. It use
 single reader object as an entire archive. The |sdk-go| automatically computes the tree hash
 checksum for the data to be uploaded.
 
-.. literalinclude:: example_code/glacier/upload_archive.go
+.. literalinclude:: glacier/upload_archive.go
    :dedent: 4
    :lines: 15-

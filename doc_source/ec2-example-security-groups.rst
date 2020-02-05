@@ -70,34 +70,34 @@ To get started, create a new Go file named :file:`ec2_describe_security_groups.g
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/ec2/ec2_describe_security_groups.go
+.. literalinclude:: ec2/ec2_describe_security_groups.go
    :lines: 15-26
 
 In the ``main`` function, get the security group ID that is passed in.
 
-.. literalinclude:: example_code/ec2/ec2_describe_security_groups.go
+.. literalinclude:: ec2/ec2_describe_security_groups.go
    :lines: 33-38
 
 Initialize a session and create an EC2 service client.
 
-.. literalinclude:: example_code/ec2/ec2_describe_security_groups.go
+.. literalinclude:: ec2/ec2_describe_security_groups.go
    :dedent: 4
    :lines: 42-47
 
 Obtain and print out the security group descriptions. You will explicitly check for
 errors caused by an invalid group ID.
 
-.. literalinclude:: example_code/ec2/ec2_describe_security_groups.go
+.. literalinclude:: ec2/ec2_describe_security_groups.go
    :dedent: 4
    :lines: 50-68
 
 The following utility function is used by this example to display errors.
 
-.. literalinclude:: example_code/ec2/ec2_describe_security_groups.go
+.. literalinclude:: ec2/ec2_describe_security_groups.go
    :lines: 71-74
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_describe_security_groups.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ec2/ec2_describe_security_groups.go>`_
 on GitHub.
 
 .. _create-security-group:
@@ -114,45 +114,45 @@ first VPC in the account.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/ec2/ec2_create_security_group.go
+.. literalinclude:: ec2/ec2_create_security_group.go
    :lines: 15-26
 
 Get the parameters (name, description, and optional ID of the VPC) that are passed in to the
 routine.
 
-.. literalinclude:: example_code/ec2/ec2_create_security_group.go
+.. literalinclude:: ec2/ec2_create_security_group.go
    :lines: 34-44
 
 Create a session.
 
-.. literalinclude:: example_code/ec2/ec2_create_security_group.go
+.. literalinclude:: ec2/ec2_create_security_group.go
    :dedent: 4
    :lines: 48-53
 
 If the VPC ID was not provided, you have to retrieve the first one in the account.
 
-.. literalinclude:: example_code/ec2/ec2_create_security_group.go
+.. literalinclude:: ec2/ec2_create_security_group.go
    :dedent: 4
    :lines: 56-66
 
 Then create the security group with the VPC ID, name, and description.
 
-.. literalinclude:: example_code/ec2/ec2_create_security_group.go
+.. literalinclude:: ec2/ec2_create_security_group.go
    :dedent: 4
    :lines: 69-86
 
 Add permissions to the security group.
 
-.. literalinclude:: example_code/ec2/ec2_create_security_group.go
+.. literalinclude:: ec2/ec2_create_security_group.go
    :lines: 89-91,94-117
 
 The following utility function is used by this example.
 
-.. literalinclude:: example_code/ec2/ec2_create_security_group.go
+.. literalinclude:: ec2/ec2_create_security_group.go
    :lines: 119-122
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_create_security_group.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ec2/ec2_create_security_group.go>`_
 on GitHub.
 
 .. _delete-security-group:
@@ -167,30 +167,30 @@ This example deletes a security group with the given group ID.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/ec2/ec2_delete_security_group.go
+.. literalinclude:: ec2/ec2_delete_security_group.go
    :lines: 15-26
 
 Get the group ID that is passed in to the routine.
 
-.. literalinclude:: example_code/ec2/ec2_delete_security_group.go
+.. literalinclude:: ec2/ec2_delete_security_group.go
    :lines: 32-37
 
 Create a session.
 
-.. literalinclude:: example_code/ec2/ec2_delete_security_group.go
+.. literalinclude:: ec2/ec2_delete_security_group.go
    :dedent: 4
    :lines: 41-43
 
 Then delete the security group with the group ID that is passed in.
 
-.. literalinclude:: example_code/ec2/ec2_delete_security_group.go
+.. literalinclude:: ec2/ec2_delete_security_group.go
    :lines: 49-65
 
 This example uses the following utility function.
 
-.. literalinclude:: example_code/ec2/ec2_delete_security_group.go
+.. literalinclude:: ec2/ec2_delete_security_group.go
    :lines: 67-70
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_delete_security_group.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ec2/ec2_delete_security_group.go>`_
 on GitHub.

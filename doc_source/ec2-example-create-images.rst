@@ -62,14 +62,14 @@ operations in succession. The following example creates an instance and then
 adds a ``Name`` tag to it. The |EC2| console displays the
 value of the ``Name`` tag in its list of instances.
 
-.. literalinclude:: example_code/ec2/create_instance.go
+.. literalinclude:: ec2/create_instance.go
    :lines: 15-
 
 You can add up to 10 tags to an instance in a
 single ``CreateTags`` operation.
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/create_instance.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ec2/create_instance.go>`_
 on GitHub.
 
 .. _create-image-without-block-device:
@@ -86,9 +86,9 @@ The ``NoDevice`` parameter is compatible only with ``DeviceName``, not with any 
 field in ``BlockDeviceMapping``. The request
 will fail if other parameters are present.
 
-.. literalinclude:: example_code/ec2/create_image_no_block_device.go
+.. literalinclude:: ec2/create_image_no_block_device.go
    :lines: 15-
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/create_image_no_block_device.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ec2/create_image_no_block_device.go>`_
 on GitHub.

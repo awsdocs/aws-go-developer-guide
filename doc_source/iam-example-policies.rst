@@ -54,32 +54,32 @@ This code creates a new IAM Policy. Create a new Go file named :file:`iam_create
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_createpolicy.go
+.. literalinclude:: iam/iam_createpolicy.go
    :lines: 15-24
 
 Define two structs. The first is the definition of the policies to upload to |IAM|.
 
-.. literalinclude:: example_code/iam/iam_createpolicy.go
+.. literalinclude:: iam/iam_createpolicy.go
    :lines: 27-30
 
 The second dictates what this policy will allow or disallow.
 
-.. literalinclude:: example_code/iam/iam_createpolicy.go
+.. literalinclude:: iam/iam_createpolicy.go
    :lines: 33-37
 
 Set up the session and |IAM| client.
 
-.. literalinclude:: example_code/iam/iam_createpolicy.go
+.. literalinclude:: iam/iam_createpolicy.go
    :lines: 41,44-49
 
 Build the policy document using the structures defined earlier.
 
-.. literalinclude:: example_code/iam/iam_createpolicy.go
+.. literalinclude:: iam/iam_createpolicy.go
    :lines: 52-75
 
 Marshal the policy to JSON and pass to ``CreatePolicy``.
 
-.. literalinclude:: example_code/iam/iam_createpolicy.go
+.. literalinclude:: iam/iam_createpolicy.go
    :lines: 77-94
 
 .. _iam-example-get-policy:
@@ -91,17 +91,17 @@ In this example, you retrieve an existing policy from |IAM|. Create a new Go fil
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_getpolicy.go
+.. literalinclude:: iam/iam_getpolicy.go
    :lines: 15-22
 
 Set up a new |IAM| client.
 
-.. literalinclude:: example_code/iam/iam_getpolicy.go
+.. literalinclude:: iam/iam_getpolicy.go
    :lines: 26,29-34
 
 Call ``GetPolicy``, passing in the ARN for the policy (which is hard coded in this example), and print the results.
 
-.. literalinclude:: example_code/iam/iam_getpolicy.go
+.. literalinclude:: iam/iam_getpolicy.go
    :lines: 34-47
 
 .. _iam-example-attach-managed-role-policy:
@@ -115,27 +115,27 @@ Then, you'll check the array members to see if the policy you want to attach to 
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_attachuserpolicy.go
+.. literalinclude:: iam/iam_attachuserpolicy.go
    :lines: 15-23
 
 Set up a new |IAM| client.
 
-.. literalinclude:: example_code/iam/iam_attachuserpolicy.go
+.. literalinclude:: iam/iam_attachuserpolicy.go
    :lines: 27,30-35
 
 Declare variables to hold the name and ARN of the policy.
 
-.. literalinclude:: example_code/iam/iam_attachuserpolicy.go
+.. literalinclude:: iam/iam_attachuserpolicy.go
    :lines: 37-39
 
 Paginate through all the role policies. If your role exists on any role policy, you set the ``pageErr`` and return ``false``, stopping the pagination.
 
-.. literalinclude:: example_code/iam/iam_attachuserpolicy.go
+.. literalinclude:: iam/iam_attachuserpolicy.go
    :lines: 44-61
 
 If your role policy is not attached already, call ``AttachRolePolicy``.
 
-.. literalinclude:: example_code/iam/iam_attachuserpolicy.go
+.. literalinclude:: iam/iam_attachuserpolicy.go
    :lines: 63-83
 
 .. _iam-example-detach-managed-role-policy:
@@ -149,22 +149,22 @@ Then, check the array members to see if the policy you want to detach from the r
 
 Create a new Go file named :file:`iam_detachuserpolicy.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_detachuserpolicy.go
+.. literalinclude:: iam/iam_detachuserpolicy.go
    :lines: 15-23
 
 Set up a new |IAM| client.
 
-.. literalinclude:: example_code/iam/iam_detachuserpolicy.go
+.. literalinclude:: iam/iam_detachuserpolicy.go
    :lines: 27,30-35
 
 Declare variables to hold the name and ARN of the policy.
 
-.. literalinclude:: example_code/iam/iam_detachuserpolicy.go
+.. literalinclude:: iam/iam_detachuserpolicy.go
    :lines: 37-39
 
 Paginate through all the role policies. If the role exists on any role policy,
 you stop iterating and detach the role.
 
-.. literalinclude:: example_code/iam/iam_detachuserpolicy.go
+.. literalinclude:: iam/iam_detachuserpolicy.go
    :lines: 43-81
 

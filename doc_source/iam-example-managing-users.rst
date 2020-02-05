@@ -56,17 +56,17 @@ This code creates a new |IAM| user.
 Create a new Go file named :file:`iam_createuser.go`. You must import the relevant Go and
 |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_createuser.go
+.. literalinclude:: iam/iam_createuser.go
    :lines: 15-24
 
 The code takes the new user name as an argument, and then calls ``GetUser`` with the user name.
 
-.. literalinclude:: example_code/iam/iam_createuser.go
+.. literalinclude:: iam/iam_createuser.go
    :lines: 28,31-40
 
 If you receive a ``NoSuchEntity`` error, call ``CreateUser`` because the user doesn't exist.
 
-.. literalinclude:: example_code/iam/iam_createuser.go
+.. literalinclude:: iam/iam_createuser.go
    :lines: 42-56
 
 .. _iam-example-list-user:
@@ -79,17 +79,17 @@ You can get a list of the users in your account and print the list to the consol
 Create a new Go file named :file:`iam_listusers.go`. You must import the relevant Go and
 |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_listusers.go
+.. literalinclude:: iam/iam_listusers.go
    :lines: 15-24
 
 Set up a new |IAM| client.
 
-.. literalinclude:: example_code/iam/iam_listusers.go
+.. literalinclude:: iam/iam_listusers.go
    :lines: 27,30-35
 
 Call ``ListUsers`` and print the results.
 
-.. literalinclude:: example_code/iam/iam_listusers.go
+.. literalinclude:: iam/iam_listusers.go
    :lines: 37-52
 
 .. _iam_example_update_user:
@@ -101,17 +101,17 @@ In this example, you change the name of an IAM user to a new value.
 
 Create a new Go file named :file:`iam_updateuser.go`. You must import the relevant Go and|sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_updateuser.go
+.. literalinclude:: iam/iam_updateuser.go
    :lines: 15-23
 
 Set up a new IAM client.
 
-.. literalinclude:: example_code/iam/iam_updateuser.go
+.. literalinclude:: iam/iam_updateuser.go
    :lines: 27,30-35
 
 Call ``UpdateUser``, passing in the original user name and the new name, and print the results.
 
-.. literalinclude:: example_code/iam/iam_updateuser.go
+.. literalinclude:: iam/iam_updateuser.go
    :lines: 37-48
 
 .. _iam_example_delete_user:
@@ -123,17 +123,17 @@ In this example, you delete an |IAM| user.
 
 Create a new Go file named :file:`iam_deleteuser.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_deleteuser.go
+.. literalinclude:: iam/iam_deleteuser.go
    :lines: 17-25
 
 Set up a new |IAM| client.
 
-.. literalinclude:: example_code/iam/iam_deleteuser.go
+.. literalinclude:: iam/iam_deleteuser.go
    :lines: 32-34, 37
 
 Call ``DeleteUser``, passing in the user name, and print the results. If the user doesn't exist, display an error.
 
-.. literalinclude:: example_code/iam/iam_deleteuser.go
+.. literalinclude:: iam/iam_deleteuser.go
    :lines: 39-52
 
 .. _iam_example_get_admins:
@@ -148,7 +148,7 @@ has the name **AdministratorAccess**.
 Create a new Go file named :file:`IamGetAdmins.go`.
 Import the following packages.
 
-.. literalinclude:: example_code/iam/IamListAdmins.go
+.. literalinclude:: iam/IamListAdmins.go
    :lines: 17-24
    :dedent: 0
    :language: go
@@ -156,7 +156,7 @@ Import the following packages.
 Create a method to determine whether a user has a policy that
 has administrator privileges.
 
-.. literalinclude:: example_code/iam/IamListAdmins.go
+.. literalinclude:: iam/IamListAdmins.go
    :lines: 26-34
    :dedent: 0
    :language: go
@@ -164,7 +164,7 @@ has administrator privileges.
 Create a method to determine whether a user has an attached policy that
 has administrator privileges.
 
-.. literalinclude:: example_code/iam/IamListAdmins.go
+.. literalinclude:: iam/IamListAdmins.go
    :lines: 36-44
    :dedent: 0
    :language: go
@@ -172,7 +172,7 @@ has administrator privileges.
 Create a method that determines whether a group has a policy that
 has adminstrator privileges.
 
-.. literalinclude:: example_code/iam/IamListAdmins.go
+.. literalinclude:: iam/IamListAdmins.go
    :lines: 46-65
    :dedent: 0
    :language: go
@@ -180,7 +180,7 @@ has adminstrator privileges.
 Create a method that determines whether a group has an attached policy that
 has administrator privileges.
 
-.. literalinclude:: example_code/iam/IamListAdmins.go
+.. literalinclude:: iam/IamListAdmins.go
    :lines: 67-83
    :dedent: 0
    :language: go
@@ -188,14 +188,14 @@ has administrator privileges.
 Create a method that determines whether any group to which the user belongs
 has administrator privileges.
 
-.. literalinclude:: example_code/iam/IamListAdmins.go
+.. literalinclude:: iam/IamListAdmins.go
    :lines: 85-109
    :dedent: 0
    :language: go
 
 Create a method that determines whether a user has administrator privileges.
 
-.. literalinclude:: example_code/iam/IamListAdmins.go
+.. literalinclude:: iam/IamListAdmins.go
    :lines: 111-129
    :dedent: 0
    :language: go
@@ -204,7 +204,7 @@ Create a main method with an IAM client in :code:`us-west-2`.
 Create variables to keep track of how many users we have
 and how many of those have administrator privileges.
 
-.. literalinclude:: example_code/iam/IamListAdmins.go
+.. literalinclude:: iam/IamListAdmins.go
    :lines: 131-142
    :dedent: 0
    :language: go
@@ -212,7 +212,7 @@ and how many of those have administrator privileges.
 Create the input for and call :code:`GetAccountAuthorizationDetails`.
 If there is an error, print an error message and quit.
 
-.. literalinclude:: example_code/iam/IamListAdmins.go
+.. literalinclude:: iam/IamListAdmins.go
    :lines: 145-152
    :dedent: 4
    :language: go
@@ -222,7 +222,7 @@ If a user has adminstrator privileges,
 print their name and increment the number of users
 who have adminstrator privileges.
 
-.. literalinclude:: example_code/iam/IamListAdmins.go
+.. literalinclude:: iam/IamListAdmins.go
    :lines: 155-167
    :dedent: 4
    :language: go
@@ -232,7 +232,7 @@ If we did not get all of the users in the first call to
 loop through the next set of users and determine which
 of those have adminstrator privileges.
 
-.. literalinclude:: example_code/iam/IamListAdmins.go
+.. literalinclude:: iam/IamListAdmins.go
    :lines: 179-190
    :dedent: 4
    :language: go
@@ -240,11 +240,11 @@ of those have adminstrator privileges.
 Finally, display the number of users who have
 administrator access.
 
-.. literalinclude:: example_code/iam/IamListAdmins.go
+.. literalinclude:: iam/IamListAdmins.go
    :lines: 192-193
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/iam/IamListAdmins.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/iam/IamListAdmins.go>`_
 on GitHub.

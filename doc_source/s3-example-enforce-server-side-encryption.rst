@@ -35,14 +35,14 @@ Create the file *require_server_encryption.go*.
 
 Import the required packages.
 
-.. literalinclude:: ./example_code/s3/s3_require_server_encryption.go
+.. literalinclude:: ./s3/s3_require_server_encryption.go
    :lines: 17-26
    :dedent: 0
    :language: go
 
 Set the name of the bucket, create a session, and create an Amazon S3 client.
 
-.. literalinclude:: ./example_code/s3/s3_require_server_encryption.go
+.. literalinclude:: ./s3/s3_require_server_encryption.go
    :lines: 29,34-38
    :dedent: 4
    :language: go
@@ -50,7 +50,7 @@ Set the name of the bucket, create a session, and create an Amazon S3 client.
 Create an |S3| policy that requires server-side KMS encryption on objects
 uploaded to the bucket.
 
-.. literalinclude:: ./example_code/s3/s3_require_server_encryption.go
+.. literalinclude:: ./s3/s3_require_server_encryption.go
    :lines: 40-68
    :dedent: 4
    :language: go
@@ -58,11 +58,11 @@ uploaded to the bucket.
 Convert the policy into JSON, create the input for and call :code:`PutBucketPolicy`, apply the policy to the bucket,
 and print a success message.
 
-.. literalinclude:: ./example_code/s3/s3_require_server_encryption.go
+.. literalinclude:: ./s3/s3_require_server_encryption.go
    :lines: 71, 78-81, 83, 90
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_require_server_encryption.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/s3/s3_require_server_encryption.go>`_
 on GitHub.

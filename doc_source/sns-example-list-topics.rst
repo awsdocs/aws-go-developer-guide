@@ -24,5 +24,5 @@ The following example lists the ARNs of your |SNS| topics in your default region
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/sns/SnsListTopics.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sns/SnsListTopics.go>`_
 on GitHub.

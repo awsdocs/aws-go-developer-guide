@@ -67,20 +67,20 @@ a command line argument.
 Create the file *s3_get_bucket_acl.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: example_code/s3/s3_get_bucket_acl.go
+.. literalinclude:: s3/s3_get_bucket_acl.go
    :lines: 17-23
    :language: go
 
 Create a function to display errors and exit.
 
-.. literalinclude:: example_code/s3/s3_get_bucket_acl.go
+.. literalinclude:: s3/s3_get_bucket_acl.go
    :lines: 69-72
    :language: go
 
 This example requires one input parameter, the name of the bucket.
 If the name is not supplied, call the error function and exit.
 
-.. literalinclude:: example_code/s3/s3_get_bucket_acl.go
+.. literalinclude:: s3/s3_get_bucket_acl.go
    :lines: 30-34
    :language: go
    :dedent: 4
@@ -90,7 +90,7 @@ from the shared credentials file *~/.aws/credentials*,
 the region from the shared configuration file *~/.aws/config*,
 and create a new |S3| service client.
 
-.. literalinclude:: example_code/s3/s3_get_bucket_acl.go
+.. literalinclude:: s3/s3_get_bucket_acl.go
    :lines: 38-43
    :language: go
    :dedent: 4
@@ -101,13 +101,13 @@ If an error occurs, call ``exitErrorf``.
 If no error occurs, loop through the results
 and print out the name, type, and permission for the grantees.
 
-.. literalinclude:: example_code/s3/s3_get_bucket_acl.go
+.. literalinclude:: s3/s3_get_bucket_acl.go
    :lines: 46-66
    :language: go
    :dedent: 4
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_get_bucket_acl.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/s3/s3_get_bucket_acl.go>`_
 on GitHub.
 
 .. _s3-examples-bucket-acls-set-bucket-acl:
@@ -127,13 +127,13 @@ if it isn'o't supplied, the user is given READ access to the bucket.
 Create the file *s3_put_bucket_acl.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: example_code/s3/s3_put_bucket_acl.go
+.. literalinclude:: s3/s3_put_bucket_acl.go
    :lines: 17-23
    :language: go
 
 Create a function to display errors and exit.
 
-.. literalinclude:: example_code/s3/s3_put_bucket_acl.go
+.. literalinclude:: s3/s3_put_bucket_acl.go
    :lines: 101-104
    :language: go
 
@@ -142,7 +142,7 @@ If the optional permission parameter is supplied,
 make sure it is one of the allowed values.
 If not, print an error message and quit.
 
-.. literalinclude:: example_code/s3/s3_put_bucket_acl.go
+.. literalinclude:: s3/s3_put_bucket_acl.go
    :lines: 31-49
    :language: go
    :dedent: 4
@@ -152,7 +152,7 @@ from the shared credentials file *~/.aws/credentials*,
 the region from the shared configuration file *~/.aws/config*,
 and create a new |S3| service client.
 
-.. literalinclude:: example_code/s3/s3_put_bucket_acl.go
+.. literalinclude:: s3/s3_put_bucket_acl.go
    :lines: 55-60
    :language: go
    :dedent: 4
@@ -161,7 +161,7 @@ Get the existing ACLs and append the new user to the list.
 If there is an error while retrieving the list,
 print an error message and quit.
 
-.. literalinclude:: example_code/s3/s3_put_bucket_acl.go
+.. literalinclude:: s3/s3_put_bucket_acl.go
    :lines: 63-79
    :language: go
    :dedent: 4
@@ -169,7 +169,7 @@ print an error message and quit.
 Build the parameter list for the call based on the existing
 ACLs and the new user information.
 
-.. literalinclude:: example_code/s3/s3_put_bucket_acl.go
+.. literalinclude:: s3/s3_put_bucket_acl.go
    :lines: 81-90
    :language: go
    :dedent: 4
@@ -179,13 +179,13 @@ passing in the parameter list.
 If an error occurs, display a message and quit.
 Otherwise, display a message indicating success.
 
-.. literalinclude:: example_code/s3/s3_put_bucket_acl.go
+.. literalinclude:: s3/s3_put_bucket_acl.go
    :lines: 93-98
    :language: go
    :dedent: 4
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_put_bucket_acl.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/s3/s3_put_bucket_acl.go>`_
 on GitHub.
 
 .. _s3-examples-bucket-acls-make-bucket-public-acl:
@@ -203,21 +203,21 @@ with the bucket name specified as a command line argument.
 Create the file *s3_make_bucket_public.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: example_code/s3/s3_make_bucket_public.go
+.. literalinclude:: s3/s3_make_bucket_public.go
    :lines: 17-23
    :dedent: 0
    :language: go
 
 Create a function to display errors and exit.
 
-.. literalinclude:: example_code/s3/s3_make_bucket_public.go
+.. literalinclude:: s3/s3_make_bucket_public.go
    :lines: 25-28
    :dedent: 0
    :language: go
 
 Get the required input parameter and create the **acl**.
 
-.. literalinclude:: example_code/s3/s3_make_bucket_public.go
+.. literalinclude:: s3/s3_make_bucket_public.go
    :lines: 35-39, 43
    :dedent: 4
    :language: go
@@ -227,7 +227,7 @@ from the shared credentials file *~/.aws/credentials*
 the region from the shared configuration file *~/.aws/config*,
 and create a new |S3| service client.
 
-.. literalinclude:: example_code/s3/s3_make_bucket_public.go
+.. literalinclude:: s3/s3_make_bucket_public.go
    :lines: 48-50, 53
    :language: go
    :dedent: 4
@@ -236,13 +236,13 @@ Create the input for and call :sdk-go-api-deep:`PutBucketAcl <service/s3/#S3.Put
 If an error occurs, display a message and quit.
 Otherwise, display a message indicating success.
 
-.. literalinclude:: example_code/s3/s3_make_bucket_public.go
+.. literalinclude:: s3/s3_make_bucket_public.go
    :lines: 55-66
    :language: go
    :dedent: 4
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_make_bucket_public.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/s3/s3_make_bucket_public.go>`_
 on GitHub.
 
 .. _s3-examples-bucket-acls-get-bucket-object-acl:
@@ -260,20 +260,20 @@ with the bucket and item name specified as command line arguments.
 Create the file *s3_get_bucket_object_acl.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
+.. literalinclude:: s3/s3_get_bucket_object_acl.go
    :lines: 17-23
    :language: go
 
 Create a function to display errors and exit.
 
-.. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
+.. literalinclude:: s3/s3_get_bucket_object_acl.go
    :lines: 64-67
    :language: go
 
 This example requires two input parameters, the names of the bucket and object.
 If either name is not supplied, call the error function and exit.
 
-.. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
+.. literalinclude:: s3/s3_get_bucket_object_acl.go
    :lines: 30-35
    :language: go
    :dedent: 4
@@ -283,7 +283,7 @@ from the shared credentials file *~/.aws/credentials*,
 the region from the shared configuration file *~/.aws/config*,
 and create a new |S3| service client.
 
-.. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
+.. literalinclude:: s3/s3_get_bucket_object_acl.go
    :lines: 39-44
    :language: go
    :dedent: 4
@@ -294,13 +294,13 @@ If an error occurs, call ``exitErrorf``.
 If no error occurs, loop through the results
 and print out the name, type, and permission for the grantees.
 
-.. literalinclude:: example_code/s3/s3_get_bucket_object_acl.go
+.. literalinclude:: s3/s3_get_bucket_object_acl.go
    :lines: 47-61
    :language: go
    :dedent: 4
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_get_bucket_object_acl.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/s3/s3_get_bucket_object_acl.go>`_
 on GitHub.
 
 .. _s3-examples-bucket-acls-set-bucket-object-acl:
@@ -320,13 +320,13 @@ However, if it isn't supplied, the user is given READ access to the bucket.
 Create the file *s3_put_bucket_object_acl.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
+.. literalinclude:: s3/s3_put_bucket_object_acl.go
    :lines: 17-23
    :language: go
 
 Create a function to display errors and exit.
 
-.. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
+.. literalinclude:: s3/s3_put_bucket_object_acl.go
    :lines: 101-104
    :language: go
 
@@ -335,7 +335,7 @@ If the optional permission parameter is supplied,
 make sure it is one of the allowed values.
 If not, print an error message and quit.
 
-.. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
+.. literalinclude:: s3/s3_put_bucket_object_acl.go
    :lines: 31-49
    :language: go
    :dedent: 4
@@ -344,7 +344,7 @@ Initialize the session that the SDK uses to load credentials
 from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
-.. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
+.. literalinclude:: s3/s3_put_bucket_object_acl.go
    :lines: 53-58
    :language: go
    :dedent: 4
@@ -352,7 +352,7 @@ and create a new |S3| service client.
 Build the parameter list for the call based on the existing
 ACLs and the new user information.
 
-.. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
+.. literalinclude:: s3/s3_put_bucket_object_acl.go
    :lines: 61-90
    :language: go
    :dedent: 4
@@ -362,11 +362,11 @@ passing in the parameter list.
 If an error occurs, display a message and quit.
 Otherwise, display a message indicating success.
 
-.. literalinclude:: example_code/s3/s3_put_bucket_object_acl.go
+.. literalinclude:: s3/s3_put_bucket_object_acl.go
    :lines: 93-98
    :language: go
    :dedent: 4
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_put_bucket_object_acl.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/s3/s3_put_bucket_object_acl.go>`_
 on GitHub.

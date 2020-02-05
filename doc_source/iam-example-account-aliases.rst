@@ -52,17 +52,17 @@ This code creates a new |IAM| user.
 
 Create a new Go file named :file:`iam_createaccountalias.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_createaccountalias.go
+.. literalinclude:: iam/iam_createaccountalias.go
    :lines: 15-23
 
 Set up a session and an |IAM| client.
 
-.. literalinclude:: example_code/iam/iam_createaccountalias.go
+.. literalinclude:: iam/iam_createaccountalias.go
    :lines: 28,31-40
 
 The code takes the new alias as an argument, and then calls ``CreateAccountAlias`` with the alias name.
 
-.. literalinclude:: example_code/iam/iam_createaccountalias.go
+.. literalinclude:: iam/iam_createaccountalias.go
    :lines: 37-47
 
 .. _iam-example-list-aliases:
@@ -74,17 +74,17 @@ This code lists the aliases for your |IAM| account.
 
 Create a new Go file named :file:`iam_listaccountaliases.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_listaccountaliases.go
+.. literalinclude:: iam/iam_listaccountaliases.go
    :lines: 15-23
 
 Set up a session and an |IAM| client.
 
-.. literalinclude:: example_code/iam/iam_listaccountaliases.go
+.. literalinclude:: iam/iam_listaccountaliases.go
    :lines: 27,30-35
 
 The code calls ``ListAccountAliases``, specifying to return a maximum of 10 items.
 
-.. literalinclude:: example_code/iam/iam_listaccountaliases.go
+.. literalinclude:: iam/iam_listaccountaliases.go
    :lines: 37-52
 
 .. _iam-example-delete-aliases:
@@ -96,17 +96,17 @@ This code deletes a specified |IAM| account alias.
 
 Create a new Go file with the name :file:`iam_deleteaccountalias.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/iam/iam_deleteaccountalias.go
+.. literalinclude:: iam/iam_deleteaccountalias.go
    :lines: 15-23
 
 Set up a session and an |IAM| client.
 
-.. literalinclude:: example_code/iam/iam_deleteaccountalias.go
+.. literalinclude:: iam/iam_deleteaccountalias.go
    :lines: 27,30-35
 
 The code calls ``ListAccountAliases``, specifying to return a maximum of 10 items.
 
-.. literalinclude:: example_code/iam/iam_deleteaccountalias.go
+.. literalinclude:: iam/iam_deleteaccountalias.go
    :lines: 37-47
 
 

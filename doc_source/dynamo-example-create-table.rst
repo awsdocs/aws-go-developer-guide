@@ -46,5 +46,5 @@ If no error occurs, print an message that the table was created.
    :dedent: 4
    :language: go
 
-See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBCreateTable.go>`_
+See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/dynamodb/DynamoDBCreateTable.go>`_
 on GitHub.

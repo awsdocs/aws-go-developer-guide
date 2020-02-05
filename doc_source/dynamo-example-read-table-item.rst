@@ -65,5 +65,5 @@ display the year, title, plot, and rating.
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBReadItem.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/dynamodb/DynamoDBReadItem.go>`_
 on GitHub.

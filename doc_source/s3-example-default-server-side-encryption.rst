@@ -33,7 +33,7 @@ Create the file *set_default_encryption.go*.
 
 Import the required packages.
 
-.. literalinclude:: ./example_code/s3/s3_set_default_encryption.go
+.. literalinclude:: ./s3/s3_set_default_encryption.go
    :lines: 17-24
    :dedent: 0
    :language: go
@@ -42,25 +42,25 @@ Get the KMS key from the command line,
 where :code:`key` is a KMS key ID as created in the :doc:`kms-example-create-key` example,
 and set the bucket name.
 
-.. literalinclude:: ./example_code/s3/s3_set_default_encryption.go
+.. literalinclude:: ./s3/s3_set_default_encryption.go
    :lines: 27-33
    :dedent: 4
    :language: go
 
 Create a session and |S3| client.
 
-.. literalinclude:: ./example_code/s3/s3_set_default_encryption.go
+.. literalinclude:: ./s3/s3_set_default_encryption.go
    :lines: 38-42
    :dedent: 4
    :language: go
 
 Create the input for and call :code:`PutBucketEncryption`, and display a success message.
 
-.. literalinclude:: ./example_code/s3/s3_set_default_encryption.go
+.. literalinclude:: ./s3/s3_set_default_encryption.go
    :lines: 45-49, 51, 58
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_set_default_encryption.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/s3/s3_set_default_encryption.go>`_
 on GitHub.

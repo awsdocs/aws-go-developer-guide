@@ -377,7 +377,7 @@ if 'extlinks' not in vars():
     extlinks = {}
 
 extlinks['doc-examples-go'] = (
-    'https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/%s',
+    'https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/%s',
     '')
 
 # https://github.com/aws/aws-sdk-go/blob/master/example/...

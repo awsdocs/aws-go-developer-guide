@@ -22,12 +22,12 @@ Building an AWS CodeBuild Project
 The following example builds the |ACBlong| project specified on the command line.
 If no command-line argument is supplied, it emits an error and quits.
 
-.. literalinclude:: ./example_code/codebuild/cb_build_project.go
+.. literalinclude:: ./codebuild/cb_build_project.go
    :lines: 15-653
    :dedent: 0
    :language: go
 
 Choose :code:`Copy` to save the code locally.
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/codebuild/cb_build_project.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/codebuild/cb_build_project.go>`_
 on GitHub.

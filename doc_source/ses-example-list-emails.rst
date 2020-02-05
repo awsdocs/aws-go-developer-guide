@@ -22,10 +22,10 @@ Listing Valid |SES| Email Addresses
 The following example demonstrates how to use the |sdk-go| to list the valid |SES|
 email addresses.
 
-.. literalinclude:: ./example_code/ses/ses_list_emails.go
+.. literalinclude:: ./ses/ses_list_emails.go
    :lines: 15-59
    :dedent: 0
    :language: go
 
-See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ses/ses_list_emails.go>`_
+See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/ses/ses_list_emails.go>`_
 on GitHub.

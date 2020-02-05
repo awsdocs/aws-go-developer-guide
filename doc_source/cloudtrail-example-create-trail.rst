@@ -33,7 +33,7 @@ Choose :code:`Copy` to save the code locally.
 Create the file *create_trail.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
-.. literalinclude:: ./example_code/cloudtrail/create_trail.go
+.. literalinclude:: ./cloudtrail/create_trail.go
    :lines: 17-28
    :dedent: 0
    :language: go
@@ -43,7 +43,7 @@ and whether to attach the policy to the bucket.
 If either the trail name or bucket name is missing,
 display an error message and exit.
 
-.. literalinclude:: ./example_code/cloudtrail/create_trail.go
+.. literalinclude:: ./cloudtrail/create_trail.go
    :lines: 32-47
    :dedent: 4
    :language: go
@@ -52,14 +52,14 @@ Initialize the session that the SDK uses to load credentials
 from the shared credentials file
 *.aws/credentials* in your home folder.
 
-.. literalinclude:: ./example_code/cloudtrail/create_trail.go
+.. literalinclude:: ./cloudtrail/create_trail.go
    :lines: 50-52
    :dedent: 4
    :language: go
 
 If the **-p** flag was specfied, add a policy to the bucket.
 
-.. literalinclude:: ./example_code/cloudtrail/create_trail.go
+.. literalinclude:: ./cloudtrail/create_trail.go
    :lines: 54-117
    :dedent: 4
    :language: go
@@ -69,11 +69,11 @@ and call **CreateTrail**.
 If an error occurs, print the error and exit.
 If no error occurs, print a success message.
 
-.. literalinclude:: ./example_code/cloudtrail/create_trail.go
+.. literalinclude:: ./cloudtrail/create_trail.go
    :lines: 120-134
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudtrail/create_trail.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/cloudtrail/create_trail.go>`_
 on GitHub.

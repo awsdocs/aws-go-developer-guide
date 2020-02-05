@@ -308,5 +308,5 @@ the Context's timeout includes reading the content from the **io.ReadCloser**.
     
     
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/customHttpClient.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/s3/customHttpClient.go>`_
 on GitHub.

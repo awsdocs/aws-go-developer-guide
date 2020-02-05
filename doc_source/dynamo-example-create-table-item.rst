@@ -62,5 +62,5 @@ If no error occurs, print an message that the item was added to the table.
    :dedent: 4
    :language: go
 
-See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBCreateItem.go>`_
+See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/dynamodb/DynamoDBCreateItem.go>`_
 on GitHub.

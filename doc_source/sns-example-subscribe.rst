@@ -26,5 +26,5 @@ and displays the resulting ARN.
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/sns/SnsSubscribe.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sns/SnsSubscribe.go>`_
 on GitHub.

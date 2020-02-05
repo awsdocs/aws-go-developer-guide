@@ -39,31 +39,31 @@ in the :code:`us-west-2` region using the following values:
 
 The first step is to import the packages we use in the example.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
+.. literalinclude:: ./lambda/aws-go-sdk-lambda-example-create-function.go
    :lines: 17-26
    :dedent: 0
    :language: go
 
 Next, create the session and |LAM| client.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
+.. literalinclude:: ./lambda/aws-go-sdk-lambda-example-create-function.go
    :lines: 30-33, 35
    :dedent: 4
    :language: go
 
 Next, create the structures for the input argument to the :code:`CreateFunction` function.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
+.. literalinclude:: ./lambda/aws-go-sdk-lambda-example-create-function.go
    :lines: 44-57
    :dedent: 4
    :language: go
 
 Finally, call :code:`CreateFunction` and display a message with the result of the call.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-create-function.go
+.. literalinclude:: ./lambda/aws-go-sdk-lambda-example-create-function.go
    :lines: 59-64
    :dedent: 0
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/lambda/aws-go-sdk-lambda-example-create-function.go>`_ on GitHub.
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/lambda/aws-go-sdk-lambda-example-create-function.go>`_ on GitHub.

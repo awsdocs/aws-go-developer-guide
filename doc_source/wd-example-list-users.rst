@@ -21,7 +21,7 @@ example at the end of this topic.
 
 Import the following Go packages.
 
-.. literalinclude:: ./example_code/workdocs/wd_list_users.go
+.. literalinclude:: ./workdocs/wd_list_users.go
    :lines: 17-23
    :dedent: 0
    :language: go
@@ -33,7 +33,7 @@ Import the following Go packages.
 
 Create a session and |WD| client.
 
-.. literalinclude:: ./example_code/workdocs/wd_list_users.go
+.. literalinclude:: ./workdocs/wd_list_users.go
    :lines: 35-40
    :dedent: 4
    :language: go
@@ -41,7 +41,7 @@ Create a session and |WD| client.
 Create the input arguments for the :code:`DescribeUsers` method and add your
 organization ID.
 
-.. literalinclude:: ./example_code/workdocs/wd_list_users.go
+.. literalinclude:: ./workdocs/wd_list_users.go
    :lines: 42-46
    :dedent: 4
    :language: go
@@ -49,7 +49,7 @@ organization ID.
 If we have a user name, add that to the input arguments so we only get information
 about that user.
 
-.. literalinclude:: ./example_code/workdocs/wd_list_users.go
+.. literalinclude:: ./workdocs/wd_list_users.go
    :lines: 48-57
    :dedent: 4
    :language: go
@@ -57,11 +57,11 @@ about that user.
 Run the :code:`DescribeUsers` method and display the information for the user or
 all users.
 
-.. literalinclude:: ./example_code/workdocs/wd_list_users.go
+.. literalinclude:: ./workdocs/wd_list_users.go
    :lines: 61-84
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/workdocs/wd_list_users.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/workdocs/wd_list_users.go>`_
 on GitHub.

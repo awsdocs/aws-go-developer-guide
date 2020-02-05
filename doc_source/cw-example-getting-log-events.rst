@@ -27,5 +27,5 @@ LOG-STREAM-NAME with the name of the log stream for the log group.
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/CloudWatchGetLogEvents.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/cloudwatch/CloudWatchGetLogEvents.go>`_
 on GitHub.

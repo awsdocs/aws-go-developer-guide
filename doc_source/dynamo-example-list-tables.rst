@@ -46,5 +46,5 @@ If no error occurs, loop through the tabless, printing the name of each table.
    :dedent: 4
    :language: go
 
-See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBListTables.go>`_
+See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/dynamodb/DynamoDBListTables.go>`_
 on GitHub.

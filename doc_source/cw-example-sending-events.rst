@@ -117,7 +117,7 @@ Choose **Copy** to save the code locally.
 Create the file :file:`events_schedule_rule.go`.
 Import the packages used in the example.
 
-.. literalinclude:: example_code/cloudwatch/events_schedule_rule.go
+.. literalinclude:: cloudwatch/events_schedule_rule.go
    :lines: 17-23
    :dedent: 0
    :language: go
@@ -127,7 +127,7 @@ from the shared credentials file ~/.aws/credentials,
 load your configuration from the shared configuration file ~/.aws/config,
 and create a CloudWatch Events client.
 
-.. literalinclude:: example_code/cloudwatch/events_schedule_rule.go
+.. literalinclude:: cloudwatch/events_schedule_rule.go
    :lines: 29-34
    :dedent: 4
    :language: go
@@ -137,13 +137,13 @@ ARN of the |IAM| role you created, :code:`IAM_ROLE_ARN`,
 and an expression defining the schedule.
 Finally, display the ARN of the rule.
 
-.. literalinclude:: example_code/cloudwatch/events_schedule_rule.go
+.. literalinclude:: cloudwatch/events_schedule_rule.go
    :lines: 36-40, 46
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/events_schedule_rule.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/cloudwatch/events_schedule_rule.go>`_
 on GitHub.
 
 Add a Lambda Function Target
@@ -154,7 +154,7 @@ Choose **Copy** to save the code locally.
 Create the file :file:`events_put_targets.go`.
 Import the packages used in the example.
 
-.. literalinclude:: example_code/cloudwatch/events_put_targets.go
+.. literalinclude:: cloudwatch/events_put_targets.go
    :lines: 17-23
    :dedent: 0
    :language: go
@@ -164,7 +164,7 @@ from the shared credentials file ~/.aws/credentials,
 load your configuration from the shared configuration file ~/.aws/config,
 and create a new CloudWatch Events client.
           
-.. literalinclude:: example_code/cloudwatch/events_put_targets.go
+.. literalinclude:: cloudwatch/events_put_targets.go
    :lines: 29-34
    :dedent: 4
    :language: go
@@ -175,13 +175,13 @@ For the target, specify the ARN of the Lambda function you created,
 and the ID of the rule, :code:`myCloudWatchEventsTarget`.
 Print any errors, or a success message with any targets that failed.
 
-.. literalinclude:: example_code/cloudwatch/events_put_targets.go
+.. literalinclude:: cloudwatch/events_put_targets.go
    :lines: 36-44, 50
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/events_put_targets.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/cloudwatch/events_put_targets.go>`_
 on GitHub.
 
 Send Events
@@ -192,7 +192,7 @@ Choose **Copy** to save the code locally.
 Create the file :file:`events_put_events.go`.
 Import the packages used in the example.
 
-.. literalinclude:: example_code/cloudwatch/events_put_events.go
+.. literalinclude:: cloudwatch/events_put_events.go
    :lines: 17-23
    :dedent: 0
    :language: go
@@ -202,7 +202,7 @@ from the shared credentials file ~/.aws/credentials,
 load your configuration from the shared configuration file ~/.aws/config,
 and create a CloudWatch Events client.
 
-.. literalinclude:: example_code/cloudwatch/events_put_events.go
+.. literalinclude:: cloudwatch/events_put_events.go
    :lines: 29-34
    :dedent: 4
    :language: go
@@ -213,12 +213,12 @@ See :sdk-go-api-deep:`PutEventsRequestEntry <service/cloudwatchevents/#PutEvents
 for a description of the fields.
 Finally, display the ingested events.
 
-.. literalinclude:: example_code/cloudwatch/events_put_events.go
+.. literalinclude:: cloudwatch/events_put_events.go
    :lines: 36-47, 53
    :dedent: 4
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/events_put_events.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/cloudwatch/events_put_events.go>`_
 on GitHub.
 

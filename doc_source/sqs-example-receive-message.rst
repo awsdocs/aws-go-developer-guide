@@ -62,20 +62,20 @@ Create a new Go file named :file:`sqs_sendmessage.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_sendmessage.go
+.. literalinclude:: sqs/sqs_sendmessage.go
    :lines: 15-23
 
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file, ~/.aws/credentials.
 
-.. literalinclude:: example_code/sqs/sqs_sendmessage.go
+.. literalinclude:: sqs/sqs_sendmessage.go
    :lines: 27-35
 
 Now you're ready to send your message. In the example, the message input passed to ``SendMessage``
 represents information about a fiction best seller for a particular week and defines title,
 author, and weeks on the list values.
 
-.. literalinclude:: example_code/sqs/sqs_sendmessage.go
+.. literalinclude:: sqs/sqs_sendmessage.go
    :lines: 37-63
 
 .. _sqs-example-receive-delete-message:
@@ -87,25 +87,25 @@ Create a new Go file named :file:`sqs_deletemessage.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_deletemessage.go
+.. literalinclude:: sqs/sqs_deletemessage.go
    :lines: 15-23
 
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file, ~/.aws/credentials.
 
-.. literalinclude:: example_code/sqs/sqs_deletemessage.go
+.. literalinclude:: sqs/sqs_deletemessage.go
    :lines: 27-32
 
 Now you're ready to receive a message from a queue specified by a queue URL. In the example,
 the ``qURL`` variable would hold the URL for the queue containing the message.
 
-.. literalinclude:: example_code/sqs/sqs_deletemessage.go
+.. literalinclude:: sqs/sqs_deletemessage.go
    :lines: 35-58
 
 After retrieving the message, delete it from the queue with ``DeleteMessage``, passing the ``ReceiptHandle``
 returned from the previous call.
 
-.. literalinclude:: example_code/sqs/sqs_deletemessage.go
+.. literalinclude:: sqs/sqs_deletemessage.go
    :lines: 60-71
 
 .. _sqs-example-send-receive-message:
@@ -117,34 +117,34 @@ Create a new Go file named :file:`sqs_longpolling_receive_message.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
+.. literalinclude:: sqs/sqs_longpolling_receive_message.go
    :lines: 15-26
 
 Get the queue name and timeout passed from the command.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
+.. literalinclude:: sqs/sqs_longpolling_receive_message.go
    :lines: 32-42
 
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file, ~/.aws/credentials.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
+.. literalinclude:: sqs/sqs_longpolling_receive_message.go
    :lines: 46-51
 
 Get the Queue. You need to convert the queue name into a URL. You can use the ``GetQueueUrl``
 API call to retrieve the URL. This is needed for receiving messages from the queue. Print
 any errors.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
+.. literalinclude:: sqs/sqs_longpolling_receive_message.go
    :lines: 56-64
 
 Call ``ReceiveMessage`` to get the latest message from the queue.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
+.. literalinclude:: sqs/sqs_longpolling_receive_message.go
    :lines: 67-86
 
 The example uses this utility function.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
+.. literalinclude:: sqs/sqs_longpolling_receive_message.go
    :lines: 88-91
 

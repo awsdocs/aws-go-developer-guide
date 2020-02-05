@@ -23,12 +23,12 @@ The following example displays information about your |ACBlong| project builds,
 including the name of the project, when the build started, and how long each
 phase of the build took, in seconds.
 
-.. literalinclude:: ./example_code/codebuild/cb_list_builds.go
+.. literalinclude:: ./codebuild/cb_list_builds.go
    :lines: 15-58
    :dedent: 0
    :language: go
 
 Choose :code:`Copy` to save the code locally.
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/codebuild/cb_list_builds.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/codebuild/cb_list_builds.go>`_
 on GitHub.

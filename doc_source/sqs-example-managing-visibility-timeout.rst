@@ -59,23 +59,23 @@ Create a new Go file named :file:`sqs_changingvisibility.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_changingvisibility.go
+.. literalinclude:: sqs/sqs_changingvisibility.go
    :lines: 15-23
 
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file, ~/.aws/credentials.
 
-.. literalinclude:: example_code/sqs/sqs_changingvisibility.go
+.. literalinclude:: sqs/sqs_changingvisibility.go
    :lines: 27, 30-35
 
 Get a message from the queue. Call ``ReceiveMessage``. Pass in the URL of the queue
 to return details of the next message in the queue. Print any errors, or a
 message if no message was received.
 
-.. literalinclude:: example_code/sqs/sqs_changingvisibility.go
+.. literalinclude:: sqs/sqs_changingvisibility.go
    :lines: 38-60
 
 If a message was returned, use its receipt handle to set the timeout to 30 seconds.
 
-.. literalinclude:: example_code/sqs/sqs_changingvisibility.go
+.. literalinclude:: sqs/sqs_changingvisibility.go
    :lines: 63-76

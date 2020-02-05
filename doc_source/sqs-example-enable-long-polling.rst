@@ -68,28 +68,28 @@ no error is returned.
 Create a new Go file named :file:`sqs_longpolling_create_queue.go`. You must import the
 relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_create_queue.go
+.. literalinclude:: sqs/sqs_longpolling_create_queue.go
    :lines: 15-26
 
 Get the queue name passed in by the user.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_create_queue.go
+.. literalinclude:: sqs/sqs_longpolling_create_queue.go
    :lines: 33-43
 
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file, ~/.aws/credentials.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_create_queue.go
+.. literalinclude:: sqs/sqs_longpolling_create_queue.go
    :lines: 47-52
 
 Create the queue with long polling enabled. Print any errors or a success message.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_create_queue.go
+.. literalinclude:: sqs/sqs_longpolling_create_queue.go
    :lines: 55-67
 
 The example uses this utility function.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_create_queue.go
+.. literalinclude:: sqs/sqs_longpolling_create_queue.go
    :lines: 69-72
 
 
@@ -100,32 +100,32 @@ Create a new Go file named :file:`sqs_longpolling_existing_queue.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
+.. literalinclude:: sqs/sqs_longpolling_existing_queue.go
    :lines: 15-27
 
 This example takes two flags, the -n flag is the queue name, and the -t flag contains the
 timeout value.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
+.. literalinclude:: sqs/sqs_longpolling_existing_queue.go
    :lines: 33-43
 
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file, ~/.aws/credentials.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
+.. literalinclude:: sqs/sqs_longpolling_existing_queue.go
    :lines: 47-52
 
 You need to convert the queue name into a URL.
 Make the ``GetQueueUrl`` API call to retrieve the URL. This is needed for setting attributes
 on the queue.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
+.. literalinclude:: sqs/sqs_longpolling_existing_queue.go
    :lines: 57-65
 
 Update the queue to enable long polling with a call to ``SetQueueAttributes``, passing in the
 queue URL. Print any errors or a success message.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
+.. literalinclude:: sqs/sqs_longpolling_existing_queue.go
    :lines: 68-84
 
 Enable Long Polling on Message Receipt
@@ -135,32 +135,32 @@ Create a new Go file named :file:`sqs_longpolling_receive_message.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
+.. literalinclude:: sqs/sqs_longpolling_receive_message.go
    :lines: 15-26
 
 This example takes two flags, the -n flag is the queue name, and the -t flag contains the
 timeout value.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
+.. literalinclude:: sqs/sqs_longpolling_receive_message.go
    :lines: 32-42
 
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file, ~/.aws/credentials.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
+.. literalinclude:: sqs/sqs_longpolling_receive_message.go
    :lines: 46-51
 
 You need to convert the queue name into a URL.
 Make the ``GetQueueUrl`` API call to retrieve the URL. This is needed for setting attributes
 on the queue.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
+.. literalinclude:: sqs/sqs_longpolling_receive_message.go
    :lines: 56-64
 
 Receive a message from the queue with long polling enabled with a call to
 ``ReceiveMessage``, passing in the queue URL. Print any errors or a success message.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
+.. literalinclude:: sqs/sqs_longpolling_receive_message.go
    :lines: 67-91
 
 

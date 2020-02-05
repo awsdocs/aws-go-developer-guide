@@ -21,12 +21,12 @@ Getting Information about All AWS CodeBuild Projects
 
 The following example lists the names of up to 100 of your |ACBlong| projects.
 
-.. literalinclude:: ./example_code/codebuild/cb_list_projects.go
+.. literalinclude:: ./codebuild/cb_list_projects.go
    :lines: 15-58
    :dedent: 0
    :language: go
 
 Choose :code:`Copy` to save the code locally.
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/codebuild/cb_list_projects.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/codebuild/cb_list_projects.go>`_
 on GitHub.

@@ -64,34 +64,34 @@ Create a new Go file named :file:`sqs_longpolling_existing_queue.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
+.. literalinclude:: sqs/sqs_longpolling_existing_queue.go
    :lines: 15-27
 
 Get the queue name and timeout passed in by the user.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
+.. literalinclude:: sqs/sqs_longpolling_existing_queue.go
    :lines: 33-43
 
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file, ~/.aws/credentials.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
+.. literalinclude:: sqs/sqs_longpolling_existing_queue.go
    :lines: 47-52
 
 Get the queue. You need to convert the queue name into a URL. You can use the ``GetQueueUrl``
 API call to retrieve the URL. This is needed for setting attributes on the queue. Print
 any errors.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
+.. literalinclude:: sqs/sqs_longpolling_existing_queue.go
    :lines: 57-65
 
 Update the queue to enable long polling.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
+.. literalinclude:: sqs/sqs_longpolling_existing_queue.go
    :lines: 68-79
 
 The example uses this utility function.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
+.. literalinclude:: sqs/sqs_longpolling_existing_queue.go
    :lines: 81-84
 

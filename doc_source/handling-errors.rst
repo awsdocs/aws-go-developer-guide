@@ -60,11 +60,11 @@ In this example the `S3` `GetObject` API operation is used to request the conten
 example handles the `NoSuchBucket` and `NoSuchKey` error codes, printing custom messages to stderr. If any
 other error is received, a generic message is printed.
 
-.. literalinclude:: example_code/extending_sdk/handleServiceErrorCodes.go
+.. literalinclude:: extending_sdk/handleServiceErrorCodes.go
    :lines: 49-71
    :dedent: 4
 
-See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/extending_sdk/handleServiceErrorCodes.go>`_
+See the `complete example <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/extending_sdk/handleServiceErrorCodes.go>`_
 on GitHub.
 
 .. _additional-error-information:

@@ -83,5 +83,5 @@ title and rating for those where the rating is greater than 4.0
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBScanItems.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/dynamodb/DynamoDBScanItems.go>`_
 on GitHub.

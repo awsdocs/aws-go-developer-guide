@@ -56,7 +56,7 @@ set one by default.
 The following example generates a pre-signed URL that enables you to temporarily share a file
 without making it public. Anyone with access to the URL can view the file.
 
-.. literalinclude:: example_code/s3/generate_presigned_url.go
+.. literalinclude:: s3/generate_presigned_url.go
    :lines: 14-
    :language: go
 
@@ -77,7 +77,7 @@ This is not the Content-MD5, but the signature. To enforce Content-MD5, simply a
 The following example adds a ``Body`` field to generate a pre-signed PUT operation that requires
 a specific payload to be uploaded by users.
 
-.. literalinclude:: example_code/s3/generate_presigned_url_specific_payload.go
+.. literalinclude:: s3/generate_presigned_url_specific_payload.go
    :lines: 14-
    :language: go
 
@@ -86,6 +86,6 @@ object.
 
 The following example shows the enforcing of Content-MD5.
 
-.. literalinclude:: example_code/s3/enforce_content_md5.go
+.. literalinclude:: s3/enforce_content_md5.go
    :lines: 14-
    :language: go
