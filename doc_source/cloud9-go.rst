@@ -129,7 +129,7 @@ used in the official AWS SDK documentation into your environment's root director
    git clone https://github.com/awsdocs/aws-doc-sdk-examples.git
 
 To find code examples for the |sdk-go|, use the :guilabel:`Environment` window to open the
-:file:`ENVIRONMENT_NAME/aws-doc-sdk-examples/go/example_code` directory,
+:file:`ENVIRONMENT_NAME/aws-doc-sdk-examples/go` directory,
 where :file:`ENVIRONMENT_NAME` is the name of your development environment.
 
 To learn how to work with these and other code examples, see :doc:`common-examples`.
