@@ -24,6 +24,7 @@ Security for |SERVICENAMETITLE|
    :maxdepth: 1
    :titlesonly:
 
+   Setting TLS Version <tls>
    Data Protection <data-protection>
    Identity and Access Management <common/security-iam>
    Compliance Validation <common/compliance-validation>
