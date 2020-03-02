@@ -8,28 +8,14 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-###################################
-Setting the TLS Version in |sdk-go|
-###################################
+#####################################
+Enforcing TLS Version 1.2 in |sdk-go|
+#####################################
 
 .. meta::
    :description: Describes how to set the TLS version for the |sdk-go|.
 
-The Issue
-=========
-
-All AWS APIs use a secure protocol to ensure that communication between your application and AWS servers is encrypted.
-To ensure this communication cannot be compromised,
-AWS will soon require that you use TLS (transport layer security) version 1.2 or greater.
-Support for previous versions of TLS will end on March 31, 2020.
-
-How do I get my TLS Version?
-============================
-
-Go has supported TLS 1.2 since the 1.13 release.
-To see your Go version, enter the following command.
-
-:code:`go version`
+To add increased security when communicating with AWS services, you should configure your client to use TLS 1.2 or later.
 
 How do I set my TLS Version?
 ============================
@@ -38,31 +24,54 @@ You can set the TLS version to 1.2 using the following code.
 
 1. Create a custom HTTP transport to require a minimum TLS 1.2 version.
 
-   .. literalinclude:: s3.go.set_tls_12_transport.txt
-   :dedent: 4
-   :language: go
+   .. code:: go
+      tr := &http.Transport{
+          TLSClientConfig: &tls.Config{
+              MinVersion: tls.VersionTLS12,
+          },
+      }
 
 2. Configure the transport.
 
    In Go versions before 1.13:
 
-   .. literalinclude:: s3.go.set_tls_12_cfg_112.txt
-   :dedent: 8
-   :language: go
+   .. code:: go
+      err := http2.ConfigureTransport(tr)
+     if err != nil {
+         fmt.Println("Got an error configuring HTTP transport")
+         fmt.Println(err)
+         return
+     }
 
    In Go versions from 1.13 on:
 
-   .. literalinclude:: s3.go.set_tls_12_cfg_113.txt
-   :dedent: 8
-   :language: go
+   .. code:: go
+      tr.ForceAttemptHTTP2 = true
 
-3. Create an HTTP client with the configured transport, and use that to create an SDK client,
-   in this case for Amazon S3.
+3. Create an HTTP client with the configured transport, and use that to create a session.
 
-   .. literalinclude:: s3.go.set_tls_12_client.txt
-   :dedent: 4
-   :language: go   
+   .. code:: go
+      client := http.Client{Transport: tr}
 
-See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/s3/s3SetTls12.go>`_
-on GitHub.
+      sess := session.Must(session.NewSession(&aws.Config{
+          Region:     regionPtr,
+          HTTPClient: &client,
+      }))
+
+4. Confirm your TLS version with the following Go code.
+
+.. code:: go
+   version := "Unknown"
+   
+   switch tr.TLSClientConfig.MinVersion {
+   case tls.VersionTLS10:
+       version = "TLS 1.0"
+   case tls.VersionTLS11:
+       version = "TLS 1.1"
+   case tls.VersionTLS12:
+       version = "TLS 1.2"
+   case tls.VersionTLS13:
+       version = "TLS 1.3"
+   }
+
+   fmt.Println("TLS version: " + version)
