@@ -49,12 +49,13 @@ You can set the TLS version to 1.2 using the following code.
        tr.ForceAttemptHTTP2 = true
 
 3. Create an HTTP client with the configured transport, and use that to create a session.
+    REGION is the AWS Region, such as `us-west-2`.
 
    .. code:: go
        client := http.Client{Transport: tr}
 
        sess := session.Must(session.NewSession(&aws.Config{
-           Region:     regionPtr,
+           Region:     &REGION,
            HTTPClient: &client,
        }))
 
