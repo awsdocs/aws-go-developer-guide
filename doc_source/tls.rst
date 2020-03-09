@@ -60,21 +60,21 @@ You can set the TLS version to 1.2 using the following code.
            HTTPClient: &client,
        }))
 
-4. Confirm your TLS version with the following Go code.
+4. Use the following function to confirm your TLS version.
 
    .. code:: go
              
-       version := "Unknown"
-   
-       switch tr.TLSClientConfig.MinVersion {
-       case tls.VersionTLS10:
-           version = "TLS 1.0"
-       case tls.VersionTLS11:
-           version = "TLS 1.1"
-       case tls.VersionTLS12:
-           version = "TLS 1.2"
-       case tls.VersionTLS13:
-           version = "TLS 1.3"
-       }
+       func GetTLSVersion(tr *http.Transport) string {
+           switch tr.TLSClientConfig.MinVersion {
+           case tls.VersionTLS10:
+               return "TLS 1.0"
+           case tls.VersionTLS11:
+               return "TLS 1.1"
+           case tls.VersionTLS12:
+               return "TLS 1.2"
+           case tls.VersionTLS13:
+               return "TLS 1.3"
+           }
 
-       fmt.Println("TLS version: " + version)
+           return "Unknown"
+       }
