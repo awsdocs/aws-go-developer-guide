@@ -16,7 +16,6 @@ Enforcing TLS Version 1.2 in |sdk-go|
    :description: Describes how to set the TLS version for the |sdk-go|.
 
 To add increased security when communicating with AWS services, you should configure your client to use TLS 1.2 or later.
-TLS 1.2 has been the default in Go since release 1.13 in September 2019.
 
 How do I set my TLS Version?
 ============================
