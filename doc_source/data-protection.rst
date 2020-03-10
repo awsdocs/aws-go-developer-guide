@@ -1,4 +1,4 @@
-.. Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -29,7 +29,7 @@ For data protection purposes, we recommend that you protect |AWS| account creden
 you secure your data in the following ways:
 
 * Use multi-factor authentication (MFA) with each account.
-* Use SSL/TLS to communicate with |AWS| resources.
+* Use SSL/TLS to communicate with |AWS| resources. See :doc:`tls` for details.
 * Set up API and user activity logging with |CTlong|.
 * Use |AWS| encryption solutions, along with all default security controls within |AWS| services.
 * Use advanced managed security services such as |MCElong|, which assists in discovering and securing personal data that 
