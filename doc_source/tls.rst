@@ -77,3 +77,11 @@ You can set the TLS version to 1.2 using the following code.
 
            return "Unknown"
        }
+
+5. Confirm your TLS version by calling `GetTLSVersion`.
+
+   .. code:: go
+             
+       if tr, ok := s3Client.Config.HTTPClient.Transport.(*http.Transport); ok {
+           log.Printf("Client uses %v", GetTLSVersion(tr))
+       }
