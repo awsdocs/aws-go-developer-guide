@@ -31,7 +31,7 @@ you secure your data in the following ways:
 * Use multi-factor authentication (MFA) with each account.
 * Use SSL/TLS to communicate with |AWS| resources. See :doc:`tls` for details.
 * Set up API and user activity logging with |CTlong|.
-* Use |AWS| encryption solutions, along with all default security controls within |AWS| services.
+* Use |AWS| encryption solutions, with all default security controls within |AWS| services.
 * Use advanced managed security services such as |MCElong|, which assists in discovering and securing personal data that 
   is stored in |S3|.
 
