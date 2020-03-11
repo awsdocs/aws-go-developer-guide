@@ -17,12 +17,12 @@ Enforcing TLS Version 1.2 in |sdk-go|
 
 To add increased security when communicating with AWS services, you should configure your client to use TLS 1.2 or later.
 
-How do I set my TLS Version?
+How do I set my TLS version?
 ============================
 
 You can set the TLS version to 1.2 using the following code.
 
-1. Create a custom HTTP transport to require a minimum TLS 1.2 version.
+1. Create a custom HTTP transport to require a minimum version of TLS 1.2
 
    .. code:: go
              
@@ -36,7 +36,7 @@ You can set the TLS version to 1.2 using the following code.
 
    .. code:: go
              
-       // In Go versions before 1.13
+       // In Go versions earlier than 1.13
        err := http2.ConfigureTransport(tr)
        if err != nil {
            fmt.Println("Got an error configuring HTTP transport")
@@ -44,7 +44,7 @@ You can set the TLS version to 1.2 using the following code.
            return
        }
 
-       // In Go versions from 1.13 on:
+       // In Go versions later than 1.13
        tr.ForceAttemptHTTP2 = true
 
 3. Create an HTTP client with the configured transport, and use that to create a session.
