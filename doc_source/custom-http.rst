@@ -211,7 +211,7 @@ The following example creates an **http.Client** that is configured to have:
 - a five second TLS handshake timeout
 - a five second wait for the HTTP response headers
 
-.. literalinclude:: s3.go.customHttpClient.sess.txt
+.. literalinclude:: s3.go.customHttpClient_session.txt
    :dedent: 8
    :language: go
 
