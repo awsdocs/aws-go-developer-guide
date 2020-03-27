@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -21,44 +21,34 @@ example at the end of this topic.
 
 Import the following Go packages.
 
-.. literalinclude:: ./example_code/workdocs/wd_list_users.go
-   :lines: 17-23
+.. literalinclude:: workdocs.go.list_users.imports.txt
    :dedent: 0
    :language: go
 
-- :code:`flag` is for getting user input, in this case the name of the user
-- :code:`fmt` is for formatting output
-- :code:`session` is for creating a session
-- :code:`workdocs` is for using the WorkDocs APIs
+Get an optional user name and organization ID from the command line.
+If the organization ID is missing,
+print an error message and quit.
+
+.. literalinclude:: workdocs.go.list_users.vars.txt
+   :dedent: 4
+   :language: go
+
+Create input for the :code:`DescribeUsers` method.
+
+.. literalinclude:: workdocs.go.list_users.input.txt
+   :dedent: 4
+   :language: go
 
 Create a session and |WD| client.
 
-.. literalinclude:: ./example_code/workdocs/wd_list_users.go
-   :lines: 35-40
+.. literalinclude:: workdocs.go.list_users.session.txt
    :dedent: 4
    :language: go
 
-Create the input arguments for the :code:`DescribeUsers` method and add your
-organization ID.
-
-.. literalinclude:: ./example_code/workdocs/wd_list_users.go
-   :lines: 42-46
-   :dedent: 4
-   :language: go
-
-If we have a user name, add that to the input arguments so we only get information
-about that user.
-
-.. literalinclude:: ./example_code/workdocs/wd_list_users.go
-   :lines: 48-57
-   :dedent: 4
-   :language: go
-
-Run the :code:`DescribeUsers` method and display the information for the user or
+Call :code:`DescribeUsers` and display the information for the user or
 all users.
 
-.. literalinclude:: ./example_code/workdocs/wd_list_users.go
-   :lines: 61-84
+.. literalinclude:: workdocs.go.list_users.describe.txt
    :dedent: 4
    :language: go
 

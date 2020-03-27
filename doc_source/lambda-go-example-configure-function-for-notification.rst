@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -22,24 +22,35 @@ Configuring a |LAM| Function to Receive Notifications
 The following example configures the |LAM| function :code:`functionName`
 to accept notifications from the resource with the ARN :code:`sourceArn`.
 
-The first step is to create the session and |LAM| client.
+Import the packages we use.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-configure-function-for-notification.go
-   :lines: 29-32, 34
+.. literalinclude:: lambda.go.configure_function.imports.txt
+   :dedent: 0
+   :language: go
+
+Get the name of the function and ARN of the entity invoking the function.
+If either is missing,
+print an error message and quit.
+
+.. literalinclude:: lambda.go.configure_function.vars.txt
    :dedent: 4
    :language: go
 
-Next, we create the structure for the input argument to the :code:`AddPermission` function.
+Create the session and |LAM| client.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-configure-function-for-notification.go
-   :lines: 36-42
+.. literalinclude:: lambda.go.configure_function.session.txt
    :dedent: 4
    :language: go
 
-Finally, we call :code:`AddPermission` and display a message with the result of the call.
+Create the structure for the input argument to the :code:`AddPermission` function.
 
-.. literalinclude:: ./example_code/lambda/aws-go-sdk-lambda-example-configure-function-for-notification.go
-   :lines: 44-51
+.. literalinclude:: lambda.go.configure_function.struct.txt
+   :dedent: 4
+   :language: go
+
+Finally, call :code:`AddPermission` and display a message with the result of the call.
+
+.. literalinclude:: lambda.go.configure_function.add_permission.txt
    :dedent: 4
    :language: go
 

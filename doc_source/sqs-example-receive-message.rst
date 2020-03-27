@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -117,34 +117,41 @@ Create a new Go file named :file:`sqs_longpolling_receive_message.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
-   :lines: 15-26
+.. literalinclude:: sqs.go.longpolling_receive_message.imports.txt
+   :dedent: 0
+   :language: go
 
-Get the queue name and timeout passed from the command.
+Get the queue name and (optional) timeout passed from the command.
+If the name is missing,
+print an error message and quit.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
-   :lines: 32-42
+.. literalinclude:: sqs.go.longpolling_receive_message.vars.txt
+   :dedent: 4
+   :language: go
 
 Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials.
+from the shared credentials file, ~/.aws/credentials
+and create an |SQS| client.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
-   :lines: 46-51
+.. literalinclude:: sqs.go.longpolling_receive_message.session.txt
+   :dedent: 4
+   :language: go
 
-Get the Queue. You need to convert the queue name into a URL. You can use the ``GetQueueUrl``
-API call to retrieve the URL. This is needed for receiving messages from the queue. Print
-any errors.
+Get the queue URL.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
-   :lines: 56-64
+.. literalinclude:: sqs.go.longpolling_receive_message.url.txt
+   :dedent: 4
+   :language: go
 
 Call ``ReceiveMessage`` to get the latest message from the queue.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
-   :lines: 67-86
+.. literalinclude:: sqs.go.longpolling_receive_message.receive.txt
+   :dedent: 4
+   :language: go
 
 The example uses this utility function.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
-   :lines: 88-91
+.. literalinclude:: sqs.go.longpolling_receive_message.exit.txt
+   :dedent: 0
+   :language: go
 

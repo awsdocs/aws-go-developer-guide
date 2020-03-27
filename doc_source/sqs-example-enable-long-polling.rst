@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -68,29 +68,36 @@ no error is returned.
 Create a new Go file named :file:`sqs_longpolling_create_queue.go`. You must import the
 relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_create_queue.go
-   :lines: 15-26
+.. literalinclude:: sqs.go.longpolling_create_queue.imports.txt
+   :dedent: 0
+   :language: go
 
 Get the queue name passed in by the user.
+If the name isn't provided,
+print an error message and quit.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_create_queue.go
-   :lines: 33-43
+.. literalinclude:: sqs.go.longpolling_create_queue.vars.txt
+   :dedent: 4
+   :language: go
 
 Initialize a session that the SDK will use to load credentials
 from the shared credentials file, ~/.aws/credentials.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_create_queue.go
-   :lines: 47-52
+.. literalinclude:: sqs.go.longpolling_create_queue.session.txt
+   :dedent: 4
+   :language: go
 
-Create the queue with long polling enabled. Print any errors or a success message.
+Create |SQS| client and the queue with long polling enabled. Print any errors or a success message.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_create_queue.go
-   :lines: 55-67
+.. literalinclude:: sqs.go.longpolling_create_queue.create.txt
+   :dedent: 4
+   :language: go
 
 The example uses this utility function.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_create_queue.go
-   :lines: 69-72
+.. literalinclude:: sqs.go.longpolling_create_queue.exit.txt
+   :dedent: 0
+   :language: go
 
 
 Enable Long Polling on an Existing Queue
@@ -100,33 +107,39 @@ Create a new Go file named :file:`sqs_longpolling_existing_queue.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
-   :lines: 15-27
+.. literalinclude:: sqs.go.longpolling_existing_queue.imports.txt
+   :dedent: 0
+   :language: go
 
-This example takes two flags, the -n flag is the queue name, and the -t flag contains the
-timeout value.
+This example takes two flags, the -n flag defines the queue name, and the -t flag defines the
+optional timeout value.
+If no queue name is provided,
+it prints an error message and quits.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
-   :lines: 33-43
+.. literalinclude:: sqs.go.longpolling_existing_queue.vars.txt
+   :dedent: 4
+   :language: go
 
 Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials.
+from the shared credentials file, ~/.aws/credentials
+and create an |SQS| client.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
-   :lines: 47-52
+.. literalinclude:: sqs.go.longpolling_existing_queue.session.txt
+   :dedent: 4
+   :language: go
 
-You need to convert the queue name into a URL.
-Make the ``GetQueueUrl`` API call to retrieve the URL. This is needed for setting attributes
-on the queue.
+Get the URL of the queue.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
-   :lines: 57-65
+.. literalinclude:: sqs.go.longpolling_existing_queue.url.txt
+   :dedent: 4
+   :language: go
 
 Update the queue to enable long polling with a call to ``SetQueueAttributes``, passing in the
 queue URL. Print any errors or a success message.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
-   :lines: 68-84
+.. literalinclude:: sqs.go.longpolling_existing_queue.enable.txt
+   :dedent: 4
+   :language: go
 
 Enable Long Polling on Message Receipt
 ======================================
@@ -135,32 +148,42 @@ Create a new Go file named :file:`sqs_longpolling_receive_message.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
-   :lines: 15-26
+.. literalinclude:: sqs.go.longpolling_receive_message.imports.txt
+   :dedent: 0
+   :language: go
 
-This example takes two flags, the -n flag is the queue name, and the -t flag contains the
+This example takes two flags, the -n flag defines the queue name, and the optional -t flag defines the
 timeout value.
+If the name is missing,
+print an error message and quit.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
-   :lines: 32-42
+.. literalinclude:: sqs.go.longpolling_receive_message.vars.txt
+   :dedent: 4
+   :language: go
 
 Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials.
+from the shared credentials file, ~/.aws/credentials
+and create an |SQS| client.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
-   :lines: 46-51
+.. literalinclude:: sqs.go.longpolling_receive_message.session.txt
+   :dedent: 4
+   :language: go
 
-You need to convert the queue name into a URL.
-Make the ``GetQueueUrl`` API call to retrieve the URL. This is needed for setting attributes
-on the queue.
+Get the queue URL.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
-   :lines: 56-64
+.. literalinclude:: sqs.go.longpolling_receive_message.url.txt
+   :dedent: 4
+   :language: go
 
 Receive a message from the queue with long polling enabled with a call to
 ``ReceiveMessage``, passing in the queue URL. Print any errors or a success message.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_receive_message.go
-   :lines: 67-91
+.. literalinclude:: sqs.go.longpolling_receive_message.receive.txt
+   :dedent: 4
+   :language: go
 
+The example uses this utility function.
 
+.. literalinclude:: sqs.go.longpolling_receive_message.exit.txt
+   :dedent: 0
+   :language: go

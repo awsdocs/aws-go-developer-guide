@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -21,35 +21,34 @@ example at the end of this topic.
 
 Import the following Go packages.
 
-.. literalinclude:: ./example_code/workdocs/wd_list_user_docs.go
-   :lines: 17-23
+.. literalinclude:: workdocs.go.list_user_docs.imports.txt
    :dedent: 0
    :language: go
 
-- :code:`flag` is for getting user input, in this case the name of the user
-- :code:`fmt` is for formatting output
-- :code:`session` is for creating a session
-- :code:`workdocs` is for using the WorkDocs APIs
+Get the user and organization ID from the command line.
+If either is missing,
+print an error message and quit.
 
-Create a session and |WD| client.
-
-.. literalinclude:: ./example_code/workdocs/wd_list_users.go
-   :lines: 35-40
+.. literalinclude:: workdocs.go.list_user_docs.vars.txt
    :dedent: 4
    :language: go
 
-Check that we have a user name, and get the root folder for that user.
+Create a session and |WD| client.
 
-.. literalinclude:: ./example_code/workdocs/wd_list_user_docs.go
-   :lines: 42-70
+.. literalinclude:: workdocs.go.list_user_docs.session.txt
+   :dedent: 4
+   :language: go
+
+Get the root folder for the user.
+
+.. literalinclude:: workdocs.go.list_user_docs.root_folder.txt
    :dedent: 4
    :language: go
 
 Run the :code:`DescribeFolderContents` method and display the name, size, and
 last modified information for each document.
 
-.. literalinclude:: ./example_code/workdocs/wd_list_user_docs.go
-   :lines: 72-87
+.. literalinclude:: workdocs.go.list_user_docs.describe.txt
    :dedent: 8
    :language: go
 

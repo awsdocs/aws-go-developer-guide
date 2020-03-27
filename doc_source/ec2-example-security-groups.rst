@@ -1,4 +1,4 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -15,8 +15,8 @@ Working with Security Groups in |EC2|
 #####################################
 
 .. meta::
-   :description: Work with security groups in Amazon EC2 using this AWS SDK for Go code example.
-   :keywords: AWS SDK for Go code examples, EC2 security groups
+   :description: Work with security groups in |EC2| using this AWS SDK for Go code example.
+   :keywords: AWS SDK for Go code examples, |EC2| security groups
 
 These Go examples show you how to:
 
@@ -114,42 +114,47 @@ first VPC in the account.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/ec2/ec2_create_security_group.go
-   :lines: 15-26
+.. literalinclude:: ec2.go.create_security_group.imports.txt
+   :dedent: 0
+   :language: go
 
 Get the parameters (name, description, and optional ID of the VPC) that are passed in to the
 routine.
 
-.. literalinclude:: example_code/ec2/ec2_create_security_group.go
-   :lines: 34-44
-
-Create a session.
-
-.. literalinclude:: example_code/ec2/ec2_create_security_group.go
+.. literalinclude:: ec2.go.create_security_group.vars.txt
    :dedent: 4
-   :lines: 48-53
+   :language: go
 
-If the VPC ID was not provided, you have to retrieve the first one in the account.
+Create a session and |EC2| client.
 
-.. literalinclude:: example_code/ec2/ec2_create_security_group.go
+.. literalinclude:: ec2.go.create_security_group.session.txt
    :dedent: 4
-   :lines: 56-66
+   :language: go
 
-Then create the security group with the VPC ID, name, and description.
+Create an |EC2| client.              
+If the VPC ID was not provided, retrieve the first one in the account.
 
-.. literalinclude:: example_code/ec2/ec2_create_security_group.go
+.. literalinclude:: ec2.go.create_security_group.vpcid.txt
    :dedent: 4
-   :lines: 69-86
+   :language: go
+
+Create the security group with the VPC ID, name, and description.
+
+.. literalinclude:: ec2.go.create_security_group.create.txt
+   :dedent: 4
+   :language: go
 
 Add permissions to the security group.
 
-.. literalinclude:: example_code/ec2/ec2_create_security_group.go
-   :lines: 89-91,94-117
+.. literalinclude:: ec2.go.create_security_group.permissions.txt
+   :dedent: 4
+   :language: go
 
 The following utility function is used by this example.
 
-.. literalinclude:: example_code/ec2/ec2_create_security_group.go
-   :lines: 119-122
+.. literalinclude:: ec2.go.create_security_group.exit.txt
+   :dedent: 4
+   :language: go
 
 See the `complete example
 <https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_create_security_group.go>`_
