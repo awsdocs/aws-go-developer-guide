@@ -1,4 +1,4 @@
-.. Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+.. Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
    This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
    International License (the "License"). You may not use this file except in compliance with the
@@ -169,23 +169,9 @@ Create Import Statement
 
 The complete example imports the following Go packages.
 
-.. code-block:: go
-
-    import (
-        "bytes"
-        "flag"
-        "fmt"
-        "net"
-        "net/http"
-        "os"
-        "time"
-
-        "github.com/aws/aws-sdk-go/aws"
-        "github.com/aws/aws-sdk-go/aws/session"
-        "github.com/aws/aws-sdk-go/service/s3"
-
-        "golang.org/x/net/http2"
-    )
+.. literalinclude:: s3.go.customHttpClient.import.txt
+   :dedent: 0
+   :language: go
 
 .. _timeout-struct:
 
@@ -195,18 +181,9 @@ Creating a Timeout Struct
 Let's create a struct to hold the timeout values we want to be able to set
 on our HTTP client.
 
-.. code-block:: go
-
-    type HTTPClientSettings struct {
-        Connect          time.Duration
-        ConnKeepAlive    time.Duration
-        ExpectContinue   time.Duration
-        IdleConn         time.Duration
-        MaxAllIdleConns  int
-        MaxHostIdleConns int
-        ResponseHeader   time.Duration
-        TLSHandshake     time.Duration
-    }
+.. literalinclude:: s3.go.customHttpClient_struct.txt
+   :dedent: 0
+   :language: go
 
 .. _timeout-func:
 
@@ -216,31 +193,9 @@ Creating a Function to Create a Custom HTTP Client
 Next let's create a function that takes a **ClientTimeout** struct
 and creates a custom HTTP client based on those timeout values.
 
-.. code-block:: go
-
-    func NewHTTPClientWithTimeouts(httpSettings HTTPClientSettings) *http.Client {
-        tr := &http.Transport{
-            ResponseHeaderTimeout: httpSettings.ResponseHeader,
-            Proxy:                 http.ProxyFromEnvironment,
-            DialContext:           (&net.Dialer{
-                KeepAlive: httpSettings.ConnKeepAlive,
-                DualStack: true,
-                Timeout:   httpSettings.Connect,
-            }).DialContext,
-            MaxIdleConns:          httpSettings.MaxAllIdleConns,
-            IdleConnTimeout:       httpSettings.IdleConn,
-            TLSHandshakeTimeout:   httpSettings.TLSHandshake,
-            MaxIdleConnsPerHost:   httpSettings.MaxHostIdleConns,
-            ExpectContinueTimeout: httpSettings.ExpectContinue,
-        }
-
-        // So client makes HTTP/2 requests
-        http2.ConfigureTransport(tr)
-
-        return &http.Client{
-            Transport: tr,
-        }
-    }
+.. literalinclude:: s3.go.customHttpClient_client.txt
+   :dedent: 0
+   :language: go
 
 .. _s3-client:
 
@@ -256,23 +211,9 @@ The following example creates an **http.Client** that is configured to have:
 - a five second TLS handshake timeout
 - a five second wait for the HTTP response headers
 
-.. code-block:: go
-
-    sess := session.Must(session.NewSession(&aws.Config{
-        Region: regionPtr,
-        HTTPClient: NewHTTPClientWithSettings(HTTPClientSettings{
-            Connect:          5 * time.Second,
-            ExpectContinue:   1 * time.Second,
-            IdleConn:         90 * time.Second,
-            ConnKeepAlive:    30 * time.Second,
-            MaxAllIdleConns:  100,
-            MaxHostIdleConns: 10,
-            ResponseHeader:   5 * time.Second,
-            TLSHandshake:     5 * time.Second,
-        }),
-    }))
-
-    client := s3.New(sess)
+.. literalinclude:: s3.go.customHttpClient_session.txt
+   :dedent: 8
+   :language: go
 
 All of these settings give the client approximately 15 seconds create a connection,
 do a TLS handshake, and receive the response headers from the service.
@@ -289,24 +230,10 @@ The SDK must be able to read the full HTTP response body (Object body) within th
 For API operations that return an **io.ReadCloser** in their response type,
 the Context's timeout includes reading the content from the **io.ReadCloser**.
 
-.. code-block:: go
+.. literalinclude:: s3.go.customHttpClient.get_object.txt
+   :dedent: 4
+   :language: go
 
-    ctx, cancelFn := context.WithTimeout(context.TODO(), 20 *time.Second)
-
-    resp, err := client.GetObjectWithContext(ctx, &s3.GetObjectInput{
-        Bucket: &config.Bucket,
-        Key:    &config.Key,
-    })
-    if err != nil {
-        return err
-    }
-    
-    defer resp.Body.Close()
-
-    //  Read object from resp.Body
-
-    
-    
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/customHttpClient.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/s3/CustomClient/CustomHttpClient.go>`_
 on GitHub.
