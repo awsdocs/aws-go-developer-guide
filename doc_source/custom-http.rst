@@ -211,7 +211,7 @@ The following example creates an **http.Client** that is configured to have:
 - a five second TLS handshake timeout
 - a five second wait for the HTTP response headers
 
-.. literalinclude:: s3.go.customHttpClient_session.txt
+.. literalinclude:: s3.go.customHttpClient.sess.txt
    :dedent: 8
    :language: go
 
@@ -235,5 +235,5 @@ the Context's timeout includes reading the content from the **io.ReadCloser**.
    :language: go
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/customHttpClient.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/s3/CustomClient/CustomHttpClient.go>`_
 on GitHub.
