@@ -1,12 +1,5 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
-   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
-   International License (the "License"). You may not use this file except in compliance with the
-   License. A copy of the License is located at http://creativecommons.org/licenses/by-nc-sa/4.0/.
-
-   This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
-   either express or implied. See the License for the specific language governing permissions and
-   limitations under the License.
+.. Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. 
+   SPDX-License-Identifier: CC-BY-SA-4.0
 
 .. _examples-sqs-using-queues:
 
@@ -17,7 +10,6 @@ Using |SQS| Queues
 .. meta::
    :description: Learn to work with Amazon SQS queues using this AWS SDK for Go.
    :keywords: AWS SDK for Go code examples, SQS, create queue
-
 
 These |sdk-go| examples show you how to:
 
@@ -51,89 +43,151 @@ Prerequisites
 * You have :doc:`set up <setting-up>` and :doc:`configured <configuring-sdk>` the |sdk-go|.
 * You are familiar with using |SQS|. To learn more, see :sqs-dg:`How Queues Work <sqs-how-it-works>` in the |SQS-dg|.
 
-
 .. _sqs-example-list-queues:
 
 List Queues
 ===========
 
-Create a new Go file named :file:`sqs_listqueues.go`. You must import the relevant Go and
+Create a new Go file named :file:`ListQueues.go`. You must import the relevant Go and
 |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_listqueues.go
-   :lines: 15-22
+.. literalinclude:: sqs.go.list_queues.imports.txt
+   :language: go
+   :dedent: 0
 
-Initialize a session that the SDK will use to load credentials from the shared credentials file, ~/.aws/credentials.
+Initialize a session that the SDK uses to load credentials from the shared credentials file, ~/.aws/credentials
+and the default region from ~/.aws/config.
 
-.. literalinclude:: example_code/sqs/sqs_listqueues.go
-   :lines: 26,29-34
+.. literalinclude:: sqs.go.list_queues.sess.txt
+   :language: go
+   :dedent: 4
 
-Call ``ListQueues`` passing in ``nil`` to return all queues. Print any errors or a success
-message and loop through the queue URLs to print them.
+Create a service client and call ``ListQueues``,
+passing in ``nil`` to return all queues. 
 
-.. literalinclude:: example_code/sqs/sqs_listqueues.go
-   :lines: 37-52
+.. literalinclude:: sqs.go.list_queues.call.txt
+   :language: go
+   :dedent: 4
 
-Create Queues
-=============
+Loop through the queue URLs to print them.
 
-Create a new Go file named :file:`sqs_createqueues.go`. You must import the relevant Go and
+.. literalinclude:: sqs.go.list_queues.display.txt
+   :language: go
+   :dedent: 4
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/ListQueues.go>`_
+on GitHub.
+            
+Create a Queue
+==============
+
+Create a new Go file named :file:`CreateQueue.go`. You must import the relevant Go and
 |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_createqueues.go
-   :lines: 15-23
+.. literalinclude:: sqs.go.create_queue.imports.txt
+   :language: go
+   :dedent: 0
 
-Initialize a session that the SDK will use to load credentials from the shared credentials file, ~/.aws/credentials.
+Get the queue name from the command line.
 
-.. literalinclude:: example_code/sqs/sqs_createqueues.go
-   :lines: 27,30-35
+.. literalinclude:: sqs.go.create_queue.args.txt
+   :language: go
+   :dedent: 4
 
-Call ``CreateQueue`` passing in the new queue name and queue attributes. Print any errors
-or a success message.
+Initialize a session that the SDK uses to load credentials from the shared credentials file, ~/.aws/credentials
+and the default region from ~/.aws/config.
 
-.. literalinclude:: example_code/sqs/sqs_createqueues.go
-   :lines: 37-50
+.. literalinclude:: sqs.go.create_queue.sess.txt
+   :language: go
+   :dedent: 4
 
+Create a service client and call ``CreateQueue``,
+passing in the queue name and queue attributes. 
 
-Get a Queue URL
-===============
+.. literalinclude:: sqs.go.create_queue.call.txt
+   :language: go
+   :dedent: 4
 
-Create a new Go file named :file:`sqs_getqueueurl.go`. You must import the relevant Go and
+Display the queue URL.
+
+.. literalinclude:: sqs.go.create_queue.print.txt
+   :language: go
+   :dedent: 4
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/CreateQueue.go>`_
+on GitHub.
+
+Get the URL of a Queue
+======================
+
+Create a new Go file named :file:`GetQueueUrl.go`. You must import the relevant Go and
 |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_getqueueurl.go
-   :lines: 15-23
+.. literalinclude:: sqs.go.get_queue_url.imports.txt
+   :language: go
+   :dedent: 0
 
-Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials.
+Get the name of the queue from the command line.
 
-.. literalinclude:: example_code/sqs/sqs_getqueueurl.go
-   :lines: 27,30-35
+.. literalinclude:: sqs.go.get_queue_url.args.txt
+   :language: go
+   :dedent: 4
 
-Call ``GetQueueUrl`` passing in the queue name. Print any errors
-or a success message.
+Initialize a session that the SDK uses to load credentials from the shared credentials file, ~/.aws/credentials
+and the default region from ~/.aws/config.
 
-.. literalinclude:: example_code/sqs/sqs_getqueueurl.go
-   :lines: 37-47
+.. literalinclude:: sqs.go.get_queue_url.sess.txt
+   :language: go
+   :dedent: 4
+
+Create a service client and call ``GetQueueUrl``,
+passing in the queue name.
+
+.. literalinclude:: sqs.go.get_queue_url.call.txt
+   :language: go
+   :dedent: 4
+
+Display the URL of the queue.
+
+.. literalinclude:: sqs.go.get_queue_url.print.txt
+   :language: go
+   :dedent: 4
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/GetQueueURL.go>`_
+on GitHub.
 
 Delete a Queue
 ==============
 
-Create a new Go file named :file:`sqs_deletequeue.go`. You must import the relevant Go and
+Create a new Go file named :file:`DeleteQueue.go`. You must import the relevant Go and
 |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_deletequeue.go
-   :lines: 15-23
+.. literalinclude:: sqs.go.delete_queue.imports.txt
+   :language: go
+   :dedent: 0
 
-Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials.
+Get the name of the queue from the command line.
 
-.. literalinclude:: example_code/sqs/sqs_deletequeue.go
-   :lines: 27,30-35
+.. literalinclude:: sqs.go.delete_queue.args.txt
+   :language: go
+   :dedent: 4
 
-Call ``DeleteQueue`` passing in the queue name. Print any errors
-or a success message.
+Initialize a session that the SDK uses to load credentials from the shared credentials file, ~/.aws/credentials
+and the default region from ~/.aws/config.
 
-.. literalinclude:: example_code/sqs/sqs_deletequeue.go
-   :lines: 37-47
+.. literalinclude:: sqs.go.delete_queue.sess.txt
+   :language: go
+   :dedent: 4
 
+Create a service client and all ``DeleteQueue`` passing in the queue name.
+
+.. literalinclude:: sqs.go.delete_queue.get_queue_url.txt
+   :language: go
+   :dedent: 4
+
+See the  `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/DeleteQueue.go>`_
+on GitHub.

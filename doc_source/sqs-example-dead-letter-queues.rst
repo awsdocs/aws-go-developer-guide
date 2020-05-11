@@ -1,12 +1,5 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
-   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
-   International License (the "License"). You may not use this file except in compliance with the
-   License. A copy of the License is located at http://creativecommons.org/licenses/by-nc-sa/4.0/.
-
-   This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
-   either express or implied. See the License for the specific language governing permissions and
-   limitations under the License.
+.. Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. 
+   SPDX-License-Identifier: CC-BY-SA-4.0
 
 .. _examples-sqs-using-dead-letter-queues:
 
@@ -17,7 +10,6 @@ Using Dead Letter Queues in |SQS|
 .. meta::
    :description: Use an Amazon SQS queue to receive and hold messages with this AWS SDK for Go code example.
    :keywords: AWS SDK for Go code examples, SQS, create queue
-
 
 This |sdk-go| example shows you how to configure source |SQS| queues that send messages to
 a dead letter queue.
@@ -59,27 +51,67 @@ that route unprocessed messages to the dead letter queue. To do this, specify a 
 that identifies the queue to use as a dead letter queue and the maximum number of receives by
 individual messages before they are routed to the dead letter queue.
 
-Create a new Go file with the name :file:`sqs_deadletterqueue.go`.
+Create a new Go file with the name :file:`DeadLetterQueue.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_deadletterqueue.go
-   :lines: 15-24
+.. literalinclude:: sqs.go.dead_letter_queue.imports.txt
+   :language: go
+   :dedent: 0
+
+Get the name of the queue and the dead letter queue from the commmand line.
+
+.. literalinclude:: sqs.go.dead_letter_queue.args.txt
+   :language: go
+   :dedent: 0
 
 Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials.
+from the shared credentials file, *~/.aws/credentials*
+and the default AWS Region from *~/.aws/config*.
 
-.. literalinclude:: example_code/sqs/sqs_deadletterqueue.go
-   :lines: 28,31-36
+.. literalinclude:: sqs.go.dead_letter_queue.sess.txt
+   :language: go,
+   :dedent: 4
 
-Define the redrive policy for the queue, then marshal the policy to use as input
-for the ``SetQueueAttributes`` call.
+Create a service client and call ``GetQueueUrl`` to get the URL for the queue.
 
-.. literalinclude:: example_code/sqs/sqs_deadletterqueue.go
-   :lines: 39-43,46-50
+.. literalinclude:: sqs.go.get_queue_url.call.txt
+   :language: go
+   :dedent: 4
+
+The URL of the queue is in the ``QueueUrl`` property of the returned object.
+
+.. literalinclude:: sqs.go.dead_letter_queue.url.txt
+   :language: go
+   :dedent: 4
+
+Similarly, get the URL of the dead letter queue.
+
+Create the ARN of the dead-letter queue from the URL.
+
+.. literalinclude:: sqs.go.get_queue_url.arn.txt
+   :language: go
+   :dedent: 4
+
+Define the redrive policy for the queue.
+
+.. literalinclude:: sqs.go.dead_letter_queue.policy.txt
+   :language: go
+   :dedent: 4
+
+Marshal the policy to use as input
+for the ``SetQueueAttributes`` call.           
+
+.. literalinclude:: sqs.go.dead_letter_queue.marshall.txt
+   :language: go
+   :dedent: 4
 
 Set the policy on the queue.
 
-.. literalinclude:: example_code/sqs/sqs_deadletterqueue.go
-   :lines: 52-65
+.. literalinclude:: sqs.go.dead_letter_queue.set_attributes.txt
+   :language: go
+   :dedent: 4
 
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/DeadLetterQueue.go>`_
+on GitHub.

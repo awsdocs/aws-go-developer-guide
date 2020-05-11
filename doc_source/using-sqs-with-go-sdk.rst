@@ -35,9 +35,3 @@ You can download complete versions of these example files from the
    sqs-example-managing-visibility-timeout
    sqs-example-enable-long-polling
    sqs-example-dead-letter-queues
-   sqs-example-set-attributes
-
-
-
-
-
