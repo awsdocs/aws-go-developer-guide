@@ -40,7 +40,7 @@ and create a new |DDB| service client.
 
 Call **ListTables**.
 If an error occurs, print the error and exit.
-If no error occurs, loop through the tabless, printing the name of each table.
+If no error occurs, loop through the tables, printing the name of each table.
 
 .. literalinclude:: dynamodb.go.list_tables.call.txt
    :dedent: 4
