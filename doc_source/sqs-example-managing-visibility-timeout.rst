@@ -94,5 +94,5 @@ Call ``ChangeMessageVisibility`` to change the visibility of the messages in the
    :dedent: 4
 
 See the  `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/ChangeMsgVisibility.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/ChangeMsgVisibility/ChangeMsgVisibility.go>`_
 on GitHub.

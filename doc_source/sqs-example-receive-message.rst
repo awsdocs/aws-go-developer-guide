@@ -81,7 +81,7 @@ author, and weeks on the list values.
    :dedent: 4
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/SendMessage.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/SendMessage/SendMessage.go>`_
 on GitHub.
 
 .. _sqs-example-receive-mesage:
@@ -138,7 +138,7 @@ Print the message handle of the first message in the queue
    :dedent: 4
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/ReceiveMessage.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/ReceiveMessage/ReceiveMessage.go>`_
 on GitHub.
 
 .. _sqs-example-delete-message:
@@ -176,5 +176,5 @@ passing in the name of the queue and the message handle.
    :dedent: 4
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/DeleteMessage.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/DeleteMessage/DeleteMessage.go>`_
 on GitHub.

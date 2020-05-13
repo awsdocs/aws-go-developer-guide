@@ -88,7 +88,7 @@ passing in the time to wait for messages.
    :dedent: 4
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/CreateLPQueue.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/CreateLPQueue/CreateLPQueue.go>`_
 on GitHub.
 
 Enable Long Polling on an Existing Queue
@@ -137,7 +137,7 @@ queue URL.
    :dedent: 4
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/CConfigureLPQueue.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/ConfigureLPQueue/ConfigureLPQueue.go>`_
 on GitHub.
 
 Enable Long Polling on Message Receipt
@@ -186,5 +186,5 @@ Display the IDs of the mesages.
    :dedent: 0
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/ReceiveLPMessage.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/ReceiveLPMessage/ReceiveLPMessage.go>`_
 on GitHub.

@@ -76,7 +76,7 @@ Loop through the queue URLs to print them.
    :dedent: 4
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/ListQueues.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/ListQueues/ListQueues.go>`_
 on GitHub.
             
 Create a Queue
@@ -116,7 +116,7 @@ Display the queue URL.
    :dedent: 4
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/CreateQueue.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/CreateQueue/CreateQueue.go>`_
 on GitHub.
 
 Get the URL of a Queue
@@ -156,7 +156,7 @@ Display the URL of the queue.
    :dedent: 4
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/GetQueueURL.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/GetQueueURL/GetQueueURL.go>`_
 on GitHub.
 
 Delete a Queue
@@ -189,5 +189,5 @@ Create a service client and all ``DeleteQueue`` passing in the queue name.
    :dedent: 4
 
 See the  `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/DeleteQueue.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/DeleteQueue/DeleteQueue.go>`_
 on GitHub.

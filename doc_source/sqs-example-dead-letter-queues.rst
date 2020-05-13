@@ -113,5 +113,5 @@ Set the policy on the queue.
    :dedent: 4
 
 See the `complete example
-<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/DeadLetterQueue.go>`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/DeadLetterQueue/DeadLetterQueue.go>`_
 on GitHub.
