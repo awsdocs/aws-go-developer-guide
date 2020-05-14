@@ -1,12 +1,5 @@
-.. Copyright 2010-2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
-   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
-   International License (the "License"). You may not use this file except in compliance with the
-   License. A copy of the License is located at http://creativecommons.org/licenses/by-nc-sa/4.0/.
-
-   This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
-   either express or implied. See the License for the specific language governing permissions and
-   limitations under the License.
+.. Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. 
+   SPDX-License-Identifier: CC-BY-SA-4.0
 
 .. _examples-sqs-receive-message:
 
@@ -21,8 +14,8 @@ Sending and Receiving Messages in |SQS|
 These |sdk-go| examples show you how to:
 
 * Send a message to an |SQS| queue
-* Receive and delete a message from an |SQS| queue
-* Send and receive messages from an |SQS| queue
+* Receive a message from an |SQS| queue
+* Delete a message from an |SQS| queue
 
 You can download complete versions of these example files from the
 :doc-examples-go:`aws-doc-sdk-examples <sqs>` repository on GitHub.
@@ -52,106 +45,136 @@ Prerequisites
   :sqs-dg:`Receiving and Deleting a Message from an Amazon SQS Queue <sqs-receive-delete-message>`
   in the |SQS-dg|.
 
-
 .. _sqs-example-send-message:
 
 Send a Message to a Queue
 =========================
 
-Create a new Go file named :file:`sqs_sendmessage.go`.
+Create a new Go file named :file:`SendMessage.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_sendmessage.go
-   :lines: 15-23
+.. literalinclude:: sqs.go.send_message.imports.txt
+   :language: go
+   :dedent: 0
 
-Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials.
+Get the name of the queue from the command line.
 
-.. literalinclude:: example_code/sqs/sqs_sendmessage.go
-   :lines: 27-35
+.. literalinclude:: sqs.go.send_message.args.txt
+   :language: go
+   :dedent: 4
 
-Now you're ready to send your message. In the example, the message input passed to ``SendMessage``
-represents information about a fiction best seller for a particular week and defines title,
+Initialize a session that the SDK uses to load credentials
+from the shared credentials file, ~/.aws/credentials
+and the default region from ~/.aws/config.
+
+.. literalinclude:: sqs.go.send_message.sess.txt
+   :language: go
+   :dedent: 4
+
+Create a service client and call `SendMessage`.
+The input represents information about a fiction best seller for a particular week and defines title,
 author, and weeks on the list values.
 
-.. literalinclude:: example_code/sqs/sqs_sendmessage.go
-   :lines: 37-63
-
-.. _sqs-example-receive-delete-message:
-
-Receive and Delete a Message from a Queue
-=========================================
-
-Create a new Go file named :file:`sqs_deletemessage.go`.
-
-You must import the relevant Go and |sdk-go| packages by adding the following lines.
-
-.. literalinclude:: example_code/sqs/sqs_deletemessage.go
-   :lines: 15-23
-
-Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials.
-
-.. literalinclude:: example_code/sqs/sqs_deletemessage.go
-   :lines: 27-32
-
-Now you're ready to receive a message from a queue specified by a queue URL. In the example,
-the ``qURL`` variable would hold the URL for the queue containing the message.
-
-.. literalinclude:: example_code/sqs/sqs_deletemessage.go
-   :lines: 35-58
-
-After retrieving the message, delete it from the queue with ``DeleteMessage``, passing the ``ReceiptHandle``
-returned from the previous call.
-
-.. literalinclude:: example_code/sqs/sqs_deletemessage.go
-   :lines: 60-71
-
-.. _sqs-example-send-receive-message:
-
-Send and Receive Messages
-=========================
-
-Create a new Go file named :file:`sqs_longpolling_receive_message.go`.
-
-You must import the relevant Go and |sdk-go| packages by adding the following lines.
-
-.. literalinclude:: sqs.go.longpolling_receive_message.imports.txt
-   :dedent: 0
+.. literalinclude:: sqs.go.send_message.call.txt
    :language: go
-
-Get the queue name and (optional) timeout passed from the command.
-If the name is missing,
-print an error message and quit.
-
-.. literalinclude:: sqs.go.longpolling_receive_message.vars.txt
    :dedent: 4
-   :language: go
 
-Initialize a session that the SDK will use to load credentials
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/SendMessage/SendMessage.go>`_
+on GitHub.
+
+.. _sqs-example-receive-mesage:
+
+Receiving a Message from a Queue
+================================
+
+Create a new Go file named :file:`ReceiveMessage.go`.
+
+You must import the relevant Go and |sdk-go| packages by adding the following lines.
+
+.. literalinclude:: sqs.go.receive_messages.imports.txt
+   :language: go
+   :dedent: 0
+
+Get the name of the queue and how long the message is hidden from other consumers from the command line.
+
+.. literalinclude:: sqs.go.receive_messages.args.txt
+   :language: go
+   :dedent: 4
+
+Initialize a session that the SDK uses to load credentials
 from the shared credentials file, ~/.aws/credentials
-and create an |SQS| client.
+and the default region from ~/.aws/config.
 
-.. literalinclude:: sqs.go.longpolling_receive_message.session.txt
-   :dedent: 4
+.. literalinclude:: sqs.go.receive_messages.sess.txt
    :language: go
-
-Get the queue URL.
-
-.. literalinclude:: sqs.go.longpolling_receive_message.url.txt
    :dedent: 4
+
+Create a service client and call the `GetQueueUrl` function
+to get the URL of the queue.
+
+.. literalinclude:: sqs.go.receive_messages.queue_url.txt
    :language: go
-
-Call ``ReceiveMessage`` to get the latest message from the queue.
-
-.. literalinclude:: sqs.go.longpolling_receive_message.receive.txt
    :dedent: 4
+
+The URL of the queue is in the `QueueUrl` property of the returned object.
+
+.. literalinclude:: sqs.go.receive_message.url.txt
    :language: go
+   :dedent: 4
 
-The example uses this utility function.
+Call the `ReceiveMessage` function to get the messages in the queue.
 
-.. literalinclude:: sqs.go.longpolling_receive_message.exit.txt
+.. literalinclude:: sqs.go.receive_messages.call.txt
+   :language: go
+   :dedent: 4
+
+Print the message handle of the first message in the queue
+(you need the handle to delete the message).
+
+.. literalinclude:: sqs.go.receive_messages.print_handle.txt
+   :language: go
+   :dedent: 4
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/ReceiveMessage/ReceiveMessage.go>`_
+on GitHub.
+
+.. _sqs-example-delete-message:
+
+Delete a Message from a Queue
+=============================
+
+Create a new Go file named :file:`DeleteMessage.go`.
+
+You must import the relevant Go and |sdk-go| packages by adding the following lines.
+
+.. literalinclude:: sqs.go.delete_message.imports.txt
+   :language: go
    :dedent: 0
-   :language: go
 
+Get the name of the queue and the handle for the message from the command line.
+
+.. literalinclude:: sqs.go.delete_message.args.txt
+   :language: go
+   :dedent: 4
+
+Initialize a session that the SDK uses to load credentials
+from the shared credentials file, ~/.aws/credentials
+and the default region from ~/.aws/config.
+
+.. literalinclude:: sqs.go.delete_message.sess.txt
+   :language: go
+   :dedent: 4
+
+Create a service client and call the `DeleteMessage` function,
+passing in the name of the queue and the message handle.
+
+.. literalinclude:: sqs.go.delete_message.call.txt
+   :language: go
+   :dedent: 4
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/DeleteMessage/DeleteMessage.go>`_
+on GitHub.

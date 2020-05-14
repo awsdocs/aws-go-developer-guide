@@ -18,7 +18,6 @@ Managing Visibility Timeout in |SQS| Queues
    :description: Manage visibility timeout with Amazon SQS queues using this AWS SDK for Go code exammple.
    :keywords: AWS SDK for Go code examples, creating SQS queues
 
-
 This |sdk-go| example shows you how to:
 
 * Change visibility timeout with |SQS| queues
@@ -31,14 +30,13 @@ You can download complete versions of these example files from the
 Scenario
 ========
 
-This example manages visibility timeout with |SQS| queues. It uses these methods of the
+This example manages visibility timeout with |SQS| queues.
+Visibility is the duration, in seconds, while messages are in the queue, but not available to other consumers.
+It uses these methods of the
 |SQS| client class:
 
-* :sdk-go-api-deep:`CreateQueue <service/sqs/#SQS.CreateQueue>`
-* :sdk-go-api-deep:`ListQueues <service/sqs/#SQS.ListQueues>`
+* :sdk-go-api-deep:`ChangeMessageVisibility <service/sqs/#SQS.ChangeMessageVisibility>`
 * :sdk-go-api-deep:`GetQueueUrl <service/sqs/#SQS.GetQueueUrl>`
-* :sdk-go-api-deep:`DeleteQueue <service/sqs/#SQS.DeleteQueue>`
-
 
 .. _sqs-visibility-prerequisites:
 
@@ -49,33 +47,52 @@ Prerequisites
 * You are familiar with using |SQS| visibility timeout. To learn more,
   see :sqs-dg:`Visibility Timeout <sqs-visibility-timeout>` in the |SQS-dg|.
 
-
 .. _sqs-example-visibility-timeout:
 
 Change the Visibility Timeout
 =============================
 
-Create a new Go file named :file:`sqs_changingvisibility.go`.
+Create a new Go file named :file:`ChangeMsgVisibility.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_changingvisibility.go
-   :lines: 15-23
+.. literalinclude:: sqs.go.change_message_visibility.imports.txt
+   :language: go
+   :dedent: 0
+
+Get the queue name, receipt handle of the message, and visibility duration from the command line.
+Ensure the visibility is from 0 (zero) seconds to 12 hours.
+
+.. literalinclude:: sqs.go.change_message_visibility.args.txt
+   :language: go
+   :dedent: 4
 
 Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials.
+from the shared credentials file, ~/.aws/credentials
+and the default region from ~/.aws/config.
 
-.. literalinclude:: example_code/sqs/sqs_changingvisibility.go
-   :lines: 27, 30-35
+.. literalinclude:: sqs.go.change_message_visibility.sess.txt
+   :language: go
+   :dedent: 4
 
-Get a message from the queue. Call ``ReceiveMessage``. Pass in the URL of the queue
-to return details of the next message in the queue. Print any errors, or a
-message if no message was received.
+Create a service client and call ``GetQueueUrl`` to retrieve the URL of the queue.
 
-.. literalinclude:: example_code/sqs/sqs_changingvisibility.go
-   :lines: 38-60
+.. literalinclude:: sqs.go.get_queue_url.call.txt
+   :language: go
+   :dedent: 4
 
-If a message was returned, use its receipt handle to set the timeout to 30 seconds.
+The URL of the queue is in the ``QueueUrl`` property of the returned object.
 
-.. literalinclude:: example_code/sqs/sqs_changingvisibility.go
-   :lines: 63-76
+.. literalinclude:: sqs.go.change_message_visibility.url.txt
+   :language: go
+   :dedent: 4
+
+Call ``ChangeMessageVisibility`` to change the visibility of the messages in the queue.
+
+.. literalinclude:: sqs.go.change_message_visibility.op.txt
+   :language: go
+   :dedent: 4
+
+See the  `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/ChangeMsgVisibility/ChangeMsgVisibility.go>`_
+on GitHub.
