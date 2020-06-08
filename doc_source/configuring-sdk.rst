@@ -132,9 +132,9 @@ looks for credentials in the following order:
 
 1. Environment variables.
 2. Shared credentials file.
-3. If your application is running on an |EC2| instance, |IAM| role for |EC2|.
-4. If your application uses an ECS task definition or RunTask API operation,
+3. If your application uses an ECS task definition or RunTask API operation,
    |IAM| role for tasks.
+4. If your application is running on an |EC2| instance, |IAM| role for |EC2|.
 
 The SDK detects and uses the built-in providers automatically, without
 requiring manual configurations. For example, if you use |IAM| roles for
