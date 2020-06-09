@@ -20,20 +20,11 @@ Using Regions and Availability Zones with |EC2|
 
 These Go examples show you how to retrieve details about AWS Regions and Availability Zones.
 
-An |EC2| security group acts as a virtual firewall that controls the traffic for one or
-more instances. You add rules to each security group to allow traffic to or from its
-associated instances. You can modify the rules for a security group at any time; the
-new rules are automatically applied to all instances that are associated with the security
-group.
-
 The code in this example uses the |sdk-go| to perform these tasks by using these
 methods of the |EC2| client class:
 
-* :sdk-go-api-deep:`DescribeSecurityGroups <service/ec2/#EC2.DescribeSecurityGroups>`
-* :sdk-go-api-deep:`AuthorizeSecurityGroupIngress <service/ec2/#EC2.AuthorizeSecurityGroupIngress>`
-* :sdk-go-api-deep:`CreateSecurityGroup <service/ec2/#EC2.CreateSecurityGroup>`
-* :sdk-go-api-deep:`DescribeVpcs <service/ec2/#EC2.DescribeVpcs>`
-* :sdk-go-api-deep:`DeleteSecurityGroup <service/ec2/#EC2.DeleteSecurityGroup>`
+* :sdk-go-api-deep:`DescribeRegions <service/ec2/#EC2.DescribeRegions>`
+* :sdk-go-api-deep:`DescribeAvailabilityZones <service/ec2/#EC2.DescribeAvailabilityZones>`
 
 You can download complete versions of these example files from the
 :doc-examples-go:`aws-doc-sdk-examples <ec2>` repository on GitHub.
@@ -63,11 +54,10 @@ Prerequisites
   :ec2-ug:`Regions and Availability Zones <using-regions-availability-zones>` in the
   |ec2-ug| or :ec2-ug-win:`Regions and Availability Zones <resources>` in the |ec2-ug-win|.
 
-List the Groups
-===============
+List the Regions
+================
 
-This example describes the security groups by IDs that are passed in to the routine. It takes
-a space separated list of group IDs as input.
+This example lists the regions in which |EC2| is available.
 
 To get started, create a new Go file named :file:`regions_and_availability.go`.
 
