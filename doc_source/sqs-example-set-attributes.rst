@@ -1,12 +1,5 @@
-.. Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
-   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
-   International License (the "License"). You may not use this file except in compliance with the
-   License. A copy of the License is located at http://creativecommons.org/licenses/by-nc-sa/4.0/.
-
-   This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
-   either express or implied. See the License for the specific language governing permissions and
-   limitations under the License.
+.. Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. 
+   SPDX-License-Identifier: CC-BY-SA-4.0
 
 .. _examples-sqs-set-attributes:
 
@@ -64,34 +57,28 @@ Create a new Go file named :file:`sqs_longpolling_existing_queue.go`.
 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
-   :lines: 15-27
+.. literalinclude:: sqs.go.longpolling_existing_queue.imports.txt
 
 Get the queue name and timeout passed in by the user.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
-   :lines: 33-43
+.. literalinclude:: sqs.go.longpolling_existing_queue.vars.txt
 
 Initialize a session that the SDK will use to load credentials
-from the shared credentials file, ~/.aws/credentials.
+from the shared credentials file, ~/.aws/credentials,
+and create an |SQS| client.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
-   :lines: 47-52
+.. literalinclude:: sqs.go.longpolling_existing_queue.session.txt
 
 Get the queue. You need to convert the queue name into a URL. You can use the ``GetQueueUrl``
 API call to retrieve the URL. This is needed for setting attributes on the queue. Print
 any errors.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
-   :lines: 57-65
+.. literalinclude:: sqs.go.longpolling_existing_queue.url.txt
 
 Update the queue to enable long polling.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
-   :lines: 68-79
+.. literalinclude:: sqs.go.longpolling_existing_queue.enable.txt
 
 The example uses this utility function.
 
-.. literalinclude:: example_code/sqs/sqs_longpolling_existing_queue.go
-   :lines: 81-84
-
+.. literalinclude:: sqs.go.longpolling_existing_queue.error.txt
