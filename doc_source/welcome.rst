@@ -56,3 +56,15 @@ More Info
 -  To view a video introduction of the SDK and a sample application demonstration, see
    `AWS SDK For Go: Gophers Get Going with AWS <https://www.youtube.com/watch?v=iOGIKG3EptI&feature=youtu.be>`_ from AWS
    re:Invent 2015.
+
+Maintenance and support for SDK major versions
+==============================================
+
+For information about maintenance and support for SDK major versions and their underlying dependencies, 
+see the following in the `AWS SDKs and Tools Shared Configuration and Credentials Reference Guide <https://docs.aws.amazon.com/credref/latest/refdocs/overview.html>`_:
+
+* `AWS SDKs and Tools Maintenance Policy <https://docs.aws.amazon.com/credref/latest/refdocs/maint-policy.html>`_
+
+* `AWS SDKs and Tools Version Support Matrix <https://docs.aws.amazon.com/credref/latest/refdocs/version-support-matrix.html>`_
+
+
