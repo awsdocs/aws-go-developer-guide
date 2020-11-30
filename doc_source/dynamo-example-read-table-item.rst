@@ -56,8 +56,8 @@ Otherwise, display information about the item.
    :dedent: 4
    :language: go
 
-Unmarshall the return value and if the title is not empty,
-indicating we got the item,
+If an item was returned,
+unmarshall the return value and
 display the year, title, plot, and rating.
 
 .. literalinclude:: dynamodb.go.read_item.unmarshall.txt
