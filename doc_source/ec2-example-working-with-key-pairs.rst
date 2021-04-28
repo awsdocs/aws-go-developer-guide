@@ -63,7 +63,7 @@ Create a new Go file named :file:`ec2_describe_keypairs.go`.
 Import the required |sdk-go| packages.
 
 .. literalinclude:: example_code/ec2/ec2_describe_keypairs.go
-   :lines: 15-23
+   :lines: 15-24
 
 Use the following code to create a session and |EC2| client.
 
