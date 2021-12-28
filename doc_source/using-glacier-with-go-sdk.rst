@@ -49,7 +49,7 @@ The following example uses the |GLlong| :sdk-go-api-deep:`CreateVault <service/g
 operation to create a vault named ``YOUR_VAULT_NAME``.
 
 .. literalinclude:: example_code/glacier/create_vault.go
-   :dedent: 4
+   :dedent: 0
    :lines: 15-
 
 
@@ -62,5 +62,5 @@ single reader object as an entire archive. The |sdk-go| automatically computes t
 checksum for the data to be uploaded.
 
 .. literalinclude:: example_code/glacier/upload_archive.go
-   :dedent: 4
+   :dedent: 0
    :lines: 15-
