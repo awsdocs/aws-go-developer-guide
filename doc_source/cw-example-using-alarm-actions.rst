@@ -67,7 +67,7 @@ Create the file :file:`create_enable_alarms.go`.
 Import packages used in the example.
 
 .. literalinclude:: example_code/cloudwatch/create_enable_alarms.go
-   :lines: 16-24
+   :lines: 17-24
    :dedent: 0
    :language: go
 
@@ -118,14 +118,14 @@ Create the file :file:`disable_alarm.go`.
 Import the packages used in the example.
 
 .. literalinclude:: example_code/cloudwatch/disable_alarm.go
-   :lines: 17-23
+   :lines: 17-24
    :dedent: 0
    :language: go
 
 Get the name of the alarm from the command line.
 
 .. literalinclude:: example_code/cloudwatch/disable_alarm.go
-   :lines: 26-31
+   :lines: 27-30
    :dedent: 4
    :language: go
 
@@ -135,7 +135,7 @@ load your configuration from the shared configuration file ~/.aws/config,
 and create a |CW| client.
 
 .. literalinclude:: example_code/cloudwatch/disable_alarm.go
-   :lines: 36-41
+   :lines: 37-42
    :dedent: 4
    :language: go
 
@@ -143,7 +143,7 @@ Call :code:`DisableAlarmActions` to disable the actions for this alarm
 and display a message.
 
 .. literalinclude:: example_code/cloudwatch/disable_alarm.go
-   :lines: 44-48, 54
+   :lines: 44-49, 55
    :dedent: 4
    :language: go
 

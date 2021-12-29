@@ -31,7 +31,7 @@ Create the file *describe_trails.go*.
 Add the following statements to import the Go and AWS SDK for Go packages used in the example.
 
 .. literalinclude:: ./example_code/cloudtrail/describe_trails.go
-   :lines: 17-24
+   :lines: 17-22
    :dedent: 0
    :language: go
 
@@ -40,7 +40,7 @@ from the shared credentials file
 *.aws/credentials* in your home folder, and create a new service client.
 
 .. literalinclude:: ./example_code/cloudtrail/describe_trails.go
-   :lines: 29-34
+   :lines: 27-32
    :dedent: 4
    :language: go
 
@@ -50,7 +50,7 @@ If no error occurs, loop through the trails,
 printing the name of each trail and the bucket.
 
 .. literalinclude:: ./example_code/cloudtrail/describe_trails.go
-   :lines: 36-51
+   :lines: 34-48
    :dedent: 4
    :language: go
 

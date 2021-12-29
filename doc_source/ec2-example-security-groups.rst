@@ -71,12 +71,13 @@ To get started, create a new Go file named :file:`ec2_describe_security_groups.g
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
 .. literalinclude:: example_code/ec2/ec2_describe_security_groups.go
-   :lines: 15-26
+   :lines: 17-26
 
 In the ``main`` function, get the security group ID that is passed in.
 
 .. literalinclude:: example_code/ec2/ec2_describe_security_groups.go
-   :lines: 33-38
+   :dedent: 4
+   :lines: 34-38
 
 Initialize a session and create an EC2 service client.
 
@@ -153,7 +154,6 @@ Add permissions to the security group.
 The following utility function is used by this example.
 
 .. literalinclude:: ec2.go.create_security_group.exit.txt
-   :dedent: 4
    :language: go
 
 See the `complete example
@@ -173,23 +173,25 @@ This example deletes a security group with the given group ID.
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
 .. literalinclude:: example_code/ec2/ec2_delete_security_group.go
-   :lines: 15-26
+   :lines: 17-26
 
 Get the group ID that is passed in to the routine.
 
 .. literalinclude:: example_code/ec2/ec2_delete_security_group.go
-   :lines: 32-37
+   :dedent: 4
+   :lines: 33-37
 
 Create a session.
 
 .. literalinclude:: example_code/ec2/ec2_delete_security_group.go
    :dedent: 4
-   :lines: 41-43
+   :lines: 41-46
 
 Then delete the security group with the group ID that is passed in.
 
 .. literalinclude:: example_code/ec2/ec2_delete_security_group.go
-   :lines: 49-65
+   :dedent: 4
+   :lines: 49-64
 
 This example uses the following utility function.
 
