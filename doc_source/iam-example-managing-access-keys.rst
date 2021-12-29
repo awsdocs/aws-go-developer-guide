@@ -19,7 +19,7 @@ Managing |IAM| Access Keys
    :keywords: AWS SDK for Go code examples, IAM access keys
 
 
-This Go example shows you how to create, modify, view, or rotate |IAM| access keys. You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
+This Go example shows you how to create, modify, view, or rotate |IAM| access keys. You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <iam>` repository on GitHub.
 
 .. _iam-access-keys-scenario:
 

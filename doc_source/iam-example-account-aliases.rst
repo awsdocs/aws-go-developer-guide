@@ -19,7 +19,7 @@ Managing |IAM| Account Aliases
    :keywords: AWS SDK for Go code examples, IAM alias
 
 
-This Go example shows you how to create, list, and delete |IAM| account aliases. You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
+This Go example shows you how to create, list, and delete |IAM| account aliases. You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <iam>` repository on GitHub.
 
 .. _iam-aliases-scenario:
 
@@ -53,19 +53,25 @@ This code creates a new |IAM| user.
 Create a new Go file named :file:`iam_createaccountalias.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
 .. literalinclude:: example_code/iam/iam_createaccountalias.go
-   :lines: 15-23
+   :lines: 15-24
 
 Set up a session and an |IAM| client.
 
 .. literalinclude:: example_code/iam/iam_createaccountalias.go
-   :lines: 28,31-40
+   :lines: 28,31-36
 
 The code takes the new alias as an argument, and then calls ``CreateAccountAlias`` with the alias name.
 
 .. literalinclude:: example_code/iam/iam_createaccountalias.go
-   :lines: 37-47
+   :lines: 38-47
+
+See the `complete example
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_createaccountalias.go`_
+on GitHub.
+
 
 .. _iam-example-list-aliases:
+
 
 List |IAM| Account Aliases
 ==========================
@@ -87,7 +93,13 @@ The code calls ``ListAccountAliases``, specifying to return a maximum of 10 item
 .. literalinclude:: example_code/iam/iam_listaccountaliases.go
    :lines: 37-52
 
+See the `complete example
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_listaccountaliases.go`_
+on GitHub.
+
+
 .. _iam-example-delete-aliases:
+
 
 Delete an |IAM| Account Alias
 =============================
@@ -97,16 +109,19 @@ This code deletes a specified |IAM| account alias.
 Create a new Go file with the name :file:`iam_deleteaccountalias.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
 .. literalinclude:: example_code/iam/iam_deleteaccountalias.go
-   :lines: 15-23
+   :lines: 15-24
 
 Set up a session and an |IAM| client.
 
 .. literalinclude:: example_code/iam/iam_deleteaccountalias.go
-   :lines: 27,30-35
+   :lines: 28-36
 
 The code calls ``ListAccountAliases``, specifying to return a maximum of 10 items.
 
 .. literalinclude:: example_code/iam/iam_deleteaccountalias.go
-   :lines: 37-47
+   :lines: 38-47
 
+See the `complete example
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_deleteaccountalias.go`_
+on GitHub.
 

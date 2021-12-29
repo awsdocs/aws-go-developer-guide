@@ -21,7 +21,7 @@ Managing |IAM| Users
 
 This Go example shows you how to create, update, view, and
 delete |IAM| users. You can download complete versions of these
-example files from the :doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
+example files from the :doc-examples-go:`aws-doc-sdk-examples <iam>` repository on GitHub.
 
 .. _iam-users-scenario:
 
@@ -57,19 +57,27 @@ Create a new Go file named :file:`iam_createuser.go`. You must import the releva
 |sdk-go| packages by adding the following lines.
 
 .. literalinclude:: example_code/iam/iam_createuser.go
-   :lines: 15-24
+   :lines: 17-25
 
 The code takes the new user name as an argument, and then calls ``GetUser`` with the user name.
 
 .. literalinclude:: example_code/iam/iam_createuser.go
-   :lines: 28,31-40
+   :dedent: 4
+   :lines: 30-41
 
 If you receive a ``NoSuchEntity`` error, call ``CreateUser`` because the user doesn't exist.
 
 .. literalinclude:: example_code/iam/iam_createuser.go
-   :lines: 42-56
+   :dedent: 4
+   :lines: 43-56
+
+See the `complete example
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_createuser.go`_
+on GitHub.
+
 
 .. _iam-example-list-user:
+
 
 List |IAM| Users in Your Account
 ================================
@@ -80,19 +88,26 @@ Create a new Go file named :file:`iam_listusers.go`. You must import the relevan
 |sdk-go| packages by adding the following lines.
 
 .. literalinclude:: example_code/iam/iam_listusers.go
-   :lines: 15-24
+   :lines: 17-23
 
 Set up a new |IAM| client.
 
 .. literalinclude:: example_code/iam/iam_listusers.go
-   :lines: 27,30-35
+   :dedent: 4
+   :lines: 28-35
 
 Call ``ListUsers`` and print the results.
 
 .. literalinclude:: example_code/iam/iam_listusers.go
-   :lines: 37-52
+   :dedent: 4
+   :lines: 37-51
+
+See the `complete example
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_listusers.go`_
+on GitHub.
 
 .. _iam_example_update_user:
+
 
 Update a User's Name
 ====================
@@ -102,19 +117,26 @@ In this example, you change the name of an IAM user to a new value.
 Create a new Go file named :file:`iam_updateuser.go`. You must import the relevant Go and|sdk-go| packages by adding the following lines.
 
 .. literalinclude:: example_code/iam/iam_updateuser.go
-   :lines: 15-23
+   :lines: 17-24
 
 Set up a new IAM client.
 
 .. literalinclude:: example_code/iam/iam_updateuser.go
-   :lines: 27,30-35
+   :dedent: 4
+   :lines: 29-36
 
 Call ``UpdateUser``, passing in the original user name and the new name, and print the results.
 
 .. literalinclude:: example_code/iam/iam_updateuser.go
-   :lines: 37-48
+   :dedent: 4
+   :lines: 38-48
+
+See the `complete example
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_updateuser.go`_
+on GitHub.
 
 .. _iam_example_delete_user:
+
 
 Delete an IAM User
 ==================
@@ -136,7 +158,12 @@ Call ``DeleteUser``, passing in the user name, and print the results. If the use
 .. literalinclude:: example_code/iam/iam_deleteuser.go
    :lines: 39-52
 
+See the `complete example
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_deleteuser.go`_
+on GitHub.
+
 .. _iam_example_get_admins:
+
 
 List the IAM Users who have Administrator Privileges
 ====================================================
@@ -205,8 +232,8 @@ Create variables to keep track of how many users we have
 and how many of those have administrator privileges.
 
 .. literalinclude:: example_code/iam/IamListAdmins.go
-   :lines: 131-142
-   :dedent: 0
+   :lines: 132-142
+   :dedent: 4
    :language: go
 
 Create the input for and call :code:`GetAccountAuthorizationDetails`.
@@ -233,7 +260,7 @@ loop through the next set of users and determine which
 of those have adminstrator privileges.
 
 .. literalinclude:: example_code/iam/IamListAdmins.go
-   :lines: 179-190
+   :lines: 170-190
    :dedent: 4
    :language: go
 

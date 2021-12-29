@@ -19,7 +19,7 @@ Working with |IAM| Policies
    :keywords: AWS SDK for Go code examples, IAM policies
 
 
-This Go example shows you how to create, get, attach, and detach |IAM| policies. You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
+This Go example shows you how to create, get, attach, and detach |IAM| policies. You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <iam>` repository on GitHub.
 
 .. _iam-policies-scenario:
 
@@ -82,7 +82,13 @@ Marshal the policy to JSON and pass to ``CreatePolicy``.
 .. literalinclude:: example_code/iam/iam_createpolicy.go
    :lines: 77-94
 
+See the `complete example
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_createpolicy.go`_
+on GitHub.
+
+
 .. _iam-example-get-policy:
+
 
 Get an IAM Policy
 =================
@@ -92,19 +98,25 @@ In this example, you retrieve an existing policy from |IAM|. Create a new Go fil
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
 .. literalinclude:: example_code/iam/iam_getpolicy.go
-   :lines: 15-22
+   :lines: 15-23
 
 Set up a new |IAM| client.
 
 .. literalinclude:: example_code/iam/iam_getpolicy.go
-   :lines: 26,29-34
+   :lines: 27-35
 
 Call ``GetPolicy``, passing in the ARN for the policy (which is hard coded in this example), and print the results.
 
 .. literalinclude:: example_code/iam/iam_getpolicy.go
-   :lines: 34-47
+   :lines: 37-47
+
+See the `complete example
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_getpolicy.go`_
+on GitHub.
+
 
 .. _iam-example-attach-managed-role-policy:
+
 
 Attach a Managed Role Policy
 ============================
@@ -116,29 +128,35 @@ Then, you'll check the array members to see if the policy you want to attach to 
 You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
 .. literalinclude:: example_code/iam/iam_attachuserpolicy.go
-   :lines: 15-23
+   :lines: 15-24
 
 Set up a new |IAM| client.
 
 .. literalinclude:: example_code/iam/iam_attachuserpolicy.go
-   :lines: 27,30-35
+   :lines: 28-36
 
 Declare variables to hold the name and ARN of the policy.
 
 .. literalinclude:: example_code/iam/iam_attachuserpolicy.go
-   :lines: 37-39
+   :lines: 38-40
 
 Paginate through all the role policies. If your role exists on any role policy, you set the ``pageErr`` and return ``false``, stopping the pagination.
 
 .. literalinclude:: example_code/iam/iam_attachuserpolicy.go
-   :lines: 44-61
+   :lines: 45-62
 
 If your role policy is not attached already, call ``AttachRolePolicy``.
 
 .. literalinclude:: example_code/iam/iam_attachuserpolicy.go
    :lines: 63-83
 
+See the `complete example
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_attachuserpolicy.go`_
+on GitHub.
+
+
 .. _iam-example-detach-managed-role-policy:
+
 
 Detach a Managed Role Policy
 ============================
@@ -150,21 +168,25 @@ Then, check the array members to see if the policy you want to detach from the r
 Create a new Go file named :file:`iam_detachuserpolicy.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
 .. literalinclude:: example_code/iam/iam_detachuserpolicy.go
-   :lines: 15-23
+   :lines: 15-24
 
 Set up a new |IAM| client.
 
 .. literalinclude:: example_code/iam/iam_detachuserpolicy.go
-   :lines: 27,30-35
+   :lines: 28-36
 
 Declare variables to hold the name and ARN of the policy.
 
 .. literalinclude:: example_code/iam/iam_detachuserpolicy.go
-   :lines: 37-39
+   :lines: 38-40
 
 Paginate through all the role policies. If the role exists on any role policy,
 you stop iterating and detach the role.
 
 .. literalinclude:: example_code/iam/iam_detachuserpolicy.go
-   :lines: 43-81
+   :lines: 44-81
+
+See the `complete example
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_detachuserpolicy.go`_
+on GitHub.
 

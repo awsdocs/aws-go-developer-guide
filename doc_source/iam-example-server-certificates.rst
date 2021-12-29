@@ -20,7 +20,7 @@ Working with |IAM| Server Certificates
 
 This Go example shows you how to carry out basic tasks for managing server certificate HTTPS connections with the |sdk-go|.
 
-You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <s3>` repository on GitHub.
+You can download complete versions of these example files from the :doc-examples-go:`aws-doc-sdk-examples <iam>` repository on GitHub.
 
 .. _iam-certificates-scenario:
 
@@ -49,20 +49,30 @@ Prerequisites
 List Your Server Certificates
 =============================
 
-This code lists your certificates.
+This code lists your certificates. Create a new Go file named :file:`iam_listservercerts.go`.
 
-Create a new Go file named :file:`iam_listservercerts.go`. You must import the relevant Go and |sdk-go| packages by adding the following lines.
+You must import the relevant Go and |sdk-go| packages by adding the following lines.
 
 .. literalinclude:: example_code/iam/iam_listservercerts.go
-   :lines: 26,29-34
+   :lines: 17-23
+
+Set up the session and |IAM| client.
+
+.. literalinclude:: example_code/iam/iam_listservercerts.go
+   :lines: 27-35
 
 Call ``ListServerCertificates`` and print the details.
 
 .. literalinclude:: example_code/iam/iam_listservercerts.go
    :lines: 36-49
 
+See the `complete example
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_listservercerts.go`_
+on GitHub.
+
 
 .. _iam-example-get-certificate:
+
 
 Get a Server Certificate
 ========================
@@ -83,6 +93,11 @@ Call ``GetServerCertificate``, passing the name of the certificate, and print th
 
 .. literalinclude:: example_code/iam/iam_getservercert.go
    :lines: 37-46
+
+See the `complete example
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_getservercert.go`_
+on GitHub.
+
 
 .. _iam-example-update-certificate:
 
@@ -108,6 +123,11 @@ Update the certificate name.
 .. literalinclude:: example_code/iam/iam_updateservercert.go
    :lines: 37-47
 
+See the `complete example
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_updateservercert.go`_
+on GitHub.
+
+
 .. _iam_example_delete_server_certificate:
 
 Delete a Server Certificate
@@ -132,4 +152,7 @@ Call the method to delete the certificate, specifying the name of certificate.
 .. literalinclude:: example_code/iam/iam_deleteservercert.go
    :lines: 37-46
 
+See the `complete example
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_deleteservercert.go`_
+on GitHub.
 
