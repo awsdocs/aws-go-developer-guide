@@ -66,6 +66,10 @@ Call ``CreateAccessKey`` and print the results.
 .. literalinclude:: example_code/iam/iam_createaccesskey.go
    :lines: 37-47
 
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_createaccesskey.go>`_
+on GitHub.
+
 .. _iam-example-list-access-keys:
 
 List a User's Access Keys
@@ -88,6 +92,10 @@ Call ``ListAccessKeys`` and print the results.
 .. literalinclude:: example_code/iam/iam_listaccesskeys.go
    :lines: 37-48
 
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_listaccesskeys.go>`_
+on GitHub.
+
 .. _iam_example_last_use:
 
 Get the Last Use for an Access Key
@@ -109,6 +117,10 @@ Call ``GetAccessKeyLastUsed``, passing in the access key ID, and print the resul
 
 .. literalinclude:: example_code/iam/iam_accesskeylastused.go
    :lines: 37-48
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_accesskeylastused.go>`_
+on GitHub.
 
 .. _iam_example_update-access-key:
 
@@ -134,6 +146,10 @@ Call ``UpdateAccessKey``, passing in the access key ID, status (making it active
 .. literalinclude:: example_code/iam/iam_updateaccesskey.go
    :lines: 37-49
 
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_updateaccesskey.go>`_
+on GitHub.
+
 .. _iam-example-delete-access-key:
 
 Delete an Access Key
@@ -155,3 +171,7 @@ Call ``DeleteAccessKey``, passing in the access key ID and user name.
 
 .. literalinclude:: example_code/iam/iam_deleteaccesskey.go
    :lines: 37-48
+
+See the `complete example
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_deleteaccesskey.go>`_
+on GitHub.

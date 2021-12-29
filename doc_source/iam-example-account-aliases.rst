@@ -66,7 +66,7 @@ The code takes the new alias as an argument, and then calls ``CreateAccountAlias
    :lines: 38-47
 
 See the `complete example
-https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_createaccountalias.go`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_createaccountalias.go>`_
 on GitHub.
 
 
@@ -94,7 +94,7 @@ The code calls ``ListAccountAliases``, specifying to return a maximum of 10 item
    :lines: 37-52
 
 See the `complete example
-https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_listaccountaliases.go`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_listaccountaliases.go>`_
 on GitHub.
 
 
@@ -122,6 +122,6 @@ The code calls ``ListAccountAliases``, specifying to return a maximum of 10 item
    :lines: 38-47
 
 See the `complete example
-https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_deleteaccountalias.go`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_deleteaccountalias.go>`_
 on GitHub.
 

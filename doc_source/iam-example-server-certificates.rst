@@ -67,7 +67,7 @@ Call ``ListServerCertificates`` and print the details.
    :lines: 36-49
 
 See the `complete example
-https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_listservercerts.go`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_listservercerts.go>`_
 on GitHub.
 
 
@@ -95,7 +95,7 @@ Call ``GetServerCertificate``, passing the name of the certificate, and print th
    :lines: 37-46
 
 See the `complete example
-https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_getservercert.go`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_getservercert.go>`_
 on GitHub.
 
 
@@ -124,7 +124,7 @@ Update the certificate name.
    :lines: 37-47
 
 See the `complete example
-https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_updateservercert.go`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_updateservercert.go>`_
 on GitHub.
 
 
@@ -153,6 +153,6 @@ Call the method to delete the certificate, specifying the name of certificate.
    :lines: 37-46
 
 See the `complete example
-https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_deleteservercert.go`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_deleteservercert.go>`_
 on GitHub.
 

@@ -83,7 +83,7 @@ Marshal the policy to JSON and pass to ``CreatePolicy``.
    :lines: 77-94
 
 See the `complete example
-https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_createpolicy.go`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_createpolicy.go>`_
 on GitHub.
 
 
@@ -111,7 +111,7 @@ Call ``GetPolicy``, passing in the ARN for the policy (which is hard coded in th
    :lines: 37-47
 
 See the `complete example
-https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_getpolicy.go`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_getpolicy.go>`_
 on GitHub.
 
 
@@ -151,7 +151,7 @@ If your role policy is not attached already, call ``AttachRolePolicy``.
    :lines: 63-83
 
 See the `complete example
-https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_attachuserpolicy.go`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_attachuserpolicy.go>`_
 on GitHub.
 
 
@@ -187,6 +187,6 @@ you stop iterating and detach the role.
    :lines: 44-81
 
 See the `complete example
-https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_detachuserpolicy.go`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_detachuserpolicy.go>`_
 on GitHub.
 

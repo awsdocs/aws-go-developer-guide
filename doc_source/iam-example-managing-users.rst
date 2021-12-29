@@ -72,7 +72,7 @@ If you receive a ``NoSuchEntity`` error, call ``CreateUser`` because the user do
    :lines: 43-56
 
 See the `complete example
-https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_createuser.go`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_createuser.go>`_
 on GitHub.
 
 
@@ -103,7 +103,7 @@ Call ``ListUsers`` and print the results.
    :lines: 37-51
 
 See the `complete example
-https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_listusers.go`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_listusers.go>`_
 on GitHub.
 
 .. _iam_example_update_user:
@@ -132,7 +132,7 @@ Call ``UpdateUser``, passing in the original user name and the new name, and pri
    :lines: 38-48
 
 See the `complete example
-https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_updateuser.go`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_updateuser.go>`_
 on GitHub.
 
 .. _iam_example_delete_user:
@@ -159,7 +159,7 @@ Call ``DeleteUser``, passing in the user name, and print the results. If the use
    :lines: 39-52
 
 See the `complete example
-https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_deleteuser.go`_
+<https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/iam_deleteuser.go>`_
 on GitHub.
 
 .. _iam_example_get_admins:
