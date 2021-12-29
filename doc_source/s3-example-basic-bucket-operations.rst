@@ -364,19 +364,19 @@ Create the file *s3_copy_object.go*.
 Add the following statements to import the Go and |sdk-go| packages used in the example.
 
 .. literalinclude:: example_code/s3/s3_copy_object.go
-   :lines: 17-23
+   :lines: 17-24
 
 Create a function we use to display errors and exit.
 
 .. literalinclude:: example_code/s3/s3_copy_object.go
-   :lines: 64-67
+   :lines: 66-69
 
 Get the names of the bucket containing the item, the item to copy,
 and the name of the bucket to which the item is copied.
 If there aren't four command line arguments, call ``exitErrorf``.
 
 .. literalinclude:: example_code/s3/s3_copy_object.go
-   :lines: 30-38
+   :lines: 31-39
    :dedent: 4
 
 Initialize the session that the SDK uses to load credentials
@@ -384,7 +384,7 @@ from the shared credentials file *~/.aws/credentials,
 and create a new |S3| service client.
 
 .. literalinclude:: example_code/s3/s3_copy_object.go
-   :lines: 42-47
+   :lines: 43-48
    :dedent: 4
 
 Call :sdk-go-api-deep:`CopyObject <service/s3/#S3.CopyObject>`,
@@ -401,7 +401,7 @@ If the ``WaitUntilObjectExists`` call returns an error,
 call ``exitErrorf``. Otherwise, notify the user that the copy succeeded.
 
 .. literalinclude:: example_code/s3/s3_copy_object.go
-   :lines: 57-61
+   :lines: 57-63
    :dedent: 4
 
 See the `complete example

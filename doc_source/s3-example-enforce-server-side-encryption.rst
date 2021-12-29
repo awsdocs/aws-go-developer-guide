@@ -43,7 +43,7 @@ Import the required packages.
 Set the name of the bucket, create a session, and create an Amazon S3 client.
 
 .. literalinclude:: ./example_code/s3/s3_require_server_encryption.go
-   :lines: 29,34-38
+   :lines: 28,33-37
    :dedent: 4
    :language: go
 
@@ -51,7 +51,7 @@ Create an |S3| policy that requires server-side KMS encryption on objects
 uploaded to the bucket.
 
 .. literalinclude:: ./example_code/s3/s3_require_server_encryption.go
-   :lines: 40-68
+   :lines: 39-67
    :dedent: 4
    :language: go
 
@@ -59,7 +59,7 @@ Convert the policy into JSON, create the input for and call :code:`PutBucketPoli
 and print a success message.
 
 .. literalinclude:: ./example_code/s3/s3_require_server_encryption.go
-   :lines: 71, 78-81, 83, 90
+   :lines: 70, 77-80, 82, 89
    :dedent: 4
    :language: go
 
