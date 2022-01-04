@@ -120,4 +120,4 @@ for _, i := range result.Items {
 fmt.Println("Found", numItems, "movie(s) with a rating above", minRating, "in", year)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBScanItems.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/dynamodb/DynamoDBScanItems.go) on GitHub\.

@@ -87,4 +87,4 @@ _, err := svc.ChangeMessageVisibility(&sqs.ChangeMessageVisibilityInput{
 })
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/ChangeMsgVisibility/ChangeMsgVisibility.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/sqs/ChangeMsgVisibility/ChangeMsgVisibility.go) on GitHub\.

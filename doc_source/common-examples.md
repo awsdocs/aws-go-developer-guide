@@ -2,7 +2,7 @@
 
 The AWS SDK for Go examples can help you write your own Go applications that use Amazon Web Services\. The examples assume you have already set up and configured the SDK \(that is, you have imported all required packages and set your credentials and region\)\. For more information, see [Getting Started with the AWS SDK for Go](setting-up.md) and [Configuring the AWS SDK for Go](configuring-sdk.md)\.
 
-Find the source code for these examples and others in the AWS documentation [code examples repository on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples)\. To propose a new code example for the AWS documentation team to consider producing, create a new request\. The team is looking to produce code examples that cover broader scenarios and use cases, versus simple code snippets that cover only individual API calls\. For instructions, see the *Proposing new code examples* section in the [Readme on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/README.rst)\.
+Find the source code for these examples and others in the AWS documentation [code examples repository on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples)\. To propose a new code example for the AWS documentation team to consider producing, create a new request\. The team is looking to produce code examples that cover broader scenarios and use cases, versus simple code snippets that cover only individual API calls\. For instructions, see the *Proposing new code examples* section in the [Readme on GitHub](https://github.com/awsdocs/aws-doc-sdk-examples)\.
 
 **Topics**
 + [SDK Request Examples](using-requests-with-go-sdk.md)

@@ -56,4 +56,4 @@ if err != nil {
 fmt.Println("Deleted '" + movieName + "' (" + movieYear + ") from table " + tableName)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBDeleteItem.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/dynamodb/DynamoDBDeleteItem.go) on GitHub\.

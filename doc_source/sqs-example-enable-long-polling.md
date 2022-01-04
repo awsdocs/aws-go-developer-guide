@@ -80,7 +80,7 @@ result, err := svc.CreateQueue(&sqs.CreateQueueInput{
 })
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/CreateLPQueue/CreateLPQueue.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/sqs/CreateLPQueue/CreateLPQueue.go) on GitHub\.
 
 ## Enable Long Polling on an Existing Queue<a name="enable-long-polling-on-an-existing-queue"></a>
 
@@ -156,7 +156,7 @@ _, err := svc.SetQueueAttributes(&sqs.SetQueueAttributesInput{
 })
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/ConfigureLPQueue/ConfigureLPQueue.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/sqs/ConfigureLPQueue/ConfigureLPQueue.go) on GitHub\.
 
 ## Enable Long Polling on Message Receipt<a name="enable-long-polling-on-message-receipt"></a>
 
@@ -240,4 +240,4 @@ Display the IDs of the mesages\.
     }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/ReceiveLPMessage/ReceiveLPMessage.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/sqs/ReceiveLPMessage/ReceiveLPMessage.go) on GitHub\.

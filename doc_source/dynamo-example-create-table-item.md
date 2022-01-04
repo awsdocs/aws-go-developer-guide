@@ -80,4 +80,4 @@ year := strconv.Itoa(item.Year)
 fmt.Println("Successfully added '" + item.Title + "' (" + year + ") to table " + tableName)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBCreateItem.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/dynamodb/DynamoDBCreateItem.go) on GitHub\.

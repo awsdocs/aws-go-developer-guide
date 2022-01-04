@@ -82,4 +82,4 @@ for _, doc := range result.Documents {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/workdocs/wd_list_user_docs.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/workdocs/wd_list_user_docs.go) on GitHub\.

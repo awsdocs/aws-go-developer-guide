@@ -78,7 +78,7 @@ func main() {
 
 You can add up to 10 tags to an instance in a single `CreateTags` operation\.
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/create_instance.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/ec2/create_instance.go) on GitHub\.
 
 ## Create an Image without a Block Device<a name="create-image-without-block-device"></a>
 
@@ -135,4 +135,4 @@ func main() {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/create_image_no_block_device.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/ec2/create_image_no_block_device.go) on GitHub\.

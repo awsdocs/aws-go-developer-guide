@@ -76,7 +76,7 @@ result, err := svc.ListMetrics(&cloudwatch.ListMetricsInput{
 fmt.Println("Metrics", result.Metrics)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/listing_metrics.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/cloudwatch/listing_metrics.go) on GitHub\.
 
 ## Submit Custom Metrics<a name="cw-example-custom-metrics"></a>
 
@@ -177,4 +177,4 @@ for _, metric := range result.Metrics {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/custom_metrics.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/cloudwatch/custom_metrics.go) on GitHub\.

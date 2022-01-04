@@ -55,4 +55,4 @@ _, err := svc.PutBucketEncryption(input)
 fmt.Println("Bucket " + bucket + " now has KMS encryption by default")
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_set_default_encryption.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_set_default_encryption.go) on GitHub\.

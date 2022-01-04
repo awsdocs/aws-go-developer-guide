@@ -87,7 +87,7 @@ for _, b := range result.Buckets {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_list_buckets.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_list_buckets.go) on GitHub\.
 
 ## Create a Bucket<a name="s3-examples-bucket-ops-create-bucket"></a>
 
@@ -165,7 +165,7 @@ if err != nil {
 fmt.Printf("Bucket %q successfully created\n", bucket)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_create_bucket.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_create_bucket.go) on GitHub\.
 
 ## List Bucket Items<a name="s3-examples-bucket-ops-list-bucket-items"></a>
 
@@ -233,7 +233,7 @@ for _, item := range resp.Contents {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_list_objects.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_list_objects.go) on GitHub\.
 
 ## Upload a File to a Bucket<a name="s3-examples-bucket-ops-upload-file-to-bucket"></a>
 
@@ -311,7 +311,7 @@ if err != nil {
 fmt.Printf("Successfully uploaded %q to %q\n", filename, bucket)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_upload_object.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_upload_object.go) on GitHub\.
 
 ## Download a File from a Bucket<a name="s3-examples-bucket-ops-download-file-from-bucket"></a>
 
@@ -379,7 +379,7 @@ if err != nil {
 fmt.Println("Downloaded", file.Name(), numBytes, "bytes")
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_download_object.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_download_object.go) on GitHub\.
 
 ## Copy an Item from one Bucket to Another<a name="s3-examples-bucket-ops-copy-bucket-item"></a>
 
@@ -457,7 +457,7 @@ if err != nil {
 fmt.Printf("Item %q successfully copied from bucket %q to bucket %q\n", item, bucket, other)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_copy_object.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_copy_object.go) on GitHub\.
 
 ## Delete an Item in a Bucket<a name="s3-examples-bucket-ops-delete-bucket-item"></a>
 
@@ -529,7 +529,7 @@ If `WaitUntilObjectNotExists` returns an error, call `exitErrorf`\. Otherwise, i
 fmt.Printf("Object %q successfully deleted\n", obj)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_delete_object.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_delete_object.go) on GitHub\.
 
 ## Delete All the Items in a Bucket<a name="s3-examples-bucket-ops-delete-all-bucket-items"></a>
 
@@ -597,7 +597,7 @@ Once all of the items in the bucket have been deleted, inform the user that the 
 fmt.Printf("Deleted object(s) from bucket: %s", bucket)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_delete_objects.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_delete_objects.go) on GitHub\.
 
 ## Restore a Bucket Item<a name="s3-examples-bucket-ops-restore-bucket-item"></a>
 
@@ -660,7 +660,7 @@ if err != nil {
 fmt.Printf("%q should be restored to %q in about 4 hours\n", obj, bucket)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_restore_object.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_restore_object.go) on GitHub\.
 
 ## Delete a Bucket<a name="s3-examples-bucket-ops-delete-bucket"></a>
 
@@ -738,4 +738,4 @@ if err != nil {
 fmt.Printf("Bucket %q successfully deleted\n", bucket)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_delete_bucket.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_delete_bucket.go) on GitHub\.

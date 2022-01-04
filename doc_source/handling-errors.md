@@ -49,7 +49,7 @@ if err != nil {
     }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/extending_sdk/handleServiceErrorCodes.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/extending_sdk/handleServiceErrorCodes.go) on GitHub\.
 
 ## Additional Error Information<a name="additional-error-information"></a>
 

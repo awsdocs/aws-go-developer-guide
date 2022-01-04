@@ -46,4 +46,4 @@ for _, trail := range resp.TrailList {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudtrail/describe_trails.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/cloudtrail/describe_trails.go) on GitHub\.

@@ -60,4 +60,4 @@ _, err := svc.PutObject(input)
 fmt.Println("Added object " + object + " to bucket " + bucket + " with AWS KMS encryption")
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_encrypt_on_server_with_kms.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_encrypt_on_server_with_kms.go) on GitHub\.

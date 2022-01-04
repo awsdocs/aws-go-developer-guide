@@ -67,7 +67,7 @@ if err != nil {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/describing_instances.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/ec2/describing_instances.go) on GitHub\.
 
 ## Manage Instance Monitoring<a name="ec2-manage-instance-monitoring"></a>
 
@@ -151,7 +151,7 @@ Based on the value of a command\-line argument \(ON or OFF\), call either the `M
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/monitoring_instances.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/ec2/monitoring_instances.go) on GitHub\.
 
 ## Start and Stop Instances<a name="scenario-starting-stopping"></a>
 
@@ -235,7 +235,7 @@ Based on the value of a command\-line argument \(START or STOP\), call either th
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/start_stop_instances.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/ec2/start_stop_instances.go) on GitHub\.
 
 ## Reboot Instances<a name="ec2-reboot-instances"></a>
 
@@ -298,4 +298,4 @@ If the error code is `DryRunOperation`, it means that you do have the permission
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/reboot_instances.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/ec2/reboot_instances.go) on GitHub\.

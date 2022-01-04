@@ -75,4 +75,4 @@ for _, event := range resp.Events {
     fmt.Println("")
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudtrail/lookup_events.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/cloudtrail/lookup_events.go) on GitHub\.

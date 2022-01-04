@@ -97,7 +97,7 @@ func exitErrorf(msg string, args ...interface{}) {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_describe_security_groups.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/ec2/ec2_describe_security_groups.go) on GitHub\.
 
 ## Creating a Security Group<a name="create-security-group"></a>
 
@@ -227,7 +227,7 @@ func exitErrorf(msg string, args ...interface{}) {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_create_security_group.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/ec2/ec2_create_security_group.go) on GitHub\.
 
 ## Deleting a Security Group<a name="delete-security-group"></a>
 
@@ -301,4 +301,4 @@ func exitErrorf(msg string, args ...interface{}) {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_delete_security_group.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/ec2/ec2_delete_security_group.go) on GitHub\.

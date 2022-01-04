@@ -43,4 +43,4 @@ func main() {
     fmt.Println(result.CiphertextBlob)
 ```
 
-Choose `Copy` to save the code locally\. See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/kms/kms_re_encrypt_data.go) on GitHub\.
+Choose `Copy` to save the code locally\. See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/kms/kms_re_encrypt_data.go) on GitHub\.

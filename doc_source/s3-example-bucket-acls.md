@@ -94,7 +94,7 @@ for _, g := range result.Grants {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_get_bucket_acl.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_get_bucket_acl.go) on GitHub\.
 
 ## Set a Bucket ACL<a name="s3-examples-bucket-acls-set-bucket-acl"></a>
 
@@ -206,7 +206,7 @@ if err != nil {
 fmt.Println("Congratulations. You gave user with email address", address, permission, "permission to bucket", bucket)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_put_bucket_acl.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_put_bucket_acl.go) on GitHub\.
 
 ## Making a Bucket Public using a Canned ACL<a name="s3-examples-bucket-acls-make-bucket-public-acl"></a>
 
@@ -272,7 +272,7 @@ if err != nil {
 fmt.Println("Bucket " + bucket + " is now public")
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_make_bucket_public.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_make_bucket_public.go) on GitHub\.
 
 ## Get a Bucket Object ACL<a name="s3-examples-bucket-acls-get-bucket-object-acl"></a>
 
@@ -343,7 +343,7 @@ for _, g := range result.Grants {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_get_bucket_object_acl.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_get_bucket_object_acl.go) on GitHub\.
 
 ## Set a Bucket Object ACL<a name="s3-examples-bucket-acls-set-bucket-object-acl"></a>
 
@@ -453,4 +453,4 @@ if err != nil {
 fmt.Println("Congratulations. You gave user with email address", address, permission, "permission to bucket", bucket, "object", key)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_put_bucket_object_acl.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_put_bucket_object_acl.go) on GitHub\.

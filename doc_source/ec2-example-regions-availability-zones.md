@@ -75,4 +75,4 @@ Add a call that retrieves Availability Zones only for the region of the EC2 serv
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/regions_and_availability.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/ec2/regions_and_availability.go) on GitHub\.

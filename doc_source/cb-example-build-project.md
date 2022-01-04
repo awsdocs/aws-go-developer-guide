@@ -43,4 +43,4 @@ func main() {
 }
 ```
 
-Choose `Copy` to save the code locally\. See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/codebuild/cb_build_project.go) on GitHub\.
+Choose `Copy` to save the code locally\. See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/codebuild/cb_build_project.go) on GitHub\.

@@ -14,7 +14,7 @@ To install the SDK and its dependencies, run the following Go command\.
 go get -u github.com/aws/aws-sdk-go/...
 ```
 
-If you set the [Go vendor experiment](https://github.com/aws/aws-sdk-go/blob/master/README.md#installing) environment variable to `1`, you can use the following command to get the SDK\. The SDK's runtime dependencies are vendored in the `vendor/` folder\.
+If you set the [Go vendor experiment](https://github.com/aws/aws-sdk-go/blob/main/README.md#installing) environment variable to `1`, you can use the following command to get the SDK\. The SDK's runtime dependencies are vendored in the `vendor/` folder\.
 
 ```
 go get -u github.com/aws/aws-sdk-go
@@ -22,7 +22,7 @@ go get -u github.com/aws/aws-sdk-go
 
 ## Get your AWS access keys<a name="get-aws-credentials"></a>
 
-Access keys consist of an *access key ID* and *secret access key*, which are used to sign programmatic requests that you make to AWS\. If you don't have access keys, you can create them by using the [AWS Management Console]()\. We recommend that you use IAM access keys instead of AWS root account access keys\. IAM lets you securely control access to AWS services and resources in your AWS account\.
+Access keys consist of an *access key ID* and *secret access key*, which are used to sign programmatic requests that you make to AWS\. If you don't have access keys, you can create them by using the [AWS Management Console](https://console.aws.amazon.com/console/home)\. We recommend that you use IAM access keys instead of AWS root account access keys\. IAM lets you securely control access to AWS services and resources in your AWS account\.
 
 **Note**  
 To create access keys, you must have permissions to perform the required IAM actions\. For more information, see [Granting IAM User Permission to Manage Password Policy and Credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_delegate-permissions.html) in the IAM User Guide\.

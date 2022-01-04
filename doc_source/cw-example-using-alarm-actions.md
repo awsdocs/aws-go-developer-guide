@@ -103,7 +103,7 @@ result, err := svc.EnableAlarmActions(&cloudwatch.EnableAlarmActionsInput{
 fmt.Println("Alarm action enabled", result)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/create_enable_alarms.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/cloudwatch/create_enable_alarms.go) on GitHub\.
 
 ## Disable Actions on an Alarm<a name="disable-actions-on-an-alarm"></a>
 
@@ -156,4 +156,4 @@ _, err := svc.DisableAlarmActions(&cloudwatch.DisableAlarmActionsInput{
 fmt.Println("Success")
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/disable_alarm.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/cloudwatch/disable_alarm.go) on GitHub\.

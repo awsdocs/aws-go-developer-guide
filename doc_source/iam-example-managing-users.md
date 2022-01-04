@@ -445,4 +445,4 @@ fmt.Println("")
 fmt.Println("Found", numAdmins, "admin(s) out of", numUsers, "user(s).")
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/iam/IamListAdmins.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/iam/IamListAdmins.go) on GitHub\.

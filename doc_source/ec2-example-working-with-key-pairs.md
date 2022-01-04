@@ -74,7 +74,7 @@ func exitErrorf(msg string, args ...interface{}) {
     os.Exit(1)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_describe_keypairs.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/ec2/ec2_describe_keypairs.go) on GitHub\.
 
 ## Create a Key Pair<a name="example-create-key-pair"></a>
 
@@ -142,7 +142,7 @@ func exitErrorf(msg string, args ...interface{}) {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_create_keypair.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/ec2/ec2_create_keypair.go) on GitHub\.
 
 ## Delete a Key Pair<a name="example-delete-key-pair"></a>
 
@@ -209,4 +209,4 @@ func exitErrorf(msg string, args ...interface{}) {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_delete_keypair.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/ec2/ec2_delete_keypair.go) on GitHub\.

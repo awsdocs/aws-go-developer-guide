@@ -38,4 +38,4 @@ func main() {
     fmt.Println(blob_string)
 ```
 
-Choose `Copy` to save the code locally\. See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/kms/kms_decrypt_data.go) on GitHub\.
+Choose `Copy` to save the code locally\. See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/kms/kms_decrypt_data.go) on GitHub\.

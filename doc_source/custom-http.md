@@ -226,4 +226,4 @@ if err != nil {
 return resp.Body, nil
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/s3/CustomClient/CustomHttpClient.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/s3/CustomClient/CustomHttpClient.go) on GitHub\.

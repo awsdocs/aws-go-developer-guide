@@ -2,7 +2,7 @@
 
 This topic describes important changes to the AWS SDK for Go Developer Guide over the course of its history\.
 
-To view the list of changes to the AWS SDK for Go and its documentation, see the [CHANGELOG\.md](https://github.com/aws/aws-sdk-go/blob/master/CHANGELOG.md) file in the `aws/aws-sdk-go` repository in GitHub\.
+To view the list of changes to the AWS SDK for Go and its documentation, see the [CHANGELOG\.md](https://github.com/aws/aws-sdk-go/blob/main/CHANGELOG.md) file in the `aws/aws-sdk-go` repository in GitHub\.
 
  **Last documentation update:** Dec 29, 2021
 

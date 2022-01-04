@@ -84,7 +84,7 @@ _, err := svc.SendMessage(&sqs.SendMessageInput{
 })
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/SendMessage/SendMessage.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/sqs/SendMessage/SendMessage.go) on GitHub\.
 
 ## Receiving a Message from a Queue<a name="sqs-example-receive-mesage"></a>
 
@@ -170,7 +170,7 @@ Print the message handle of the first message in the queue \(you need the handle
 fmt.Println("Message Handle: " + *msgResult.Messages[0].ReceiptHandle)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/ReceiveMessage/ReceiveMessage.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/sqs/ReceiveMessage/ReceiveMessage.go) on GitHub\.
 
 ## Delete a Message from a Queue<a name="sqs-example-delete-message"></a>
 
@@ -220,4 +220,4 @@ _, err := svc.DeleteMessage(&sqs.DeleteMessageInput{
 })
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/DeleteMessage/DeleteMessage.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/sqs/DeleteMessage/DeleteMessage.go) on GitHub\.

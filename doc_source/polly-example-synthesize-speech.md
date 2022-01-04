@@ -70,4 +70,4 @@ defer outFile.Close()
 **Note**  
 The resulting MP3 file is in the MPEG\-2 format\.
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/polly/pollySynthesizeSpeech.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/polly/pollySynthesizeSpeech.go) on GitHub\.

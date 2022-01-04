@@ -44,4 +44,4 @@ for _, v := range resp.Voices {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/polly/pollyDescribeVoices.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/polly/pollyDescribeVoices.go) on GitHub\.

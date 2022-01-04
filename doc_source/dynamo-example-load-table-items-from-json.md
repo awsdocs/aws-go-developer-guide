@@ -92,4 +92,4 @@ for _, item := range items {
     fmt.Println("Successfully added '" + item.Title + "' (" + year + ") to table " + tableName)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBLoadItems.go) and a [sample JSON file](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/.movie_data.json) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/dynamodb/DynamoDBLoadItems.go) and a [sample JSON file](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/dynamodb/.movie_data.json) on GitHub\.

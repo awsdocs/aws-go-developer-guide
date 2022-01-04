@@ -99,7 +99,7 @@ func exitErrorf(msg string, args ...interface{}) {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_describe_addresses.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/ec2/ec2_describe_addresses.go) on GitHub\.
 
 ## Allocate Addresses to Instances<a name="ec2-example-allocate"></a>
 
@@ -180,7 +180,7 @@ func exitErrorf(msg string, args ...interface{}) {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_allocate_address.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/ec2/ec2_allocate_address.go) on GitHub\.
 
 ## Release Instance IP Addresses<a name="ec2-example-release-instance-addresses"></a>
 
@@ -263,4 +263,4 @@ func exitErrorf(msg string, args ...interface{}) {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/ec2/ec2_describe_addresses.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/ec2/ec2_describe_addresses.go) on GitHub\.

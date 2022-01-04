@@ -97,7 +97,7 @@ fmt.Printf("%q's Bucket Policy:\n", bucket)
 fmt.Println(out.String())
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_get_bucket_policy.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_get_bucket_policy.go) on GitHub\.
 
 ## Set Bucket Policy<a name="s3-example-set-policy"></a>
 
@@ -184,4 +184,4 @@ func exitErrorf(msg string, args ...interface{}) {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_set_bucket_policy.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_set_bucket_policy.go) on GitHub\.

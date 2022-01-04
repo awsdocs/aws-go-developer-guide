@@ -119,7 +119,7 @@ if len(resp.Body.Data) > 0 {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/lambda/aws-go-sdk-lambda-example-run-function.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/lambda/aws-go-sdk-lambda-example-run-function.go) on GitHub\.
 
 **Note**  
-The [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/lambda/aws-go-sdk-lambda-example-run-function.go) includes the structures for marshaling the JSON request and unmarshaling the JSON response\.
+The [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/lambda/aws-go-sdk-lambda-example-run-function.go) includes the structures for marshaling the JSON request and unmarshaling the JSON response\.

@@ -110,4 +110,4 @@ _, err = svc.SetQueueAttributes(&sqs.SetQueueAttributesInput{
 })
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/DeadLetterQueue/DeadLetterQueue.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/sqs/DeadLetterQueue/DeadLetterQueue.go) on GitHub\.

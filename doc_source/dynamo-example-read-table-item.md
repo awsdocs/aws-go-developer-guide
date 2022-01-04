@@ -87,4 +87,4 @@ fmt.Println("Plot:  ", item.Plot)
 fmt.Println("Rating:", item.Rating)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/dynamodb/DynamoDBReadItem.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/dynamodb/DynamoDBReadItem.go) on GitHub\.

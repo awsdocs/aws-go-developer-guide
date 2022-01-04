@@ -64,4 +64,4 @@ if err != nil {
 fmt.Println(result)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/lambda/aws-go-sdk-lambda-example-configure-function-for-notification.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/lambda/aws-go-sdk-lambda-example-configure-function-for-notification.go) on GitHub\.

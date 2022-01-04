@@ -105,7 +105,7 @@ result, err := svc.PutRule(&cloudwatchevents.PutRuleInput{
 fmt.Println("Rule ARN:", result.RuleArn)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/events_schedule_rule.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/cloudwatch/events_schedule_rule.go) on GitHub\.
 
 ## Add a Lambda Function Target<a name="add-a-lambda-function-target"></a>
 
@@ -149,7 +149,7 @@ result, err := svc.PutTargets(&cloudwatchevents.PutTargetsInput{
 fmt.Println("Success", result)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/events_put_targets.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/cloudwatch/events_put_targets.go) on GitHub\.
 
 ## Send Events<a name="send-events"></a>
 
@@ -196,4 +196,4 @@ result, err := svc.PutEvents(&cloudwatchevents.PutEventsInput{
 fmt.Println("Ingested events:", result.Entries)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/cloudwatch/events_put_events.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/cloudwatch/events_put_events.go) on GitHub\.

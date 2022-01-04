@@ -79,4 +79,4 @@ _, err = svc.PutBucketPolicy(input)
 fmt.Println("Set policy for " + bucket)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/example_code/s3/s3_require_server_encryption.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/s3/s3_require_server_encryption.go) on GitHub\.

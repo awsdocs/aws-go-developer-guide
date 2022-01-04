@@ -59,7 +59,7 @@ for i, url := range result.QueueUrls {
 }
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/ListQueues/ListQueues.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/sqs/ListQueues/ListQueues.go) on GitHub\.
 
 ## Create a Queue<a name="create-a-queue"></a>
 
@@ -116,7 +116,7 @@ Display the queue URL\.
 fmt.Println("URL: " + *result.QueueUrl)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/CreateQueue/CreateQueue.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/sqs/CreateQueue/CreateQueue.go) on GitHub\.
 
 ## Get the URL of a Queue<a name="get-the-url-of-a-queue"></a>
 
@@ -168,7 +168,7 @@ Display the URL of the queue\.
 fmt.Println("URL: " + *result.QueueUrl)
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/GetQueueURL/GetQueueURL.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/sqs/GetQueueURL/GetQueueURL.go) on GitHub\.
 
 ## Delete a Queue<a name="delete-a-queue"></a>
 
@@ -214,4 +214,4 @@ result, err := svc.GetQueueUrl(&sqs.GetQueueUrlInput{
 })
 ```
 
-See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/go/sqs/DeleteQueue/DeleteQueue.go) on GitHub\.
+See the [complete example](https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/sqs/DeleteQueue/DeleteQueue.go) on GitHub\.
