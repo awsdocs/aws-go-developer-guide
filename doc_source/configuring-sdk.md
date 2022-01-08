@@ -4,7 +4,7 @@ In the AWS SDK for Go, you can configure settings for service clients, such as t
 
 ## Creating a Session<a name="creating-sesstion"></a>
 
-Before you can create a service client you must create a session, which is part of the **github\.com/aws/aws\-sdk\-go/aws/session** package\.
+Before you can create a service client you must create a session, which is part of the `github.com/aws/aws-sdk-go/aws/session` package\.
 
 There are a number of ways of configuring a session but the following are the most common\.
 
@@ -42,12 +42,12 @@ See [session](https://docs.aws.amazon.com/sdk-for-go/api/aws/session) for additi
 
 ## Specifying the AWS Region<a name="specifying-the-region"></a>
 
-When you specify the Region, you specify where to send requests, such as `us-west-2` or `us-east-2.` For a list of Regions for each service, see [Regions and Endpoints]() in the Amazon Web Services General Reference\.
+When you specify the Region, you specify where to send requests, such as `us-west-2` or `us-east-2.` For a list of Regions for each service, see [Service endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/aws-service-information.html) in the Amazon Web Services General Reference\.
 
 The SDK does not have a default Region\. To specify a Region:
 + Set the `AWS_REGION` environment variable to the default Region
-+ Set the `AWS_SDK_LOAD_CONFIG` environment variable to **true** to get the Region value from the *config* file in the *\.aws/* folder in your home directory
-+ Set the **NewSessionWithOptions** method argument **SharedConfigState** to **SharedConfigEnable** when you create a session to get the Region value from the *config* file in the *\.aws/* folder in your home directory
++ Set the `AWS_SDK_LOAD_CONFIG` environment variable to **true** to get the Region value from the *config* file in the `.aws/` folder in your home directory
++ Set the **NewSessionWithOptions** method argument **SharedConfigState** to **SharedConfigEnable** when you create a session to get the Region value from the *config* file in the `.aws/` folder in your home directory
 + Set the Region explicitly when you create a session
 
 If you set a Region using all of these techniques, the SDK uses the Region you explicitly specified in the session\.

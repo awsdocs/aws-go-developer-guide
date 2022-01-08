@@ -31,7 +31,7 @@ if *trailNamePtr == "" {
 }
 ```
 
-Initialize the session that the SDK uses to load credentials from the shared credentials file *\.aws/credentials* in your home folder, and create a new service client\.
+Initialize the session that the SDK uses to load credentials from the shared credentials file `.aws/credentials` in your home folder, and create a new service client\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{

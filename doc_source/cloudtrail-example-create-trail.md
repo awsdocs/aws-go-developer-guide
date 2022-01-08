@@ -35,7 +35,7 @@ if *trailNamePtr == "" || *bucketNamePtr == "" {
 }
 ```
 
-Initialize the session that the SDK uses to load credentials from the shared credentials file *\.aws/credentials* in your home folder\.
+Initialize the session that the SDK uses to load credentials from the shared credentials file `.aws/credentials` in your home folder\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{

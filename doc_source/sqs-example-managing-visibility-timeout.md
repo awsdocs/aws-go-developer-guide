@@ -53,7 +53,7 @@ if *visibility > 12*60*60 {
 }
 ```
 
-Initialize a session that the SDK will use to load credentials from the shared credentials file, \~/\.aws/credentials and the default region from \~/\.aws/config\.
+Initialize a session that the SDK will use to load credentials from the shared credentials file, `~/.aws/credentials` and the default region from `~/.aws/config`\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{

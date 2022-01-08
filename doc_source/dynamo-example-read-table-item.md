@@ -28,7 +28,7 @@ type Item struct {
 }
 ```
 
-Initialize a session that the SDK will use to load credentials from the shared credentials file *\~/\.aws/credentials* and region from the shared configuration file *\~/\.aws/config* and create a new DynamoDB service client\.
+Initialize a session that the SDK will use to load credentials from the shared credentials file `~/.aws/credentials` and region from the shared configuration file `~/.aws/config` and create a new DynamoDB service client\.
 
 ```
 // Initialize a session that the SDK will use to load

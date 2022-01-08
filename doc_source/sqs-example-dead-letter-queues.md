@@ -49,7 +49,7 @@ Get the name of the queue and the dead letter queue from the commmand line\.
     }
 ```
 
-Initialize a session that the SDK will use to load credentials from the shared credentials file, *\~/\.aws/credentials* and the default AWS Region from *\~/\.aws/config*\.
+Initialize a session that the SDK will use to load credentials from the shared credentials file, `~/.aws/credentials` and the default AWS Region from `~/.aws/config`\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{

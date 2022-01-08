@@ -51,7 +51,7 @@ value := os.Args[2]
 name := os.Args[3]
 ```
 
-Initialize a session that the SDK will use to load credentials from the shared credentials file \~/\.aws/credentials, load your configuration from the shared configuration file \~/\.aws/config, and create a CloudWatch client\.
+Initialize a session that the SDK will use to load credentials from the shared credentials file `~/.aws/credentials`, load your configuration from the shared configuration file `~/.aws/config`, and create a CloudWatch client\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{
@@ -133,7 +133,7 @@ if len(os.Args) != 2 {
 }
 ```
 
-Initialize a session that the SDK will use to load credentials from the shared credentials file \~/\.aws/credentials, load your configuration from the shared configuration file \~/\.aws/config, and create a CloudWatch client\.
+Initialize a session that the SDK will use to load credentials from the shared credentials file `~/.aws/credentials`, load your configuration from the shared configuration file `~/.aws/config`, and create a CloudWatch client\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{

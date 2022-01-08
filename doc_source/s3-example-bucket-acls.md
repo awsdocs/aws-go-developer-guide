@@ -57,7 +57,7 @@ if len(os.Args) != 2 {
 bucket := os.Args[1]
 ```
 
-Initialize the session that the SDK uses to load credentials from the shared credentials file *\~/\.aws/credentials*, the region from the shared configuration file *\~/\.aws/config*, and create a new Amazon S3 service client\.
+Initialize the session that the SDK uses to load credentials from the shared credentials file `~/.aws/credentials`, the region from the shared configuration file `~/.aws/config`, and create a new Amazon S3 service client\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{
@@ -147,7 +147,7 @@ if len(os.Args) == 4 {
 }
 ```
 
-Initialize the session that the SDK uses to load credentials from the shared credentials file *\~/\.aws/credentials*, the region from the shared configuration file *\~/\.aws/config*, and create a new Amazon S3 service client\.
+Initialize the session that the SDK uses to load credentials from the shared credentials file `~/.aws/credentials`, the region from the shared configuration file `~/.aws/config`, and create a new Amazon S3 service client\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{
@@ -246,7 +246,7 @@ bucket := os.Args[1]
 acl := "public-read"
 ```
 
-Initialize the session that the SDK uses to load credentials from the shared credentials file *\~/\.aws/credentials* the region from the shared configuration file *\~/\.aws/config*, and create a new Amazon S3 service client\.
+Initialize the session that the SDK uses to load credentials from the shared credentials file `~/.aws/credentials` the region from the shared configuration file `~/.aws/config`, and create a new Amazon S3 service client\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{
@@ -312,7 +312,7 @@ bucket := os.Args[1]
 key := os.Args[2]
 ```
 
-Initialize the session that the SDK uses to load credentials from the shared credentials file *\~/\.aws/credentials*, the region from the shared configuration file *\~/\.aws/config*, and create a new Amazon S3 service client\.
+Initialize the session that the SDK uses to load credentials from the shared credentials file `~/.aws/credentials`, the region from the shared configuration file `~/.aws/config`, and create a new Amazon S3 service client\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{

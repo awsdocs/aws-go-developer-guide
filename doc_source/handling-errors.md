@@ -19,7 +19,7 @@ Errors returned by the SDK are backed by a concrete type that will satisfy the `
 
 The following example demonstrates how to handle error codes that you encounter while using the AWS SDK for Go\. The example assumes you have already set up and configured the SDK \(that is, all required packages are imported and your credentials and region are set\)\. For more information, see [Getting Started with the AWS SDK for Go](setting-up.md) and [Configuring the AWS SDK for Go](configuring-sdk.md)\.
 
-This example highlights how you can use the *awserr\.Error* type to perform logic based on specific error codes returned by service API operations\.
+This example highlights how you can use the `awserr.Error` type to perform logic based on specific error codes returned by service API operations\.
 
 In this example the *S3* *GetObject* API operation is used to request the contents of an object in S3\. The example handles the *NoSuchBucket* and *NoSuchKey* error codes, printing custom messages to stderr\. If any other error is received, a generic message is printed\.
 

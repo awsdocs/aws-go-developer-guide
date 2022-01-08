@@ -50,7 +50,7 @@ if *queue == "" {
 }
 ```
 
-Initialize a session that the SDK uses to load credentials from the shared credentials file, \~/\.aws/credentials and the default region from \~/\.aws/config\.
+Initialize a session that the SDK uses to load credentials from the shared credentials file, `~/.aws/credentials` and the default region from `~/.aws/config`\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{
@@ -124,7 +124,7 @@ if *timeout > 12*60*60 {
 }
 ```
 
-Initialize a session that the SDK uses to load credentials from the shared credentials file, \~/\.aws/credentials and the default region from \~/\.aws/config\.
+Initialize a session that the SDK uses to load credentials from the shared credentials file, `~/.aws/credentials` and the default region from `~/.aws/config`\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{
@@ -201,7 +201,7 @@ if *queue == "" || *messageHandle == "" {
 }
 ```
 
-Initialize a session that the SDK uses to load credentials from the shared credentials file, \~/\.aws/credentials and the default region from \~/\.aws/config\.
+Initialize a session that the SDK uses to load credentials from the shared credentials file, `~/.aws/credentials` and the default region from `~/.aws/config`\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{

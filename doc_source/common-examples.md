@@ -12,7 +12,7 @@ Find the source code for these examples and others in the AWS documentation [cod
 + [Amazon DynamoDB Examples](using-dynamodb-with-go-sdk.md)
 + [Amazon EC2 Examples](using-ec2-with-go-sdk.md)
 + [Amazon Glacier Examples](using-glacier-with-go-sdk.md)
-+ [AWS IAM Examples](using-iam-with-go-sdk.md)
++ [IAM Examples](using-iam-with-go-sdk.md)
 + [AWS KMS Examples](using-kms-with-go-sdk.md)
 + [AWS Lambda Examples](using-lambda-with-go-sdk.md)
 + [Amazon Polly Examples](using-polly-with-go-sdk.md)

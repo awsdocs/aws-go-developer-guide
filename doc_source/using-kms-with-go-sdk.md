@@ -1,6 +1,6 @@
 # AWS Key Management Service Examples Using the AWS SDK for Go<a name="using-kms-with-go-sdk"></a>
 
-You can use the following examples to access AWS Key Management Service \(AWS KMS\) using the AWS SDK for Go\. For more information about AWS KMS, see the [Amazon KMS documentation](https://aws.amazon.com/documentation/kms/)\. For reference information about the AWS KMS client, see the [New](https://docs.aws.amazon.com/sdk-for-go/api/service/kms/#New) function\.
+You can use the following examples to access AWS Key Management Service \(AWS KMS\) using the AWS SDK for Go\. For more information about AWS KMS, see the [AWS KMS documentation](https://aws.amazon.com/documentation/kms/)\. For reference information about the AWS KMS client, see the [New](https://docs.aws.amazon.com/sdk-for-go/api/service/kms/#New) function\.
 
  **Examples** 
 

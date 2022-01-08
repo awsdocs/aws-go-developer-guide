@@ -42,7 +42,7 @@ import (
 
 ### Get the Address Descriptions<a name="get-the-address-descriptions"></a>
 
-This routine prints out the Elastic IP Addresses for the account’s VPC\. Initialize a session that the SDK will use to load credentials from the shared credentials file, \~/\.aws/credentials, and create a new EC2 service client\.
+This routine prints out the Elastic IP Addresses for the account’s VPC\. Initialize a session that the SDK will use to load credentials from the shared credentials file, `~/.aws/credentials`, and create a new EC2 service client\.
 
 ```
 func main() {
@@ -132,7 +132,7 @@ func main() {
     instanceID := os.Args[1]
 ```
 
-You will need to initialize a session that the SDK will use to load credentials from the shared credentials file, \~/\.aws/credentials, and create a new Amazon EC2 service client\.
+You will need to initialize a session that the SDK will use to load credentials from the shared credentials file, `~/.aws/credentials`, and create a new Amazon EC2 service client\.
 
 ```
     sess, err := session.NewSession(&aws.Config{
@@ -216,7 +216,7 @@ func main() {
     allocationID := os.Args[1]
 ```
 
-Initialize a session that the SDK will use to load credentials from the shared credentials file, \~/\.aws/credentials, and create a new EC2 service client\.
+Initialize a session that the SDK will use to load credentials from the shared credentials file, `~/.aws/credentials`, and create a new EC2 service client\.
 
 ```
     sess, err := session.NewSession(&aws.Config{

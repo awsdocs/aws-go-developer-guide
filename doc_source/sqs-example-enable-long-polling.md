@@ -59,7 +59,7 @@ if *waitTime > 20 {
 }
 ```
 
-Initialize a session that the SDK will use to load credentials from the shared credentials file, *\~/\.aws/credentials* and the default AWS Region from *\~/\.aws/config*\.
+Initialize a session that the SDK will use to load credentials from the shared credentials file, `~/.aws/credentials` and the default AWS Region from `~/.aws/config`\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{
@@ -121,7 +121,7 @@ if *waitTime > 20 {
 }
 ```
 
-Initialize a session that the SDK will use to load credentials from the shared credentials file, *\~/\.aws/credentials*, and a default AWS Region from *\~/\.aws/config*\.
+Initialize a session that the SDK will use to load credentials from the shared credentials file, `~/.aws/credentials`, and a default AWS Region from `~/.aws/config`\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{
@@ -196,7 +196,7 @@ if *waitTime > 20 {
 }
 ```
 
-Initialize a session that the SDK will use to load credentials from the shared credentials file, *\~/\.aws/credentials* and the default AWS Region from *\~/\.aws/config*\.
+Initialize a session that the SDK will use to load credentials from the shared credentials file, `~/.aws/credentials` and the default AWS Region from `~/.aws/config`\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{

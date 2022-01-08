@@ -26,7 +26,7 @@ To set up and run this example, you must first complete these tasks:
 
 1. Create a Lambda function using the hello\-world blueprint to serve as the target for events\. To learn how, see [Step 1: Create an AWS Lambda function](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/LogEC2InstanceState.html) in the CloudWatch Events User Guide\.
 
-1. Create an IAM role whose policy grants permission to CloudWatch Events and that includes `events.amazonaws.com` as a trusted entity\. For more information about creating an IAM role, see [Creating a Role to Delegate Permissions to an AWS Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the IAM User Guide\.
+1. Create an IAM role whose policy grants permission to CloudWatch Events and that includes `events.amazonaws.com` as a trusted entity\. For more information about creating an IAM role, see [Creating a Role to Delegate Permissions to an AWS service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the IAM User Guide\.
 
    Use the following role policy when creating the IAM role\.
 
@@ -83,7 +83,7 @@ import (
 )
 ```
 
-Initialize a session that the SDK will use to load credentials from the shared credentials file \~/\.aws/credentials, load your configuration from the shared configuration file \~/\.aws/config, and create a CloudWatch Events client\.
+Initialize a session that the SDK will use to load credentials from the shared credentials file `~/.aws/credentials`, load your configuration from the shared configuration file `~/.aws/config`, and create a CloudWatch Events client\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{
@@ -123,7 +123,7 @@ import (
 )
 ```
 
-Initialize a session that the SDK will use to load credentials from the shared credentials file \~/\.aws/credentials, load your configuration from the shared configuration file \~/\.aws/config, and create a new CloudWatch Events client\.
+Initialize a session that the SDK will use to load credentials from the shared credentials file `~/.aws/credentials`, load your configuration from the shared configuration file `~/.aws/config`, and create a new CloudWatch Events client\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{
@@ -167,7 +167,7 @@ import (
 )
 ```
 
-Initialize a session that the SDK will use to load credentials from the shared credentials file \~/\.aws/credentials, load your configuration from the shared configuration file \~/\.aws/config, and create a CloudWatch Events client\.
+Initialize a session that the SDK will use to load credentials from the shared credentials file `~/.aws/credentials`, load your configuration from the shared configuration file `~/.aws/config`, and create a CloudWatch Events client\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{

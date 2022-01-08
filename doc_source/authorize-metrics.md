@@ -4,7 +4,7 @@ To collect metrics from AWS SDKs using SDK Metrics for Enterprise Support, Enter
 
 Use the following Go code sample or the AWS Console to create an IAM Policy and Role for an CloudWatch agent to access SDK Metrics in your environment\.
 
-Learn more about using SDK Metrics with AWS SDK for Go in [Set up SDK Metrics in the AWS SDK for Go](setup-metrics.md)\.
+Learn more about using SDK Metrics with the AWS SDK for Go in [Set Up SDK Metrics](setup-metrics.md)\.
 
 ## Set Up Access Permissions Using the AWS SDK for Go<a name="setup-access-permissions-sdk"></a>
 

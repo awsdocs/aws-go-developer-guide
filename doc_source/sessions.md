@@ -48,7 +48,7 @@ svc := s3.New(sess)
 
 In addition to `NewSession`, you can create sessions using `NewSessionWithOptions`\. This function allows you to control and override how the session will be created through code, instead of being driven by environment variables only\.
 
-Use [NewSessionWithOptions](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/#NewSessionWithOptions) when you want to provide the config profile, or override the shared credentials state \(AWS\_SDK\_LOAD\_CONFIG\)\.
+Use [NewSessionWithOptions](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/#NewSessionWithOptions) when you want to provide the config profile, or override the shared credentials state \(`AWS_SDK_LOAD_CONFIG`\)\.
 
 ```
 // Equivalent to session.New

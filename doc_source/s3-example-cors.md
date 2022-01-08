@@ -64,7 +64,7 @@ func filterMethods(methods []string) []string {
 }
 ```
 
-Initialize a session that the SDK will use to load credentials, from the shared credentials file, \~/\.aws/credentials, and create a new S3 service client\.
+Initialize a session that the SDK will use to load credentials, from the shared credentials file, `~/.aws/credentials`, and create a new S3 service client\.
 
 ```
 sess := session.Must(session.NewSessionWithOptions(session.Options{

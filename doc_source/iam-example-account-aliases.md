@@ -11,7 +11,7 @@ You can use a series of Go routines to manage aliases in IAM\. The routines use 
 
 ## Prerequisites<a name="iam-aliases-prerequisites"></a>
 + You have [set up](setting-up.md) and [configured](configuring-sdk.md) the AWS SDK for Go\.
-+ You are familiar with IAM account aliases\. To learn more, see [Your AWS Account ID and Its Alias](https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html) in the IAM User Guide\.
++ You are familiar with IAM account aliases\. To learn more, see [Your AWS account ID and Its Alias](https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html) in the IAM User Guide\.
 
 ## Create a New IAM Account Alias<a name="iam-example-create-alias"></a>
 

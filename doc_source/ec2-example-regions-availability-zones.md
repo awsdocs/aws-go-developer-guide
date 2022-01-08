@@ -39,7 +39,7 @@ import (
 )
 ```
 
-In the `main` function, create a session with credentials from the shared credentials file, \~/\.aws/credentials, and create a new EC2 client\.
+In the `main` function, create a session with credentials from the shared credentials file, `~/.aws/credentials`, and create a new EC2 client\.
 
 ```
 func main() {

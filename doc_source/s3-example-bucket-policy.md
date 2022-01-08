@@ -53,7 +53,7 @@ if len(os.Args) != 2 {
 bucket := os.Args[1]
 ```
 
-Initialize a session that the SDK will use to load credentials from the shared credentials file, \~/\.aws/credentials, and create a new S3 service client\.
+Initialize a session that the SDK will use to load credentials from the shared credentials file, `~/.aws/credentials`, and create a new S3 service client\.
 
 ```
 sess, err := session.NewSession(&aws.Config{
@@ -127,7 +127,7 @@ func main() {
     bucket := os.Args[1]
 ```
 
-Initialize a session that the SDK will use to load configuration, credentials, and region information from the shared credentials file, \~/\.aws/credentials, and create a new S3 service client\.
+Initialize a session that the SDK will use to load configuration, credentials, and region information from the shared credentials file, `~/.aws/credentials`, and create a new S3 service client\.
 
 ```
     sess, err := session.NewSession(&aws.Config{

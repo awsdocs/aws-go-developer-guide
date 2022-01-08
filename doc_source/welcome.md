@@ -17,13 +17,15 @@ See [Using AWS Cloud9 with the AWS SDK for Go](cloud9-go.md) for information on 
 ## More Info<a name="more-info"></a>
 + To learn about everything you need before you can start using the AWS SDK for Go, see [Getting Started with the AWS SDK for Go](setting-up.md)\.
 + For code examples, see [AWS SDK for Go Code Examples](common-examples.md)\.
-+ You can browse the AWS SDK for Go examples in the [AWS Code Sample Catalog](https://docs.aws.amazon.com/code-samples/latest/catalog/code-catalog-go.html)\.
++ You can browse the AWS SDK for Go examples in the [aws\-doc\-sdk\-examples](https://github.com/awsdocs/aws-doc-sdk-examples) repo on GitHub\.
 + To learn about the SDK utilities, see [Using the AWS SDK for Go Utilities](sdk-utilities.md)\.
 + For learn about the types and functionality that the library provides, see the [AWS SDK for Go API Reference](https://docs.aws.amazon.com/sdk-for-go/api/)\.
-+ To view a video introduction of the SDK and a sample application demonstration, see [AWS SDK For Go: Gophers Get Going with AWS](https://www.youtube.com/watch?v=iOGIKG3EptI&amp;feature=youtu.be) from AWS re:Invent 2015\.
++ To view a video introduction of the SDK and a sample application demonstration, see [AWS SDK for Go: Gophers Get Going with AWS](https://www.youtube.com/watch?v=iOGIKG3EptI&amp;feature=youtu.be) from AWS re:Invent 2015\.
 
 ## Maintenance and support for SDK major versions<a name="maintenance-and-support-for-sdk-major-versions"></a>
 
+### Maintenance and support for SDK major versions<a name="sdks-major-versions-maintenance-support"></a>
+
 For information about maintenance and support for SDK major versions and their underlying dependencies, see the following in the [AWS SDKs and Tools Reference Guide](https://docs.aws.amazon.com/sdkref/latest/guide/overview.html):
-+  [AWS SDKs and Tools Maintenance Policy](https://docs.aws.amazon.com/sdkref/latest/guide/maint-policy.html) 
-+  [AWS SDKs and Tools Version Support Matrix](https://docs.aws.amazon.com/sdkref/latest/guide/version-support-matrix.html) 
++ [AWS SDKs and tools maintenance policy](https://docs.aws.amazon.com/sdkref/latest/guide/maint-policy.html)
++ [AWS SDKs and tools version support matrix](https://docs.aws.amazon.com/sdkref/latest/guide/version-support-matrix.html)
