@@ -1,6 +1,9 @@
-# AWS SDK for Go Developer Guide<a name="welcome"></a>
+# What is the AWS SDK for Go<a name="welcome"></a>
 
-Welcome to the AWS SDK for Go\. The AWS SDK for Go provides APIs and utilities that developers can use to build Go applications that use AWS services, such as Amazon Elastic Compute Cloud \(Amazon EC2\) and Amazon Simple Storage Service \(Amazon S3\)\.
+The AWS SDK for Go provides APIs and utilities that developers can use to build Go applications that use AWS services, such as Amazon Elastic Compute Cloud \(Amazon EC2\) and Amazon Simple Storage Service \(Amazon S3\)\.
+
+**Note**  
+This document is for version 1 of the AWS SDK for Go\. If you're looking for version 2 of the SDK, see the [version 2 developer guide](https://aws.github.io/aws-sdk-go-v2/docs/) and the [version 2 SDK API reference](https://pkg.go.dev/github.com/aws/aws-sdk-go-v2)\.
 
 The SDK removes the complexity of coding directly against a web service interface\. It hides a lot of the lower\-level plumbing, such as authentication, request retries, and error handling\.
 

@@ -1,4 +1,4 @@
-# AWS SDK for Go Developer Guide
+# AWS SDK for Go (version 1) Developer Guide
 
 -----
 *****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
@@ -14,7 +14,7 @@ Amazon's trademarks and trade dress may not be used in
 
 -----
 ## Contents
-+ [AWS SDK for Go Developer Guide](welcome.md)
++ [What is the AWS SDK for Go](welcome.md)
 + [Getting Started with the AWS SDK for Go](setting-up.md)
 + [Configuring the AWS SDK for Go](configuring-sdk.md)
    + [SDK Metrics in the AWS SDK for Go](sdk-metrics.md)

@@ -53,7 +53,7 @@ Other configuration settings are available, see [Update a CloudWatch Agent](#upd
 **Note**  
 Enabling SDK Metrics does not configure your credentials to use an AWS service\. To do that, see [Specifying Credentials](configuring-sdk.md#specifying-credentials)\.
 
-### Option 2: Shared AWS `config` file<a name="enable-csm-option-2"></a>
+### Option 2: Shared AWS`config` file<a name="enable-csm-option-2"></a>
 
 If no SDK Metrics configuration is found in the environment variables, the AWS SDK for Go looks for your customized AWS profile field\. Then it checks the `aws_csm` profile\. To enable SDK Metrics, add `csm_enabled` to the shared config file `~/.aws/config`\.
 
@@ -84,7 +84,7 @@ export AWS_CSM_PORT=1234
 export AWS_CSM_CLIENT_ID="My Application"
 ```
 
-### Option 2: Shared AWS `config` file<a name="update-cw-agent-option2"></a>
+### Option 2: Shared AWS`config` file<a name="update-cw-agent-option2"></a>
 
 Most services use the default port\. If your service requires a unique port ID, add `AWS_CSM_PORT=[PORT-NUMBER]`, where PORT\-NUMBER is the port number, to `~/.aws/config`\.
 
@@ -119,7 +119,7 @@ To turn off SDK Metrics, set `csm_enabled` to **false** in your environment vari
 
  `export AWS_CSM_ENABLED=false` 
 
-#### Option 2: Shared AWS `config` file<a name="id4"></a>
+#### Option 2: Shared AWS`config` file<a name="id4"></a>
 
 **Note**  
 Environment variables override the shared AWS `config` file\. If SDK Metrics is enabled in the environment variables, the SDK Metrics remains enabled\.
