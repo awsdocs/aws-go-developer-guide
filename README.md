@@ -13,7 +13,7 @@ The GitHub repository for the AWS SDK for Go V1 is at https://github.com/aws/aws
 * If you're interested in _**version 2**_ of the AWS SDK for Go, see the following instead:
   * [Developer guide](https://aws.github.io/aws-sdk-go-v2/docs/)
   * [SDK API reference](https://pkg.go.dev/github.com/aws/aws-sdk-go-v2)
-  * [GitHub repo](https://github.com/aws/aws-sdk-go-v2
+  * [GitHub repo](https://github.com/aws/aws-sdk-go-v2)
 
 ## Recent updates
 
