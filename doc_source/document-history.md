@@ -6,6 +6,9 @@ To view the list of changes to the AWS SDK for Go and its documentation, see the
 
  **Last documentation update:** Dec 29, 2021
 
+**Feb 7, 2022**  
+Removed SDK Metrics material\. This feature was deprecated on December 31, 2021\.
+
 **Jul 10, 2017**  
 Added the Document History topic\.
 
