@@ -1,6 +1,8 @@
-# Enforcing TLS Version 1\.2 in AWS SDK for Go<a name="tls"></a>
+# Enforcing TLS Version 1\.3 in AWS SDK for Go<a name="tls"></a>
 
 To add increased security when communicating with AWS services, you should configure your client to use TLS 1\.2 or later\.
+
+As of [Go 1\.18](https://go.dev/doc/go1.18#tls10), the TLS configuration used by the `net/http#Client` defaults to TLS 1\.2 as a minimum, and disables support for TLS 1\.0 and TLS 1\.1\.
 
 ## How do I set my TLS version?<a name="how-do-i-set-my-tls-version"></a>
 
@@ -64,7 +66,7 @@ You can set the TLS version to 1\.2 using the following code\.
 1. Confirm your TLS version by calling *GetTLSVersion*\.
 
    ```
-   if tr, ok := s3Client.Config.HTTPClient.Transport.(*http.Transport); ok {
+   if tr, ok := sess.Config.HTTPClient.Transport.(*http.Transport); ok {
        log.Printf("Client uses %v", GetTLSVersion(tr))
    }
    ```
