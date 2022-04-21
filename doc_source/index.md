@@ -115,6 +115,6 @@ Amazon's trademarks and trade dress may not be used in
    + [Compliance Validation for this AWS Product or Service](compliance-validation.md)
    + [Resilience for this AWS Product or Service](disaster-recovery-resiliency.md)
    + [Infrastructure Security for this AWS Product or Service](infrastructure-security.md)
-   + [Enforcing TLS Version 1.2 in AWS SDK for Go](tls.md)
+   + [Enforcing a minimum TLS version in the AWS SDK for Go](tls.md)
    + [Amazon S3 Encryption Client Migration](s3-encryption-migration.md)
 + [Document History](document-history.md)
