@@ -22,7 +22,7 @@ See [Using AWS Cloud9 with the AWS SDK for Go](cloud9-go.md) for information on 
 + For code examples, see [AWS SDK for Go Code Examples](common-examples.md)\.
 + You can browse the AWS SDK for Go examples in the [aws\-doc\-sdk\-examples](https://github.com/awsdocs/aws-doc-sdk-examples) repo on GitHub\.
 + To learn about the SDK utilities, see [Using the AWS SDK for Go Utilities](sdk-utilities.md)\.
-+ For learn about the types and functionality that the library provides, see the [AWS SDK for Go API Reference](https://docs.aws.amazon.com/sdk-for-go/api/)\.
++ To learn about the types and functionality that the library provides, see the [AWS SDK for Go API Reference](https://docs.aws.amazon.com/sdk-for-go/api/)\.
 + To view a video introduction of the SDK and a sample application demonstration, see [AWS SDK for Go: Gophers Get Going with AWS](https://www.youtube.com/watch?v=iOGIKG3EptI&amp;feature=youtu.be) from AWS re:Invent 2015\.
 
 ## Maintenance and support for SDK major versions<a name="maintenance-and-support-for-sdk-major-versions"></a>
