@@ -209,8 +209,8 @@ Create a service client and all `DeleteQueue` passing in the queue name\.
 ```
 svc := sqs.New(sess)
 
-result, err := svc.GetQueueUrl(&sqs.GetQueueUrlInput{
-    QueueName: queueName,
+_, err := svc.DeleteQueue(&sqs.DeleteQueueInput{
+    QueueUrl: queueURL,
 })
 ```
 
