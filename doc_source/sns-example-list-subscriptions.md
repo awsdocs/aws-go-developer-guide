@@ -16,37 +16,25 @@ import (
 )
 
 func main() {
-    emailPtr := flag.String("e", "", "The email address of the user subscribing to the topic")
-    topicPtr := flag.String("t", "", "The ARN of the topic to which the user subscribes")
-
-    flag.Parse()
-
-    if *emailPtr == "" || *topicPtr == "" {
-        fmt.Println("You must supply an email address and topic ARN")
-        fmt.Println("Usage: go run SnsSubscribe.go -e EMAIL -t TOPIC-ARN")
-        os.Exit(1)
-    }
-
     // Initialize a session that the SDK will use to load
-    // credentials from the shared credentials file. (~/.aws/credentials).
-    sess := session.Must(session.NewSessionWithOptions(session.Options{
-        SharedConfigState: session.SharedConfigEnable,
-    }))
+	// credentials from the shared credentials file. (~/.aws/credentials).
+	sess := session.Must(session.NewSessionWithOptions(session.Options{
+		SharedConfigState: session.SharedConfigEnable,
+	}))
 
-    svc := sns.New(sess)
+	svc := sns.New(sess)
 
-    result, err := svc.Subscribe(&sns.SubscribeInput{
-        Endpoint:              emailPtr,
-        Protocol:              aws.String("email"),
-        ReturnSubscriptionArn: aws.Bool(true), // Return the ARN, even if user has yet to confirm
-        TopicArn:              topicPtr,
-    })
-    if err != nil {
-        fmt.Println(err.Error())
-        os.Exit(1)
-    }
+	result, err := svc.ListSubscriptions(&sns.ListSubscriptionsInput{})
+	if err != nil {
+		fmt.Println(err.Error())
+		os.Exit(1)
+	}
 
-    fmt.Println(*result.SubscriptionArn)
+	for _, t := range result.Subscriptions {
+		fmt.Println(*t.SubscriptionArn)
+	}
+
+	fmt.Println(*result.NextToken)
 }
 ```
 
